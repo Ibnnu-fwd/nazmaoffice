@@ -1,6 +1,4 @@
 <x-guest-layout>
-    @push('js-internal')
-    @endpush
 
     {{-- Navbar --}}
     <div class="mx-auto bg-white w-full">
@@ -71,21 +69,21 @@
     {{-- Hero --}}
     <div id="indicators-carousel" class="relative w-full" data-carousel="static">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:rounded-none md:h-[482px] mx-4 md:mx-0">
+        <div class="relative h-56 overflow-hidden rounded-lg md:rounded-none md:h-[488px] mx-4 md:mx-0">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                 <img src="{{ asset('assets/images/hero1.jpg') }}"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60 dark:from-gray-800/60"></div>
                 <div class="absolute top-0 bottom-0 md:right-0 z-20 text-white md:w-1/2 p-10 md:p-32">
-                    <p class="font-normal">
+                    <p class="font-normal text-xs 2xl:text-sm">
                         Halo, Selamat Datang di Website Nazma Office!
                     </p>
                     <p class="font-semibold text-2xl md:text-5xl mt-2">
                         We'll Finish It <br>With Excellence
                     </p>
                     <button
-                        class="inline-flex items-center justify-center px-8 py-3 text-md mt-0 md:mt-3 font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                        class="hidden md:inline-flex items-center justify-center px-4 py-2 mt-3 text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                         Hubungi Kami
                     </button>
                 </div>
@@ -138,5 +136,128 @@
             </span>
         </button>
     </div>
+
+    {{-- Insight --}}
+    <section class="bg-white">
+        <p class="text-2xl font-medium text-center pt-12 mb-8 mx-2 md:mx-0">
+            Terima Kasih Telah Mempercayai Kami
+        </p>
+        <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto">
+            <figure class="flex justify-center flex-col">
+                <img class="bg-gray-200 w-32 h-32 self-center object-cover object-center"
+                    src="../images/placeholders/square1.svg" alt="">
+                <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                    1000+
+                </p>
+                <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                    Mitra Usaha
+                </p>
+            </figure>
+            <figure class="flex justify-center flex-col">
+                <img class="bg-gray-200 w-32 h-32 self-center object-cover object-center"
+                    src="../images/placeholders/square1.svg" alt="">
+                <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                    1000+
+                </p>
+                <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                    Mitra Usaha
+                </p>
+            </figure>
+            <figure class="flex justify-center flex-col">
+                <img class="bg-gray-200 w-32 h-32 self-center object-cover object-center"
+                    src="../images/placeholders/square1.svg" alt="">
+                <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                    1000+
+                </p>
+                <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                    Mitra Usaha
+                </p>
+            </figure>
+            <figure class="flex justify-center flex-col">
+                <img class="bg-gray-200 w-32 h-32 self-center object-cover object-center"
+                    src="../images/placeholders/square1.svg" alt="">
+                <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                    1000+
+                </p>
+                <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                    Mitra Usaha
+                </p>
+            </figure>
+        </div>
+    </section>
+
+    {{-- Services --}}
+
+    <section>
+        <p class="text-2xl font-medium text-center pt-12 mb-6 mx-2 md:mx-0">
+            Layanan Yang Kami Miliki
+        </p>
+        <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
+            <div class="justify-center w-full lg:p-10 max-auto">
+                <div class="justify-center w-full text-center">
+
+                    <div x-data="{ tab: 'tab1' }">
+                        <ul class="md:flex gap-3 text-gray-500 justify-center">
+                            <li class="-mb-px">
+                                <!-- event handler set state to 'tab1' and add conditional :class for active state -->
+                                <a @click.prevent="tab = 'tab1'" href="#"
+                                    class="inline-block px-8 py-2.5 text-md rounded-full text-white bg-primary"
+                                    :class="{ '  text-white bg-primary': tab === 'tab1' }">
+                                    Produk Teknologi Informasi
+                                </a>
+                            </li>
+                            <li class="-mb-px">
+                                <a @click.prevent="tab = 'tab2'" href="#"
+                                    class="inline-block px-8 py-2.5 text-md rounded-full text-gray-400"
+                                    :class="{ '  text-white bg-primary': tab === 'tab2' }">
+                                    Produk Konsultan Manajemen
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="py-4 pt-4 text-left content mt-8">
+                            <!-- show tab1 only -->
+                            <div x-show="tab==='tab1'" class="text-gray-500" style="">
+                                <main class="grid md:grid-cols-3 gap-6">
+                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
+                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
+                                            <svg class=" text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
+                                            </svg>
+                                        </div>
+                                        <a href="#">
+                                            <h5
+                                                class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                                                Need a help in Claim?</h5>
+                                        </a>
+                                        <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this
+                                            step by step guideline process on how to certify for your weekly
+                                            benefits:</p>
+                                        <a href="#"
+                                            class="inline-flex items-center text-blue-600 hover:underline">
+                                            See our guideline
+                                            <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewBox="0 0 18 18">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </main>
+                            </div>
+                            <div x-show="tab==='tab2'" class="text-gray-500" style="display: none;">
+                                <main></main>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 </x-guest-layout>
