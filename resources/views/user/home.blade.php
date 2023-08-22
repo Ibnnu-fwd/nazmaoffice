@@ -28,7 +28,7 @@
                     <li>
                         <a href="#"
                             class="px-4 py-8 text-sm text-gray-500 border-b-2 border-transparent lg:px-6 hover:border-blue-500 md:px-3 hover:text-blue-600">
-                            Berandaaaa
+                            Beranda
                         </a>
                     </li>
                     <li>
