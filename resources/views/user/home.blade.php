@@ -66,6 +66,8 @@
         </div>
     </div>
 
+    
+
     {{-- Hero --}}
     <div id="indicators-carousel" class="relative w-full" data-carousel="static">
         <!-- Carousel wrapper -->
@@ -136,6 +138,10 @@
             </span>
         </button>
     </div>
+
+    <p>
+        <ion-icon name="ion-social-chrome-outline"></ion-icon>
+    </p>
 
     {{-- Insight --}}
     <section class="bg-white">
