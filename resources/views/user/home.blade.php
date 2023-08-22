@@ -1,5 +1,9 @@
 <x-guest-layout>
 
+    @push('css-internal')
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    @endpush
+
     {{-- Navbar --}}
     <div class="mx-auto bg-white w-full">
         <div x-data="{ open: false }"
@@ -66,8 +70,6 @@
         </div>
     </div>
 
-    
-
     {{-- Hero --}}
     <div id="indicators-carousel" class="relative w-full" data-carousel="static">
         <!-- Carousel wrapper -->
@@ -78,7 +80,7 @@
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60 dark:from-gray-800/60"></div>
                 <div class="absolute top-0 bottom-0 md:right-0 z-20 text-white md:w-1/2 p-10 md:py-32 text-start">
-                    <p class="font-normal text-xs 2xl:text-md">
+                    <p class="font-normal text-xs 2xl:text-sm">
                         Halo, Selamat Datang di Website Nazma Office!
                     </p>
                     <p class="font-semibold text-2xl md:text-3xl lg:text-5xl mt-2">
@@ -139,19 +141,15 @@
         </button>
     </div>
 
-    <p>
-        <ion-icon name="ion-social-chrome-outline"></ion-icon>
-    </p>
-
     {{-- Insight --}}
     <section class="bg-white">
-        <p class="text-2xl font-medium text-center pt-12 mb-8 mx-2 md:mx-0">
+        <p class="text-2xl font-medium text-black text-center pt-12 mb-8 mx-2 md:mx-0">
             Terima Kasih Telah Mempercayai Kami
         </p>
         <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-4 lg:grid-cols-4 max-w-4xl mx-auto">
             <figure class="flex justify-center flex-col">
-                <img class="bg-gray-200 hidden md:inline-block w-32 h-32 self-center object-cover object-center"
-                    src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+                <ion-icon name="storefront-outline"
+                    class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
                 <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
                     1000+
                 </p>
@@ -160,28 +158,28 @@
                 </p>
             </figure>
             <figure class="flex justify-center flex-col">
-                <img class="bg-gray-200 hidden md:inline-block w-32 h-32 self-center object-cover object-center"
-                    src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+                <ion-icon name="bookmarks-outline"
+                    class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
                 <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
                     1000+
                 </p>
                 <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
-                    Mitra Usaha
+                    Event Edukatif
                 </p>
             </figure>
             <figure class="flex justify-center flex-col">
-                <img class="bg-gray-200 hidden md:inline-block w-32 h-32 self-center object-cover object-center"
-                    src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+                <ion-icon name="people-outline"
+                    class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
                 <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
                     1000+
                 </p>
                 <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
-                    Mitra Usaha
+                    Mentor Profesional
                 </p>
             </figure>
             <figure class="flex justify-center flex-col">
-                <img class="bg-gray-200 hidden md:inline-block w-32 h-32 self-center object-cover object-center"
-                    src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+                <ion-icon name="person-add-outline"
+                    class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
                 <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
                     1000+
                 </p>
@@ -194,7 +192,7 @@
 
     {{-- Services --}}
     <section>
-        <p class="text-2xl font-medium text-center pt-12 mb-6 mx-2 md:mx-0">
+        <p class="text-2xl font-medium text-black text-center pt-12 mb-6 mx-2 md:mx-0">
             Layanan Yang Kami Miliki
         </p>
         <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
@@ -225,12 +223,8 @@
                                 <main class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                     <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
                                         <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <svg class=" text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path
-                                                    d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
-                                            </svg>
+                                            <ion-icon name="easel-outline" class="text-primary"
+                                                size="large"></ion-icon>
                                         </div>
                                         <a href="#">
                                             <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
@@ -244,23 +238,14 @@
                                         <a href="#"
                                             class="inline-flex mt-4 items-center text-blue-600 hover:underline">
                                             Selengkapnya
-                                            <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 18 18">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                            </svg>
+                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
+                                                size="small"></ion-icon>
                                         </a>
                                     </div>
                                     <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
                                         <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <svg class=" text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path
-                                                    d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
-                                            </svg>
+                                            <ion-icon name="play-circle-outline" class="text-danger"
+                                                size="large"></ion-icon>
                                         </div>
                                         <a href="#">
                                             <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
@@ -274,23 +259,14 @@
                                         <a href="#"
                                             class="inline-flex mt-4 items-center text-blue-600 hover:underline">
                                             Selengkapnya
-                                            <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 18 18">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                            </svg>
+                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
+                                                size="small"></ion-icon>
                                         </a>
                                     </div>
                                     <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
                                         <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <svg class=" text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path
-                                                    d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
-                                            </svg>
+                                            <ion-icon name="globe-outline" class="text-success"
+                                                size="large"></ion-icon>
                                         </div>
                                         <a href="#">
                                             <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
@@ -304,23 +280,14 @@
                                         <a href="#"
                                             class="inline-flex mt-4 items-center text-blue-600 hover:underline">
                                             Selengkapnya
-                                            <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 18 18">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                            </svg>
+                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
+                                                size="small"></ion-icon>
                                         </a>
                                     </div>
                                     <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
                                         <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <svg class=" text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path
-                                                    d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
-                                            </svg>
+                                            <ion-icon name="code-outline" class="text-warning"
+                                                size="large"></ion-icon>
                                         </div>
                                         <a href="#">
                                             <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
@@ -334,23 +301,14 @@
                                         <a href="#"
                                             class="inline-flex mt-4 items-center text-blue-600 hover:underline">
                                             Selengkapnya
-                                            <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 18 18">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                            </svg>
+                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
+                                                size="small"></ion-icon>
                                         </a>
                                     </div>
                                     <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
                                         <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <svg class=" text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path
-                                                    d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
-                                            </svg>
+                                            <ion-icon name="flag-outline" class="text-black"
+                                                size="large"></ion-icon>
                                         </div>
                                         <a href="#">
                                             <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
@@ -365,13 +323,8 @@
                                         <a href="#"
                                             class="inline-flex mt-4 items-center text-blue-600 hover:underline">
                                             Selengkapnya
-                                            <svg class="w-3 h-3 ml-2.5" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 18 18">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                                            </svg>
+                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
+                                                size="small"></ion-icon>
                                         </a>
                                     </div>
                                 </main>
@@ -386,5 +339,434 @@
         </div>
     </section>
 
+    {{-- About us --}}
+    <section class="bg-white py-12">
+        <div class="relative items-center w-full px-5 py-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+            <div class="w-full mx-auto text-left">
+                <div class="relative flex-col items-center m-auto align-middle">
+                    <div class="items-center gap-12 text-left lg:gap-24 lg:inline-flex">
+                        <div class="flex flex-col m-auto md:order-first">
+                            <div class="max-w-xl">
+                                <div>
+                                    <p class="text-2xl font-medium tracking-tight text-black">
+                                        Tentang Kami
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-6 lg:max-w-7xl">
+                                <p class="text-gray-400">
+                                    Nabila Zafira Mahalia, yang dikenal juga sebagai NaZMa Office, didirikan pada tahun
+                                    2007. Dengan pengalaman mencapai lebih dari 10 tahun, tepatnya sekitar 12 tahun,
+                                    NaZMa Office telah mengembangkan keahlian yang mendalam dalam bidang konsultan IT
+                                    dan layanan manajemen.
+                                </p>
+                                <ul role="list" class="grid md:grid-cols-2 gap-4 list-none lg:gap-6">
+                                    <li>
+                                        <div>
+                                            <p class="mt-5 text-lg font-medium leading-6 text-black">
+                                                Produk unggulan kami
+                                            </p>
+                                        </div>
+                                        <ul class="list-disc list-inside mt-3 text-gray-400">
+                                            <li>Penjualan hardware</li>
+                                            <li>Pengembangan perangkat lunak</li>
+                                            <li>Pelatihan IT</li>
+                                            <li>Pembuatan video profil</li>
+                                            <li>Pengembangan website</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <p class="mt-5 text-lg font-medium leading-6 text-black">
+                                                Dibidang konsultan:
+                                            </p>
+                                        </div>
+                                        <ul class="list-disc list-inside mt-3 text-gray-400">
+                                            <li>Pelatihan InHouse</li>
+                                            <li>Public course</li>
+                                            <li>Sertifikasi</li>
+                                            <li>Event organisasi</li>
+                                            <li>Kajian - kajian</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="order-first block w-full mt-8 lg:mt-0">
+                            <img class=" object-cover object-center rounded-lg w-full mx-auto bg-gray-300 border lg:ml-auto h-60 md:h-80"
+                                alt="hero" src="{{ asset('assets/images/hero2.jpg') }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Partners --}}
+    <section class="py-12">
+        <p class="text-gray-400 text-center px-10 md:px-0">
+            Lebih dari <strong>100+ mitra</strong> tumbuh bersama NaZMa Office
+        </p>
+        <div>
+            <div class="">
+                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8">
+                    <div class="mt-6 grid gap-5 md:gap-0.5 md:grid-flow-col lg:mt-8">
+                        <div class="flex justify-center col-span-1 px-8">
+                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 2.svg') }}"
+                                alt=" logo">
+                        </div>
+                        <div class="flex justify-center col-span-1 px-8">
+                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 3.svg') }}"
+                                alt="logo">
+                        </div>
+                        <div class="flex justify-center col-span-1 px-8">
+                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 4.svg') }}"
+                                alt="logo">
+                        </div>
+                        <div class="flex justify-center col-span-1 px-8">
+                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 5.svg') }}"
+                                alt="logo">
+                        </div>
+                        <div class="flex justify-center col-span-1 px-8">
+                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 6.svg') }}"
+                                alt="logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Testimonials --}}
+    <section class="py-12 bg-white">
+        <p class="text-2xl font-medium tracking-tight text-black text-center">
+            Apa Kata Mereka
+        </p>
+        <div class="max-w-7xl mx-auto" id="testimonial">
+            <div class="carousel carousel-center p-4 space-x-4 w-full">
+                <div id="item1" class="carousel-item">
+                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                        <div class="flex justify-between items-center mb-4">
+                            <img src="{{ asset('assets/images/noimage.jpg') }}"
+                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                            <div class="flex items-center">
+                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
+                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                                Faisal Salim
+                            </h5>
+                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                                Business Man
+                            </span>
+                        </a>
+                        <p class="mt-3 font-normal text-gray-500 ">
+                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
+                            yang kami
+                            miliki
+                        </p>
+                    </div>
+                </div>
+                <div id="item2" class="carousel-item">
+
+                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                        <div class="flex justify-between items-center mb-4">
+                            <img src="{{ asset('assets/images/noimage.jpg') }}"
+                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                            <div class="flex items-center">
+                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
+                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                                Faisal Salim
+                            </h5>
+                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                                Business Man
+                            </span>
+                        </a>
+                        <p class="mt-3 font-normal text-gray-500 ">
+                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
+                            yang kami
+                            miliki
+                        </p>
+                    </div>
+
+                </div>
+                <div id="item3" class="carousel-item">
+
+                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                        <div class="flex justify-between items-center mb-4">
+                            <img src="{{ asset('assets/images/noimage.jpg') }}"
+                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                            <div class="flex items-center">
+                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
+                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                                Faisal Salim
+                            </h5>
+                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                                Business Man
+                            </span>
+                        </a>
+                        <p class="mt-3 font-normal text-gray-500 ">
+                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
+                            yang kami
+                            miliki
+                        </p>
+                    </div>
+
+                </div>
+                <div id="item4" class="carousel-item">
+                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                        <div class="flex justify-between items-center mb-4">
+                            <img src="{{ asset('assets/images/noimage.jpg') }}"
+                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                            <div class="flex items-center">
+                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
+                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                                Faisal Salim
+                            </h5>
+                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                                Business Man
+                            </span>
+                        </a>
+                        <p class="mt-3 font-normal text-gray-500 ">
+                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
+                            yang kami
+                            miliki
+                        </p>
+                    </div>
+
+                </div>
+                <div id="item5" class="carousel-item">
+                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                        <div class="flex justify-between items-center mb-4">
+                            <img src="{{ asset('assets/images/noimage.jpg') }}"
+                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                            <div class="flex items-center">
+                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
+                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                                Faisal Salim
+                            </h5>
+                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                                Business Man
+                            </span>
+                        </a>
+                        <p class="mt-3 font-normal text-gray-500 ">
+                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
+                            yang kami
+                            miliki
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Project --}}
+    <section class="py-12">
+        <p class="text-2xl font-medium tracking-tight text-black text-center">
+            Proyek Kami
+        </p>
+        <p class="text-gray-400 text-center">
+            Kami telah berkontribusi dalam berbagai kegiatan untuk memajukan usaha <br> individu, kelompok, maupun UMKM
+        </p>
+        <div class="max-w-7xl mx-auto px-4 mt-8" id="testimonial">
+            <div class="carousel carousel-center p-4 gap-x-8 w-full">
+                <div class="carousel-item w-full lg:w-1/2">
+                    <div
+                        class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
+                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center"
+                            src="{{ asset('assets/images/hero1.jpg') }}" alt="">
+                        <div class="leading-normal col-span-2">
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                Noteworthy technology acquisitions 2021</h5>
+                            <p class="font-normal text-gray-400 mb-4 line-clamp-2">
+                                Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
+                                ilmu dan sharing pengalaman bisnisnya
+                            </p>
+
+                            <ul class="space-y-2 text-left text-gray-500 dark:text-gray-400">
+                                <li class="flex items-center space-x-3">
+                                    <ion-icon name="calendar"
+                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
+                                    <span>12 Agustus 2023</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <ion-icon name="navigate"
+                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
+                                    <span>Kabupaten Sleman, Yogyakarta</span>
+                                </li>
+                            </ul>
+                            <button
+                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                Selengkapnya
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item w-full lg:w-1/2">
+                    <div
+                        class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
+                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center"
+                            src="{{ asset('assets/images/hero1.jpg') }}" alt="">
+                        <div class="leading-normal col-span-2">
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                Noteworthy technology acquisitions 2021</h5>
+                            <p class="font-normal text-gray-400 mb-4 line-clamp-2">
+                                Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
+                                ilmu dan sharing pengalaman bisnisnya
+                            </p>
+
+                            <ul class="space-y-2 text-left text-gray-500 dark:text-gray-400">
+                                <li class="flex items-center space-x-3">
+                                    <ion-icon name="calendar"
+                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
+                                    <span>12 Agustus 2023</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <ion-icon name="navigate"
+                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
+                                    <span>Kabupaten Sleman, Yogyakarta</span>
+                                </li>
+                            </ul>
+                            <button
+                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                Selengkapnya
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item w-full lg:w-1/2">
+                    <div
+                        class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
+                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center"
+                            src="{{ asset('assets/images/hero1.jpg') }}" alt="">
+                        <div class="leading-normal col-span-2">
+                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                Noteworthy technology acquisitions 2021</h5>
+                            <p class="font-normal text-gray-400 mb-4 line-clamp-2">
+                                Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
+                                ilmu dan sharing pengalaman bisnisnya
+                            </p>
+
+                            <ul class="space-y-2 text-left text-gray-500 dark:text-gray-400">
+                                <li class="flex items-center space-x-3">
+                                    <ion-icon name="calendar"
+                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
+                                    <span>12 Agustus 2023</span>
+                                </li>
+                                <li class="flex items-center space-x-3">
+                                    <ion-icon name="navigate"
+                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
+                                    <span>Kabupaten Sleman, Yogyakarta</span>
+                                </li>
+                            </ul>
+                            <button
+                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                Selengkapnya
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Blog --}}
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl px-4 md:px-8 mx-auto">
+            <div class="flex justify-between items-center">
+                <div>
+                    <p class="text-medium text-black text-2xl">Informasi Terbaru</p>
+                    <p class="text-gray-400">
+                        Kami melakukan press release setiap kegiatan. Jangan sampai ketinggalan
+                    </p>
+                </div>
+                <div>
+                    <button
+                        class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-400 bg-transparent border border-gray-300 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                        Lihat Semua
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+                <figure>
+                    <img class="w-full bg-gray-200 rounded-lg h-60 object-cover object-center"
+                        src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+
+                    <p class="mt-5 text-lg font-medium leading-6 text-black">
+                        Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
+                    </p>
+                    <p class="mt-3 text-base text-gray-500 line-clamp-3">
+                        Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
+                        Bimbingan…
+                    </p>
+                    <hr class="text-gray-300 my-4 opacity-30">
+                    <p class="uppercase text-gray-400">12 agustus 2023</p>
+                </figure>
+                <figure>
+                    <img class="w-full bg-gray-200 rounded-lg h-60 object-cover object-center"
+                        src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+
+                    <p class="mt-5 text-lg font-medium leading-6 text-black">
+                        Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
+                    </p>
+                    <p class="mt-3 text-base text-gray-500 line-clamp-3">
+                        Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
+                        Bimbingan…
+                    </p>
+                    <hr class="text-gray-300 my-4 opacity-30">
+                    <p class="uppercase text-gray-400">12 agustus 2023</p>
+                </figure>
+                <figure>
+                    <img class="w-full bg-gray-200 rounded-lg h-60 object-cover object-center"
+                        src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+
+                    <p class="mt-5 text-lg font-medium leading-6 text-black">
+                        Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
+                    </p>
+                    <p class="mt-3 text-base text-gray-500 line-clamp-3">
+                        Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
+                        Bimbingan…
+                    </p>
+                    <hr class="text-gray-300 my-4 opacity-30">
+                    <p class="uppercase text-gray-400">12 agustus 2023</p>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    @push('js-internal')
+        <script>
+            // load each image async
+            const images = document.querySelectorAll('[data-carousel-item]');
+            images.forEach((image) => {
+                const src = image.getAttribute('data-carousel-item');
+                const img = new Image();
+                img.src = src;
+                img.onload = () => {
+                    image.style.backgroundImage = `url(${src})`;
+                    image.classList.remove('hidden');
+                };
+            });
+        </script>
+    @endpush
 
 </x-guest-layout>

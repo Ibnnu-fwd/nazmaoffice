@@ -30,7 +30,7 @@ module.exports = {
                     100: "#F2F2F2",
                     200: "#E0E0E0",
                     300: "#BDBDBD",
-                    400: "#828282",
+                    400: "#464646",
                     500: "#4F4F4F",
                     600: "#333333",
                     700: "#1A1A1A",
@@ -50,5 +50,5 @@ module.exports = {
           }
     },
 
-    plugins: [require('@tailwindcss/forms'), require('flowbite/plugin')],
+    plugins: [require('@tailwindcss/forms'), require('flowbite/plugin'), require('@tailwindcss/line-clamp')],
 };
