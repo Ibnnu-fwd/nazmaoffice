@@ -445,7 +445,7 @@
         <div class="max-w-7xl mx-auto" id="testimonial">
             <div class="carousel carousel-center p-4 space-x-4 w-full">
                 <div id="item1" class="carousel-item">
-                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
                                 class="w-20 h-20 object-center object-cover rounded-full" alt="">
@@ -471,7 +471,7 @@
                 </div>
                 <div id="item2" class="carousel-item">
 
-                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
                                 class="w-20 h-20 object-center object-cover rounded-full" alt="">
@@ -498,7 +498,7 @@
                 </div>
                 <div id="item3" class="carousel-item">
 
-                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
                                 class="w-20 h-20 object-center object-cover rounded-full" alt="">
@@ -524,7 +524,7 @@
 
                 </div>
                 <div id="item4" class="carousel-item">
-                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
                                 class="w-20 h-20 object-center object-cover rounded-full" alt="">
@@ -550,7 +550,7 @@
 
                 </div>
                 <div id="item5" class="carousel-item">
-                    <div class="max-w-sm p-6 bg-white rounded-lg border border-gray-50">
+                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
                                 class="w-20 h-20 object-center object-cover rounded-full" alt="">
@@ -587,14 +587,14 @@
             Kami telah berkontribusi dalam berbagai kegiatan untuk memajukan usaha <br> individu, kelompok, maupun UMKM
         </p>
         <div class="max-w-7xl mx-auto px-4 mt-8" id="testimonial">
-            <div class="carousel carousel-center p-4 gap-x-8 w-full">
+            <div class="carousel carousel-center md:mx-4 gap-x-8 w-full">
                 <div class="carousel-item w-full lg:w-1/2">
                     <div
                         class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
                         <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center"
                             src="{{ asset('assets/images/hero1.jpg') }}" alt="">
                         <div class="leading-normal col-span-2">
-                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <h5 class="mb-2 text-xl font-medium line-clamp-2 tracking-tight text-gray-900">
                                 Noteworthy technology acquisitions 2021</h5>
                             <p class="font-normal text-gray-400 mb-4 line-clamp-2">
                                 Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
@@ -614,7 +614,7 @@
                                 </li>
                             </ul>
                             <button
-                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-md font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                                 Selengkapnya
                             </button>
                         </div>
@@ -626,7 +626,7 @@
                         <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center"
                             src="{{ asset('assets/images/hero1.jpg') }}" alt="">
                         <div class="leading-normal col-span-2">
-                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <h5 class="mb-2 text-xl font-medium line-clamp-2 tracking-tight text-gray-900">
                                 Noteworthy technology acquisitions 2021</h5>
                             <p class="font-normal text-gray-400 mb-4 line-clamp-2">
                                 Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
@@ -646,7 +646,7 @@
                                 </li>
                             </ul>
                             <button
-                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-md font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                                 Selengkapnya
                             </button>
                         </div>
@@ -658,7 +658,7 @@
                         <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center"
                             src="{{ asset('assets/images/hero1.jpg') }}" alt="">
                         <div class="leading-normal col-span-2">
-                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <h5 class="mb-2 text-xl font-medium line-clamp-2 tracking-tight text-gray-900">
                                 Noteworthy technology acquisitions 2021</h5>
                             <p class="font-normal text-gray-400 mb-4 line-clamp-2">
                                 Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
@@ -678,7 +678,7 @@
                                 </li>
                             </ul>
                             <button
-                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-md font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                                 Selengkapnya
                             </button>
                         </div>
@@ -693,20 +693,20 @@
         <div class="max-w-7xl px-4 md:px-8 mx-auto">
             <div class="flex justify-between items-center">
                 <div>
-                    <p class="text-medium text-black text-2xl">Informasi Terbaru</p>
+                    <p class="text-medium tracking-tight text-black text-2xl">Informasi Terbaru</p>
                     <p class="text-gray-400">
                         Kami melakukan press release setiap kegiatan. Jangan sampai ketinggalan
                     </p>
                 </div>
                 <div>
                     <button
-                        class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-400 bg-transparent border border-gray-300 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                        class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
                         Lihat Semua
                     </button>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
                 <figure>
                     <img class="w-full bg-gray-200 rounded-lg h-60 object-cover object-center"
                         src="{{ asset('assets/images/noimage.jpg') }}" alt="">
@@ -752,6 +752,172 @@
             </div>
         </div>
     </section>
+
+    {{-- Faq --}}
+    <section class="py-12 max-w-2xl mx-auto">
+        <p class="text-2xl font-medium tracking-tight text-black text-center">
+            Pertanyaan Umum
+        </p>
+        <p class="text-center text-gray-400">
+            Beberapa pertanyaan yang sering diajukan untuk layanan pada website NaZMa Office.
+        </p>
+
+
+        <div id="accordion-arrow-icon" data-accordion="open" class="mt-8 mx-4 md:mx-0">
+            <h2 id="accordion-arrow-icon-heading-2" class="rounded-lg mb-3 bg-white">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                    data-accordion-target="#accordion-arrow-icon-body-2" aria-expanded="false"
+                    aria-controls="accordion-arrow-icon-body-2">
+                    <span>Apa itu website NaZMa Office?</span>
+                    <ion-icon name="chevron-down-circle-outline" data-accordion-icon
+                        class="shrink-0 -mr-0.5 w-6 h-6"></ion-icon>
+                </button>
+            </h2>
+            <div id="accordion-arrow-icon-body-2" class="hidden mb-4"
+                aria-labelledby="accordion-arrow-icon-heading-2">
+                <div class="p-5 bg-white rounded-lg">
+                    <p class="text-gray-400 text-xs 2xl:text-md">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quae, officiis veniam
+                        similique animi architecto soluta nostrum, sed quaerat fuga vitae atque ipsam et nisi quo
+                        eveniet voluptatem sint dignissimos.
+                    </p>
+                </div>
+            </div>
+            <h2 id="accordion-arrow-icon-heading-3" class="rounded-lg mb-3 bg-white">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                    data-accordion-target="#accordion-arrow-icon-body-3" aria-expanded="false"
+                    aria-controls="accordion-arrow-icon-body-3">
+                    <span>Kapan saja jam operasional NaZMa Office?</span>
+                    <ion-icon name="chevron-down-circle-outline" data-accordion-icon
+                        class="shrink-0 -mr-0.5 w-6 h-6"></ion-icon>
+                </button>
+            </h2>
+            <div id="accordion-arrow-icon-body-3" class="hidden mb-4"
+                aria-labelledby="accordion-arrow-icon-heading-3">
+                <div class="p-5 bg-white rounded-lg">
+                    <p class="text-gray-400 text-xs 2xl:text-md">
+                        Jam kerja admin: <br>
+                        Setiap hari (Senin-Minggu) <br>
+                        Jam 09:00-19:00 WIB
+                    </p>
+                </div>
+            </div>
+            <h2 id="accordion-arrow-icon-heading-4" class="rounded-lg mb-3 bg-white">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                    data-accordion-target="#accordion-arrow-icon-body-4" aria-expanded="false"
+                    aria-controls="accordion-arrow-icon-body-4">
+                    <span>Bagaimana cara menghubungi NaZMa Office?</span>
+                    <ion-icon name="chevron-down-circle-outline" data-accordion-icon
+                        class="shrink-0 -mr-0.5 w-6 h-6"></ion-icon>
+                </button>
+            </h2>
+            <div id="accordion-arrow-icon-body-4" class="hidden mb-4"
+                aria-labelledby="accordion-arrow-icon-heading-4">
+                <div class="p-5 bg-white rounded-lg">
+                    <p class="text-gray-400 text-xs 2xl:text-md">
+                        Anda dapat menghubungi kami melalui email, telepon, atau mengisi form yang telah kami sediakan
+                        pada halaman kontak.
+                    </p>
+                </div>
+            </div>
+            <h2 id="accordion-arrow-icon-heading-5" class="rounded-lg mb-3 bg-white">
+                <button type="button"
+                    class="flex items-center justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                    data-accordion-target="#accordion-arrow-icon-body-5" aria-expanded="false"
+                    aria-controls="accordion-arrow-icon-body-5">
+                    <span>Bagaimana cara memesan produk NaZMa Office?</span>
+                    <ion-icon name="chevron-down-circle-outline" data-accordion-icon
+                        class="shrink-0 -mr-0.5 w-6 h-6"></ion-icon>
+                </button>
+            </h2>
+            <div id="accordion-arrow-icon-body-5" class="hidden mb-4"
+                aria-labelledby="accordion-arrow-icon-heading-5">
+                <div class="p-5 bg-white rounded-lg">
+                    <p class="text-gray-400 text-xs 2xl:text-md">
+                        Anda dapat memesan produk kami melalui website ini, atau menghubungi kami melalui email,
+                        telepon, atau mengisi form yang telah kami sediakan pada halaman kontak.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    {{-- Footer --}}
+
+    <footer class="border-t border-gray-200">
+        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-16">
+            <div class="grid md:grid-cols-2 gap-12 md:gap-28">
+                <div>
+                    <div class="mb-8">
+                        <h1 class="font-medium text-lg text-black mb-2">NaZMa Office</h1>
+                        <p class="text-gray-400 text-sm">
+                            Nabila Zafira Mahalia atau yang biasa disebut sebagai NaZMa Office berdiri pada tahun 2007.
+                            NaZMa Office telah memiliki pengalaman kurang lebih sekitar 12 tahun dalam bidang Konsultan
+                            IT
+                            dan Manajemen
+                        </p>
+                    </div>
+
+                    <div class="mb-3">
+                        <h1 class="font-medium text-md text-black">No. Telepon Kantor</h1>
+                        <p class="text-gray-400 text-sm">
+                            (0274) 542850
+                        </p>
+                    </div>
+
+                    <div class="mb-3">
+                        <h1 class="font-medium text-md text-black">No. Handphone</h1>
+                        <p class="text-gray-400 text-sm">
+                            087834671064 (Meylin)
+                        </p>
+                    </div>
+
+                    <div class="mb-3">
+                        <h1 class="font-medium text-md text-black">Email</h1>
+                        <p class="text-gray-400 text-sm">
+                            itmcnazma@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-6">
+                        <h1 class="font-medium text-md text-black">Alamat</h1>
+                        <ul class="list-disc list-inside mt-6 list">
+                            <li class="md:pl-6 mb-2">
+                                <span class="font-medium text-black">KANTOR CABANG</span>
+                                <p class="text-gray-400 pl-5">
+                                    Serangan NG II/191 RT 010 RW 002 Notoprajan, Ngampilan, Yogyakarta
+                                </p>
+                            </li>
+                            <li class="md:pl-6">
+                                <span class="font-medium text-black">KANTOR PUSAT</span>
+                                <p class="text-gray-400 pl-5">
+                                    Jl. Selokan Mataram, Pogung Dalangan SIA XVI/11 No. 16, Sleman, Yogyakarta 55284
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h1 class="font-medium text-md text-black">Ikut Kami</h1>
+                        <div class="flex gap-2 mt-3">
+                            <ion-icon name="logo-instagram" class="text-gray-400"></ion-icon>
+                            <ion-icon name="logo-facebook" class="text-gray-400"></ion-icon>
+                            <ion-icon name="logo-twitter" class="text-gray-400"></ion-icon>
+                            <ion-icon name="logo-youtube" class="text-gray-400"></ion-icon>
+                            <ion-icon name="logo-linkedin" class="text-gray-400"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
 
     @push('js-internal')
         <script>
