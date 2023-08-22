@@ -14,7 +14,40 @@ module.exports = {
             fontFamily: {
                 sans: ['rubik', ...defaultTheme.fontFamily.sans],
             },
+
+            colors: {
+                primary  : "#2C2F75",
+                secondary: "#ED2B2A",
+                info     : "#F15A59",
+                danger   : "#D21312",
+                success  : "#5D9C59",
+                warning  : "#FD8D14",
+                light    : "#F2F2F2",
+                dark     : "#070A52",
+                black    : "#2E3840",
+                white    : "#FFFFFF",
+                gray: {
+                    100: "#F2F2F2",
+                    200: "#E0E0E0",
+                    300: "#BDBDBD",
+                    400: "#828282",
+                    500: "#4F4F4F",
+                    600: "#333333",
+                    700: "#1A1A1A",
+                    800: "#070A52",
+                    900: "#000000",
+                },
+            },
         },
+        fontSize: {
+            sm: '0.8rem',
+            base: '1rem',
+            xl: '1.25rem',
+            '2xl': '1.563rem',
+            '3xl': '1.953rem',
+            '4xl': '2.441rem',
+            '5xl': '3.052rem',
+          }
     },
 
     plugins: [require('@tailwindcss/forms'), require('flowbite/plugin')],

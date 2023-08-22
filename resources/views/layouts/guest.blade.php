@@ -13,11 +13,14 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    @stack('css-internal')
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased bg-gray-50">
     {{ $slot }}
-    <script src="../path/to/flowbite/dist/flowbite.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
 </body>
 
 </html>
