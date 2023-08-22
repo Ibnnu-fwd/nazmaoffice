@@ -393,7 +393,7 @@
                             </div>
                         </div>
                         <div class="order-first block w-full mt-8 lg:mt-0">
-                            <img class=" object-cover object-center rounded-lg w-full mx-auto bg-gray-300 border lg:ml-auto h-60 md:h-80"
+                            <img class=" object-cover object-center rounded-lg w-full mx-auto bg-gray-300 lg:ml-auto h-60 md:h-80"
                                 alt="hero" src="{{ asset('assets/images/hero2.jpg') }}">
                         </div>
                     </div>
