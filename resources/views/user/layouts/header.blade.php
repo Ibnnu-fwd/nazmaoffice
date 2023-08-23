@@ -39,10 +39,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                        class="px-4 py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600">
-                        Blog
-                    </a>
+                    <a href="{{ route('user.blog') }}"
+                        class="px-4 py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.blog') || request()->routeIs('user.blog.detail') ? 'text-primary' : '' }}">
+                        Blog </a>
                 </li>
                 <li>
                     <a href="{{ route('user.gallery') }}"

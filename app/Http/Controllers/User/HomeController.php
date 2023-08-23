@@ -30,4 +30,20 @@ class HomeController extends Controller
     {
         return view('user.gallery');
     }
+
+    /* 
+        * This function is used to display the blog page
+    */
+    public function blog()
+    {
+        return view('user.blog');
+    }
+
+    /* 
+        * This function is used to display the blog detail page
+    */
+    public function blogDetail($id)
+    {
+        return view('blog.detail');
+    }
 }

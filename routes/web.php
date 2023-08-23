@@ -8,14 +8,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
 Route::get('about', [HomeController::class, 'about'])->name('user.about');
 Route::get('gallery', [HomeController::class, 'gallery'])->name('user.gallery');
-
+Route::get('blog', [HomeController::class, 'blog'])->name('user.blog');
+Route::get('blog/{id}', [HomeController::class, 'blogDetail'])->name('user.blog.detail');
 
 Route::get('/loginPage', [AdminController::class, 'login'])->name('admin.login');
 
-Route::group(['prefix' => 'admin'], function() {
-    
+Route::group(['prefix' => 'admin'], function () {
+
     // Dashboard
-        
+
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/blog', [AdminController::class, 'blog'])->name('admin.blog');
     Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');
@@ -25,9 +26,6 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/partnership', [AdminController::class, 'partnership]'])->name('admin.partnership');
     Route::get('/gallery', [AdminController::class, 'gallery'])->name('admin.gallery');
     Route::get('/sidebar', [AdminController::class, 'sidebar'])->name('admin.sidebar');
-
-
-
 });
 
 require __DIR__ . '/auth.php';
