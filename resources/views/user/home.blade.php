@@ -4,72 +4,6 @@
         <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     @endpush
 
-    {{-- Navbar --}}
-    <div class="mx-auto bg-white w-full">
-        <div x-data="{ open: false }"
-            class="relative flex flex-col w-full p-5 mx-auto bg-white md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 md:max-w-7xl">
-            <div class="flex flex-row items-center justify-between lg:justify-start">
-                <a class="text-lg tracking-tight text-black uppercase focus:outline-none focus:ring lg:text-2xl"
-                    href="/">
-                    <span class="lg:text-lg uppecase focus:ring-0">
-                        nazma office
-                    </span>
-                </a>
-                <button @click="open = !open"
-                    class="inline-flex items-center justify-center p-2 text-gray-400 hover:text-black focus:outline-none focus:text-black md:hidden">
-                    <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{ 'hidden': open, 'inline-flex': !open }" class="inline-flex"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                        </path>
-                        <path :class="{ 'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <nav :class="{ 'flex': open, 'hidden': !open }"
-                class="flex-col flex-grow hidden py-10 md:flex lg:py-0 md:justify-end md:flex-row">
-                <ul class="space-y-2 list-none md:space-y-0 md:items-center md:inline-flex">
-                    <li>
-                        <a href="#"
-                            class="px-4 py-8 text-sm text-gray-500 border-b-2 border-transparent lg:px-6 hover:border-blue-500 md:px-3 hover:text-blue-600">
-                            Beranda
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="px-4 py-8 text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 hover:border-blue-500">
-                            Tentang Kami
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="px-4 py-8 text-sm text-gray-500 border-b-2 border-transparent lg:px-6 hover:border-blue-500 md:px-3 hover:text-blue-600">
-                            Layanan
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="px-4 py-8 text-sm text-gray-500 border-b-2 border-transparent lg:px-6 hover:border-blue-500 md:px-3 hover:text-blue-600">
-                            Blog
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="px-4 py-8 mr-0 md:mr-3 text-sm text-gray-500 border-b-2 border-transparent lg:px-6 hover:border-blue-500 md:px-3 hover:text-blue-600">
-                            Galeri
-                        </a>
-                    </li>
-                    <li>
-                        <button
-                            class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
-                            Acara
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
     {{-- Hero --}}
     <div id="indicators-carousel" class="relative w-full" data-carousel="static">
         <!-- Carousel wrapper -->
@@ -80,7 +14,7 @@
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60 dark:from-gray-800/60"></div>
                 <div class="absolute top-0 bottom-0 md:right-0 z-20 text-white md:w-1/2 p-10 md:py-32 text-start">
-                    <p class="font-normal text-xs 2xl:text-sm">
+                    <p class="font-normal text-xs 2xl:text-md">
                         Halo, Selamat Datang di Website Nazma Office!
                     </p>
                     <p class="font-semibold text-2xl md:text-3xl lg:text-5xl mt-2">
@@ -845,85 +779,6 @@
         </div>
 
     </section>
-
-    {{-- Footer --}}
-
-    <footer class="bg-white">
-        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-16">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-28">
-                <div>
-                    <div class="mb-8">
-                        <h1 class="font-medium text-lg text-black mb-2">NaZMa Office</h1>
-                        <p class="text-gray-400">
-                            Nabila Zafira Mahalia atau yang biasa disebut sebagai NaZMa Office berdiri pada tahun 2007.
-                            NaZMa Office telah memiliki pengalaman kurang lebih sekitar 12 tahun dalam bidang Konsultan
-                            IT
-                            dan Manajemen
-                        </p>
-                    </div>
-
-                    <div class="mb-3">
-                        <h1 class="font-medium text-md text-black">No. Telepon Kantor</h1>
-                        <p class="text-gray-400">
-                            (0274) 542850
-                        </p>
-                    </div>
-
-                    <div class="mb-3">
-                        <h1 class="font-medium text-md text-black">No. Handphone</h1>
-                        <p class="text-gray-400">
-                            087834671064 (Meylin)
-                        </p>
-                    </div>
-
-                    <div class="mb-3">
-                        <h1 class="font-medium text-md text-black">Email</h1>
-                        <p class="text-gray-400">
-                            itmcnazma@gmail.com
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <div class="mb-6">
-                        <h1 class="font-medium text-md text-black">Alamat</h1>
-                        <ul class="list-disc list-inside mt-6 list">
-                            <li class="md:pl-6 mb-2">
-                                <span class="font-medium text-black">KANTOR CABANG</span>
-                                <p class="text-gray-400 pl-5">
-                                    Serangan NG II/191 RT 010 RW 002 Notoprajan, Ngampilan, Yogyakarta
-                                </p>
-                            </li>
-                            <li class="md:pl-6">
-                                <span class="font-medium text-black">KANTOR PUSAT</span>
-                                <p class="text-gray-400 pl-5">
-                                    Jl. Selokan Mataram, Pogung Dalangan SIA XVI/11 No. 16, Sleman, Yogyakarta 55284
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h1 class="font-medium text-md text-black">Ikut Kami</h1>
-                        <div class="flex gap-2 mt-3">
-                            <ion-icon name="logo-instagram" class="text-gray-400"></ion-icon>
-                            <ion-icon name="logo-facebook" class="text-gray-400"></ion-icon>
-                            <ion-icon name="logo-twitter" class="text-gray-400"></ion-icon>
-                            <ion-icon name="logo-youtube" class="text-gray-400"></ion-icon>
-                            <ion-icon name="logo-linkedin" class="text-gray-400"></ion-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bg-primary py-4">
-            <p class="text-center text-white">
-                CV. NaZMa Office. <br>
-                Yogyakarta, Indonesia
-            </p>
-        </div>
-    </footer>
-
-
 
     @push('js-internal')
         <script>

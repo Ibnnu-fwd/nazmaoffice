@@ -18,7 +18,11 @@
 </head>
 
 <body class="font-sans antialiased bg-gray-50">
+    @include('user.layouts.header')
+
     {{ $slot }}
+
+    @include('user.layouts.footer')
 
     <!-- Flowbite -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
@@ -26,6 +30,8 @@
     <!-- Ion Icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script></script>
 </body>
 
 </html>
