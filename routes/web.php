@@ -11,6 +11,8 @@ Route::get('about', [HomeController::class, 'about'])->name('user.about');
 Route::group(['prefix' => 'admin'], function() {
     
     // Dashboard
+    
+    Route::get('/auth', [AdminController::class, 'login'])->name('admin.login');
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 
 });
