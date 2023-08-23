@@ -23,71 +23,92 @@
                     <i x-show="isOpen" class="fas fa-times"></i>
                 </button>
             </div>
-
-            <!-- Dropdown Nav -->
-            <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4">
-                <a href="index.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-tachometer-alt mr-3"></i>
-                    Dashboard
-                </a>
-                <a href="blank.html" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
-                    <i class="fas fa-sticky-note mr-3"></i>
-                    Blank Page
-                </a>
-                <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-table mr-3"></i>
-                    Tables
-                </a>
-                <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-align-left mr-3"></i>
-                    Forms
-                </a>
-                <a href="tabs.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-tablet-alt mr-3"></i>
-                    Tabbed Content
-                </a>
-                <a href="calendar.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-calendar mr-3"></i>
-                    Calendar
-                </a>
-                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-cogs mr-3"></i>
-                    Support
-                </a>
-                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-user mr-3"></i>
-                    My Account
-                </a>
-                <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-sign-out-alt mr-3"></i>
-                    Sign Out
-                </a>
-                <button class="w-full bg-white cta-btn font-semibold py-2 mt-3 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                    <i class="fas fa-arrow-circle-up mr-3"></i> Upgrade to Pro!
-                </button>
-            </nav>
-            <!-- <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                <i class="fas fa-plus mr-3"></i> New Report
-            </button> -->
         </header>
     
         <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
             <main class="w-full flex-grow p-6">
-                <h1 class="text-3xl text-black pb-6">CREW Page</h1>
+                <h1 class="text-3xl text-black pb-6">Crew Management</h1>
 
                 <!-- Content goes here! 😁 -->
+                <a href="{{ route('admin.addcrew') }}">
+                    <x-primary-button>Add New Crew</x-primary-button>
+                </a>
+
+                <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-4">
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    Foto
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Nama
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Posisi
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td class="w-32 p-2">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Apple Watch">
+                                </td>
+                                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                                    Sukmadhia Aqila Risnuasa
+                                </td>
+                                
+                                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                                    Creative Crew
+                                </td>
+                                <td class="px-6 py-4">
+                                    <x-primary-button class="bg-yellow-400">Edit</x-primary-button>
+                                    <x-primary-button class="bg-red-500">Remove</x-primary-button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td class="w-32 p-2">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Apple Watch">
+                                </td>
+                                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                                    Novia Rahmawati
+                                </td>
+                                
+                                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                                    Creative Crew
+                                </td>
+                                <td class="px-6 py-4">
+                                    <x-primary-button class="bg-yellow-400">Edit</x-primary-button>
+                                    <x-primary-button class="bg-red-500">Remove</x-primary-button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <td class="w-32 p-2">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Apple Watch">
+                                </td>
+                                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                                    Risti Yulia
+                                </td>
+                                
+                                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                                    Creative Crew
+                                </td>
+                                <td class="px-6 py-4">
+                                    <x-primary-button class="bg-yellow-400">Edit</x-primary-button>
+                                    <x-primary-button class="bg-red-500">Remove</x-primary-button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </main>
     
-            <footer class="w-full bg-white text-right p-4">
-                Built by <a target="_blank" href="https://davidgrzyb.com" class="underline">David Grzyb</a>.
-            </footer>
         </div>
         
     </div>
-
-    <!-- AlpineJS -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <!-- Font Awesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 </x-app-layout>
     
