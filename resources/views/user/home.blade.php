@@ -143,7 +143,7 @@
 
     {{-- Insight --}}
     <section class="bg-white">
-        <p class="text-2xl font-medium text-black text-center pt-12 mb-8 mx-2 md:mx-0">
+        <p class="text-2xl font-medium text-black text-center pt-12 mb-2 mx-2 md:mx-0">
             Terima Kasih Telah Mempercayai Kami
         </p>
         <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-4 lg:grid-cols-4 max-w-4xl mx-auto">
@@ -693,14 +693,14 @@
         <div class="max-w-7xl px-4 md:px-8 mx-auto">
             <div class="flex justify-between items-center">
                 <div>
-                    <p class="text-medium tracking-tight text-black text-2xl">Informasi Terbaru</p>
+                    <p class="font-medium tracking-tight text-black text-2xl">Informasi Terbaru</p>
                     <p class="text-gray-400">
                         Kami melakukan press release setiap kegiatan. Jangan sampai ketinggalan
                     </p>
                 </div>
                 <div>
                     <button
-                        class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
+                        class="inline-flex items-center justify-center px-3 py-2 text-md text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
                         Lihat Semua
                     </button>
                 </div>
@@ -848,13 +848,13 @@
 
     {{-- Footer --}}
 
-    <footer class="border-t border-gray-200">
+    <footer class="bg-white">
         <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-16">
             <div class="grid md:grid-cols-2 gap-12 md:gap-28">
                 <div>
                     <div class="mb-8">
                         <h1 class="font-medium text-lg text-black mb-2">NaZMa Office</h1>
-                        <p class="text-gray-400 text-sm">
+                        <p class="text-gray-400">
                             Nabila Zafira Mahalia atau yang biasa disebut sebagai NaZMa Office berdiri pada tahun 2007.
                             NaZMa Office telah memiliki pengalaman kurang lebih sekitar 12 tahun dalam bidang Konsultan
                             IT
@@ -864,21 +864,21 @@
 
                     <div class="mb-3">
                         <h1 class="font-medium text-md text-black">No. Telepon Kantor</h1>
-                        <p class="text-gray-400 text-sm">
+                        <p class="text-gray-400">
                             (0274) 542850
                         </p>
                     </div>
 
                     <div class="mb-3">
                         <h1 class="font-medium text-md text-black">No. Handphone</h1>
-                        <p class="text-gray-400 text-sm">
+                        <p class="text-gray-400">
                             087834671064 (Meylin)
                         </p>
                     </div>
 
                     <div class="mb-3">
                         <h1 class="font-medium text-md text-black">Email</h1>
-                        <p class="text-gray-400 text-sm">
+                        <p class="text-gray-400">
                             itmcnazma@gmail.com
                         </p>
                     </div>
@@ -914,6 +914,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="bg-primary py-4">
+            <p class="text-center text-white">
+                CV. NaZMa Office. <br>
+                Yogyakarta, Indonesia
+            </p>
         </div>
     </footer>
 
