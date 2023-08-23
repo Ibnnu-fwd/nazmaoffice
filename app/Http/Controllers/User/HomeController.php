@@ -22,4 +22,12 @@ class HomeController extends Controller
     {
         return view('user.about');
     }
+
+    /* 
+        * This function is used to display the gallery page
+    */
+    public function gallery()
+    {
+        return view('user.gallery');
+    }
 }

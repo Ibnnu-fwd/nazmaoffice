@@ -45,14 +45,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                        class="px-4 py-8 mr-0 md:mr-3 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600">
+                    <a href="{{ route('user.gallery') }}"
+                        class="px-4 py-8 mr-0 md:mr-3 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.gallery') ? 'text-primary' : '' }}">
                         Galeri
                     </a>
                 </li>
                 <li>
                     <button
-                        class="inline-flex items-center justify-center px-4 py-2 text-xs 2xl:text-md font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                        class="inline-flex
+                        items-center justify-center px-4 py-2 text-xs 2xl:text-md font-medium text-white bg-primary
+                        rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
+                        hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                         Acara
                     </button>
                 </li>
