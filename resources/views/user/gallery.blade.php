@@ -22,7 +22,7 @@
         </form>
 
         <div>
-            <div class="flex justify-between items-center md:px-20 mt-16">
+            <div class="flex justify-between items-center px-10 md:px-24 lg:px-20 xl:px-44 mt-16">
                 <h1 class="text-gray-300 text-4xl font-bold">2023</h1>
                 <ion-icon class="text-gray-300 text-5xl" name="chevron-down-circle-outline"></ion-icon>
             </div>
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div>
-            <div class="flex justify-between items-center md:px-20 mt-16">
+            <div class="flex justify-between items-center md:px-48 mt-16">
                 <h1 class="text-gray-300 text-4xl font-bold">2022</h1>
                 <ion-icon class="text-gray-300 text-5xl" name="chevron-down-circle-outline"></ion-icon>
             </div>
