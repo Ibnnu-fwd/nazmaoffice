@@ -10,6 +10,7 @@ Route::get('about', [HomeController::class, 'about'])->name('user.about');
 Route::get('gallery', [HomeController::class, 'gallery'])->name('user.gallery');
 Route::get('blog', [HomeController::class, 'blog'])->name('user.blog');
 Route::get('blog/{id}', [HomeController::class, 'blogDetail'])->name('user.blog.detail');
+Route::get('event', [HomeController::class, 'event'])->name('user.event');
 
 Route::get('/loginPage', [AdminController::class, 'login'])->name('admin.login');
 

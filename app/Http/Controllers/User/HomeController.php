@@ -46,4 +46,12 @@ class HomeController extends Controller
     {
         return view('blog.detail');
     }
+
+    /* 
+        * This function is used to display the event page
+    */
+    public function event()
+    {
+        return view('user.event');
+    }
 }

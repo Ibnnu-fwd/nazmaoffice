@@ -48,7 +48,7 @@
         <h1 class="font-medium text-center text-2xl text-black tracking-tight">
             Artikel Terkait
         </h1>
-        <section class="flex items-center w-full">
+        <section class="flex items-center w-full my-12">
             <div class="relative items-center w-full">
                 <div class="grid grid-cols-2 gap-x-6 gap-y-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
                     @for ($i = 1; $i <= 3; $i++)

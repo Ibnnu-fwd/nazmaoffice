@@ -50,13 +50,15 @@
                     </a>
                 </li>
                 <li>
-                    <button
+                    <a href="{{ route('user.event') }}"
                         class="inline-flex
                         items-center justify-center px-4 py-2 text-xs 2xl:text-md font-medium text-white bg-primary
                         rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
-                        hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                        hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black
+                        {{ request()->routeIs('user.event') ? 'text-white bg-primary' : 'text-primary bg-white' }}
+                        ">
                         Acara
-                    </button>
+                    </a>
                 </li>
             </ul>
         </nav>

@@ -91,12 +91,11 @@
                         <div
                             class="z-10 flex items-center justify-center w-4 h-4 bg-orange-700 rounded-full ring-white shrink-0">
                         </div>
-                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.0.0</h3>
-                        <time
-                            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
+                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
                         <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
                             interactive elements.</p>
@@ -107,12 +106,11 @@
                         <div
                             class="z-10 flex items-center justify-center w-4 h-4 bg-orange-700 rounded-full ring-white shrink-0">
                         </div>
-                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.0.0</h3>
-                        <time
-                            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
+                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
                         <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
                             interactive elements.</p>
@@ -123,12 +121,11 @@
                         <div
                             class="z-10 flex items-center justify-center w-4 h-4 bg-orange-700 rounded-full ring-white shrink-0">
                         </div>
-                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.0.0</h3>
-                        <time
-                            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
+                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
                         <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
                             interactive elements.</p>
@@ -139,12 +136,11 @@
                         <div
                             class="z-10 flex items-center justify-center w-4 h-4 bg-orange-700 rounded-full ring-white shrink-0">
                         </div>
-                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.0.0</h3>
-                        <time
-                            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
+                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
                         <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
                             interactive elements.</p>
@@ -155,12 +151,11 @@
                         <div
                             class="z-10 flex items-center justify-center w-4 h-4 bg-orange-700 rounded-full ring-white shrink-0">
                         </div>
-                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                        <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flowbite Library v1.0.0</h3>
-                        <time
-                            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released
+                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
                         <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
                             interactive elements.</p>

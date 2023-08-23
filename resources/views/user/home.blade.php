@@ -2,6 +2,10 @@
 
     @push('css-internal')
         <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+
+        <style>
+
+        </style>
     @endpush
 
     {{-- Hero --}}
@@ -376,7 +380,7 @@
         <p class="text-2xl font-medium tracking-tight text-black text-center">
             Apa Kata Mereka
         </p>
-        <div class="max-w-7xl mx-auto" id="testimonial">
+        <div id="testimonial">
             <div class="carousel carousel-center p-4 space-x-4 w-full">
                 <div id="item1" class="carousel-item">
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
@@ -520,7 +524,7 @@
         <p class="text-gray-400 text-center">
             Kami telah berkontribusi dalam berbagai kegiatan untuk memajukan usaha <br> individu, kelompok, maupun UMKM
         </p>
-        <div class="max-w-7xl mx-auto px-4 mt-8" id="testimonial">
+        <div class="max-w-7xl mx-auto px-4 mt-8">
             <div class="carousel carousel-center md:mx-4 gap-x-8 w-full">
                 <div class="carousel-item w-full lg:w-1/2">
                     <div
@@ -793,6 +797,25 @@
                     image.classList.remove('hidden');
                 };
             });
+        </script>
+
+        <script>
+            const carousel = document.querySelector('.carousel');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+
+            let currentItem = 0;
+
+            function slideNext() {
+                currentItem = (currentItem + 1) % carouselItems.length;
+                updateCarouselPosition();
+            }
+
+            function updateCarouselPosition() {
+                const itemWidth = carouselItems[currentItem].clientWidth;
+                carousel.style.transform = `translateX(-${itemWidth * currentItem}px)`;
+            }
+
+            setInterval(slideNext, 2000); // Change slide every 2 seconds
         </script>
     @endpush
 

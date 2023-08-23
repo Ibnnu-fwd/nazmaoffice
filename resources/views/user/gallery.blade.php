@@ -29,7 +29,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
                 @for ($i = 1; $i <= 9; $i++)
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-6">
+                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
                         <a href="#">
                             <img class="rounded-xl" src="{{ asset('assets/images/hero2.jpg') }}" alt="" />
                         </a>
@@ -55,7 +55,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
                 @for ($i = 1; $i <= 9; $i++)
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-6">
+                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
                         <a href="#">
                             <img class="rounded-xl" src="{{ asset('assets/images/hero2.jpg') }}" alt="" />
                         </a>
