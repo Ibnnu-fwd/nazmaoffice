@@ -22,7 +22,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/project', [AdminController::class, 'project'])->name('admin.project');
     Route::get('/testimony', [AdminController::class, 'testimony'])->name('admin.testimony');
     Route::get('/trainers', [AdminController::class, 'trainers'])->name('admin.trainers');
-    Route::get('/partnership', [AdminController::class, 'partnership]'])->name('admin.partnership');
+    Route::get('/partnership', [AdminController::class, 'partnership'])->name('admin.partnership');
     Route::get('/gallery', [AdminController::class, 'gallery'])->name('admin.gallery');
     Route::get('/sidebar', [AdminController::class, 'sidebar'])->name('admin.sidebar');
 
