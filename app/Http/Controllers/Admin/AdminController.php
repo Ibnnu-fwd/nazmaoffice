@@ -16,4 +16,46 @@ class AdminController extends Controller
     {
         return view('admin.login');
     }
+
+    public function blog()
+    {
+        return view('admin.blog');
+    }
+
+    public function crew()
+    {
+        return view('admin.crew');
+    }
+
+    public function project()
+    {
+        return view('admin.project');
+    }
+    
+    public function trainers()
+    {
+        return view('admin.trainers');
+    }
+
+    public function testimony()
+    {
+        return view('admin.testimony');
+    }
+
+    public function partnership()
+    {
+        return view('admin.partnership');
+    }
+
+    public function gallery()
+    {
+        return view('admin.gallery');
+    }
+
+    public function sidebar()
+    {
+        return view('admin.sidebar');
+    }
+
+
 }
