@@ -11,31 +11,31 @@
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Dashboard
             </a>
-            <a href="{{ url('project')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+            <a href="{{ url('admin/project')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Project
             </a>
-            <a href="{{ url('testimony')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+            <a href="{{ url('admin/testimony')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Testimony
             </a>
-            <a href="{{ url('trainers')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+            <a href="{{ url('admin/trainers')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Certified Trainers
             </a>
-            <a href="{{ url('crew')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+            <a href="{{ url('admin/crew')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Creative Crews
             </a>
-            <a href="{{ url('partnership')}}"" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <a href="{{ url('admin/partnership')}}"" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-sticky-note mr-3"></i>
                 Partnership
             </a>
-            <a href="{{ url('blog')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+            <a href="{{ url('admin/blog')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Blog
             </a>
-            <a href="{{ url('gallery')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+            <a href="{{ url('admin/gallery')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Gallery
             </a>
