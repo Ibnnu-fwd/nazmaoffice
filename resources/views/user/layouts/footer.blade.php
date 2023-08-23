@@ -1,6 +1,6 @@
 {{-- Footer --}}
 <footer class="bg-white">
-    <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-16">
+    <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6">
         <div class="grid md:grid-cols-2 gap-12 md:gap-28">
             <div>
                 <div class="mb-8">
@@ -56,11 +56,11 @@
                 <div>
                     <h1 class="font-medium text-md text-black">Ikut Kami</h1>
                     <div class="flex gap-2 mt-3">
-                        <ion-icon name="logo-instagram" class="text-gray-400"></ion-icon>
-                        <ion-icon name="logo-facebook" class="text-gray-400"></ion-icon>
-                        <ion-icon name="logo-twitter" class="text-gray-400"></ion-icon>
-                        <ion-icon name="logo-youtube" class="text-gray-400"></ion-icon>
-                        <ion-icon name="logo-linkedin" class="text-gray-400"></ion-icon>
+                        <ion-icon name="logo-instagram" class="w-7 h-7 text-gray-400"></ion-icon>
+                        <ion-icon name="logo-facebook" class="w-7 h-7 text-gray-400"></ion-icon>
+                        <ion-icon name="logo-twitter" class="w-7 h-7 text-gray-400"></ion-icon>
+                        <ion-icon name="logo-youtube" class="w-7 h-7 text-gray-400"></ion-icon>
+                        <ion-icon name="logo-linkedin" class="w-7 h-7 text-gray-400"></ion-icon>
                     </div>
                 </div>
             </div>
