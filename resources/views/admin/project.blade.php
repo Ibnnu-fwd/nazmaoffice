@@ -355,9 +355,9 @@
                     </div>
                     <nav class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4" aria-label="Table navigation">
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
-                            Showing
+                            Menampilkan
                             <span class="font-semibold text-gray-900 dark:text-white">1-10</span>
-                            of
+                            dari
                             <span class="font-semibold text-gray-900 dark:text-white">15</span>
                         </span>
                         <ul class="inline-flex items-stretch -space-x-px">
@@ -398,10 +398,10 @@
             </div>
         </section>
         <!-- End block -->
-        <div id="createProductModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] md:h-full">
-            <div class="relative p-4 w-full max-w-3xl h-full md:h-auto">
+        <div id="createProductModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0  z-[1055] justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div class="relative p-4 w-full max-w-3xl md:h-auto mt-20">
                 <!-- Modal content -->
-                <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+                <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800">
                     <!-- Modal header -->
                     <h5 id="drawer-label" class="inline-flex items-center mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">Add Projek</h5>
                     <button type="button" data-drawer-dismiss="drawer-update-product" aria-controls="drawer-update-product" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
