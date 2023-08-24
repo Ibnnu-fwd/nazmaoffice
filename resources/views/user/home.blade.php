@@ -4,28 +4,34 @@
         <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
 
         <style>
+            @import url('https://fonts.cdnfonts.com/css/damion');
 
+            #header-title {
+                font-family: 'Damion', cursive;
+                line-height: 1.2;
+            }
         </style>
     @endpush
 
     {{-- Hero --}}
     <div id="indicators-carousel" class="relative w-full" data-carousel="static">
         <!-- Carousel wrapper -->
-        <div class="relative h-48 overflow-hidden rounded-lg md:rounded-none md:h-[488px] mx-4 md:mx-0">
+        <div class="relative h-48 overflow-hidden rounded-lg md:rounded-none md:h-[350px] lg:h-[488px] mx-4 md:mx-0">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                 <img src="{{ asset('assets/images/hero1.jpg') }}"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60 dark:from-gray-800/60"></div>
-                <div class="absolute top-0 bottom-0 md:right-0 z-20 text-white md:w-1/2 p-10 md:py-32 text-start">
+                <div
+                    class="absolute top-0 bottom-0 md:right-0 z-20 text-white lg:w-1/2 p-10 md:py-12 lg:py-24 text-start">
                     <p class="font-normal text-xs 2xl:text-md">
                         Halo, Selamat Datang di Website Nazma Office!
                     </p>
-                    <p class="font-semibold text-2xl md:text-3xl lg:text-5xl mt-2">
+                    <p id="header-title" class="font-medium text-2xl md:text-6xl lg:text-7xl mt-2">
                         We'll Finish It <br>With Excellence
                     </p>
                     <button
-                        class="hidden md:inline-flex items-center justify-center px-4 py-2 mt-3 text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                        class="hidden md:inline-flex items-center justify-center px-6 py-3 mt-4 text-md font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                         Hubungi Kami
                     </button>
                 </div>
