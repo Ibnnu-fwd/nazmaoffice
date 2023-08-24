@@ -34,7 +34,7 @@
                 </li>
                 <li>
                     <a href="{{ route('user.service') }}"
-                        class="px-4 py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.service') ? 'text-primary' : '' }}">
+                        class="px-4 py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.service') || request()->routeIs('user.service.detail') ? 'text-primary' : '' }}">
                         Layanan
                     </a>
                 </li>

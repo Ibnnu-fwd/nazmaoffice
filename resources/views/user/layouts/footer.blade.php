@@ -1,6 +1,6 @@
 {{-- Footer --}}
-<footer class="bg-white">
-    <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6">
+<footer class="bg-white mt-10">
+    <div class="px-4 py-12 mx-auto max-w-7xl lg:px-12 2xl:px-0">
         <div class="grid md:grid-cols-2 gap-12 md:gap-28">
             <div>
                 <div class="mb-8">

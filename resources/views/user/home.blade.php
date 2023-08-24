@@ -18,7 +18,7 @@
         <!-- Carousel wrapper -->
         <div class="relative h-48 overflow-hidden rounded-lg md:rounded-none md:h-[350px] lg:h-[488px] mx-4 md:mx-0">
             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/hero1.jpg') }}"
                     class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60 dark:from-gray-800/60"></div>
@@ -652,8 +652,8 @@
 
             <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
                 <figure>
-                    <img class="w-full bg-gray-200 rounded-lg h-60 object-cover object-center"
-                        src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+                    <img class="w-full bg-gray-200 rounded-xl h-60 object-cover object-center"
+                        src="{{ asset('assets/images/hero1.jpg') }}" alt="">
 
                     <p class="mt-5 text-lg font-medium leading-6 text-black">
                         Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
@@ -666,8 +666,8 @@
                     <p class="uppercase text-gray-400">12 agustus 2023</p>
                 </figure>
                 <figure>
-                    <img class="w-full bg-gray-200 rounded-lg h-60 object-cover object-center"
-                        src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+                    <img class="w-full bg-gray-200 rounded-xl h-60 object-cover object-center"
+                        src="{{ asset('assets/images/hero2.jpg') }}" alt="">
 
                     <p class="mt-5 text-lg font-medium leading-6 text-black">
                         Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
@@ -680,8 +680,8 @@
                     <p class="uppercase text-gray-400">12 agustus 2023</p>
                 </figure>
                 <figure>
-                    <img class="w-full bg-gray-200 rounded-lg h-60 object-cover object-center"
-                        src="{{ asset('assets/images/noimage.jpg') }}" alt="">
+                    <img class="w-full bg-gray-200 rounded-xl h-60 object-cover object-center"
+                        src="{{ asset('assets/images/hero3.jpg') }}" alt="">
 
                     <p class="mt-5 text-lg font-medium leading-6 text-black">
                         Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
@@ -803,25 +803,6 @@
                     image.classList.remove('hidden');
                 };
             });
-        </script>
-
-        <script>
-            const carousel = document.querySelector('.carousel');
-            const carouselItems = document.querySelectorAll('.carousel-item');
-
-            let currentItem = 0;
-
-            function slideNext() {
-                currentItem = (currentItem + 1) % carouselItems.length;
-                updateCarouselPosition();
-            }
-
-            function updateCarouselPosition() {
-                const itemWidth = carouselItems[currentItem].clientWidth;
-                carousel.style.transform = `translateX(-${itemWidth * currentItem}px)`;
-            }
-
-            setInterval(slideNext, 2000); // Change slide every 2 seconds
         </script>
     @endpush
 

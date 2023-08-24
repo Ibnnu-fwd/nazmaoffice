@@ -70,4 +70,12 @@ class HomeController extends Controller
     {
         return view('user.service.index');
     }
+
+    /* 
+        * This function is used to display the service detail page
+    */
+    public function serviceDetail($id)
+    {
+        return view('user.service.detail');
+    }
 }
