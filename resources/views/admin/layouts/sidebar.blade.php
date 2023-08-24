@@ -12,31 +12,31 @@
                 Dashboard
             </a>
             <a href="{{ url('admin/project')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-                <i class="fas fa-tachometer-alt mr-3"></i>
+                <i class="fas fa-window-restore mr-3"></i>
                 Projek
             </a>
             <a href="{{ url('admin/testimony')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-                <i class="fas fa-tachometer-alt mr-3"></i>
+                <i class="fas fa-users mr-3"></i>
                 Testimoni
             </a>
             <a href="{{ url('admin/trainers')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-                <i class="fas fa-tachometer-alt mr-3"></i>
+                <i class="fas fa-user mr-3"></i>
                 Pelatih Tersertifikasi
             </a>
             <a href="{{ url('admin/crew')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-                <i class="fas fa-tachometer-alt mr-3"></i>
+                <i class="fas fa-users mr-3"></i>
                 Tim Kreatif
             </a>
             <a href="{{ url('admin/partnership')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-                <i class="fas fa-tachometer-alt mr-3"></i>
+                <i class="fas fa-users mr-3"></i>
                 Partnership
             </a> 
             <a href="{{ url('admin/blog')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-                <i class="fas fa-tachometer-alt mr-3"></i>
+                <i class="fas fa-blog mr-3"></i>
                 Blog
             </a>
             <a href="{{ url('admin/gallery')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-                <i class="fas fa-tachometer-alt mr-3"></i>
+                <i class="fas fa-images mr-3"></i>
                 Galeri
             </a>
         </nav>
