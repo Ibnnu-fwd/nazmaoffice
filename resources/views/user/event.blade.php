@@ -6,7 +6,7 @@
             <div class="relative flex-col items-start m-auto align-middle">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
                     <div class="relative items-center gap-12 m-auto lg:inline-flex md:order-first">
-                        <div class="max-w-xl text-center lg:text-left">
+                        <div class="max-w-xl text-center lg:text-left m-auto">
                             <div>
                                 <p class="text-gray-400">
                                     Telah diikuti lebih dari 100+ unit usaha 🔥
@@ -45,7 +45,7 @@
     {{-- List Of Event --}}
     <section class="bg-white py-24">
         <div class="max-w-md mx-auto text-center px-4 md:px-0">
-            <h1 class="text-2xl md:text-3xl font-semibold text-black">
+            <h1 class="text-2xl md:text-3xl font-medium text-black">
                 Dokumentasi Kegiatan
             </h1>
         </div>
