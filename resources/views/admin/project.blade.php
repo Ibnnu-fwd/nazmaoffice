@@ -256,7 +256,7 @@
                                         </div>
                                     </td>
                                     
-                                    <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">1.47</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Kamis, 24 Agustus 2023</td>
                                     <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Kabupaten Sleman, Yogyakarta	</td>
                                     <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         <div class="flex items-center space-x-4">
@@ -329,7 +329,7 @@
                                         </div>
                                     </td>
                                     
-                                    <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">1.47</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Kamis, 24 Agustus 2023</td>
                                     <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">Kabupaten Sleman, Yogyakarta	</td>
                                     <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         <div class="flex items-center space-x-4">
@@ -443,7 +443,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+                        <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                             <button type="submit" class="w-full sm:w-auto text-grey justify-center inline-flex items-center hover:text-white border text-lime-700 border-lime-700 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800">                            
                                 Simpan
                             </button>
@@ -497,7 +497,7 @@
                     </label>
                 </div>
             </div>
-            <div class="items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+            <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                 <button type="submit" class="w-full sm:w-auto text-grey justify-center inline-flex items-center hover:text-white border text-lime-700 border-lime-700 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800">                            
                     Simpan
                 </button>
