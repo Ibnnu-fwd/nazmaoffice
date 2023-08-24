@@ -13,19 +13,19 @@
             </a>
             <a href="{{ url('admin/project')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
-                Project
+                Projek
             </a>
             <a href="{{ url('admin/testimony')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
-                Testimony
+                Testimoni
             </a>
             <a href="{{ url('admin/trainers')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
-                Certified Trainers
+                Pelatih Tersertifikasi
             </a>
             <a href="{{ url('admin/crew')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
-                Creative Crews
+                Tim Kreatif
             </a>
             <a href="{{ url('admin/partnership')}}"class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
@@ -37,7 +37,7 @@
             </a>
             <a href="{{ url('admin/gallery')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
-                Gallery
+                Galeri
             </a>
         </nav>
        
