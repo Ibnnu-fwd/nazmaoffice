@@ -33,8 +33,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"
-                        class="px-4 py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600">
+                    <a href="{{ route('user.service') }}"
+                        class="px-4 py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.service') ? 'text-primary' : '' }}">
                         Layanan
                     </a>
                 </li>
@@ -55,7 +55,7 @@
                         items-center justify-center px-6 py-2 text-xs 2xl:text-md font-medium text-white bg-primary
                         rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
                         hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black
-                        {{ request()->routeIs('user.event') ? 'text-white bg-primary' : '' }}
+                        {{ request()->routeIs('user.event') || request()->routeIs('user.event.detail') ? 'text-white bg-primary' : '' }}
                         ">
                         Acara
                     </a>
