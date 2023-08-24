@@ -54,4 +54,12 @@ class HomeController extends Controller
     {
         return view('user.event');
     }
+
+    /* 
+        * This function is used to display the event detail page
+    */
+    public function eventDetail($id)
+    {
+        return view('user.event.detail');
+    }
 }

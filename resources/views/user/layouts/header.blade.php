@@ -55,7 +55,7 @@
                         items-center justify-center px-6 py-2 text-xs 2xl:text-md font-medium text-white bg-primary
                         rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
                         hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black
-                        {{ request()->routeIs('user.event') ? 'text-white bg-primary' : '' }}
+                        {{ request()->routeIs('user.event') || request()->routeIs('user.event.detail') ? 'text-white bg-primary' : '' }}
                         ">
                         Acara
                     </a>
