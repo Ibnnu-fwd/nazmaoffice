@@ -28,6 +28,11 @@ Route::group(['prefix' => 'admin'], function () {
     // Blog
     Route::prefix('blog')->group(function () {
         Route::get('/', [BlogController::class, 'index'])->name('admin.blog');
+        Route::post('get-by-id', [BlogController::class, 'getById'])->name('admin.blog.get-by-id');
+        Route::post('update/{id}', [BlogController::class, 'update'])->name('admin.blog.update');
+        Route::post('store', [BlogController::class, 'store'])->name('admin.blog.store');
+        Route::post('destroy/{id}', [BlogController::class, 'destroy'])->name('admin.blog.destroy');
+        Route::get('show/{id}', [BlogController::class, 'show'])->name('admin.blog.show');
     });
 
     // Blog Category

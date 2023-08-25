@@ -5,6 +5,7 @@ namespace App\Interfaces;
 interface BlogCategoryInterface
 {
     public function getAll();
+    public function getAllWithoutPagination();
     public function getById($id);
     public function store($data);
     public function update($id, $data);

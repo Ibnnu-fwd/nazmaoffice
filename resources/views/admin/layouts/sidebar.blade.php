@@ -1,4 +1,4 @@
-<aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
+<aside class="relative bg-sidebar w-64 hidden sm:block shadow-xl">
     <div class="py-4 text-center">
         <a href="{{ url('admin') }}" class="text-white text-lg font-semibold uppercase hover:text-orange-600">
             Admin Panel
@@ -41,7 +41,7 @@
             Kategori Blog
         </a>
         <a href="{{ route('admin.blog') }}"
-            class="flex items-center active-nav-link  py-4 pl-6 nav-item hover:text-orange-400 {{ request()->routeIs('admin.blog') ? 'text-orange-400' : 'text-white' }}">
+            class="flex items-center active-nav-link  py-4 pl-6 nav-item hover:text-orange-400 {{ request()->routeIs('admin.blog.*') ? 'text-orange-400' : 'text-white' }}">
             <i class="fas fa-blog mr-3"></i>
             Blog
         </a>

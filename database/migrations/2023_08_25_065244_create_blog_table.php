@@ -19,7 +19,7 @@ return new class extends Migration
             $table->longText("thumbnail")->nullable();
             $table->longText("main_image");
             $table->string("author_name");
-            $table->longText("author_profile_picture");
+            $table->longText("author_profile_picture")->nullable();
             $table->string("title");
             $table->date("published_date");
             $table->longText("content");

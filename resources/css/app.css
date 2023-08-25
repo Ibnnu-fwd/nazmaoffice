@@ -9,3 +9,17 @@
 #swal2-html-container {
     @apply text-base;
 }
+
+.ck {
+    font-family: 'Lexend Deca' !important;
+}
+
+.ck-placeholder
+{
+    @apply text-xs 2xl:text-sm;
+}
+
+.ck-content
+{
+    @apply text-xs 2xl:text-sm;
+}

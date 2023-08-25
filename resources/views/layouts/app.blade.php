@@ -49,9 +49,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100 font-family-karla flex">
+<body class="bg-gray-100 font-family-karla flex min-h-screen">
     @include('admin.layouts.sidebar')
-    <div class="w-full flex flex-col h-screen overflow-y-hidden">
+    <div class="w-full flex flex-col">
         <!-- Desktop Header -->
         <header class="w-full items-center  bg-white py-2 px-6 hidden sm:flex">
             <div class="w-1/2"></div>
