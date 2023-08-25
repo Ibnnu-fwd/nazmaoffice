@@ -20,7 +20,7 @@
         <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
             <main class="w-full flex-grow p-6">
                 <div class="bg-white dark:bg-gray-800 mb-4 relative shadow-md sm:rounded-lg overflow-hidden">
-                    <h1 class="text-2xl text-center text-blue-950 p-3">Halaman Manajemen Blog</h1>
+                    <h1 class="text-md text-center text-blue-950 pb-3 py-3">Halaman Manajemen Blog</h1>
                 </div>
 
                 <!-- Start block -->

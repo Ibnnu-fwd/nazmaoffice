@@ -20,7 +20,6 @@ Route::get('service/{id}', [HomeController::class, 'serviceDetail'])->name('user
 Route::get('/login-page', [AdminController::class, 'login'])->name('admin.login');
 
 Route::group(['prefix' => 'admin'], function () {
-
     // Dashboard
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/blog', [AdminController::class, 'blog'])->name('admin.blog');

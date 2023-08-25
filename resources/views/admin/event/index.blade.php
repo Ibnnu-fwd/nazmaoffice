@@ -20,7 +20,7 @@
         <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
             <main class="w-full flex-grow p-6">
                 <div class="bg-white dark:bg-gray-800 mb-4 relative shadow-md sm:rounded-lg overflow-hidden">
-                    <h1 class="text-2xl text-center text-blue-950 p-3">Halaman Manajemen Acara</h1>
+                    <h1 class="text-md text-center text-blue-950 pb-3 py-3">Halaman Manajemen Event</h1>
                 </div>
 
                 <!-- Start block -->
@@ -102,17 +102,20 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="break-words border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <tr
+                                            class="break-words border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <th scope="row"
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center mr-3 w-32">
                                                     <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan
+                                                        Pembuatan Logo dan Company Profile</span>
                                                 </div>
                                             </th>
                                             <td class="px-4 py-3">
                                                 <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis,
+                                                    23 Februari 2023, 08.00 WIB</span>
                                             </td>
                                             <td
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -166,12 +169,14 @@
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center mr-3 w-32">
                                                     <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan
+                                                        Pembuatan Logo dan Company Profile</span>
                                                 </div>
                                             </th>
                                             <td class="px-4 py-3">
                                                 <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis,
+                                                    23 Februari 2023, 08.00 WIB</span>
                                             </td>
                                             <td
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -219,75 +224,20 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <tr
+                                            class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <th scope="row"
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center mr-3 w-32">
                                                     <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan
+                                                        Pembuatan Logo dan Company Profile</span>
                                                 </div>
                                             </th>
                                             <td class="px-4 py-3">
                                                 <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
-                                            </td>
-                                            <td
-                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                <div class="flex items-center">
-                                                    Kabupaten Sleman, Daerah Istimewa Yogyakarta
-                                                </div>
-                                            </td>
-                                            <td
-                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                <div class="flex items-center">
-                                                    Start at 2000k
-                                                </div>
-                                            </td>
-                                            <td
-                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                <div class="flex items-center space-x-4">
-                                                    <button type="button" data-drawer-target="drawer-update-product"
-                                                        data-drawer-show="drawer-update-product"
-                                                        aria-controls="drawer-update-product"
-                                                        class="py-2 px-3 flex items-center text-sm font-medium hover:text-white text-center text-lime-700 focus:outline-none bg-white rounded-lg border border-lime-700 hover:bg-lime-800 hover:text-primary-700 focus:z-10 focus:ring-4 focus:lime-lime-300 dark:focus:ring-lime-700 dark:bg-lime-800 dark:text-lime-400 dark:border-lime-600 dark:hover:text-white dark:hover:bg-lime-700">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                            class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20"
-                                                            fill="currentColor" aria-hidden="true">
-                                                            <path
-                                                                d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                                                            <path fill-rule="evenodd"
-                                                                d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                                                                clip-rule="evenodd" />
-                                                        </svg>
-                                                        Edit
-                                                    </button>
-                                                    <button type="button" data-modal-target="delete-modal"
-                                                        data-modal-toggle="delete-modal"
-                                                        class="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                            class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20"
-                                                            fill="currentColor" aria-hidden="true">
-                                                            <path fill-rule="evenodd"
-                                                                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                                                clip-rule="evenodd" />
-                                                        </svg>
-                                                        Hapus
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        
-                                        <tr class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                            <th scope="row"
-                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                <div class="flex items-center mr-3 w-32">
-                                                    <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
-                                                </div>
-                                            </th>
-                                            <td class="px-4 py-3">
-                                                <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis,
+                                                    23 Februari 2023, 08.00 WIB</span>
                                             </td>
                                             <td
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -335,17 +285,81 @@
                                             </td>
                                         </tr>
 
-                                        <tr class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <tr
+                                            class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <th scope="row"
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center mr-3 w-32">
                                                     <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan
+                                                        Pembuatan Logo dan Company Profile</span>
                                                 </div>
                                             </th>
                                             <td class="px-4 py-3">
                                                 <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis,
+                                                    23 Februari 2023, 08.00 WIB</span>
+                                            </td>
+                                            <td
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center">
+                                                    Kabupaten Sleman, Daerah Istimewa Yogyakarta
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center">
+                                                    Start at 2000k
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center space-x-4">
+                                                    <button type="button" data-drawer-target="drawer-update-product"
+                                                        data-drawer-show="drawer-update-product"
+                                                        aria-controls="drawer-update-product"
+                                                        class="py-2 px-3 flex items-center text-sm font-medium hover:text-white text-center text-lime-700 focus:outline-none bg-white rounded-lg border border-lime-700 hover:bg-lime-800 hover:text-primary-700 focus:z-10 focus:ring-4 focus:lime-lime-300 dark:focus:ring-lime-700 dark:bg-lime-800 dark:text-lime-400 dark:border-lime-600 dark:hover:text-white dark:hover:bg-lime-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path
+                                                                d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                        Edit
+                                                    </button>
+                                                    <button type="button" data-modal-target="delete-modal"
+                                                        data-modal-toggle="delete-modal"
+                                                        class="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path fill-rule="evenodd"
+                                                                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                        Hapus
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr
+                                            class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                            <th scope="row"
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center mr-3 w-32">
+                                                    <span
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan
+                                                        Pembuatan Logo dan Company Profile</span>
+                                                </div>
+                                            </th>
+                                            <td class="px-4 py-3">
+                                                <span
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis,
+                                                    23 Februari 2023, 08.00 WIB</span>
                                             </td>
                                             <td
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -494,7 +508,8 @@
                                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Waktu</label>
                                         <input type="text" name="time" id="time"
                                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                            placeholder="Ketikkan waktu pelaksanaan acara (Hari, Tanggal, Jam)" required="">
+                                            placeholder="Ketikkan waktu pelaksanaan acara (Hari, Tanggal, Jam)"
+                                            required="">
                                     </div>
 
                                     <div>
@@ -518,7 +533,8 @@
                                             <label
                                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi
                                             </label>
-                                            <textarea class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                            <textarea
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                             </textarea>
                                         </div>
                                     </div>
@@ -608,7 +624,8 @@
                                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Waktu</label>
                                         <input type="text" name="time" id="time"
                                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                            placeholder="Ketikkan waktu pelaksanaan acara (Hari, Tanggal, Jam)" required="">
+                                            placeholder="Ketikkan waktu pelaksanaan acara (Hari, Tanggal, Jam)"
+                                            required="">
                                     </div>
 
                                     <div>
@@ -632,7 +649,8 @@
                                             <label
                                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi
                                             </label>
-                                            <textarea class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                            <textarea
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                             </textarea>
                                         </div>
                                     </div>
