@@ -20,7 +20,7 @@
         <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
             <main class="w-full flex-grow p-6">
                 <div class="bg-white dark:bg-gray-800 mb-4 relative shadow-md sm:rounded-lg overflow-hidden">
-                    <h1 class="text-2xl text-center text-blue-950 p-3">Halaman Manajemen Blog</h1>
+                    <h1 class="text-2xl text-center text-blue-950 p-3">Halaman Manajemen Acara</h1>
                 </div>
 
                 <!-- Start block -->
@@ -31,7 +31,7 @@
                                 class="flex flex-col md:flex-row md:items-center md:justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                                 <div class="flex-1 flex items-center space-x-2">
                                     <h5>
-                                        <span class="text-gray-500">Jumlah Blog:</span>
+                                        <span class="text-gray-500">Jumlah Acara:</span>
                                         <span class="dark:text-white">10</span>
                                     </h5>
                                     <h5 class="text-gray-500 dark:text-gray-400 ml-1">1-5 (10)</h5>
@@ -84,42 +84,46 @@
                                             <path clip-rule="evenodd" fill-rule="evenodd"
                                                 d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
                                         </svg>
-                                        Tambah Blog
+                                        Tambah Acara
                                     </button>
                                 </div>
                             </div>
 
                             <div class="overflow-x-auto">
-                                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                <table class="table-fixed w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                     <thead
                                         class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                         <tr>
                                             <th scope="col" class="p-4">Judul</th>
-                                            <th scope="col" class="p-4">Tanggal</th>
-                                            <th scope="col" class="p-4">Kategori</th>
+                                            <th scope="col" class="p-4">Waktu</th>
+                                            <th scope="col" class="p-4">Lokasi</th>
+                                            <th scope="col" class="p-4">Harga</th>
                                             <th scope="col" class="p-4">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr
-                                            class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <tr class="break-words border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <th scope="row"
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center mr-3 w-32">
                                                     <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Bimbingan
-                                                        Teknis Strategi Pemasaran di Wilayah Sleman</span>
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
                                                 </div>
                                             </th>
                                             <td class="px-4 py-3">
                                                 <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">09
-                                                    Aug 2023</span>
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
                                             </td>
                                             <td
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center">
-                                                    Event
+                                                    Kabupaten Sleman, Daerah Istimewa Yogyakarta
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center">
+                                                    Start at 2000k
                                                 </div>
                                             </td>
                                             <td
@@ -162,19 +166,23 @@
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center mr-3 w-32">
                                                     <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Bimbingan
-                                                        Teknis Strategi Pemasaran di Wilayah Sleman</span>
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
                                                 </div>
                                             </th>
                                             <td class="px-4 py-3">
                                                 <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">09
-                                                    Aug 2023</span>
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
                                             </td>
                                             <td
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center">
-                                                    Event
+                                                    Kabupaten Sleman, Daerah Istimewa Yogyakarta
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center">
+                                                    Start at 2000k
                                                 </div>
                                             </td>
                                             <td
@@ -211,25 +219,86 @@
                                             </td>
                                         </tr>
 
-                                        <tr
-                                            class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <tr class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <th scope="row"
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center mr-3 w-32">
                                                     <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Bimbingan
-                                                        Teknis Strategi Pemasaran di Wilayah Sleman</span>
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
                                                 </div>
                                             </th>
                                             <td class="px-4 py-3">
                                                 <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">09
-                                                    Aug 2023</span>
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
                                             </td>
                                             <td
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center">
-                                                    Event
+                                                    Kabupaten Sleman, Daerah Istimewa Yogyakarta
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center">
+                                                    Start at 2000k
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center space-x-4">
+                                                    <button type="button" data-drawer-target="drawer-update-product"
+                                                        data-drawer-show="drawer-update-product"
+                                                        aria-controls="drawer-update-product"
+                                                        class="py-2 px-3 flex items-center text-sm font-medium hover:text-white text-center text-lime-700 focus:outline-none bg-white rounded-lg border border-lime-700 hover:bg-lime-800 hover:text-primary-700 focus:z-10 focus:ring-4 focus:lime-lime-300 dark:focus:ring-lime-700 dark:bg-lime-800 dark:text-lime-400 dark:border-lime-600 dark:hover:text-white dark:hover:bg-lime-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path
+                                                                d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                                            <path fill-rule="evenodd"
+                                                                d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                        Edit
+                                                    </button>
+                                                    <button type="button" data-modal-target="delete-modal"
+                                                        data-modal-toggle="delete-modal"
+                                                        class="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20"
+                                                            fill="currentColor" aria-hidden="true">
+                                                            <path fill-rule="evenodd"
+                                                                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                                                clip-rule="evenodd" />
+                                                        </svg>
+                                                        Hapus
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                            <th scope="row"
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center mr-3 w-32">
+                                                    <span
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
+                                                </div>
+                                            </th>
+                                            <td class="px-4 py-3">
+                                                <span
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
+                                            </td>
+                                            <td
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center">
+                                                    Kabupaten Sleman, Daerah Istimewa Yogyakarta
+                                                </div>
+                                            </td>
+                                            <td
+                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <div class="flex items-center">
+                                                    Start at 2000k
                                                 </div>
                                             </td>
                                             <td
@@ -266,80 +335,28 @@
                                             </td>
                                         </tr>
 
-                                        <tr
-                                            class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                        <tr class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
                                             <th scope="row"
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center mr-3 w-32">
                                                     <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Bimbingan
-                                                        Teknis Strategi Pemasaran di Wilayah Sleman</span>
+                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Pelatihan Pembuatan Logo dan Company Profile</span>
                                                 </div>
                                             </th>
                                             <td class="px-4 py-3">
                                                 <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">09
-                                                    Aug 2023</span>
+                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Kamis, 23 Februari 2023, 08.00 WIB</span>
                                             </td>
                                             <td
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center">
-                                                    Event
+                                                    Kabupaten Sleman, Daerah Istimewa Yogyakarta
                                                 </div>
-                                            </td>
-                                            <td
-                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                <div class="flex items-center space-x-4">
-                                                    <button type="button" data-drawer-target="drawer-update-product"
-                                                        data-drawer-show="drawer-update-product"
-                                                        aria-controls="drawer-update-product"
-                                                        class="py-2 px-3 flex items-center text-sm font-medium hover:text-white text-center text-lime-700 focus:outline-none bg-white rounded-lg border border-lime-700 hover:bg-lime-800 hover:text-primary-700 focus:z-10 focus:ring-4 focus:lime-lime-300 dark:focus:ring-lime-700 dark:bg-lime-800 dark:text-lime-400 dark:border-lime-600 dark:hover:text-white dark:hover:bg-lime-700">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                            class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20"
-                                                            fill="currentColor" aria-hidden="true">
-                                                            <path
-                                                                d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                                                            <path fill-rule="evenodd"
-                                                                d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                                                                clip-rule="evenodd" />
-                                                        </svg>
-                                                        Edit
-                                                    </button>
-                                                    <button type="button" data-modal-target="delete-modal"
-                                                        data-modal-toggle="delete-modal"
-                                                        class="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
-                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                            class="h-4 w-4 mr-2 -ml-0.5" viewbox="0 0 20 20"
-                                                            fill="currentColor" aria-hidden="true">
-                                                            <path fill-rule="evenodd"
-                                                                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                                                clip-rule="evenodd" />
-                                                        </svg>
-                                                        Hapus
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr
-                                            class="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                            <th scope="row"
-                                                class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                <div class="flex items-center mr-3 w-32">
-                                                    <span
-                                                        class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">Bimbingan
-                                                        Teknis Strategi Pemasaran di Wilayah Sleman</span>
-                                                </div>
-                                            </th>
-                                            <td class="px-4 py-3">
-                                                <span
-                                                    class="bg-primary-100 text-primary-800 text-xs font-medium py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">09
-                                                    Aug 2023</span>
                                             </td>
                                             <td
                                                 class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <div class="flex items-center">
-                                                    Event
+                                                    Start at 2000k
                                                 </div>
                                             </td>
                                             <td
@@ -448,7 +465,7 @@
                             <!-- Modal header -->
                             <div
                                 class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Tambah Blog</h3>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Tambah Acara</h3>
                                 <button type="button"
                                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
                                     data-modal-toggle="createProductModal">
@@ -473,67 +490,42 @@
                                     </div>
 
                                     <div>
-                                        <label for="name"
-                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal</label>
-                                        <div class="relative">
-                                            <div
-                                                class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                                    fill="currentColor" viewBox="0 0 20 20">
-                                                    <path
-                                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                                </svg>
-                                            </div>
-                                            <input datepicker type="text"
-                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                                placeholder="Select date" required="">
-                                        </div>
-
+                                        <label for="time"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Waktu</label>
+                                        <input type="text" name="time" id="time"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            placeholder="Ketikkan waktu pelaksanaan acara (Hari, Tanggal, Jam)" required="">
                                     </div>
 
                                     <div>
-                                        <label for="name"
-                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategori</label>
-                                        <select id="countries"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                            required="">
-                                            <option selected>Pilih kategori</option>
-                                            <option value="Tek">Teknologi</option>
-                                            <option value="Bud">Budaya</option>
-                                            <option value="Pol">Politik</option>
-                                            <option value="Ev">Event</option>
-                                            <option value="Fen">Fenomena</option>
-                                        </select>
+                                        <label for="location"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lokasi</label>
+                                        <input type="text" name="location" id="name"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            placeholder="Ketikkan lokasi (Kabupaten/Kota, Provinsi)" required="">
                                     </div>
+
+                                    <div>
+                                        <label for="price"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga</label>
+                                        <input type="text" name="price" id="name"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            placeholder="Ketikkan Harga" required="">
+                                    </div>
+
                                     <div class="container mx-auto">
-                                        <form>
-                                            <div>
-                                                <label
-                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konten
-                                                </label>
-                                                <textarea name="description" id="editor" class="bg-gray-500 relative overflow-x-auto text-xs font-medium">
+                                        <div>
+                                            <label
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi
+                                            </label>
+                                            <textarea class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                             </textarea>
-                                            </div>
-                                        </form>
+                                        </div>
                                     </div>
-
-                                    <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
-                                    <script>
-                                        ClassicEditor
-                                            .create(document.querySelector('#editor'), {
-                                                ckfinder: {
-                                                    uploadUrl: '{{ route('ckeditor.upload') . '?_token=' . csrf_token() }}',
-                                                }
-                                            })
-                                            .catch(error => {
-
-                                            });
-                                    </script>
 
                                     <div class="mb-4">
                                         <span
-                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Foto</span>
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Poster</span>
                                         <div class="flex justify-center items-center w-full">
                                             <label for="dropzone-file"
                                                 class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
@@ -546,7 +538,7 @@
                                                             d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                                                     </svg>
                                                     <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                                                        <span class="font-semibold">Foto</span>
+                                                        <span class="font-semibold">Klik untuk unggah Poster</span>
                                                         atau seret dan lepas
                                                     </p>
                                                     <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, atau
@@ -557,7 +549,6 @@
                                         </div>
                                     </div>
                                 </div>
-
 
                                 <div class="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                                     <button type="submit"
@@ -588,7 +579,7 @@
                             <!-- Modal header -->
                             <div
                                 class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Edit Blog</h3>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Edit Acara</h3>
                                 <button type="button" data-drawer-dismiss="drawer-update-product"
                                     aria-controls="drawer-update-product"
                                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
@@ -603,102 +594,80 @@
                             </div>
                             <!-- Modal body -->
                             <form action="#">
-                                <div>
-                                    <label for="name"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul</label>
-                                    <input type="text" name="name" id="name"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                        placeholder="Ketikkan nama anggota baru" required="">
-                                </div>
-
-                                <div>
-                                    <label for="name"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tanggal</label>
-                                    <div class="relative">
-                                        <div
-                                            class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                viewBox="0 0 20 20">
-                                                <path
-                                                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                            </svg>
-                                        </div>
-                                        <input datepicker type="text"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                            placeholder="Select date" required="">
+                                <div class="grid gap-4 mb-4 p-3 mt-4">
+                                    <div>
+                                        <label for="name"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Judul</label>
+                                        <input type="text" name="name" id="name"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            placeholder="Ketikkan nama anggota baru" required="">
                                     </div>
 
-                                </div>
+                                    <div>
+                                        <label for="time"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Waktu</label>
+                                        <input type="text" name="time" id="time"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            placeholder="Ketikkan waktu pelaksanaan acara (Hari, Tanggal, Jam)" required="">
+                                    </div>
 
-                                <div>
-                                    <label for="name"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategori</label>
-                                    <select id="countries"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        required="">
-                                        <option selected>Pilih kategori</option>
-                                        <option value="Tek">Teknologi</option>
-                                        <option value="Bud">Budaya</option>
-                                        <option value="Pol">Politik</option>
-                                        <option value="Ev">Event</option>
-                                        <option value="Fen">Fenomena</option>
-                                    </select>
-                                </div>
-                                <div class="container mx-auto">
-                                    <form>
-                                        @csrf
+                                    <div>
+                                        <label for="location"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lokasi</label>
+                                        <input type="text" name="location" id="name"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            placeholder="Ketikkan lokasi (Kabupaten/Kota, Provinsi)" required="">
+                                    </div>
+
+                                    <div>
+                                        <label for="price"
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga</label>
+                                        <input type="text" name="price" id="name"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                            placeholder="Ketikkan Harga" required="">
+                                    </div>
+
+                                    <div class="container mx-auto">
                                         <div>
                                             <label
-                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konten
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi
                                             </label>
-                                            <textarea name="editor2" id="editor2" class="bg-gray-500 relative overflow-x-scroll text-xs font-medium">
-                                        </textarea>
+                                            <textarea class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                            </textarea>
                                         </div>
-                                    </form>
-                                </div>
-                                <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
-                                <script>
-                                    ClassicEditor
-                                        .create(document.querySelector('#editor2'), {
-                                            ckfinder: {
-                                                uploadUrl: '{{ route('ckeditor.upload') . '?_token=' . csrf_token() }}',
-                                            }
-                                        })
-                                        .catch(error => {
+                                    </div>
 
-                                        });
-                                </script>
-                                <div class="mb-4">
-                                    <span
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Foto</span>
-                                    <div class="flex justify-center items-center w-full">
-                                        <label for="dropzone-file"
-                                            class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                                            <div class="flex flex-col justify-center items-center pt-5 pb-6">
-                                                <svg aria-hidden="true" class="mb-3 w-15 h-10 text-gray-400"
-                                                    fill="none" stroke="currentColor" viewbox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                                                </svg>
-                                                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                                                    <span class="font-semibold">Foto</span>
-                                                    atau seret dan lepas
-                                                </p>
-                                                <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, atau JPG
-                                                    (MAX. 800x400px)</p>
-                                            </div>
-                                            <input id="dropzone-file" type="file" class="hidden">
-                                        </label>
+                                    <div class="mb-4">
+                                        <span
+                                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Poster</span>
+                                        <div class="flex justify-center items-center w-full">
+                                            <label for="dropzone-file"
+                                                class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                                <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                                    <svg aria-hidden="true" class="mb-3 w-15 h-10 text-gray-400"
+                                                        fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                                    </svg>
+                                                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                                                        <span class="font-semibold">Klik untuk unggah Poster</span>
+                                                        atau seret dan lepas
+                                                    </p>
+                                                    <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, atau
+                                                        JPG (MAX. 800x400px)</p>
+                                                </div>
+                                                <input id="dropzone-file" type="file" class="hidden">
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div class="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                                     <button type="submit"
                                         class="w-full sm:w-auto justify-center text-white inline-flex bg-primary hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Simpan</button>
-                                    <button button type="button" data-drawer-dismiss="drawer-update-product"
-                                        aria-controls="drawer-update-product"
+                                    <button data-modal-toggle="createProductModal" type="button"
                                         class="w-full justify-center sm:w-auto text-secondary inline-flex items-center bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
                                         <svg class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -738,7 +707,7 @@
                                         d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                                 <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Apakah kamu yakin
-                                    menghapus blog ini?</h3>
+                                    menghapus acara ini?</h3>
                                 <button data-modal-toggle="delete-modal" type="button"
                                     class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">Ya,
                                     saya yakin</button>
