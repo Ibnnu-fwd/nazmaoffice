@@ -12,7 +12,7 @@ class HomeController extends Controller
     */
     public function index()
     {
-        return view('user.home');
+        return view('user.home.index');
     }
 
     /* 
@@ -20,7 +20,7 @@ class HomeController extends Controller
     */
     public function about()
     {
-        return view('user.about');
+        return view('user.about.index');
     }
 
     /* 
@@ -28,7 +28,7 @@ class HomeController extends Controller
     */
     public function gallery()
     {
-        return view('user.gallery');
+        return view('user.gallery.index');
     }
 
     /* 
@@ -36,7 +36,7 @@ class HomeController extends Controller
     */
     public function blog()
     {
-        return view('user.blog');
+        return view('user.blog.index');
     }
 
     /* 
@@ -44,7 +44,7 @@ class HomeController extends Controller
     */
     public function blogDetail($id)
     {
-        return view('blog.detail');
+        return view('user.blog.detail');
     }
 
     /* 
@@ -52,7 +52,7 @@ class HomeController extends Controller
     */
     public function event()
     {
-        return view('user.event');
+        return view('user.event.index');
     }
 
     /* 

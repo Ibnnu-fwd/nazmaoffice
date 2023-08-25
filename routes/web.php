@@ -15,12 +15,11 @@ Route::get('event/{id}', [HomeController::class, 'eventDetail'])->name('user.eve
 Route::get('service', [HomeController::class, 'service'])->name('user.service');
 Route::get('service/{id}', [HomeController::class, 'serviceDetail'])->name('user.service.detail');
 
-Route::get('/loginPage', [AdminController::class, 'login'])->name('admin.login');
+Route::get('/login-page', [AdminController::class, 'login'])->name('admin.login');
 
 Route::group(['prefix' => 'admin'], function () {
 
     // Dashboard
-
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/blog', [AdminController::class, 'blog'])->name('admin.blog');
     Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');
