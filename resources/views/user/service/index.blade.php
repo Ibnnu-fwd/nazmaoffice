@@ -43,7 +43,7 @@
         <div class="relative items-center w-full px-5 py-24 mx-auto md:px-12 2xl:px-0 max-w-7xl lg:py-24">
             <div>
                 <div class="max-w-2xl mx-auto">
-                    <p class="text-2xl font-medium tracking-tight text-black text-center">
+                    <p class="text-xl font-semibold tracking-tight text-black text-center">
                         Percayakan Pada Kami <br>
                         Membantu Bisnismu
                     </p>
@@ -64,7 +64,7 @@
                                             Real-time Sync
                                         </p>
                                     </div>
-                                    <div class="mt-4 text-base text-gray-500">
+                                    <div class="mt-4 text-base text-xs 2xl:text-sm text-gray-500">
                                         Anda akan menemukan diskusi-diskusi yang mendalam tentang berbagai topik menarik
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
 
     {{-- Services --}}
     <section>
-        <p class="text-2xl font-medium text-black text-center pt-12 mb-6 mx-2 md:mx-0">
+        <p class="text-xl font-semibold text-black text-center pt-12 mb-6 mx-2 md:mx-0">
             Layanan Yang Kami Miliki
         </p>
         <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
@@ -90,14 +90,14 @@
                             <li class="-mb-px">
                                 <!-- event handler set state to 'tab1' and add conditional :class for active state -->
                                 <a @click.prevent="tab = 'tab1'" href="#"
-                                    class="inline-block px-8 py-2.5 text-md rounded-full text-white bg-primary"
+                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-white bg-primary"
                                     :class="{ '  text-white bg-primary': tab === 'tab1' }">
                                     Produk Teknologi Informasi
                                 </a>
                             </li>
                             <li class="-mb-px">
                                 <a @click.prevent="tab = 'tab2'" href="#"
-                                    class="inline-block px-8 py-2.5 text-md rounded-full text-gray-400"
+                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-gray-400"
                                     :class="{ '  text-white bg-primary': tab === 'tab2' }">
                                     Produk Konsultan Manajemen
                                 </a>
@@ -113,16 +113,17 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Jasa Pendidikan Komputer (Teknologi Informasi dan Komunikasi) Swasta
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Kursus untuk menambah keahlian dalam bidang komputer, teknologi informasi,
                                             dan komunikasi.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -134,16 +135,17 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Aktivitas Jasa Multimedia Lainnya
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Layanan konvergen radio dan televisi, video, audio, teks, grafik dan data
                                             yang disalurkan melalui jaringan protokol internet.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -155,16 +157,17 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Aktivitas Teknologi Informasi dan Jasa Komputer Lainnya
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Pemulihan kerusakan, instalasi personal komputer dan perangkat lunak, serta
                                             manajemen insiden dan digital forensic.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -176,16 +179,17 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Aktivitas Jasa Informasi Lainnya YTDL
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Jasa informasi berbasis telepon, pencarian informasi atas dasar balas jasa
                                             atau kontrak dan jasa kliping berita, dan lain-lain.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -197,17 +201,18 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Aktivitas Pengembangan Aplikasi Perdagangan Melalui Internet
                                                 (E-Commerce)
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Pengembangan aplikasi perdagangan, konsultasi, analisis dan pemograman
                                             aplikasi melalui internet.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -230,7 +235,7 @@
         <div class="relative items-center w-full px-5 pt-24 mx-auto md:px-12 2xl:px-0 max-w-7xl lg:py-24">
             <div>
                 <div class="max-w-2xl mx-auto">
-                    <p class="text-2xl font-medium tracking-tight text-black text-center">
+                    <p class="text-xl font-semibold tracking-tight text-black text-center">
                         Jadwal Proyek NaZMa
                     </p>
                 </div>
@@ -243,7 +248,7 @@
                                 <div>
                                     <div>
                                         <div
-                                            class="flex items-center justify-center w-full py-3
+                                            class="flex items-center justify-center text-xs 2xl:text-sm font-medium w-full py-3
                                             {{ $i == 1 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-400 ' }} rounded-full">
                                             Agustus
                                         </div>
@@ -254,18 +259,18 @@
                                                 <div class="">
                                                     <a href="#">
                                                         <h5
-                                                            class="mb-2 text-lg font-medium tracking-tight line-clamp-2 text-gray-900">
+                                                            class="mb-2 text-xs 2xl:text-sm font-medium tracking-tight line-clamp-2 text-gray-900">
                                                             Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                                                         </h5>
                                                     </a>
                                                     <div class="mt-6 flex justify-between">
                                                         <div
-                                                            class="py-1.5 px-5 text-sm rounded-full bg-gray-100 text-gray-400">
+                                                            class="py-1.5 px-5 text-xs 2xl:text-sm rounded-full bg-gray-100 text-gray-400">
                                                             Website
                                                         </div>
                                                         <div class="flex items-center">
                                                             <div class="w-3 h-3 rounded-full bg-success mr-2"></div>
-                                                            <span class="text-gray-400 text-sm">
+                                                            <span class="text-gray-400 text-xs 2xl:text-sm">
                                                                 12 Agustus 2021
                                                             </span>
                                                         </div>

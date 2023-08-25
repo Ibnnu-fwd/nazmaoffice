@@ -12,7 +12,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['rubik', ...defaultTheme.fontFamily.sans],
+                sans: ['lexend deca','inter','rubik', ...defaultTheme.fontFamily.sans],
             },
 
             colors: {

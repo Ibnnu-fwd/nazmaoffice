@@ -45,7 +45,7 @@
     {{-- List Of Event --}}
     <section class="bg-white py-24">
         <div class="max-w-md mx-auto text-center px-4 md:px-0">
-            <h1 class="text-2xl md:text-3xl font-medium text-black">
+            <h1 class="text-xl font-semibold text-black">
                 Dokumentasi Kegiatan
             </h1>
         </div>
@@ -57,7 +57,7 @@
                     <ion-icon name="search-outline" class="text-gray-300 w-6 h-6"></ion-icon>
                 </div>
                 <input type="search" id="default-search"
-                    class="custom-input border border-gray-200 focus:border focus:border-gray-200 block w-full p-5 pl-14 text-xl text-gray-900 font-light rounded-full"
+                    class="custom-input border border-gray-200 focus:border focus:border-gray-200 block w-full p-5 pl-14 text-md font-light text-gray-900 rounded-full"
                     placeholder="Cari" required>
             </div>
         </form>
@@ -71,28 +71,28 @@
                         </a>
                         <div class="mt-4">
                             <a href="#">
-                                <h5 class="mb-2 text-xl font-medium tracking-tight line-clamp-2 text-gray-900">
+                                <h5 class="mb-2 text-lg font-semibold tracking-tight line-clamp-2 text-gray-900">
                                     Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                                 </h5>
                             </a>
-                            <div class="flex items-center mb-2 mt-4">
+                            <div class="flex items-center mt-4 text-xs 2xl:text-sm">
                                 <ion-icon name="calendar-outline" class="text-primary me-2"></ion-icon>
                                 <span class="text-gray-400">
                                     12 Agustus 2021
                                 </span>
                             </div>
-                            <div class="flex items-center">
+                            <div class="flex items-center  text-xs 2xl:text-sm">
                                 <ion-icon name="time-outline" class="text-primary me-2"></ion-icon>
                                 <span class="text-gray-400">
                                     08.00 - 12.00 WIB
                                 </span>
                             </div>
-                            <div class="mt-6 flex justify-between">
+                            <div class="mt-6 flex justify-between items-end">
                                 <div>
                                     <p class="text-sm text-danger animate-pulse line-through">Rp. 5.000.000</p>
-                                    <p class="text-gray-400 text-xl">Rp. 2.000.000</p>
+                                    <p class="text-gray-400 text-lg font-semibold">Rp. 2.000.000</p>
                                 </div>
-                                <div class="flex items-center">
+                                <div class="flex items-center text-xs 2xl:text-sm">
                                     <div class="w-3 h-3 rounded-full bg-success mr-2"></div>
                                     <span class="text-gray-400">
                                         Tersedia

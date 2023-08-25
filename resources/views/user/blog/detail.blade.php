@@ -3,10 +3,10 @@
         <div class="max-w-4xl mx-auto px-8 lg:px-0">
             <p class="text-white text-md">Teknologi</p>
             <div class="grid md:grid-cols-2 mt-3">
-                <h1 class="text-3xl font-medium leading-tight text-white">
+                <h1 class="text-3xl font-semibold leading-tight text-white">
                     BIMTEK Packaging, Design, dan Branding di Wilayah Sleman
                 </h1>
-                <div class="mt-2 md:mt-0 md:place-self-end text-md">
+                <div class="mt-2 md:mt-0 md:place-self-end text-xs 2xl:text-sm">
                     <p class="text-white">Moh Ibnu Abdurrohman Sutio</p>
                     <p class="text-gray-200">
                         20 Agustus 2021
@@ -19,7 +19,7 @@
     <section class="max-w-4xl mx-auto mt-10 px-8 lg:px-0">
         <img src="{{ asset('assets/images/hero1.jpg') }}"
             class="w-full h-48 md:h-96 object-cover object-center blur-mode rounded-xl" alt="">
-        <p class="mt-8 leading-6 text-justify">
+        <p class="mt-8 leading-6 text-justify -tracking-tight text-sm">
             Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan Bimbingan
             Teknis (BIMTEK) bagi para pelaku UMKM di wilayah Sleman khususnya Kapanewon Gamping dan Kapanewon Moyudan.
             BIMTEK yang dilaksanakan selama 2 hari pada Senin (10/07) dan Selasa (11/07) di Hotel Crystal Lotus,
@@ -60,10 +60,10 @@
                             <p class="mt-5 text-sm font-normal leading-6 text-gray-400">
                                 12 Agustus 2023
                             </p>
-                            <p class="mt-3 text-md text-black font-medium line-clamp-2">
+                            <p class="mt-3 text-md text-black font-semibold line-clamp-2">
                                 Your design portfolio website shouldn’t just be a portfolio
                             </p>
-                            <p class="mt-3 text-md text-gray-400 line-clamp-2">
+                            <p class="mt-3 text-xs 2xl:text-sm text-gray-400 line-clamp-2">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deserunt sapiente quas
                                 quam
                                 ducimus, culpa voluptatibus voluptatem esse, distinctio, odio iure.
@@ -78,10 +78,10 @@
                         alt="">
                     <div class="col-span-2">
                         <span class="text-gray-400 text-sm">20 Agustus 2023</span>
-                        <span class="text-lg font-medium text-black line-clamp-2 mt-2">
+                        <span class="text-lg font-semibold text-black line-clamp-2 mt-2">
                             Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                         </span>
-                        <p class="text-gray-400 line-clamp-2 mt-2 text-base">
+                        <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-sm">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto delectus quaerat iste
                             perspiciatis totam. Perspiciatis ipsum alias expedita cupiditate quaerat, laudantium dolorum
                             nisi nostrum quibusdam dolor, sint nobis. Voluptatibus, nesciunt.

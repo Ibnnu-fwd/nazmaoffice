@@ -80,11 +80,11 @@
     {{-- Milestone --}}
     <section class="bg-white py-20 px-4 md:px-8">
         <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16 text-center">
-            <h2 class="mb-4 text-2xl tracking-tight font-medium text-gray-900">
+            <h2 class="mb-4 text-xl tracking-tight font-semibold text-gray-900">
                 Perjalanan Kami
             </h2>
-            <p class=" text-gray-400 text-xs 2xl:text-md">
-                Tahun demi tahun, kami terus berkembang dan berinovasi untuk mengedukasi berbagai kalangan bisnis
+            <p class=" text-gray-400 text-xs 2xl:text-sm">
+                Tahun demi tahun, kami terus berkembang dan berinovasi <br> untuk mengedukasi berbagai kalangan bisnis
             </p>
         </div>
         <div class="max-w-7xl mx-auto">
@@ -97,10 +97,11 @@
                         <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
-                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
+                        <h3 class="text-xs 2xl:text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-xs 2xl:text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
-                        <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
+                        <p class="text-xs 2xl:text-sm font-normal text-gray-500">Get started with dozens of web
+                            components and
                             interactive elements.</p>
                     </div>
                 </div>
@@ -112,10 +113,11 @@
                         <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
-                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
+                        <h3 class="text-xs 2xl:text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-xs 2xl:text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
-                        <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
+                        <p class="text-xs 2xl:text-sm font-normal text-gray-500">Get started with dozens of web
+                            components and
                             interactive elements.</p>
                     </div>
                 </div>
@@ -127,10 +129,11 @@
                         <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
-                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
+                        <h3 class="text-xs 2xl:text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-xs 2xl:text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
-                        <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
+                        <p class="text-xs 2xl:text-sm font-normal text-gray-500">Get started with dozens of web
+                            components and
                             interactive elements.</p>
                     </div>
                 </div>
@@ -142,10 +145,11 @@
                         <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
-                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
+                        <h3 class="text-xs 2xl:text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-xs 2xl:text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
-                        <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
+                        <p class="text-xs 2xl:text-sm font-normal text-gray-500">Get started with dozens of web
+                            components and
                             interactive elements.</p>
                     </div>
                 </div>
@@ -157,10 +161,11 @@
                         <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                     </div>
                     <div class="mt-3 sm:pr-8">
-                        <h3 class="text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
-                        <time class="block mb-2 text-sm font-normal leading-none text-gray-400 ">Released
+                        <h3 class="text-xs 2xl:text-md font-normal text-gray-900 ">Flowbite Library v1.0.0</h3>
+                        <time class="block mb-2 text-xs 2xl:text-sm font-normal leading-none text-gray-400 ">Released
                             on December 2, 2021</time>
-                        <p class="text-base font-normal text-gray-500">Get started with dozens of web components and
+                        <p class="text-xs 2xl:text-sm font-normal text-gray-500">Get started with dozens of web
+                            components and
                             interactive elements.</p>
                     </div>
                 </div>
@@ -173,10 +178,10 @@
     <section class=bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
             <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-                <h2 class="mb-4 text-2xl tracking-tight font-medium text-gray-900">
+                <h2 class="mb-4 text-xl tracking-tight font-semibold text-gray-900">
                     Tim Dibalik NaZMa Office
                 </h2>
-                <p class=" text-gray-400 text-xs 2xl:text-md">
+                <p class=" text-gray-400 text-xs 2xl:text-sm">
                     Kami adalah tim yang berdedikasi untuk mengedukasi Indonesia melalui media digital
                 </p>
             </div>
@@ -185,10 +190,10 @@
                     <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                         alt="Bonnie Avatar">
-                    <h3 class="mb-1 text-2xl font-medium tracking-tight text-gray-900">
+                    <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
                         <a href="#">Bonnie Green</a>
                     </h3>
-                    <p>CEO/Co-founder</p>
+                    <p class="text-xs 2xl:text-sm">CEO/Co-founder</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -232,10 +237,10 @@
                     <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png"
                         alt="Helene Avatar">
-                    <h3 class="mb-1 text-2xl font-medium tracking-tight text-gray-900">
+                    <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
                         <a href="#">Helene Engels</a>
                     </h3>
-                    <p>CTO/Co-founder</p>
+                    <p class="text-xs 2xl:text-sm">CTO/Co-founder</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -281,10 +286,10 @@
                     <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                         alt="Bonnie Avatar">
-                    <h3 class="mb-1 text-2xl font-medium tracking-tight text-gray-900">
+                    <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
                         <a href="#">Bonnie Green</a>
                     </h3>
-                    <p>CEO/Co-founder</p>
+                    <p class="text-xs 2xl:text-sm">CEO/Co-founder</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -328,10 +333,10 @@
                     <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png"
                         alt="Helene Avatar">
-                    <h3 class="mb-1 text-2xl font-medium tracking-tight text-gray-900">
+                    <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
                         <a href="#">Helene Engels</a>
                     </h3>
-                    <p>CTO/Co-founder</p>
+                    <p class="text-xs 2xl:text-sm">CTO/Co-founder</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -375,10 +380,10 @@
                     <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
                         alt="Jese Avatar">
-                    <h3 class="mb-1 text-2xl font-medium tracking-tight text-gray-900">
+                    <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
                         <a href="#">Jese Leos</a>
                     </h3>
-                    <p>SEO & Marketing</p>
+                    <p class="text-xs 2xl:text-sm">SEO & Marketing</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -422,10 +427,10 @@
                     <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                         src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
                         alt="Joseph Avatar">
-                    <h3 class="mb-1 text-2xl font-medium tracking-tight text-gray-900">
+                    <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
                         <a href="#">Joseph Mcfall</a>
                     </h3>
-                    <p>Sales</p>
+                    <p class="text-xs 2xl:text-sm">Sales</p>
                     <ul class="flex justify-center mt-4 space-x-4">
                         <li>
                             <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -471,30 +476,30 @@
 
     {{-- Testimonials --}}
     <section class="py-12 bg-white">
-        <p class="text-2xl font-medium tracking-tight text-black text-center">
+        <p class="text-xl font-semibold tracking-tight text-black text-center">
             Apa Kata Mereka
         </p>
-        <div class="max-w-6xl mx-auto" id="testimonial">
+        <div id="testimonial">
             <div class="carousel carousel-center p-4 space-x-4 w-full">
                 <div id="item1" class="carousel-item">
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki
@@ -506,21 +511,21 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki
@@ -533,21 +538,21 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki
@@ -559,21 +564,21 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki
@@ -585,21 +590,21 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki

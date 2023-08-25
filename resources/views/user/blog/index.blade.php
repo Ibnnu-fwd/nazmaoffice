@@ -2,7 +2,7 @@
     <section class="max-w-7xl mx-auto my-12 px-4 md:px-8 xl:px-12 2xl:px-0">
         <div class="grid">
             <div class="bg-primary rounded-2xl text-white p-8 text-center h-40 md:h-44 px-8 md:px-20">
-                <h1 class="text-2xl md:text-4xl xl:text-4xl font-medium">
+                <h1 class="text-2xl md:text-2xl xl:text-3xl font-semibold">
                     Laman Blog
                 </h1>
                 <p class="text-md hidden md:block">
@@ -23,29 +23,32 @@
         </div>
 
         <div class="text-center gap-y-6">
-            <span class="bg-orange-800 text-white text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">Semua</span>
             <span
-                class="bg-transparent text-gray-400 text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">Teknologi</span>
-            <span class="bg-transparent text-gray-400 text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">Budaya</span>
+                class="bg-orange-800 text-white text-xs 2xl:text-sm font-normal mr-2 px-2.5 py-0.5 rounded-full">Semua</span>
             <span
-                class="bg-transparent text-gray-400 text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">Politik</span>
-            <span class="bg-transparent text-gray-400 text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">Event</span>
+                class="bg-transparent text-gray-400 text-xs 2xl:text-sm font-normal mr-2 px-2.5 py-0.5 rounded-full">Teknologi</span>
             <span
-                class="bg-transparent text-gray-400 text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">Fenomena</span>
+                class="bg-transparent text-gray-400 text-xs 2xl:text-sm font-normal mr-2 px-2.5 py-0.5 rounded-full">Budaya</span>
+            <span
+                class="bg-transparent text-gray-400 text-xs 2xl:text-sm font-normal mr-2 px-2.5 py-0.5 rounded-full">Politik</span>
+            <span
+                class="bg-transparent text-gray-400 text-xs 2xl:text-sm font-normal mr-2 px-2.5 py-0.5 rounded-full">Event</span>
+            <span
+                class="bg-transparent text-gray-400 text-xs 2xl:text-sm font-normal mr-2 px-2.5 py-0.5 rounded-full">Fenomena</span>
         </div>
 
-        <h1 class="text-2xl font-medium text-black tracking-tight mt-10">
+        <h1 class="text-2xl font-semibold text-black tracking-tight mt-10">
             Featured Artikel
         </h1>
         <div class="grid md:grid-cols-2 gap-6 mt-6">
             <a href="">
                 <img src="{{ asset('assets/images/hero1.jpg') }}"
                     class="w-full md:h-72 lg:h-96 rounded-xl object-cover object-center blur-mode mb-4" alt="">
-                <p class="text-gray-400 mb-1">12 Agustus 2023</p>
-                <h1 class="text-2xl font-medium text-black tracking-tight mb-3 line-clamp-2">
+                <p class="text-gray-400 mb-1 text-xs 2xl:text-sm">12 Agustus 2023</p>
+                <h1 class="text-xl font-semibold text-black tracking-tight mb-3 line-clamp-2">
                     BIMTEK Packaging, Design, dan Branding di Wilayah Sleman
                 </h1>
-                <p class="text-gray-400 line-clamp-3">
+                <p class="text-gray-400 line-clamp-3 text-xs 2xl:text-md">
                     Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
                     Bimbingan…
                 </p>
@@ -56,11 +59,11 @@
                         class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
                         alt="">
                     <div class="col-span-2">
-                        <span class="text-gray-400 text-sm">20 Agustus 2023</span>
-                        <span class="text-lg font-medium text-black line-clamp-2 mt-2">
+                        <span class="text-gray-400 text-xs 2xl:text-sm">20 Agustus 2023</span>
+                        <span class="text-md font-medium text-black line-clamp-2 mt-2">
                             Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                         </span>
-                        <p class="text-gray-400 line-clamp-2 mt-2">
+                        <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-sm">
                             Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman...
                         </p>
                         <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
@@ -73,11 +76,11 @@
                         class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
                         alt="">
                     <div class="col-span-2">
-                        <span class="text-gray-400 text-sm">20 Agustus 2023</span>
-                        <span class="text-lg font-medium text-black line-clamp-2 mt-2">
+                        <span class="text-gray-400 text-xs 2xl:text-sm">20 Agustus 2023</span>
+                        <span class="text-md font-medium text-black line-clamp-2 mt-2">
                             Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                         </span>
-                        <p class="text-gray-400 line-clamp-2 mt-2">
+                        <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-sm">
                             Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman...
                         </p>
                         <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
@@ -90,11 +93,11 @@
                         class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
                         alt="">
                     <div class="col-span-2">
-                        <span class="text-gray-400 text-sm">20 Agustus 2023</span>
-                        <span class="text-lg font-medium text-black line-clamp-2 mt-2">
+                        <span class="text-gray-400 text-xs 2xl:text-sm">20 Agustus 2023</span>
+                        <span class="text-md font-medium text-black line-clamp-2 mt-2">
                             Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                         </span>
-                        <p class="text-gray-400 line-clamp-2 mt-2">
+                        <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-sm">
                             Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman...
                         </p>
                         <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
@@ -105,7 +108,7 @@
             </div>
         </div>
 
-        <h1 class="text-2xl font-medium text-black tracking-tight mt-10">
+        <h1 class="text-2xl font-semibold text-black tracking-tight mt-20">
             Artikel Terbaru
         </h1>
 
@@ -122,10 +125,10 @@
                             <p class="mt-5 text-sm font-normal leading-6 text-gray-400">
                                 12 Agustus 2023
                             </p>
-                            <p class="mt-3 text-md text-black font-medium line-clamp-2">
+                            <p class="mt-3 text-md text-black font-semibold line-clamp-2">
                                 Your design portfolio website shouldn’t just be a portfolio
                             </p>
-                            <p class="mt-3 text-md text-gray-400 line-clamp-2">
+                            <p class="mt-3 text-xs 2xl:text-sm text-gray-400 line-clamp-2">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deserunt sapiente quas
                                 quam
                                 ducimus, culpa voluptatibus voluptatem esse, distinctio, odio iure.

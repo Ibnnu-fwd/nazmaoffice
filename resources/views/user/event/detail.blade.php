@@ -39,11 +39,11 @@
     {{-- Study Case --}}
     <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-8 lg:px-12 2xl:px-0">
-            <h1 class="text-3xl font-medium tracking-tight text-primary">Study Case</h1>
-            <h1 class="text-2xl font-medium tracking-tight text-black">
+            <h1 class="text-2xl font-semibold tracking-tight text-primary">Study Case</h1>
+            <h1 class="text-xl font-medium tracking-tight text-black">
                 Jelajahi Kreatifitas Untuk Tingkatkan Branding Bisnis
             </h1>
-            <p class="text-md text-gray-400 xl:w-1/2 mt-3">
+            <p class="text-xs 2xl:text-sm text-gray-400 xl:w-1/2 mt-3">
                 Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan dalam merancang logo dan
                 menciptakan profil perusahaan yang menarik
             </p>
@@ -55,7 +55,7 @@
                             @for ($i = 1; $i <= 6; $i++)
                                 <div>
                                     <div>
-                                        <p class="text-lg font-medium leading-6 text-black">
+                                        <p class="text-lg font-semibold leading-6 text-black">
                                             Design Brief
                                         </p>
                                     </div>
@@ -85,10 +85,10 @@
     <section class="">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-24 lg:px-6">
             <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-                <h2 class="mb-4 text-2xl tracking-tight font-medium text-gray-900">
+                <h2 class="mb-4 text-xl tracking-tight font-semibold text-gray-900">
                     Tim Dibalik NaZMa Office
                 </h2>
-                <p class=" text-gray-400 text-xs 2xl:text-md">
+                <p class=" text-gray-400 text-xs 2xl:text-sm">
                     Kami adalah tim yang berdedikasi untuk mengedukasi Indonesia melalui media digital
                 </p>
             </div>
@@ -98,10 +98,10 @@
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                             alt="Person Avatar">
-                        <h3 class="mb-1 text-2xl font-medium tracking-tight text-gray-900">
+                        <h3 class="mb-1 text-lg font-semibold tracking-tight text-gray-900">
                             <a href="#">Person Name</a>
                         </h3>
-                        <p>Role</p>
+                        <p class="text-md">Role</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -150,17 +150,17 @@
     <section class="bg-white py-24">
         <div class="max-w-7xl mx-auto px-8 lg:px-12 2xl:px-0 grid md:grid-cols-2 ">
             <div>
-                <h1 class="text-2xl xl:text-3xl font-medium mb-2">
+                <h1 class="text-xl xl:text-xl font-semibold mb-2">
                     Tiket Terbatas <br>
                     Jangan Sampai Ketinggalan
                 </h1>
-                <p class="text-gray-400 2xl:w-1/2 mb-4 lg:mb-0">
+                <p class="text-gray-400 2xl:w-1/2 mb-4 lg:mb-0 text-xs 2xl:text-sm">
                     Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan dalam merancang logo
                 </p>
             </div>
             <div class="flex items-center justify-start md:justify-end mt-6 md:mt-0">
                 <a href="#"
-                    class="items-center justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
+                    class="items-center text-xs 2xl:text-sm justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
                     Daftar Sekarang
                 </a>
             </div>

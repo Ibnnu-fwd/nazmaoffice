@@ -9,7 +9,10 @@
     <title>{{ config('app.name', 'NaZMa Office') }}</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.cdnfonts.com/css/rubik" rel="stylesheet">
+    {{-- <link href="https://fonts.cdnfonts.com/css/rubik" rel="stylesheet"> --}}
+    {{-- <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet"> --}}
+    <link href="https://fonts.cdnfonts.com/css/lexend-deca" rel="stylesheet">
+
 
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />

@@ -25,14 +25,14 @@
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60 dark:from-gray-800/60"></div>
                 <div
                     class="absolute top-0 bottom-0 md:right-0 z-20 text-white lg:w-1/2 p-10 md:py-12 lg:py-24 text-start">
-                    <p class="font-normal text-xs 2xl:text-md">
+                    <p class="font-normal text-xs 2xl:text-sm">
                         Halo, Selamat Datang di Website Nazma Office!
                     </p>
                     <p id="header-title" class="font-medium text-2xl md:text-6xl lg:text-7xl mt-2">
                         We'll Finish It <br>With Excellence
                     </p>
                     <button
-                        class="hidden md:inline-flex items-center justify-center px-6 py-3 mt-4 text-md font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                        class="hidden md:inline-flex items-center justify-center px-6 py-3 mt-4 text-xs 2xl:text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                         Hubungi Kami
                     </button>
                 </div>
@@ -90,7 +90,7 @@
 
     {{-- Insight --}}
     <section class="bg-white">
-        <p class="text-2xl font-medium text-black text-center pt-12 mb-2 mx-2 md:mx-0">
+        <p class="text-xl font-semibold text-black text-center pt-12 mb-2 mx-2 md:mx-0">
             Terima Kasih Telah Mempercayai Kami
         </p>
         <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-4 lg:grid-cols-4 max-w-4xl mx-auto">
@@ -100,7 +100,7 @@
                 <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
                     1000+
                 </p>
-                <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
                     Mitra Usaha
                 </p>
             </figure>
@@ -110,7 +110,7 @@
                 <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
                     1000+
                 </p>
-                <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
                     Event Edukatif
                 </p>
             </figure>
@@ -120,7 +120,7 @@
                 <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
                     1000+
                 </p>
-                <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
                     Mentor Profesional
                 </p>
             </figure>
@@ -130,7 +130,7 @@
                 <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
                     1000+
                 </p>
-                <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
                     Mitra Usaha
                 </p>
             </figure>
@@ -139,7 +139,7 @@
 
     {{-- Services --}}
     <section>
-        <p class="text-2xl font-medium text-black text-center pt-12 mb-6 mx-2 md:mx-0">
+        <p class="text-xl font-semibold text-black text-center pt-12 mb-6 mx-2 md:mx-0">
             Layanan Yang Kami Miliki
         </p>
         <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
@@ -151,14 +151,14 @@
                             <li class="-mb-px">
                                 <!-- event handler set state to 'tab1' and add conditional :class for active state -->
                                 <a @click.prevent="tab = 'tab1'" href="#"
-                                    class="inline-block px-8 py-2.5 text-md rounded-full text-white bg-primary"
+                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-white bg-primary"
                                     :class="{ '  text-white bg-primary': tab === 'tab1' }">
                                     Produk Teknologi Informasi
                                 </a>
                             </li>
                             <li class="-mb-px">
                                 <a @click.prevent="tab = 'tab2'" href="#"
-                                    class="inline-block px-8 py-2.5 text-md rounded-full text-gray-400"
+                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-gray-400"
                                     :class="{ '  text-white bg-primary': tab === 'tab2' }">
                                     Produk Konsultan Manajemen
                                 </a>
@@ -174,16 +174,17 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Jasa Pendidikan Komputer (Teknologi Informasi dan Komunikasi) Swasta
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Kursus untuk menambah keahlian dalam bidang komputer, teknologi informasi,
                                             dan komunikasi.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -195,16 +196,17 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Aktivitas Jasa Multimedia Lainnya
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Layanan konvergen radio dan televisi, video, audio, teks, grafik dan data
                                             yang disalurkan melalui jaringan protokol internet.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -216,16 +218,17 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Aktivitas Teknologi Informasi dan Jasa Komputer Lainnya
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Pemulihan kerusakan, instalasi personal komputer dan perangkat lunak, serta
                                             manajemen insiden dan digital forensic.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -237,16 +240,17 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Aktivitas Jasa Informasi Lainnya YTDL
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Jasa informasi berbasis telepon, pencarian informasi atas dasar balas jasa
                                             atau kontrak dan jasa kliping berita, dan lain-lain.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -258,17 +262,18 @@
                                                 size="large"></ion-icon>
                                         </div>
                                         <a href="#">
-                                            <h5 class="mb-2 mt-4 text-md font-medium tracking-tight text-gray-900">
+                                            <h5
+                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
                                                 Aktivitas Pengembangan Aplikasi Perdagangan Melalui Internet
                                                 (E-Commerce)
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                                             Pengembangan aplikasi perdagangan, konsultasi, analisis dan pemograman
                                             aplikasi melalui internet.
                                         </p>
                                         <a href="#"
-                                            class="inline-flex mt-4 items-center text-blue-600 hover:underline">
+                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
                                             Selengkapnya
                                             <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                 size="small"></ion-icon>
@@ -295,13 +300,13 @@
                         <div class="flex flex-col m-auto md:order-first">
                             <div class="max-w-xl">
                                 <div>
-                                    <p class="text-2xl font-medium tracking-tight text-black">
+                                    <p class="text-xl font-semibold tracking-tight text-black">
                                         Tentang Kami
                                     </p>
                                 </div>
                             </div>
                             <div class="mt-6 lg:max-w-7xl">
-                                <p class="text-gray-400">
+                                <p class="text-gray-400 text-xs 2xl:text-sm">
                                     Nabila Zafira Mahalia, yang dikenal juga sebagai NaZMa Office, didirikan pada tahun
                                     2007. Dengan pengalaman mencapai lebih dari 10 tahun, tepatnya sekitar 12 tahun,
                                     NaZMa Office telah mengembangkan keahlian yang mendalam dalam bidang konsultan IT
@@ -310,11 +315,11 @@
                                 <ul role="list" class="grid md:grid-cols-2 gap-4 list-none lg:gap-6">
                                     <li>
                                         <div>
-                                            <p class="mt-5 text-lg font-medium leading-6 text-black">
+                                            <p class="mt-5 text-md font-semibold leading-6 text-black">
                                                 Produk unggulan kami
                                             </p>
                                         </div>
-                                        <ul class="list-disc list-inside mt-3 text-gray-400">
+                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-sm text-gray-400">
                                             <li>Penjualan hardware</li>
                                             <li>Pengembangan perangkat lunak</li>
                                             <li>Pelatihan IT</li>
@@ -324,11 +329,11 @@
                                     </li>
                                     <li>
                                         <div>
-                                            <p class="mt-5 text-lg font-medium leading-6 text-black">
+                                            <p class="mt-5 text-md font-semibold leading-6 text-black">
                                                 Dibidang konsultan:
                                             </p>
                                         </div>
-                                        <ul class="list-disc list-inside mt-3 text-gray-400">
+                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-sm text-gray-400">
                                             <li>Pelatihan InHouse</li>
                                             <li>Public course</li>
                                             <li>Sertifikasi</li>
@@ -351,7 +356,7 @@
 
     {{-- Partners --}}
     <section class="py-12">
-        <p class="text-gray-400 text-center px-10 md:px-0">
+        <p class="text-xl text-black tracking-tight text-center px-10 md:px-0">
             Lebih dari <strong>100+ mitra</strong> tumbuh bersama NaZMa Office
         </p>
         <div>
@@ -386,7 +391,7 @@
 
     {{-- Testimonials --}}
     <section class="py-12 bg-white">
-        <p class="text-2xl font-medium tracking-tight text-black text-center">
+        <p class="text-xl font-semibold tracking-tight text-black text-center">
             Apa Kata Mereka
         </p>
         <div id="testimonial">
@@ -395,21 +400,21 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki
@@ -421,21 +426,21 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki
@@ -448,21 +453,21 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki
@@ -474,21 +479,21 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki
@@ -500,21 +505,21 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
                             </div>
                         </div>
                         <a href="#">
-                            <h5 class="text-lg font-medium tracking-tight text-gray-900">
+                            <h5 class="text-md font-medium tracking-tight text-gray-900">
                                 Faisal Salim
                             </h5>
-                            <span class="text-md -mt-2 tracking-tight text-gray-400">
+                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
                                 Business Man
                             </span>
                         </a>
-                        <p class="mt-3 font-normal text-gray-500 ">
+                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
                             Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
                             yang kami
                             miliki
@@ -527,10 +532,10 @@
 
     {{-- Project --}}
     <section class="py-12">
-        <p class="text-2xl font-medium tracking-tight text-black text-center">
+        <p class="text-xl font-semibold tracking-tight text-black text-center">
             Proyek Kami
         </p>
-        <p class="text-gray-400 text-center">
+        <p class="text-gray-400 text-center text-xs 2xl:text-sm">
             Kami telah berkontribusi dalam berbagai kegiatan untuk memajukan usaha <br> individu, kelompok, maupun UMKM
         </p>
         <div class="max-w-7xl mx-auto px-4 mt-8">
@@ -541,14 +546,14 @@
                         <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
                             src="{{ asset('assets/images/hero1.jpg') }}" alt="">
                         <div class="leading-normal col-span-2">
-                            <h5 class="mb-2 text-xl font-medium line-clamp-2 tracking-tight text-gray-900">
+                            <h5 class="mb-2 text-lg font-medium line-clamp-2 tracking-tight text-gray-900">
                                 Noteworthy technology acquisitions 2021</h5>
-                            <p class="font-normal text-gray-400 mb-4 line-clamp-2">
+                            <p class="font-normal text-gray-400 mb-4 line-clamp-2 text-xs 2xl:text-sm">
                                 Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
                                 ilmu dan sharing pengalaman bisnisnya
                             </p>
 
-                            <ul class="space-y-2 text-left text-gray-500 dark:text-gray-400">
+                            <ul class="space-y-1 text-left text-gray-500 dark:text-gray-400 text-xs 2xl:text-sm">
                                 <li class="flex items-center space-x-3">
                                     <ion-icon name="calendar"
                                         class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
@@ -561,7 +566,7 @@
                                 </li>
                             </ul>
                             <button
-                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-md font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-sm font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                                 Selengkapnya
                             </button>
                         </div>
@@ -573,14 +578,14 @@
                         <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
                             src="{{ asset('assets/images/hero1.jpg') }}" alt="">
                         <div class="leading-normal col-span-2">
-                            <h5 class="mb-2 text-xl font-medium line-clamp-2 tracking-tight text-gray-900">
+                            <h5 class="mb-2 text-lg font-medium line-clamp-2 tracking-tight text-gray-900">
                                 Noteworthy technology acquisitions 2021</h5>
-                            <p class="font-normal text-gray-400 mb-4 line-clamp-2">
+                            <p class="font-normal text-gray-400 mb-4 line-clamp-2 text-xs 2xl:text-sm">
                                 Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
                                 ilmu dan sharing pengalaman bisnisnya
                             </p>
 
-                            <ul class="space-y-2 text-left text-gray-500 dark:text-gray-400">
+                            <ul class="space-y-1 text-left text-gray-500 dark:text-gray-400 text-xs 2xl:text-sm">
                                 <li class="flex items-center space-x-3">
                                     <ion-icon name="calendar"
                                         class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
@@ -593,7 +598,7 @@
                                 </li>
                             </ul>
                             <button
-                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-md font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-sm font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                                 Selengkapnya
                             </button>
                         </div>
@@ -605,14 +610,14 @@
                         <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
                             src="{{ asset('assets/images/hero1.jpg') }}" alt="">
                         <div class="leading-normal col-span-2">
-                            <h5 class="mb-2 text-xl font-medium line-clamp-2 tracking-tight text-gray-900">
+                            <h5 class="mb-2 text-lg font-medium line-clamp-2 tracking-tight text-gray-900">
                                 Noteworthy technology acquisitions 2021</h5>
-                            <p class="font-normal text-gray-400 mb-4 line-clamp-2">
+                            <p class="font-normal text-gray-400 mb-4 line-clamp-2 text-xs 2xl:text-sm">
                                 Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
                                 ilmu dan sharing pengalaman bisnisnya
                             </p>
 
-                            <ul class="space-y-2 text-left text-gray-500 dark:text-gray-400">
+                            <ul class="space-y-1 text-left text-gray-500 dark:text-gray-400 text-xs 2xl:text-sm">
                                 <li class="flex items-center space-x-3">
                                     <ion-icon name="calendar"
                                         class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
@@ -625,7 +630,7 @@
                                 </li>
                             </ul>
                             <button
-                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-md font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-sm font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                                 Selengkapnya
                             </button>
                         </div>
@@ -640,61 +645,75 @@
         <div class="max-w-7xl px-4 md:px-8 mx-auto">
             <div class="flex justify-between items-center">
                 <div>
-                    <p class="font-medium tracking-tight text-black text-2xl">Informasi Terbaru</p>
-                    <p class="text-gray-400">
+                    <p class="font-semibold tracking-tight text-black text-xl">Informasi Terbaru</p>
+                    <p class="text-gray-400 text-xs 2xl:text-sm">
                         Kami melakukan press release setiap kegiatan. Jangan sampai ketinggalan
                     </p>
                 </div>
                 <div>
                     <button
-                        class="inline-flex items-center justify-center px-3 py-2 text-md text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
+                        class="inline-flex items-center justify-center px-3 py-2 text-xs 2xl:text-sm text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
                         Lihat Semua
                     </button>
                 </div>
             </div>
 
-            <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
                 <figure>
                     <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
                         src="{{ asset('assets/images/hero1.jpg') }}" alt="">
 
-                    <p class="mt-5 text-lg font-medium leading-6 text-black">
+                    <p class="mt-5 text-md font-semibold leading-6 text-black">
                         Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                     </p>
-                    <p class="mt-3 text-base text-gray-500 line-clamp-3">
+                    <p class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
                         Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
                         Bimbingan…
                     </p>
                     <hr class="text-gray-300 my-4 opacity-30">
-                    <p class="uppercase text-gray-400">12 agustus 2023</p>
+                    <p class="uppercase text-gray-400 text-xs 2xl:text-sm">12 agustus 2023</p>
+                </figure>
+                <figure>
+                    <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
+                        src="{{ asset('assets/images/hero1.jpg') }}" alt="">
+
+                    <p class="mt-5 text-md font-semibold leading-6 text-black">
+                        Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
+                    </p>
+                    <p class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
+                        Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
+                        Bimbingan…
+                    </p>
+                    <hr class="text-gray-300 my-4 opacity-30">
+                    <p class="uppercase text-gray-400 text-xs 2xl:text-sm">12 agustus 2023</p>
                 </figure>
                 <figure>
                     <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
                         src="{{ asset('assets/images/hero2.jpg') }}" alt="">
 
-                    <p class="mt-5 text-lg font-medium leading-6 text-black">
+                    <p class="mt-5 text-md font-semibold leading-6 text-black">
                         Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                     </p>
-                    <p class="mt-3 text-base text-gray-500 line-clamp-3">
+                    <p class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
                         Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
                         Bimbingan…
                     </p>
                     <hr class="text-gray-300 my-4 opacity-30">
-                    <p class="uppercase text-gray-400">12 agustus 2023</p>
+                    <p class="uppercase text-gray-400 text-xs 2xl:text-sm">12 agustus 2023</p>
                 </figure>
                 <figure>
                     <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
                         src="{{ asset('assets/images/hero3.jpg') }}" alt="">
 
-                    <p class="mt-5 text-lg font-medium leading-6 text-black">
+                    <p class="mt-5 text-md font-semibold leading-6 text-black">
                         Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                     </p>
-                    <p class="mt-3 text-base text-gray-500 line-clamp-3">
+                    <p class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
                         Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
                         Bimbingan…
                     </p>
                     <hr class="text-gray-300 my-4 opacity-30">
-                    <p class="uppercase text-gray-400">12 agustus 2023</p>
+                    <p class="uppercase text-gray-400 text-xs 2xl:text-sm">12 agustus 2023</p>
                 </figure>
             </div>
         </div>
@@ -702,10 +721,10 @@
 
     {{-- Faq --}}
     <section class="py-12 max-w-2xl mx-auto">
-        <p class="text-2xl font-medium tracking-tight text-black text-center">
+        <p class="text-xl font-semibold tracking-tight text-black text-center">
             Pertanyaan Umum
         </p>
-        <p class="text-center text-gray-400">
+        <p class="text-center text-xs 2xl:text-sm text-gray-400">
             Beberapa pertanyaan yang sering diajukan untuk layanan pada website NaZMa Office.
         </p>
 
@@ -713,7 +732,7 @@
         <div id="accordion-arrow-icon" data-accordion="open" class="mt-8 mx-4 md:mx-0">
             <h2 id="accordion-arrow-icon-heading-2" class="rounded-lg mb-3 bg-white">
                 <button type="button"
-                    class="flex items-center justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                    class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
                     data-accordion-target="#accordion-arrow-icon-body-2" aria-expanded="false"
                     aria-controls="accordion-arrow-icon-body-2">
                     <span>Apa itu website NaZMa Office?</span>
@@ -724,7 +743,7 @@
             <div id="accordion-arrow-icon-body-2" class="hidden mb-4"
                 aria-labelledby="accordion-arrow-icon-heading-2">
                 <div class="p-5 bg-white rounded-lg">
-                    <p class="text-gray-400 text-xs 2xl:text-md">
+                    <p class="text-gray-400 text-xs 2xl:text-sm">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quae, officiis veniam
                         similique animi architecto soluta nostrum, sed quaerat fuga vitae atque ipsam et nisi quo
                         eveniet voluptatem sint dignissimos.
@@ -733,7 +752,7 @@
             </div>
             <h2 id="accordion-arrow-icon-heading-3" class="rounded-lg mb-3 bg-white">
                 <button type="button"
-                    class="flex items-center justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                    class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
                     data-accordion-target="#accordion-arrow-icon-body-3" aria-expanded="false"
                     aria-controls="accordion-arrow-icon-body-3">
                     <span>Kapan saja jam operasional NaZMa Office?</span>
@@ -744,7 +763,7 @@
             <div id="accordion-arrow-icon-body-3" class="hidden mb-4"
                 aria-labelledby="accordion-arrow-icon-heading-3">
                 <div class="p-5 bg-white rounded-lg">
-                    <p class="text-gray-400 text-xs 2xl:text-md">
+                    <p class="text-gray-400 text-xs 2xl:text-sm">
                         Jam kerja admin: <br>
                         Setiap hari (Senin-Minggu) <br>
                         Jam 09:00-19:00 WIB
@@ -753,7 +772,7 @@
             </div>
             <h2 id="accordion-arrow-icon-heading-4" class="rounded-lg mb-3 bg-white">
                 <button type="button"
-                    class="flex items-center justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                    class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
                     data-accordion-target="#accordion-arrow-icon-body-4" aria-expanded="false"
                     aria-controls="accordion-arrow-icon-body-4">
                     <span>Bagaimana cara menghubungi NaZMa Office?</span>
@@ -764,7 +783,7 @@
             <div id="accordion-arrow-icon-body-4" class="hidden mb-4"
                 aria-labelledby="accordion-arrow-icon-heading-4">
                 <div class="p-5 bg-white rounded-lg">
-                    <p class="text-gray-400 text-xs 2xl:text-md">
+                    <p class="text-gray-400 text-xs 2xl:text-sm">
                         Anda dapat menghubungi kami melalui email, telepon, atau mengisi form yang telah kami sediakan
                         pada halaman kontak.
                     </p>
@@ -772,7 +791,7 @@
             </div>
             <h2 id="accordion-arrow-icon-heading-5" class="rounded-lg mb-3 bg-white">
                 <button type="button"
-                    class="flex items-center justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                    class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
                     data-accordion-target="#accordion-arrow-icon-body-5" aria-expanded="false"
                     aria-controls="accordion-arrow-icon-body-5">
                     <span>Bagaimana cara memesan produk NaZMa Office?</span>
@@ -783,7 +802,7 @@
             <div id="accordion-arrow-icon-body-5" class="hidden mb-4"
                 aria-labelledby="accordion-arrow-icon-heading-5">
                 <div class="p-5 bg-white rounded-lg">
-                    <p class="text-gray-400 text-xs 2xl:text-md">
+                    <p class="text-gray-400 text-xs 2xl:text-sm">
                         Anda dapat memesan produk kami melalui website ini, atau menghubungi kami melalui email,
                         telepon, atau mengisi form yang telah kami sediakan pada halaman kontak.
                     </p>

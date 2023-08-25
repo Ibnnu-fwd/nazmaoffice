@@ -43,7 +43,7 @@
                         <div class="flex flex-col m-auto md:order-first">
                             <div class="max-w-xl">
                                 <div>
-                                    <p class="text-2xl font-medium tracking-tight text-black">
+                                    <p class="text-xl font-semibold tracking-tight text-black">
                                         Benefit Yang Anda Dapatkan
                                     </p>
                                 </div>
@@ -53,11 +53,11 @@
                                     @for ($i = 1; $i <= 4; $i++)
                                         <li>
                                             <div>
-                                                <p class="mt-5 text-lg font-medium leading-6 text-black">
+                                                <p class="mt-5 text-md font-medium leading-6 text-black">
                                                     Developer experience
                                                 </p>
                                             </div>
-                                            <div class="mt-2 text-base text-gray-500">
+                                            <div class="mt-2 text-xs 2xl:text-sm text-gray-500">
                                                 Plus, our platform is constantly evolving to meet the
                                                 changing needs of the tech industry, ensuring you'll always
                                                 be ahead.
@@ -82,7 +82,7 @@
     <section class="">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-24 2xl:px-0">
             <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-                <h2 class="mb-4 text-2xl tracking-tight font-medium text-gray-900">
+                <h2 class="mb-4 text-xl tracking-tight font-semibold text-gray-900">
                     Proyek yang telah kami kerjakan
                 </h2>
             </div>
@@ -94,11 +94,12 @@
                         </a>
                         <div class="mt-4 text-start">
                             <a href="#">
-                                <h5 class="mb-2 text-2lg font-medium tracking-tight line-clamp-2 text-gray-900">
+                                <h5
+                                    class="mb-2 text-xs 2xl:text-sm font-semibold tracking-tight line-clamp-2 text-gray-900">
                                     Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                                 </h5>
                             </a>
-                            <p class="font-normal text-gray-400">
+                            <p class="font-normal text-xs 2xl:text-sm text-gray-400">
                                 12 Agustus 2023
                             </p>
                         </div>
@@ -112,17 +113,17 @@
     <section class="bg-white py-24">
         <div class="max-w-7xl mx-auto px-8 lg:px-12 2xl:px-0 grid md:grid-cols-2 ">
             <div>
-                <h1 class="text-2xl xl:text-3xl font-medium mb-2">
+                <h1 class="text-2xl font-semibold mb-2">
                     Kami Siap <br>
                     Membantu Anda Tumbuh
                 </h1>
-                <p class="text-gray-400 2xl:w-1/2 mb-4 lg:mb-0">
+                <p class="text-gray-400  text-xs 2xl:text-sm 2xl:w-1/2 mb-4 lg:mb-0">
                     Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan dalam membangun bisnis
                 </p>
             </div>
             <div class="flex items-center justify-start md:justify-end mt-6 md:mt-0">
                 <a href="#"
-                    class="items-center justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
+                    class="items-center text-xs 2xl:text-sm justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
                     Daftar Sekarang
                 </a>
             </div>
