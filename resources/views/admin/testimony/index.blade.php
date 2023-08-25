@@ -582,7 +582,7 @@
                             class="w-full sm:w-auto text-grey justify-center inline-flex items-center hover:text-white border text-lime-700 border-lime-700 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800">
                             Simpan
                         </button>
-                        <button data-modal-toggle="createProductModal" type="button"
+                        <button button type="button" data-drawer-dismiss="drawer-update-product"
                             class="w-full justify-center sm:w-auto hover:text-white text-red-500 inline-flex items-center bg-red hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg border border-red-700 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
                             Batal
                         </button>
