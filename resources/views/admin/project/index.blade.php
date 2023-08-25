@@ -3,7 +3,7 @@
         <!-- Desktop Header -->
         <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
             <div class="w-1/2"></div>
-            <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end relative z-20">
+            <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end z-20">
 
                 <button x-show="isOpen" @click="isOpen = false"
                     class="h-full w-full fixed inset-0 cursor-default"></button>
@@ -540,7 +540,7 @@
                                         Simpan
                                     </button>
                                     <button data-modal-toggle="createProductModal" type="button"
-                                        class="w-full justify-center sm:w-auto hover:text-white text-red-500 inline-flex items-center bg-red hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg border border-red-700 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                                        class="w-full justify-center sm:w-auto hover:text-white text-red-500 inline-flex items-center bg-red hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg border border-red-700 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 ">
                                         Batal
                                     </button>
                                 </div>
@@ -622,8 +622,8 @@
                             class="w-full sm:w-auto text-grey justify-center inline-flex items-center hover:text-white border text-lime-700 border-lime-700 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-lime-600 dark:hover:bg-lime-700 dark:focus:ring-lime-800">
                             Simpan
                         </button>
-                        <button button type="button" data-drawer-dismiss="drawer-update-product"
-                        class="w-full justify-center sm:w-auto hover:text-white text-red-500 inline-flex items-center bg-red hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg border border-red-700 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                        <button data-modal-toggle="createProductModal" type="button"
+                            class="w-full justify-center sm:w-auto hover:text-white text-red-500 inline-flex items-center bg-red hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg border border-red-700 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 ">
                             Batal
                         </button>
                     </div>
@@ -658,7 +658,7 @@
                                     class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">Iya,
                                     Hapus Data</button>
                                 <button data-modal-toggle="delete-modal" type="button"
-                                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Tidak,
+                                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 ">Tidak,
                                     Batal</button>
                             </div>
                         </div>

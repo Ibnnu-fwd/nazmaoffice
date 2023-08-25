@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BlogCategoryController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CkeditorController;
 
 
@@ -22,7 +24,21 @@ Route::get('/login-page', [AdminController::class, 'login'])->name('admin.login'
 Route::group(['prefix' => 'admin'], function () {
     // Dashboard
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
-    Route::get('/blog', [AdminController::class, 'blog'])->name('admin.blog');
+
+    // Blog
+    Route::prefix('blog')->group(function () {
+        Route::get('/', [BlogController::class, 'index'])->name('admin.blog');
+    });
+
+    // Blog Category
+    Route::prefix('blog-category')->group(function () {
+        Route::post('destroy/{id}', [BlogCategoryController::class, 'destroy'])->name('admin.blog-category.destroy');
+        Route::post('update/{id}', [BlogCategoryController::class, 'update'])->name('admin.blog-category.update');
+        Route::post('store', [BlogCategoryController::class, 'store'])->name('admin.blog-category.store');
+        Route::post('get-by-id', [BlogCategoryController::class, 'getById'])->name('admin.blog-category.get-by-id');
+        Route::get('/', [BlogCategoryController::class, 'index'])->name('admin.blog-category');
+    });
+
     Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');
     Route::get('/project', [AdminController::class, 'project'])->name('admin.project');
     Route::get('/testimony', [AdminController::class, 'testimony'])->name('admin.testimony');
