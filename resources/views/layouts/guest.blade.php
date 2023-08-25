@@ -14,6 +14,48 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <style>
+        .blur-mode {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .blur-mode.loaded>img {
+            opacity: 1;
+            transition: opacity 200ms ease-in-out;
+        }
+
+        .blur-mode>img {
+            opacity: 0;
+        }
+
+        .blur-mode::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            animation: pulse 2.5s infinite;
+        }
+
+
+        @keyframes pulse {
+            0% {
+                background-color: rgba(255, 255, 255, 0)
+            }
+
+            50% {
+                background-color: rgba(255, 255, 255, 0.1)
+            }
+
+            100% {
+                background-color: rgba(255, 255, 255, 0)
+            }
+        }
+
+        .blur-mode.loaded::before {
+            content: none;
+        }
+    </style>
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -43,6 +85,23 @@
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
+        const blurModeElements = document.querySelectorAll('.blur-mode');
+        blurModeElements.forEach((element) => {
+            const img = element.querySelector('img');
+
+            function loaded() {
+                element.classList.add('loaded');
+            }
+
+            if (img.complete) {
+                loaded();
+            } else {
+                img.addEventListener('load', loaded)
+            }
+        });
+    </script>
 
     @stack('js-internal')
 </body>

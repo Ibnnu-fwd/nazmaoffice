@@ -26,8 +26,8 @@
                     </div>
                 </div>
                 <div class="order-first hidden lg:block w-full lg:mt-0">
-                    <img class="object-cover object-center w-full mx-auto lg:ml-auto rounded-xl" alt="hero"
-                        src="{{ asset('assets/images/hero1.jpg') }}">
+                    <img class="object-cover object-center blur-mode w-full mx-auto lg:ml-auto rounded-xl"
+                        alt="hero" src="{{ asset('assets/images/hero1.jpg') }}">
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <div class="order-first block w-full mt-12 lg:mt-0">
-                            <img class="object-cover object-center rounded-xl w-full mx-auto bg-gray-300 border lg:ml-auto"
+                            <img class="object-cover object-center blur-mode rounded-xl w-full mx-auto bg-gray-300 border lg:ml-auto"
                                 alt="hero" src="{{ asset('assets/images/hero3.jpg') }}">
                         </div>
                     </div>
