@@ -20,7 +20,8 @@
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/hero1.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 blur-mode top-1/2 left-1/2"
+                    alt="...">
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60 dark:from-gray-800/60"></div>
                 <div
                     class="absolute top-0 bottom-0 md:right-0 z-20 text-white lg:w-1/2 p-10 md:py-12 lg:py-24 text-start">
@@ -39,12 +40,14 @@
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/hero2.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 blur-mode top-1/2 left-1/2"
+                    alt="...">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/hero3.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 blur-mode top-1/2 left-1/2"
+                    alt="...">
             </div>
         </div>
         <!-- Slider indicators -->
@@ -337,7 +340,7 @@
                             </div>
                         </div>
                         <div class="order-first block w-full mt-8 lg:mt-0">
-                            <img class=" object-cover object-center rounded-lg w-full mx-auto bg-gray-300 lg:ml-auto h-60 md:h-80"
+                            <img class=" object-cover object-center rounded-lg w-full mx-auto bg-gray-300 lg:ml-auto h-60 md:h-80 blur-mode"
                                 alt="hero" src="{{ asset('assets/images/hero2.jpg') }}">
                         </div>
                     </div>
@@ -356,23 +359,23 @@
                 <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8">
                     <div class="mt-6 grid gap-5 md:gap-0.5 md:grid-flow-col lg:mt-8">
                         <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 2.svg') }}"
+                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 2.svg') }}"
                                 alt=" logo">
                         </div>
                         <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 3.svg') }}"
+                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 3.svg') }}"
                                 alt="logo">
                         </div>
                         <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 4.svg') }}"
+                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 4.svg') }}"
                                 alt="logo">
                         </div>
                         <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 5.svg') }}"
+                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 5.svg') }}"
                                 alt="logo">
                         </div>
                         <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12" src="{{ asset('assets/images/partner/image 6.svg') }}"
+                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 6.svg') }}"
                                 alt="logo">
                         </div>
                     </div>
@@ -392,7 +395,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
@@ -418,7 +421,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
@@ -445,7 +448,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
@@ -471,7 +474,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
@@ -497,7 +500,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class=" blur-mode w-20 h-20 object-center object-cover rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
@@ -535,7 +538,7 @@
                 <div class="carousel-item w-full lg:w-1/2">
                     <div
                         class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
-                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center"
+                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
                             src="{{ asset('assets/images/hero1.jpg') }}" alt="">
                         <div class="leading-normal col-span-2">
                             <h5 class="mb-2 text-xl font-medium line-clamp-2 tracking-tight text-gray-900">
@@ -567,7 +570,7 @@
                 <div class="carousel-item w-full lg:w-1/2">
                     <div
                         class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
-                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center"
+                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
                             src="{{ asset('assets/images/hero1.jpg') }}" alt="">
                         <div class="leading-normal col-span-2">
                             <h5 class="mb-2 text-xl font-medium line-clamp-2 tracking-tight text-gray-900">
@@ -599,7 +602,7 @@
                 <div class="carousel-item w-full lg:w-1/2">
                     <div
                         class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
-                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center"
+                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
                             src="{{ asset('assets/images/hero1.jpg') }}" alt="">
                         <div class="leading-normal col-span-2">
                             <h5 class="mb-2 text-xl font-medium line-clamp-2 tracking-tight text-gray-900">
@@ -652,7 +655,7 @@
 
             <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
                 <figure>
-                    <img class="w-full bg-gray-200 rounded-xl h-60 object-cover object-center"
+                    <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
                         src="{{ asset('assets/images/hero1.jpg') }}" alt="">
 
                     <p class="mt-5 text-lg font-medium leading-6 text-black">
@@ -666,7 +669,7 @@
                     <p class="uppercase text-gray-400">12 agustus 2023</p>
                 </figure>
                 <figure>
-                    <img class="w-full bg-gray-200 rounded-xl h-60 object-cover object-center"
+                    <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
                         src="{{ asset('assets/images/hero2.jpg') }}" alt="">
 
                     <p class="mt-5 text-lg font-medium leading-6 text-black">
@@ -680,7 +683,7 @@
                     <p class="uppercase text-gray-400">12 agustus 2023</p>
                 </figure>
                 <figure>
-                    <img class="w-full bg-gray-200 rounded-xl h-60 object-cover object-center"
+                    <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
                         src="{{ asset('assets/images/hero3.jpg') }}" alt="">
 
                     <p class="mt-5 text-lg font-medium leading-6 text-black">
@@ -791,19 +794,6 @@
     </section>
 
     @push('js-internal')
-        <script>
-            // load each image async
-            const images = document.querySelectorAll('[data-carousel-item]');
-            images.forEach((image) => {
-                const src = image.getAttribute('data-carousel-item');
-                const img = new Image();
-                img.src = src;
-                img.onload = () => {
-                    image.style.backgroundImage = `url(${src})`;
-                    image.classList.remove('hidden');
-                };
-            });
-        </script>
     @endpush
 
 </x-guest-layout>

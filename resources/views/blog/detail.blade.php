@@ -18,7 +18,7 @@
 
     <section class="max-w-4xl mx-auto mt-10 px-8 lg:px-0">
         <img src="{{ asset('assets/images/hero1.jpg') }}"
-            class="w-full h-48 md:h-96 object-cover object-center rounded-xl" alt="">
+            class="w-full h-48 md:h-96 object-cover object-center blur-mode rounded-xl" alt="">
         <p class="mt-8 leading-6 text-justify">
             Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan Bimbingan
             Teknis (BIMTEK) bagi para pelaku UMKM di wilayah Sleman khususnya Kapanewon Gamping dan Kapanewon Moyudan.
@@ -53,7 +53,7 @@
                 <div class="grid grid-cols-2 gap-x-6 gap-y-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
                     @for ($i = 1; $i <= 3; $i++)
                         <figure>
-                            <img class="w-full bg-gray-200 rounded-lg object-cover object-center"
+                            <img class="w-full bg-gray-200 rounded-lg object-cover object-center blur-mode"
                                 src="{{ asset('assets/images/hero1.jpg') }}" alt="" width="1310"
                                 height="873">
 
@@ -74,7 +74,8 @@
                 <div
                     class="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-6 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
                     <img src="{{ asset('assets/images/hero2.jpg') }}"
-                        class="hidden mx-auto lg:inline-block object-center object-cover rounded-lg" alt="">
+                        class="hidden mx-auto lg:inline-block object-center object-cover blur-mode rounded-lg"
+                        alt="">
                     <div class="col-span-2">
                         <span class="text-gray-400 text-sm">20 Agustus 2023</span>
                         <span class="text-lg font-medium text-black line-clamp-2 mt-2">
@@ -87,7 +88,7 @@
                         </p>
                         <div class="flex gap-x-2 items-center mt-5">
                             <img src="{{ asset('assets/images/hero1.jpg') }}"
-                                class="w-8 h-8 rounded-full object-cover object-center" alt="">
+                                class="w-8 h-8 rounded-full object-cover object-center blur-mode" alt="">
                             <p class="text-sm">
                                 Moh Ibnu Abdurrohman Sutio
                             </p>

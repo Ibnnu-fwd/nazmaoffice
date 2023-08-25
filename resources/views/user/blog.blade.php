@@ -40,7 +40,7 @@
         <div class="grid md:grid-cols-2 gap-6 mt-6">
             <a href="">
                 <img src="{{ asset('assets/images/hero1.jpg') }}"
-                    class="w-full md:h-72 lg:h-96 rounded-xl object-cover object-center mb-4" alt="">
+                    class="w-full md:h-72 lg:h-96 rounded-xl object-cover object-center blur-mode mb-4" alt="">
                 <p class="text-gray-400 mb-1">12 Agustus 2023</p>
                 <h1 class="text-2xl font-medium text-black tracking-tight mb-3 line-clamp-2">
                     BIMTEK Packaging, Design, dan Branding di Wilayah Sleman
@@ -53,7 +53,7 @@
             <div class="grid grid-cols-1 gap-y-6 place-content-start">
                 <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
                     <img src="{{ asset('assets/images/hero2.jpg') }}"
-                        class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 object-center object-cover rounded-lg"
+                        class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
                         alt="">
                     <div class="col-span-2">
                         <span class="text-gray-400 text-sm">20 Agustus 2023</span>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
                     <img src="{{ asset('assets/images/hero2.jpg') }}"
-                        class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 object-center object-cover rounded-lg"
+                        class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
                         alt="">
                     <div class="col-span-2">
                         <span class="text-gray-400 text-sm">20 Agustus 2023</span>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
                     <img src="{{ asset('assets/images/hero2.jpg') }}"
-                        class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 object-center object-cover rounded-lg"
+                        class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
                         alt="">
                     <div class="col-span-2">
                         <span class="text-gray-400 text-sm">20 Agustus 2023</span>
@@ -115,7 +115,7 @@
                 <div class="grid grid-cols-2 gap-x-6 gap-y-8 mt-8 md:grid-cols-2 lg:grid-cols-4">
                     @for ($i = 1; $i <= 6; $i++)
                         <figure>
-                            <img class="w-full bg-gray-200 rounded-lg object-cover object-center"
+                            <img class="w-full bg-gray-200 rounded-lg object-cover object-center blur-mode"
                                 src="{{ asset('assets/images/hero1.jpg') }}" alt="" width="1310"
                                 height="873">
 

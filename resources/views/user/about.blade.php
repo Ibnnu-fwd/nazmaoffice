@@ -10,7 +10,8 @@
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                 <img src="{{ asset('assets/images/hero1.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
                 <div
                     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
@@ -28,12 +29,14 @@
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/hero2.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/hero3.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
             </div>
         </div>
         <!-- Slider indicators -->
@@ -477,7 +480,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
@@ -503,7 +506,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
@@ -530,7 +533,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
@@ -556,7 +559,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>
@@ -582,7 +585,7 @@
                     <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
                         <div class="flex justify-between items-center mb-4">
                             <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class="w-20 h-20 object-center object-cover rounded-full" alt="">
+                                class="w-20 h-20 object-center object-cover blur-mode rounded-full" alt="">
                             <div class="flex items-center">
                                 <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
                                 <span class="text-xs 2xl:text-sm text-primary">5.0</span>

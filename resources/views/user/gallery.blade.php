@@ -22,8 +22,8 @@
         </form>
 
         <div>
-            <div class="flex justify-between items-center px-10 md:px-24 lg:px-20 xl:px-44 mt-16">
-                <h1 class="text-gray-300 text-4xl font-bold">2023</h1>
+            <div class="flex justify-between items-center md:px-48 mt-16">
+                <h1 class="text-gray-300 text-4xl font-bold">2022</h1>
                 <ion-icon class="text-gray-300 text-5xl" name="chevron-down-circle-outline"></ion-icon>
             </div>
 
@@ -31,7 +31,8 @@
                 @for ($i = 1; $i <= 9; $i++)
                     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
                         <a href="#">
-                            <img class="rounded-xl" src="{{ asset('assets/images/hero2.jpg') }}" alt="" />
+                            <img class="rounded-xl blur-mode" src="{{ asset('assets/images/hero2.jpg') }}"
+                                alt="" />
                         </a>
                         <div class="mt-4">
                             <a href="#">

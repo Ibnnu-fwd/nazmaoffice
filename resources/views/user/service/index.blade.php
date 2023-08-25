@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="order-first hidden lg:flex w-full mt-12 lg:mt-0 justify-end">
-                        <img class="object-contain object-center h-[500px]" alt="hero"
+                        <img class="object-contain blur-mode object-center h-[500px]" alt="hero"
                             src="{{ asset('assets/images/service-hero.svg') }}">
                     </div>
                 </div>
