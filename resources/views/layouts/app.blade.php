@@ -56,11 +56,11 @@
     @include('admin.layouts.sidebar')
     <div class="w-full flex flex-col h-screen overflow-y-hidden">
         <!-- Desktop Header -->
-        <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
+        <header class="w-full items-center  bg-white py-2 px-6 hidden sm:flex">
             <div class="w-1/2"></div>
             <div x-data="{ isOpen: false }" class="relative w-1/2 flex justify-end">
                 <button @click="isOpen = !isOpen"
-                    class="realtive z-10 w-12 h-12  overflow-hidden border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
+                    class="realtive z-10 w-12 h-12 mt-2 mr-2 overflow-hidden border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
                     <img src="{{ asset('assets/images/logo nazma elipse -01.png') }}">
                 </button>
                 <button x-show="isOpen" @click="isOpen = false"

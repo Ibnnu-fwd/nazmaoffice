@@ -32,8 +32,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/gallery', [AdminController::class, 'gallery'])->name('admin.gallery');
     Route::get('/sidebar', [AdminController::class, 'sidebar'])->name('admin.sidebar');
     Route::post('ckeditor/upload', [CkeditorController::class, 'upload'])->name('ckeditor.upload');
-
-
 });
 
 require __DIR__ . '/auth.php';
