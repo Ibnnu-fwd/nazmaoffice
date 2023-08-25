@@ -447,7 +447,7 @@
                                     <form>
                                       <div>
                                         <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konten </label>
-                                        <textarea name="description" id="editor2" class="bg-gray-500 relative overflow-x-auto text-xs font-medium">
+                                        <textarea name="description" id="editor2" class="bg-gray-500 relative overflow-x-scroll text-xs font-medium">
                                         </textarea>
                                       </div>
                                     </form>
