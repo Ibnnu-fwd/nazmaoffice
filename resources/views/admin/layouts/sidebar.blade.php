@@ -36,6 +36,10 @@
                 <i class="fas fa-images mr-3"></i>
                 Galeri
             </a>
+            <a href="{{ url('admin/event')}}" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item hover:text-orange-400">
+                <i class="fas fa-puzzle-piece mr-3"></i>
+                Acara
+            </a>
         </nav>
        
     </aside>
