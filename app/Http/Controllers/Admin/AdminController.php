@@ -9,7 +9,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.index');
+        return view('admin.home.index');
     }
 
     public function login()
@@ -19,37 +19,37 @@ class AdminController extends Controller
 
     public function blog()
     {
-        return view('admin.blog');
+        return view('admin.blog.index');
     }
 
     public function crew()
     {
-        return view('admin.crew');
+        return view('admin.crew.index');
     }
 
     public function project()
     {
-        return view('admin.project');
+        return view('admin.project.index');
     }
     
     public function trainers()
     {
-        return view('admin.trainers');
+        return view('admin.trainers.index');
     }
 
     public function testimony()
     {
-        return view('admin.testimony');
+        return view('admin.testimony.index');
     }
 
     public function partnership()
     {
-        return view('admin.partnership');
+        return view('admin.partnership..index');
     }
 
     public function gallery()
     {
-        return view('admin.gallery');
+        return view('admin.gallery.index');
     }
 
     public function sidebar()
