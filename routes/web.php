@@ -30,6 +30,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/trainers', [AdminController::class, 'trainers'])->name('admin.trainers');
     Route::get('/partnership', [AdminController::class, 'partnership'])->name('admin.partnership');
     Route::get('/gallery', [AdminController::class, 'gallery'])->name('admin.gallery');
+    Route::get('/event', [AdminController::class, 'event'])->name('admin.event');
     Route::get('/sidebar', [AdminController::class, 'sidebar'])->name('admin.sidebar');
     Route::post('ckeditor/upload', [CkeditorController::class, 'upload'])->name('ckeditor.upload');
 
