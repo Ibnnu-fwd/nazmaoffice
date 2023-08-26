@@ -5,8 +5,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CkeditorController;
-
-
+use App\Http\Controllers\Admin\EventController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
@@ -44,13 +43,20 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/', [BlogCategoryController::class, 'index'])->name('admin.blog-category');
     });
 
+    // Event
+    Route::prefix('event')->group(function () {
+        Route::get('/', [EventController::class, 'index'])->name('admin.event');
+        Route::get('setting', [EventController::class, 'setting'])->name('admin.event.setting');
+        Route::post('setting/new', [EventController::class, 'settingNew'])->name('admin.event.setting.new');
+        Route::post('setting/update', [EventController::class, 'settingUpdate'])->name('admin.event.setting.update');
+    });
+
     Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');
     Route::get('/project', [AdminController::class, 'project'])->name('admin.project');
     Route::get('/testimony', [AdminController::class, 'testimony'])->name('admin.testimony');
     Route::get('/trainers', [AdminController::class, 'trainers'])->name('admin.trainers');
     Route::get('/partnership', [AdminController::class, 'partnership'])->name('admin.partnership');
     Route::get('/gallery', [AdminController::class, 'gallery'])->name('admin.gallery');
-    Route::get('/event', [AdminController::class, 'event'])->name('admin.event');
     Route::get('/sidebar', [AdminController::class, 'sidebar'])->name('admin.sidebar');
     Route::post('ckeditor/upload', [CkeditorController::class, 'upload'])->name('ckeditor.upload');
 });

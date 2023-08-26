@@ -35,13 +35,24 @@
             <i class="fas fa-users mr-3"></i>
             Partnership
         </a>
+        <p class="uppercase text-white text-xs font-semibold my-2 pl-6">
+            Event
+        </p>
+        <a href="{{ route('admin.event.setting') }}"
+            class="flex items-center active-nav-link py-4 pl-6 nav-item hover:text-orange-400 {{ request()->routeIs('admin.event.setting') ? 'text-orange-400' : 'text-white' }}">
+            <i class="fas fa-blog mr-3"></i>
+            Pengaturan Event
+        </a>
+        <p class="uppercase text-white text-xs font-semibold my-2 pl-6">
+            Blog
+        </p>
         <a href="{{ route('admin.blog-category') }}"
             class="flex items-center active-nav-link py-4 pl-6 nav-item hover:text-orange-400 {{ request()->routeIs('admin.blog-category') ? 'text-orange-400' : 'text-white' }}">
             <i class="fas fa-blog mr-3"></i>
-            Kategori Blog
+            Kategori
         </a>
         <a href="{{ route('admin.blog') }}"
-            class="flex items-center active-nav-link  py-4 pl-6 nav-item hover:text-orange-400 {{ request()->routeIs('admin.blog.*') ? 'text-orange-400' : 'text-white' }}">
+            class="flex items-center active-nav-link  py-4 pl-6 nav-item hover:text-orange-400 {{ request()->routeIs('admin.blog') ? 'text-orange-400' : 'text-white' }}">
             <i class="fas fa-blog mr-3"></i>
             Blog
         </a>

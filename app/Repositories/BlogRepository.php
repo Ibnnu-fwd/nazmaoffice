@@ -18,7 +18,6 @@ class BlogRepository implements BlogInterface
 
     public function getAll()
     {
-        // paginate 5 
         return $this->blog->with(['blogCategory'])->paginate(5);
     }
 
