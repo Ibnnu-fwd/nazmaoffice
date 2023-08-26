@@ -23,13 +23,16 @@ return new class extends Migration
             $table->string('study_case');
             $table->longText('study_case_description');
             $table->integer('capacity');
-            $table->integer('status');
+            $table->integer('status')->nullable();
             $table->date('start_date');
             $table->date('end_date');
             $table->date('event_date');
-            $table->integer('price');
+            $table->time('event_time');
+            $table->integer('price')->nullable();
             $table->string('location');
             $table->integer('discount')->nullable();
+            $table->boolean('is_active')->default(1);
+            $table->string('event_type');
             $table->timestamps();
         });
     }

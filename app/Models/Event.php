@@ -7,6 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
+
+    const EVENT_TYPES = [
+        'seminar'     => 'Seminar',
+        'workshop'    => 'Workshop',
+        'training'    => 'Training',
+        'webinar'     => 'Webinar',
+        'sertifikasi' => 'Sertifikasi',
+        'lainnya'     => 'Lainnya'
+    ];
+
     use HasFactory;
 
     public $table = 'events';
@@ -23,9 +33,12 @@ class Event extends Model
         'start_date',
         'end_date',
         'event_date',
+        'event_time',
         'price',
         'location',
         'discount',
+        'is_active',
+        'event_type'
     ];
 
     public function eventRundowns()

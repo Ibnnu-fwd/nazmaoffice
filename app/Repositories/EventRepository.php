@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Interfaces\EventInterface;
 use App\Models\Event;
 use App\Models\EventPageSetting;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class EventRepository implements EventInterface
@@ -51,5 +52,42 @@ class EventRepository implements EventInterface
         $setting->save();
 
         return $setting;
+    }
+
+    public function getWithPaginate($limit)
+    {
+        $events = $this->event->orderBy('created_at', 'desc')->paginate($limit);
+        return $events;
+    }
+
+    public function store($data)
+    {
+        $filenameThumbnail = uniqid() . '.' . $data['thumbnail']->extension();
+        $fileNameHeroImage = uniqid() . '.' . $data['hero_image']->extension();
+
+        $thumbnailPath = 'public/event/thumbnail/' . $filenameThumbnail;
+        $heroImagePath = 'public/event/hero_image/' . $fileNameHeroImage;
+
+        $data['thumbnail']->storeAs($thumbnailPath);
+        $data['hero_image']->storeAs($heroImagePath);
+
+        DB::beginTransaction();
+        try {
+            $formattedData = [
+                'thumbnail'  => $filenameThumbnail,
+                'hero_image' => $fileNameHeroImage,
+                'start_date' => date('Y-m-d', strtotime($data['start_date'])),
+                'end_date'   => date('Y-m-d', strtotime($data['end_date'])),
+                'event_date' => date('Y-m-d', strtotime($data['event_date'])),
+                'event_time' => date('H:i:s', strtotime($data['event_time'])),
+            ];
+
+            $this->event->create($formattedData);
+
+            DB::commit();
+        } catch (\Throwable $th) {
+            Storage::delete([$thumbnailPath, $heroImagePath]);
+            DB::rollBack();
+        }
     }
 }

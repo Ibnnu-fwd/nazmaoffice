@@ -49,6 +49,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('setting', [EventController::class, 'setting'])->name('admin.event.setting');
         Route::post('setting/new', [EventController::class, 'settingNew'])->name('admin.event.setting.new');
         Route::post('setting/update', [EventController::class, 'settingUpdate'])->name('admin.event.setting.update');
+        Route::post('destroy/{id}', [EventController::class, 'destroy'])->name('admin.event.destroy');
+        Route::post('update/{id}', [EventController::class, 'update'])->name('admin.event.update');
+        Route::post('store', [EventController::class, 'store'])->name('admin.event.store');
     });
 
     Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');

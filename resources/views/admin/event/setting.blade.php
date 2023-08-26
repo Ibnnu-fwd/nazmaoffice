@@ -1,5 +1,5 @@
 <x-app-layout>
-    <x-card-container page-title="Manajeman Halaman (Event)">
+    <x-card-container page_title="Manajeman Halaman (Event)">
         @if ($setting == null)
             <form action="{{ route('admin.event.setting.new') }}" method="POST" enctype="multipart/form-data"
                 class="grid xl:grid-cols-2 gap-x-6">
@@ -45,7 +45,7 @@
                         Preview Gambar Header
                     </p>
 
-                    <img src="{{ asset('storage/event/setting' . $setting->hero_image) }}"
+                    <img src="{{ asset('storage/event/setting/' . $setting->hero_image) }}"
                         class="w-96 h-60 rounded-xl object-contain object-center border border-gray-100"
                         alt="Gambar Header">
                 </div>
