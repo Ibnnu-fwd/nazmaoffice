@@ -8,8 +8,11 @@ use App\Http\Controllers\Admin\CkeditorController;
 use App\Http\Controllers\Admin\CompanyAddressController;
 use App\Http\Controllers\Admin\CompanySocialMediaController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\MilestoneController;
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\ServiceCategoryController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
 use Illuminate\Support\Facades\Route;
@@ -130,14 +133,32 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('{id}/destroy', [TeamController::class, 'destroy'])->name('admin.team.destroy');
     });
 
-    Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');
-    Route::get('/project', [AdminController::class, 'project'])->name('admin.project');
-    Route::get('/testimony', [AdminController::class, 'testimony'])->name('admin.testimony');
-    Route::get('/trainers', [AdminController::class, 'trainers'])->name('admin.trainers');
-    Route::get('/partnership', [AdminController::class, 'partnership'])->name('admin.partnership');
-    Route::get('/gallery', [AdminController::class, 'gallery'])->name('admin.gallery');
-    Route::get('/sidebar', [AdminController::class, 'sidebar'])->name('admin.sidebar');
-    Route::post('ckeditor/upload', [CkeditorController::class, 'upload'])->name('ckeditor.upload');
+    // Gallery
+    Route::group(['prefix' => 'gallery'], function () {
+        Route::get('/', [GalleryController::class, 'index'])->name('admin.gallery');
+        Route::post('store', [GalleryController::class, 'store'])->name('admin.gallery.store');
+        Route::post('get-by-id', [GalleryController::class, 'getById'])->name('admin.gallery.get-by-id');
+        Route::post('{id}/update', [GalleryController::class, 'update'])->name('admin.gallery.update');
+        Route::post('{id}/destroy', [GalleryController::class, 'destroy'])->name('admin.gallery.destroy');
+    });
+
+    // Service Category
+    Route::group(['prefix' => 'service-category'], function () {
+        Route::get('/', [ServiceCategoryController::class, 'index'])->name('admin.service-category');
+        Route::post('store', [ServiceCategoryController::class, 'store'])->name('admin.service-category.store');
+        Route::post('get-by-id', [ServiceCategoryController::class, 'getById'])->name('admin.service-category.get-by-id');
+        Route::post('{id}/update', [ServiceCategoryController::class, 'update'])->name('admin.service-category.update');
+        Route::post('{id}/destroy', [ServiceCategoryController::class, 'destroy'])->name('admin.service-category.destroy');
+    });
+
+    // Service
+    Route::group(['prefix' => 'service'], function () {
+        Route::get('/', [ServiceController::class, 'index'])->name('admin.service');
+        Route::post('store', [ServiceController::class, 'store'])->name('admin.service.store');
+        Route::post('get-by-id', [ServiceController::class, 'getById'])->name('admin.service.get-by-id');
+        Route::post('{id}/update', [ServiceController::class, 'update'])->name('admin.service.update');
+        Route::post('{id}/destroy', [ServiceController::class, 'destroy'])->name('admin.service.destroy');
+    });
 });
 
 require __DIR__ . '/auth.php';

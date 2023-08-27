@@ -29,6 +29,8 @@
                 active="{{ request()->routeIs('admin.testimonial') }}" />
             <x-sidebar-menu name="Tim" icon="fas fa-user-circle" route="{{ route('admin.team') }}"
                 active="{{ request()->routeIs('admin.team') }}" />
+            <x-sidebar-menu name="Galeri" icon="fas fa-images" route="{{ route('admin.gallery') }}"
+                active="{{ request()->routeIs('admin.gallery') }}" />
 
             <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Blog</p>
 
@@ -43,6 +45,12 @@
                 active="{{ request()->routeIs('admin.event') }}" />
             <x-sidebar-menu name="Konfigurasi Halaman" icon="fas fa-cog" route="{{ route('admin.event.setting') }}"
                 active="{{ request()->routeIs('admin.event.setting') }}" />
+
+            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Layanan</p>
+
+            <x-sidebar-menu name="Kategori" icon="fas fa-sort" route="{{ route('admin.service-category') }}"
+                active="{{ request()->routeIs('admin.service-category') }}" />
+
         </ul>
     </div>
 </aside>

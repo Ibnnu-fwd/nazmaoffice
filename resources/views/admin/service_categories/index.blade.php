@@ -1,5 +1,5 @@
 <x-app-layout>
-    <x-card-container page_title="Manajemen Galeri">
+    <x-card-container page_title="Manajemen Kategori Layanan">
         <div
             class="flex flex-col md:flex-row items-stretch md:items-center md:space-x-3 space-y-3 md:space-y-0 justify-between mx-4 py-4">
             <div class="w-full md:w-1/2">
@@ -35,21 +35,16 @@
             <table class="w-full text-sm text-left text-gray-500">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
                     <tr>
-                        <th scope="col" class="p-4">Judul</th>
-                        <th scope="col" class="p-4">Gambar</th>
+                        <th scope="col" class="p-4">Kategori</th>
                         <th scope="col" class="p-4">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($galleries as $data)
+                    @forelse ($serviceCategories as $data)
                         <tr class="border-b hover:bg-gray-100 dark:hover:bg-gray-700">
                             <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $data->title ?? '-' }}
                             </th>
-                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ asset('storage/gallery/' . $data->image) }}"
-                                    class="w-20 h-20 object-cover object-center rounded-lg" alt="">
-                            </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">
                                     <x-button-edit label="Edit" onclick="btnEdit('{{ $data->id }}')"
@@ -78,7 +73,7 @@
                 <!-- Modal header -->
                 <div class="flex items-start justify-between p-4 border-b rounded-t">
                     <h3 class="text-lg font-medium text-gray-900" id="modal-title">
-                        Formulir Tambah Galeri
+                        Formulir Tambah Kategori Layanan
                     </h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
@@ -97,8 +92,6 @@
                     <div class="p-6 space-y-6">
 
                         <x-input id="title" name="title" label="Judul" required />
-
-                        <x-input-file id="image" name="image" label="Gambar" required />
 
                     </div>
 
@@ -141,7 +134,7 @@
                             d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <h3 class="mb-5 text-lg font-normal text-gray-500">
-                        Apakah kamu yakin ingin menghapus galeri ini?
+                        Apakah kamu yakin ingin menghapus kategori ini?
                     </h3>
                     <form action="" method="POST">
                         @csrf
@@ -160,13 +153,13 @@
     @push('js-internal')
         <script>
             function btnEdit(id) {
-                let url = "{{ route('admin.gallery.update', ':id') }}".replace(':id', id);
+                let url = "{{ route('admin.service-category.update', ':id') }}".replace(':id', id);
                 $('#create-modal form').attr('action', url);
                 $('#create-modal form').trigger('reset');
-                $('#create-modal #modal-title').text('Formulir Edit Galeri');
+                $('#create-modal #modal-title').text('Formulir Edit Kategori Layanan');
 
                 $.ajax({
-                    url: "{{ route('admin.gallery.get-by-id') }}",
+                    url: "{{ route('admin.service-category.get-by-id') }}",
                     type: 'POST',
                     data: {
                         _token: '{{ csrf_token() }}',
@@ -175,7 +168,6 @@
                     dataType: 'JSON',
                     success: function(data) {
                         $('#create-modal #title').val(data.title);
-                        $('#create-modal #image').val(data.image);
                     },
                     error: function() {
                         Swal.fire({
@@ -188,14 +180,15 @@
             }
 
             function btnDelete(id) {
-                $('#delete-modal form').attr('action', "{{ route('admin.gallery.destroy', ':id') }}".replace(':id', id));
+                $('#delete-modal form').attr('action', "{{ route('admin.service-category.destroy', ':id') }}".replace(':id',
+                    id));
             }
             $(function() {
                 $('#btnAdd').click(function(e) {
                     e.preventDefault();
-                    $('#create-modal form').attr('action', "{{ route('admin.gallery.store') }}");
+                    $('#create-modal form').attr('action', "{{ route('admin.service-category.store') }}");
                     $('#create-modal form').trigger('reset');
-                    $('#create-modal #modal-title').text('Formulir Tambah Galeri');
+                    $('#create-modal #modal-title').text('Formulir Tambah Kategori Layanan');
                 });
 
                 $('#search').on('keypress', function(e) {
