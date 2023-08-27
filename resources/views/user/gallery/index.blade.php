@@ -1,7 +1,7 @@
 <x-guest-layout>
     <section class="my-24">
         <div class="max-w-md mx-auto text-center px-4 md:px-0">
-            <h1 class="text-2xl md:text-4xl font-medium text-black">
+            <h1 class="text-2xl md:text-4xl font-semibold text-black">
                 Dokumentasi Kegiatan
             </h1>
             <p class="text-gray-400 text-xs 2xl:text-md">
@@ -31,12 +31,12 @@
                 @for ($i = 1; $i <= 9; $i++)
                     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
                         <a href="#">
-                            <img class="rounded-xl blur-mode" src="{{ asset('assets/images/hero2.jpg') }}"
+                            <img class="w-full h-52 rounded-xl blur-mode" src="{{ asset('assets/images/hero2.jpg') }}"
                                 alt="" />
                         </a>
                         <div class="mt-4">
                             <a href="#">
-                                <h5 class="mb-2 text-2lg font-medium tracking-tight line-clamp-2 text-gray-900">
+                                <h5 class="mb-2 text-2lg font-semibold tracking-tight line-clamp-2 text-gray-900">
                                     Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
                                 </h5>
                             </a>

@@ -19,6 +19,10 @@
                 active="{{ request()->routeIs('admin.milestone') }}" />
             <x-sidebar-menu name="Partner" icon="fas fa-users" route="{{ route('admin.partner') }}"
                 active="{{ request()->routeIs('admin.partner') }}" />
+            <x-sidebar-menu name="Alamat" icon="fas fa-location-arrow" route="{{ route('admin.company-address') }}"
+                active="{{ request()->routeIs('admin.company-address') }}" />
+            <x-sidebar-menu name="Sosial Media" icon="fas fa-heart" route="{{ route('admin.company-social-media') }}"
+                active="{{ request()->routeIs('admin.company-social-media') }}" />
 
             <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Blog</p>
 

@@ -106,7 +106,7 @@
 
             <div class="flex justify-center mt-10">
                 <button
-                    class="items-center justify-center w-fit px-6 py-3  text-center text-gray-400 duration-200 bg-gray-200 rounded-full inline-flex lg:w-auto text-md">
+                    class="items-center justify-center w-fit px-6 py-3  text-center text-gray-400 duration-200 bg-gray-100 rounded-full inline-flex lg:w-auto text-xs 2xl:text-sm">
                     Muat Lebih Banyak
                 </button>
             </div>

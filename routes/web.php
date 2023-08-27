@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CkeditorController;
+use App\Http\Controllers\Admin\CompanyAddressController;
+use App\Http\Controllers\Admin\CompanySocialMediaController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\MilestoneController;
 use App\Http\Controllers\Admin\PartnerController;
@@ -88,6 +90,24 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('get-by-id', [PartnerController::class, 'getById'])->name('admin.partner.get-by-id');
         Route::post('{id}/update', [PartnerController::class, 'update'])->name('admin.partner.update');
         Route::post('{id}/destroy', [PartnerController::class, 'destroy'])->name('admin.partner.destroy');
+    });
+
+    // Company Addresses
+    Route::group(['prefix' => 'company-address'], function () {
+        Route::get('/', [CompanyAddressController::class, 'index'])->name('admin.company-address');
+        Route::post('store', [CompanyAddressController::class, 'store'])->name('admin.company-address.store');
+        Route::post('get-by-id', [CompanyAddressController::class, 'getById'])->name('admin.company-address.get-by-id');
+        Route::post('{id}/update', [CompanyAddressController::class, 'update'])->name('admin.company-address.update');
+        Route::post('{id}/destroy', [CompanyAddressController::class, 'destroy'])->name('admin.company-address.destroy');
+    });
+
+    // Company Social Media
+    Route::group(['prefix' => 'company-social-media'], function () {
+        Route::get('/', [CompanySocialMediaController::class, 'index'])->name('admin.company-social-media');
+        Route::post('store', [CompanySocialMediaController::class, 'store'])->name('admin.company-social-media.store');
+        Route::post('get-by-id', [CompanySocialMediaController::class, 'getById'])->name('admin.company-social-media.get-by-id');
+        Route::post('{id}/update', [CompanySocialMediaController::class, 'update'])->name('admin.company-social-media.update');
+        Route::post('{id}/destroy', [CompanySocialMediaController::class, 'destroy'])->name('admin.company-social-media.destroy');
     });
 
     Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');

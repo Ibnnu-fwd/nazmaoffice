@@ -23,7 +23,3 @@
 {
     @apply text-xs 2xl:text-sm;
 }
-
-img {
-    max-width: fit-content;
-}

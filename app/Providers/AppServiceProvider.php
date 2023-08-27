@@ -13,6 +13,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(\App\Interfaces\EventInterface::class, \App\Repositories\EventRepository::class);
         $this->app->bind(\App\Interfaces\MilestoneInterface::class, \App\Repositories\MilestoneRepository::class);
         $this->app->bind(\App\Interfaces\PartnerInterface::class, \App\Repositories\PartnerRepository::class);
+        $this->app->bind(\App\Interfaces\CompanyAddressInterface::class, \App\Repositories\CompanyAddressRepository::class);
+        $this->app->bind(\App\Interfaces\CompanySocialMediaInteface::class, \App\Repositories\CompanySocialMediaRepository::class);
     }
 
     public function boot()
