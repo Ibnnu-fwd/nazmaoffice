@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CkeditorController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\MilestoneController;
+use App\Http\Controllers\Admin\PartnerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
@@ -78,6 +79,15 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('get-by-id', [MilestoneController::class, 'getById'])->name('admin.milestone.get-by-id');
         Route::post('{id}/update', [MilestoneController::class, 'update'])->name('admin.milestone.update');
         Route::post('{id}/destroy', [MilestoneController::class, 'destroy'])->name('admin.milestone.destroy');
+    });
+
+    // Partner
+    Route::group(['prefix' => 'partner'], function () {
+        Route::get('/', [PartnerController::class, 'index'])->name('admin.partner');
+        Route::post('store', [PartnerController::class, 'store'])->name('admin.partner.store');
+        Route::post('get-by-id', [PartnerController::class, 'getById'])->name('admin.partner.get-by-id');
+        Route::post('{id}/update', [PartnerController::class, 'update'])->name('admin.partner.update');
+        Route::post('{id}/destroy', [PartnerController::class, 'destroy'])->name('admin.partner.destroy');
     });
 
     Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');

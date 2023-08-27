@@ -17,6 +17,8 @@
                 active="{{ request()->routeIs('admin.index') }}" />
             <x-sidebar-menu name="Milestone" icon="fas fa-circle-notch" route="{{ route('admin.milestone') }}"
                 active="{{ request()->routeIs('admin.milestone') }}" />
+            <x-sidebar-menu name="Partner" icon="fas fa-users" route="{{ route('admin.partner') }}"
+                active="{{ request()->routeIs('admin.partner') }}" />
 
             <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Blog</p>
 
