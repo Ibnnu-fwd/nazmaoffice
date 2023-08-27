@@ -121,6 +121,11 @@ class EventRepository implements EventInterface
         $event->update($data);
     }
 
+    public function getAll()
+    {
+        return $this->event->all();
+    }
+
     public function getById($id)
     {
         return $this->event->findOrFail($id);

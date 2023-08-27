@@ -46,6 +46,8 @@
 
             <x-sidebar-menu name="Acara" icon="fas fa-calendar" route="{{ route('admin.event') }}"
                 active="{{ request()->routeIs('admin.event') }}" />
+            <x-sidebar-menu name="Peserta" icon="fas fa-users" route="{{ route('admin.event-participant') }}"
+                active="{{ request()->routeIs('admin.event-participant') }}" />
             <x-sidebar-menu name="Konfigurasi Halaman" icon="fas fa-cog" route="{{ route('admin.event.setting') }}"
                 active="{{ request()->routeIs('admin.event.setting') }}" />
 
@@ -53,6 +55,8 @@
 
             <x-sidebar-menu name="Kategori" icon="fas fa-sort" route="{{ route('admin.service-category') }}"
                 active="{{ request()->routeIs('admin.service-category') }}" />
+            <x-sidebar-menu name="Proyek" icon="fas fa-project-diagram" route="{{ route('admin.service-project') }}"
+                active="{{ request()->routeIs('admin.service-project') }}" />
             <x-sidebar-menu name="Layanan" icon="fas fa-th-large" route="{{ route('admin.service') }}"
                 active="{{ request()->routeIs('admin.service') }}" />
 

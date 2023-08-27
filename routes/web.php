@@ -9,12 +9,15 @@ use App\Http\Controllers\Admin\CompanyAddressController;
 use App\Http\Controllers\Admin\CompanyLandingSettingController;
 use App\Http\Controllers\Admin\CompanySocialMediaController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\EventParticipantController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\MilestoneController;
 use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ServiceBenefitController;
 use App\Http\Controllers\Admin\ServiceCategoryController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\ServiceProjectController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\ServiceTestimonialController;
@@ -87,6 +90,16 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('speaker/{id}/destroy', [EventController::class, 'speakerDestroy'])->name('admin.event.speaker.destroy');
         Route::post('speaker/get-by-id', [EventController::class, 'speakerGetById'])->name('admin.event.speaker.get-by-id');
         Route::post('speaker/{id}/update', [EventController::class, 'speakerUpdate'])->name('admin.event.speaker.update');
+    });
+
+    // Event Participant
+    Route::group(['prefix' => 'event-participant'], function () {
+        Route::get('/', [EventParticipantController::class, 'index'])->name('admin.event-participant');
+        Route::get('{event_id}/list', [EventParticipantController::class, 'list'])->name('admin.event-participant.list');
+        Route::post('store', [EventParticipantController::class, 'store'])->name('admin.event-participant.store');
+        Route::post('get-by-id', [EventParticipantController::class, 'getById'])->name('admin.event-participant.get-by-id');
+        Route::post('{id}/update', [EventParticipantController::class, 'update'])->name('admin.event-participant.update');
+        Route::post('{id}/destroy', [EventParticipantController::class, 'destroy'])->name('admin.event-participant.destroy');
     });
 
     // Milestone
@@ -183,6 +196,25 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('testimonial/{id}/update', [ServiceTestimonialController::class, 'update'])->name('admin.service.testimonial.update');
         Route::post('testimonial/{id}/destroy', [ServiceTestimonialController::class, 'destroy'])->name('admin.service.testimonial.destroy');
         Route::post('testimonial/get-by-id', [ServiceTestimonialController::class, 'getById'])->name('admin.service.testimonial.get-by-id');
+    });
+
+    // Service Project
+    Route::group(['prefix' => 'service-project'], function () {
+        Route::get('/', [ServiceProjectController::class, 'index'])->name('admin.service-project');
+        Route::get('{service_id}/list', [ServiceProjectController::class, 'list'])->name('admin.service-project.list');
+        Route::post('store', [ServiceProjectController::class, 'store'])->name('admin.service-project.store');
+        Route::post('get-by-id', [ServiceProjectController::class, 'getById'])->name('admin.service-project.get-by-id');
+        Route::post('{id}/update', [ServiceProjectController::class, 'update'])->name('admin.service-project.update');
+        Route::post('{id}/destroy', [ServiceProjectController::class, 'destroy'])->name('admin.service-project.destroy');
+    });
+
+    // FAQ
+    Route::group(['prefix' => 'faq'], function () {
+        Route::get('/', [FaqController::class, 'index'])->name('admin.faq');
+        Route::post('store', [FaqController::class, 'store'])->name('admin.faq.store');
+        Route::post('get-by-id', [FaqController::class, 'getById'])->name('admin.faq.get-by-id');
+        Route::post('{id}/update', [FaqController::class, 'update'])->name('admin.faq.update');
+        Route::post('{id}/destroy', [FaqController::class, 'destroy'])->name('admin.faq.destroy');
     });
 });
 

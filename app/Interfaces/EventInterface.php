@@ -4,6 +4,7 @@ namespace App\Interfaces;
 
 interface EventInterface
 {
+    public function getAll();
     public function getById($id);
     public function getWithPaginate($limit);
     public function store($data);
