@@ -25,8 +25,7 @@
                 </div>
             </form>
         @else
-            <form action="{{ route('admin.event.setting.update') }}" method="POST" enctype="multipart/form-data"
-                class="grid xl:grid-cols-2 gap-x-6">
+            <form action="{{ route('admin.event.setting.update') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="space-y-6">
                     <x-input id="header_title" name="header_title" label="Judul Header"
@@ -36,19 +35,15 @@
                         placeholder="Masukkan deskripsi halaman" required
                         value="{{ $setting->description }}"></x-textarea>
 
-                    <x-input-file id="hero_image" name="hero_image" label="Gambar Header" value="" />
-
+                    <div>
+                        <x-input-file id="hero_image" name="hero_image" label="Gambar Header" value="" />
+                        <small class="text-gray-500">Gambar sudah ada: <a
+                                href="{{ asset('storage/event/setting/' . $setting->hero_image) }}"
+                                target="_blank">{{ $setting->hero_image }}</a></small>
+                    </div>
                     <x-button-save type="submit" />
                 </div>
                 <div>
-                    <p class="text-xs 2xl:text-sm text-gray-400 mb-4">
-                        Preview Gambar Header
-                    </p>
-
-                    <img src="{{ asset('storage/event/setting/' . $setting->hero_image) }}"
-                        class="w-96 h-60 rounded-xl object-contain object-center border border-gray-100"
-                        alt="Gambar Header">
-                </div>
             </form>
         @endif
     </x-card-container>

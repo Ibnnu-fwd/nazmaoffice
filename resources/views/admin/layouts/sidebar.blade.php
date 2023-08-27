@@ -31,6 +31,9 @@
                 active="{{ request()->routeIs('admin.team') }}" />
             <x-sidebar-menu name="Galeri" icon="fas fa-images" route="{{ route('admin.gallery') }}"
                 active="{{ request()->routeIs('admin.gallery') }}" />
+            <x-sidebar-menu name="Pengaturan Landing" icon="fas fa-cog"
+                route="{{ route('admin.company-landing-setting') }}"
+                active="{{ request()->routeIs('admin.company-landing-setting') }}" />
 
             <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Blog</p>
 
@@ -50,6 +53,8 @@
 
             <x-sidebar-menu name="Kategori" icon="fas fa-sort" route="{{ route('admin.service-category') }}"
                 active="{{ request()->routeIs('admin.service-category') }}" />
+            <x-sidebar-menu name="Layanan" icon="fas fa-th-large" route="{{ route('admin.service') }}"
+                active="{{ request()->routeIs('admin.service') }}" />
 
         </ul>
     </div>

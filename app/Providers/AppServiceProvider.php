@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(\App\Interfaces\TeamInterface::class, \App\Repositories\TeamRepository::class);
         $this->app->bind(\App\Interfaces\GalleryInterface::class, \App\Repositories\GalleryRepository::class);
         $this->app->bind(\App\Interfaces\ServiceCategoryInterface::class, \App\Repositories\ServiceCategoryRepository::class);
+        $this->app->bind(\App\Interfaces\ServiceInterface::class, \App\Repositories\ServiceRepository::class);
+        $this->app->bind(\App\Interfaces\ServiceBenefitInterface::class, \App\Repositories\ServiceBenefitRepository::class);
+        $this->app->bind(\App\Interfaces\ServiceTestimonialInterface::class, \App\Repositories\ServiceTestimonialRepository::class);
+        $this->app->bind(\App\Interfaces\CompanyLandingSettingInterface::class, \App\Repositories\CompanyLandingSettingRepository::class);
     }
 
     public function boot()

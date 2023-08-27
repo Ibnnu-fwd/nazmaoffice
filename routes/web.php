@@ -6,15 +6,18 @@ use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CkeditorController;
 use App\Http\Controllers\Admin\CompanyAddressController;
+use App\Http\Controllers\Admin\CompanyLandingSettingController;
 use App\Http\Controllers\Admin\CompanySocialMediaController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\MilestoneController;
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\ServiceBenefitController;
 use App\Http\Controllers\Admin\ServiceCategoryController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\ServiceTestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
@@ -32,6 +35,13 @@ Route::get('/login-page', [AdminController::class, 'login'])->name('admin.login'
 Route::group(['prefix' => 'admin'], function () {
     // Dashboard
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+
+    // Company Landing Setting
+    Route::group(['prefix' => 'company-landing-setting'], function () {
+        Route::get('/', [CompanyLandingSettingController::class, 'index'])->name('admin.company-landing-setting');
+        Route::post('store', [CompanyLandingSettingController::class, 'store'])->name('admin.company-landing-setting.store');
+        Route::post('update', [CompanyLandingSettingController::class, 'update'])->name('admin.company-landing-setting.update');
+    });
 
     // Blog
     Route::prefix('blog')->group(function () {
@@ -158,6 +168,21 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('get-by-id', [ServiceController::class, 'getById'])->name('admin.service.get-by-id');
         Route::post('{id}/update', [ServiceController::class, 'update'])->name('admin.service.update');
         Route::post('{id}/destroy', [ServiceController::class, 'destroy'])->name('admin.service.destroy');
+        Route::post('{id}/recover', [ServiceController::class, 'recover'])->name('admin.service.recover');
+
+        // Service Benefit
+        Route::get('{service_id}/benefit', [ServiceBenefitController::class, 'index'])->name('admin.service.benefit');
+        Route::post('{service_id}/benefit/store', [ServiceBenefitController::class, 'store'])->name('admin.service.benefit.store');
+        Route::post('benefit/{id}/update', [ServiceBenefitController::class, 'update'])->name('admin.service.benefit.update');
+        Route::post('benefit/{id}/destroy', [ServiceBenefitController::class, 'destroy'])->name('admin.service.benefit.destroy');
+        Route::post('benefit/get-by-id', [ServiceBenefitController::class, 'getById'])->name('admin.service.benefit.get-by-id');
+
+        // Service Testimonial
+        Route::get('{service_id}/testimonial', [ServiceTestimonialController::class, 'index'])->name('admin.service.testimonial');
+        Route::post('{service_id}/testimonial/store', [ServiceTestimonialController::class, 'store'])->name('admin.service.testimonial.store');
+        Route::post('testimonial/{id}/update', [ServiceTestimonialController::class, 'update'])->name('admin.service.testimonial.update');
+        Route::post('testimonial/{id}/destroy', [ServiceTestimonialController::class, 'destroy'])->name('admin.service.testimonial.destroy');
+        Route::post('testimonial/get-by-id', [ServiceTestimonialController::class, 'getById'])->name('admin.service.testimonial.get-by-id');
     });
 });
 
