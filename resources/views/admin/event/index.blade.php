@@ -34,12 +34,12 @@
 
         <div class="overflow-x-auto">
             <table class="w-full text-sm text-left text-gray-500">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
                     <tr>
                         <th scope="col" class="p-4">Judul</th>
                         <th scope="col" class="p-4">Kategori</th>
+                        <th scope="col" class="p-4">Gambar</th>
                         <th scope="col" class="p-4">Thumbnail</th>
-                        <th scope="col" class="p-4">Gambar Utama</th>
                         <th scope="col" class="p-4">No. Telepon</th>
                         <th scope="col" class="p-4">Studi Kasus</th>
                         <th scope="col" class="p-4">Kapasitas</th>
@@ -48,8 +48,8 @@
                         <th scope="col" class="p-4">Tgl. Event</th>
                         <th scope="col" class="p-4">Waktu</th>
                         <th scope="col" class="p-4">Harga</th>
-                        <th scope="col" class="p-4">Lokasi</th>
                         <th scope="col" class="p-4">Diskon</th>
+                        <th scope="col" class="p-4">Lokasi</th>
                         <th scope="col" class="p-4">Aksi</th>
                     </tr>
                 </thead>
@@ -63,11 +63,11 @@
                                 {{ $data->title }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ asset('storage/event/thumbnail/' . $data->thumbnail) }}"
+                                <img src="{{ asset('storage/event/hero_image/' . $data->hero_image) }}"
                                     class="w-20 h-20 object-cover rounded-lg">
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ asset('storage/event/hero_image/' . $data->hero_image) }}"
+                                <img src="{{ asset('storage/event/thumbnail/' . $data->thumbnail) }}"
                                     class="w-20 h-20 object-cover rounded-lg">
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
@@ -95,43 +95,73 @@
                                 {{ number_format($data->price, 0, ',', '.') }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ date('d F Y', strtotime($data->created_at)) }}
+                                {{ number_format($data->discount, 0, ',', '.') }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ date('d F Y', strtotime($data->discount)) }}
+                                {{ $data->location }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <div class="flex items-center space-x-4">
-                                    <button type="button" data-modal-target="create-modal"
-                                        data-modal-toggle="create-modal" onclick="btnEdit('{{ $data->id }}')"
+                                @if ($data->is_active)
+                                    <div class="flex items-center space-x-4">
+                                        <a type="button" href="{{ route('admin.event.rundown', $data->id) }}"
+                                            class="py-2 px-3 flex items-center text-sm font-medium hover:text-white text-center text-orange-700 focus:outline-none bg-white rounded-lg border border-orange-700 hover:bg-orange-500 hover:text-primary-700 focus:z-10 focus:ring-4 focus:orange-orange-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 -ml-0.5"
+                                                viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Rundown
+                                        </a>
+                                        <a type="button" href="{{ route('admin.event.speaker', $data->id) }}"
+                                            class="py-2 px-3 flex items-center text-sm font-medium hover:text-white text-center text-purple-700 focus:outline-none bg-white rounded-lg border border-purple-700 hover:bg-purple-500 hover:text-primary-700 focus:z-10 focus:ring-4 focus:purple-purple-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 -ml-0.5"
+                                                viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Pembicara
+                                        </a>
+                                        <button type="button" data-modal-target="create-modal"
+                                            data-modal-toggle="create-modal" onclick="btnEdit('{{ $data->id }}')"
+                                            class="py-2 px-3 flex items-center text-sm font-medium hover:text-white text-center text-lime-700 focus:outline-none bg-white rounded-lg border border-lime-700 hover:bg-lime-800 hover:text-primary-700 focus:z-10 focus:ring-4 focus:lime-lime-300">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 -ml-0.5"
+                                                viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Edit
+                                        </button>
+                                        <button type="button" data-modal-target="delete-modal"
+                                            data-modal-toggle="delete-modal"
+                                            onclick="btnDelete('{{ $data->id }}')"
+                                            class="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 -ml-0.5"
+                                                viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Hapus
+                                        </button>
+                                    </div>
+                                @else
+                                    <button type="button" data-modal-target="activation-modal"
+                                        data-modal-toggle="activation-modal"
+                                        onclick="btnActivate('{{ $data->id }}')"
                                         class="py-2 px-3 flex items-center text-sm font-medium hover:text-white text-center text-lime-700 focus:outline-none bg-white rounded-lg border border-lime-700 hover:bg-lime-800 hover:text-primary-700 focus:z-10 focus:ring-4 focus:lime-lime-300">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 -ml-0.5"
-                                            viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path
-                                                d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                                            <path fill-rule="evenodd"
-                                                d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                        Edit
+                                        <i class="fas fa-check mr-2"></i>
+                                        Aktifkan
                                     </button>
-                                    <button type="button" data-modal-target="delete-modal"
-                                        data-modal-toggle="delete-modal" onclick="btnDelete('{{ $data->id }}')"
-                                        class="flex items-center text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 -ml-0.5"
-                                            viewbox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd"
-                                                d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                        Hapus
-                                    </button>
-                                    <a href="{{ route('admin.blog.show', $data->id) }}"
-                                        class="flex items-center text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-900">
-                                        <i class="fas fa-eye mr-2"></i>
-                                        Lihat
-                                    </a>
-                                </div>
+                                @endif
                             </td>
                         </tr>
                     @empty
@@ -147,7 +177,6 @@
             <div class="pagination w-full">
                 {{ $events->links() }}
             </div>
-
         </nav>
     </x-card-container>
 
@@ -275,18 +304,94 @@
         </div>
     </div>
 
+    <!-- Activation modal -->
+    <div id="activation-modal" tabindex="-1"
+        class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full h-auto max-w-md max-h-full">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <button type="button"
+                    class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                    data-modal-toggle="activation-modal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only">Tutup</span>
+                </button>
+                <div class="p-6 text-center">
+                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200"
+                        fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4m0 4h.01M21 12a
+                            9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="mb-5 text-lg font-normal text-gray-500">
+                        Apakah kamu yakin ingin mengaktifkan event ini?
+                    </h3>
+                    <form action="" method="POST">
+                        @csrf
+                        <button data-modal-toggle="activation-modal" type="submit"
+                            class="text-white bg-lime-600 hover:bg-lime-800 focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">Ya,
+                            saya yakin</button>
+                        <button data-modal-toggle="activation-modal" type="button"
+                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Tidak,
+                            batalkan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     @push('js-internal')
         <script>
+            function btnActivate(id) {
+                $('#activation-modal form').attr('action', "{{ route('admin.event.activate', ':id') }}".replace(':id', id));
+            }
+
             function btnEdit(id) {
                 let url = "{{ route('admin.event.update', ':id') }}".replace(':id', id);
                 $('#create-modal form').attr('action', url);
                 $('#create-modal form').trigger('reset');
-                resetClassicEditor();
                 $('#create-modal #modal-title').text('Formulir Edit Event');
+
+                $.ajax({
+                    url: "{{ route('admin.event.get-by-id') }}",
+                    type: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        id: id
+                    },
+                    dataType: 'JSON',
+                    success: function(data) {
+                        $('#create-modal #title').val(data.title);
+                        $('#create-modal #event_type').val(data.event_type);
+                        $('#create-modal #description').val(data.description);
+                        $('#create-modal #phone').val(data.phone);
+                        $('#create-modal #study_case').val(data.study_case);
+                        $('#create-modal #study_case_description').val(data.study_case_description);
+                        $('#create-modal #capacity').val(data.capacity);
+                        $('#create-modal #start_date').val(data.start_date);
+                        $('#create-modal #end_date').val(data.end_date);
+                        $('#create-modal #event_date').val(data.event_date);
+                        $('#create-modal #event_time').val(data.event_time);
+                        $('#create-modal #price').val(data.price);
+                        $('#create-modal #location').val(data.location);
+                        $('#create-modal #discount').val(data.discount);
+                    },
+                    error: function() {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Gagal',
+                            text: 'Gagal mengambil data',
+                        })
+                    }
+                });
             }
 
             function btnDelete(id) {
-                $('#delete-modal form').attr('action', "{{ route('admin.event.destroy', ':id') }}".replace(':id', id));
+                $('#delete-modal form').attr('action', "{{ route('admin.event.speaker.destroy', ':id') }}".replace(':id', id));
             }
 
             $(function() {
@@ -294,7 +399,6 @@
                     e.preventDefault();
                     $('#create-modal form').attr('action', "{{ route('admin.event.store') }}");
                     $('#create-modal form').trigger('reset');
-                    resetClassicEditor();
                     $('#create-modal #modal-title').text('Formulir Tambah Event');
                 });
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CkeditorController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\MilestoneController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
@@ -52,6 +53,31 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('destroy/{id}', [EventController::class, 'destroy'])->name('admin.event.destroy');
         Route::post('update/{id}', [EventController::class, 'update'])->name('admin.event.update');
         Route::post('store', [EventController::class, 'store'])->name('admin.event.store');
+        Route::post('get-by-id', [EventController::class, 'getById'])->name('admin.event.get-by-id');
+        Route::post('activate/{id}', [EventController::class, 'activate'])->name('admin.event.activate');
+
+        // Event Rundown
+        Route::get('event/{id}/rundown', [EventController::class, 'rundown'])->name('admin.event.rundown');
+        Route::post('event/{id}/rundown/store', [EventController::class, 'rundownStore'])->name('admin.event.rundown.store');
+        Route::post('rundown/{id}/destroy', [EventController::class, 'rundownDestroy'])->name('admin.event.rundown.destroy');
+        Route::post('rundown/get-by-id', [EventController::class, 'rundownGetById'])->name('admin.event.rundown.get-by-id');
+        Route::post('rundown/{id}/update', [EventController::class, 'rundownUpdate'])->name('admin.event.rundown.update');
+
+        // Event Speaker
+        Route::get('event/{id}/speaker', [EventController::class, 'speaker'])->name('admin.event.speaker');
+        Route::post('event/{id}/speaker/store', [EventController::class, 'speakerStore'])->name('admin.event.speaker.store');
+        Route::post('speaker/{id}/destroy', [EventController::class, 'speakerDestroy'])->name('admin.event.speaker.destroy');
+        Route::post('speaker/get-by-id', [EventController::class, 'speakerGetById'])->name('admin.event.speaker.get-by-id');
+        Route::post('speaker/{id}/update', [EventController::class, 'speakerUpdate'])->name('admin.event.speaker.update');
+    });
+
+    // Milestone
+    Route::group(['prefix' => 'milestone'], function () {
+        Route::get('/', [MilestoneController::class, 'index'])->name('admin.milestone');
+        Route::post('store', [MilestoneController::class, 'store'])->name('admin.milestone.store');
+        Route::post('get-by-id', [MilestoneController::class, 'getById'])->name('admin.milestone.get-by-id');
+        Route::post('{id}/update', [MilestoneController::class, 'update'])->name('admin.milestone.update');
+        Route::post('{id}/destroy', [MilestoneController::class, 'destroy'])->name('admin.milestone.destroy');
     });
 
     Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');

@@ -15,6 +15,8 @@
         <ul class="space-y-2">
             <x-sidebar-menu name="Dashboard" icon="fas fa-home" route="{{ route('admin.index') }}"
                 active="{{ request()->routeIs('admin.index') }}" />
+            <x-sidebar-menu name="Milestone" icon="fas fa-circle-notch" route="{{ route('admin.milestone') }}"
+                active="{{ request()->routeIs('admin.milestone') }}" />
 
             <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Blog</p>
 
