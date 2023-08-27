@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\CompanySocialMediaController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\MilestoneController;
 use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\TeamController;
+use App\Http\Controllers\Admin\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
@@ -108,6 +110,24 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('get-by-id', [CompanySocialMediaController::class, 'getById'])->name('admin.company-social-media.get-by-id');
         Route::post('{id}/update', [CompanySocialMediaController::class, 'update'])->name('admin.company-social-media.update');
         Route::post('{id}/destroy', [CompanySocialMediaController::class, 'destroy'])->name('admin.company-social-media.destroy');
+    });
+
+    // Testimonial
+    Route::group(['prefix' => 'testimonial'], function () {
+        Route::get('/', [TestimonialController::class, 'index'])->name('admin.testimonial');
+        Route::post('store', [TestimonialController::class, 'store'])->name('admin.testimonial.store');
+        Route::post('get-by-id', [TestimonialController::class, 'getById'])->name('admin.testimonial.get-by-id');
+        Route::post('{id}/update', [TestimonialController::class, 'update'])->name('admin.testimonial.update');
+        Route::post('{id}/destroy', [TestimonialController::class, 'destroy'])->name('admin.testimonial.destroy');
+    });
+
+    // Team
+    Route::group(['prefix' => 'team'], function () {
+        Route::get('/', [TeamController::class, 'index'])->name('admin.team');
+        Route::post('store', [TeamController::class, 'store'])->name('admin.team.store');
+        Route::post('get-by-id', [TeamController::class, 'getById'])->name('admin.team.get-by-id');
+        Route::post('{id}/update', [TeamController::class, 'update'])->name('admin.team.update');
+        Route::post('{id}/destroy', [TeamController::class, 'destroy'])->name('admin.team.destroy');
     });
 
     Route::get('/crew', [AdminController::class, 'crew'])->name('admin.crew');

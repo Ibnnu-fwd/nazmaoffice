@@ -13,6 +13,8 @@
     aria-label="Sidebar">
     <div class="h-full px-4 py-8 overflow-y-auto bg-sidebar">
         <ul class="space-y-2">
+            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Perusahaan</p>
+
             <x-sidebar-menu name="Dashboard" icon="fas fa-home" route="{{ route('admin.index') }}"
                 active="{{ request()->routeIs('admin.index') }}" />
             <x-sidebar-menu name="Milestone" icon="fas fa-circle-notch" route="{{ route('admin.milestone') }}"
@@ -23,6 +25,10 @@
                 active="{{ request()->routeIs('admin.company-address') }}" />
             <x-sidebar-menu name="Sosial Media" icon="fas fa-heart" route="{{ route('admin.company-social-media') }}"
                 active="{{ request()->routeIs('admin.company-social-media') }}" />
+            <x-sidebar-menu name="Testimoni" icon="fas fa-comment" route="{{ route('admin.testimonial') }}"
+                active="{{ request()->routeIs('admin.testimonial') }}" />
+            <x-sidebar-menu name="Tim" icon="fas fa-user-circle" route="{{ route('admin.team') }}"
+                active="{{ request()->routeIs('admin.team') }}" />
 
             <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Blog</p>
 
