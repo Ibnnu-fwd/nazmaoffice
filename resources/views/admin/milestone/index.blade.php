@@ -51,7 +51,7 @@
                                 {{ $data->title }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ $data->description }}
+                                {{ Str::limit($data->description, 50) }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">

@@ -28,10 +28,10 @@ class TeamController extends Controller
             'name'      => ['required'],
             'image'     => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'job'       => ['required'],
-            'facebook'  => ['required'],
-            'twitter'   => ['required'],
-            'instagram' => ['required'],
-            'linkedin'  => ['required']
+            'facebook'  => ['nullable'],
+            'twitter'   => ['nullable'],
+            'instagram' => ['nullable'],
+            'linkedin'  => ['nullable']
         ]);
 
         try {
@@ -49,10 +49,10 @@ class TeamController extends Controller
             'name'      => ['required'],
             'image'     => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'job'       => ['required'],
-            'facebook'  => ['required'],
-            'twitter'   => ['required'],
-            'instagram' => ['required'],
-            'linkedin'  => ['required']
+            'facebook'  => ['nullable'],
+            'twitter'   => ['nullable'],
+            'instagram' => ['nullable'],
+            'linkedin'  => ['nullable']
         ]);
 
         try {
