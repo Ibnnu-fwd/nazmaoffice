@@ -6,6 +6,7 @@ use App\Interfaces\CompanyLandingSettingInterface;
 use App\Models\CompanyLandingSetting;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class CompanyLandingSettingRepository implements CompanyLandingSettingInterface
 {
@@ -56,12 +57,6 @@ class CompanyLandingSettingRepository implements CompanyLandingSettingInterface
     {
         $companyLandingSetting = $this->companyLandingSetting->first();
 
-        Storage::delete([
-            'public/company-landing-setting/' . $companyLandingSetting->slide_image_1,
-            'public/company-landing-setting/' . $companyLandingSetting->slide_image_2,
-            'public/company-landing-setting/' . $companyLandingSetting->slide_image_3
-        ]);
-
         $slideImage1 = uniqid() . '.' . $data['slide_image_1']->extension();
         $slideImage2 = uniqid() . '.' . $data['slide_image_2']->extension();
         $slideImage3 = uniqid() . '.' . $data['slide_image_3']->extension();
@@ -79,6 +74,12 @@ class CompanyLandingSettingRepository implements CompanyLandingSettingInterface
         try {
             $companyLandingSetting->update($data);
             DB::commit();
+            Storage::delete([
+                'public/company-landing-setting/' . $companyLandingSetting->slide_image_1,
+                'public/company-landing-setting/' . $companyLandingSetting->slide_image_2,
+                'public/company-landing-setting/' . $companyLandingSetting->slide_image_3
+            ]);
+            return true;
         } catch (\Throwable $th) {
             Storage::delete([
                 'public/company-landing-setting/' . $slideImage1,

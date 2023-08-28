@@ -62,7 +62,7 @@
                                 @endfor
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ $data->testimonial }}
+                                {{ Str::limit($data->testimonial, 30, '...') ?? '-' }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">

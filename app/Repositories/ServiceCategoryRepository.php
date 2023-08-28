@@ -16,7 +16,7 @@ class ServiceCategoryRepository implements ServiceCategoryInterface
 
     public function getAll()
     {
-        return $this->serviceCategory->all();
+        return $this->serviceCategory->with('services')->get();
     }
 
     public function getById($id)

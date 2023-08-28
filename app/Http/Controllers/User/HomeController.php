@@ -3,16 +3,43 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Interfaces\BlogInterface;
+use App\Interfaces\CompanyLandingSettingInterface;
+use App\Interfaces\PartnerInterface;
+use App\Interfaces\ServiceCategoryInterface;
+use App\Interfaces\ServiceInterface;
+use App\Interfaces\TestimonialInterface;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /* 
-        * This function is used to display the home page
-    */
+    private $companyLandingSetting;
+    private $service;
+    private $serviceCategory;
+    private $testimonial;
+    private $blog;
+    private $partner;
+
+    public function __construct(CompanyLandingSettingInterface $companyLandingSetting, ServiceInterface $service, ServiceCategoryInterface $serviceCategory, TestimonialInterface $testimonial, BlogInterface $blog, PartnerInterface $partner)
+    {
+        $this->companyLandingSetting = $companyLandingSetting;
+        $this->service               = $service;
+        $this->serviceCategory       = $serviceCategory;
+        $this->testimonial           = $testimonial;
+        $this->blog                  = $blog;
+        $this->partner               = $partner;
+    }
+
     public function index()
     {
-        return view('user.home.index');
+        return view('user.home.index', [
+            'companyLandingSetting' => $this->companyLandingSetting->get(),
+            'services'              => $this->service->getAll(),
+            'serviceCategories'     => $this->serviceCategory->getAll(),
+            'testimonials'          => $this->testimonial->getAll(),
+            'blogs'                 => $this->blog->getAll(),
+            'partners'              => $this->partner->getAll(),
+        ]);
     }
 
     /* 

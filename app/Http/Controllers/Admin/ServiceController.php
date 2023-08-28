@@ -37,7 +37,7 @@ class ServiceController extends Controller
             'phone'               => 'required',
             'hero_image'          => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'benefit_image'       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'teaser_link'         => 'required',
+            'teaser_link'         => 'nullable',
         ]);
 
         try {
@@ -59,7 +59,7 @@ class ServiceController extends Controller
             'phone'               => 'required',
             'hero_image'          => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'benefit_image'       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'teaser_link'         => 'required',
+            'teaser_link'         => 'nullable',
         ]);
 
         try {
