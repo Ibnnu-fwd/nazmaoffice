@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutPageSettingController;
+use App\Http\Controllers\User\AboutPageController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogCategoryController;
@@ -25,7 +26,7 @@ use App\Http\Controllers\ServiceTestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
-Route::get('about', [HomeController::class, 'about'])->name('user.about');
+Route::get('about', [AboutPageController::class, 'about'])->name('user.about');
 Route::get('gallery', [HomeController::class, 'gallery'])->name('user.gallery');
 Route::get('blog', [HomeController::class, 'blog'])->name('user.blog');
 Route::get('blog/{id}', [HomeController::class, 'blogDetail'])->name('user.blog.detail');
