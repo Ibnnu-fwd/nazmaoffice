@@ -37,6 +37,7 @@
                     <tr>
                         <th scope="col" class="p-4">Kategori</th>
                         <th scope="col" class="p-4">Icon</th>
+                        <th scope="col" class="p-4">Warna Icon</th>
                         <th scope="col" class="p-4">Judul</th>
                         <th scope="col" class="p-4">No. Telefon</th>
                         <th scope="col" class="p-4">Hero</th>
@@ -55,18 +56,23 @@
                                 {!! $data->icon !!}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                {!! $data->icon_color !!}
+                            </td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $data->title }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $data->phone }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ asset('storage/services/' . $data->hero_image) }}"
-                                    class="w-20 h-20 object-cover object-center rounded-lg" alt="">
+                                <a target="_blank" href="{{ asset('storage/services/' . $data->hero_image) }}">
+                                    <i class="fas fa-eye text-blue-700 hover:underline"></i>
+                                </a>
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ asset('storage/services/' . $data->benefit_image) }}"
-                                    class="w-20 h-20 object-cover object-center rounded-lg" alt="">
+                                <a target="_blank" href="{{ asset('storage/services/' . $data->benefit_image) }}">
+                                    <i class="fas fa-eye text-blue-700 hover:underline"></i>
+                                </a>
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <a href="{{ $data->teaser_link }}" target="_blank"
@@ -150,7 +156,7 @@
 
                         <x-input-file id="benefit_image" name="benefit_image" label="Tujuan" required />
 
-                        <x-input id="teaser_link" name="teaser_link" label="Tautan Teaser" required />
+                        <x-input id="teaser_link" name="teaser_link" label="Tautan Teaser" />
 
                     </div>
 

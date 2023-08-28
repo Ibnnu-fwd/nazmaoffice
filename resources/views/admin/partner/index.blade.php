@@ -49,10 +49,12 @@
                             </th>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <img src="{{ asset('storage/partner/' . $data->image) }}"
-                                    class="w-20 h-20 object-cover object-center" alt="">
+                                    class="w-20 h-20 object-contain object-center" alt="">
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ $data->link ?? '-' }}
+                                <a href="{{ $data->link }}" target="_blank" class="text-blue-700 hover:underline">
+                                    {{ $data->link }}
+                                </a>
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">

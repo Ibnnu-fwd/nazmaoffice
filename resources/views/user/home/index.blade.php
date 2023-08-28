@@ -14,40 +14,61 @@
     @endpush
 
     {{-- Hero --}}
-    <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+    <div id="indicators-carousel" class="relative max-w-7xl mx-auto my-12" data-carousel="static" data-aos="fade-up">
         <!-- Carousel wrapper -->
-        <div class="relative h-48 overflow-hidden rounded-lg md:rounded-none md:h-[350px] lg:h-[488px] mx-4 md:mx-0">
+        <div class="relative h-48 overflow-hidden shadow-2xl rounded-lg md:rounded-3xl md:h-[488px] mx-4 md:mx-0">
             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('assets/images/hero1.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 blur-mode top-1/2 left-1/2"
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                <img src="{{ asset('storage/company-landing-setting/' . $companyLandingSetting->slide_image_1) }}"
+                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
                     alt="...">
-                <div class="absolute inset-0 bg-gradient-to-l from-black/60 dark:from-gray-800/60"></div>
+                <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
                 <div
-                    class="absolute top-0 bottom-0 md:right-0 z-20 text-white lg:w-1/2 p-10 md:py-12 lg:py-24 text-start">
-                    <p class="font-normal text-xs 2xl:text-sm">
-                        Halo, Selamat Datang di Website Nazma Office!
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
+                        We'll Finish It
+                        <br>With Exellence
+                    </h1>
+                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
+                        Namun, kalau kamu mau belajar sambil berkarya, suka tantangan, siap mengikuti perubahan dengan
+                        cepat, ingin berinovasi dan punya visi yang sama dalam mengedukasi Indonesia, maka kami adalah
+                        tempat yang tepat untukmu berkembang
                     </p>
-                    <p id="header-title" class="font-medium text-2xl md:text-6xl lg:text-7xl mt-2">
-                        We'll Finish It <br>With Excellence
-                    </p>
-                    <button
-                        class="hidden md:inline-flex items-center justify-center px-6 py-3 mt-4 text-xs 2xl:text-sm font-medium text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
-                        Hubungi Kami
-                    </button>
                 </div>
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('assets/images/hero2.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 blur-mode top-1/2 left-1/2"
+                <img src="{{ asset('storage/company-landing-setting/' . $companyLandingSetting->slide_image_2) }}"
+                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
                     alt="...">
+                <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
+                        Dengan Kualitas Terbaik
+                    </h1>
+                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
+                        Kami adalah perusahaan yang bergerak di bidang jasa konsultan IT dan layanan manajemen. Kami
+                        siap membantu Anda dalam mengembangkan bisnis Anda dengan teknologi informasi yang tepat.
+                    </p>
+                </div>
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('assets/images/hero3.jpg') }}"
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 blur-mode top-1/2 left-1/2"
+                <img src="{{ asset('storage/company-landing-setting/' . $companyLandingSetting->slide_image_3) }}"
+                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
                     alt="...">
+                <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
+                        Team Profesional
+                    </h1>
+                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
+                        Kami memiliki tim yang berpengalaman dan profesional dalam bidangnya masing-masing. Kami
+                        siap membantu Anda dalam mengembangkan bisnis Anda dengan teknologi informasi yang tepat.
+                    </p>
+                </div>
             </div>
         </div>
         <!-- Slider indicators -->
@@ -146,144 +167,60 @@
             <div class="justify-center w-full lg:p-10 max-auto">
                 <div class="justify-center w-full text-center">
 
-                    <div x-data="{ tab: 'tab1' }">
+                    <div x-data="{ tab: '{{ $serviceCategories->first()->id }}' }">'
                         <ul class="md:flex gap-3 text-gray-500 justify-center">
                             <li class="-mb-px">
-                                <!-- event handler set state to 'tab1' and add conditional :class for active state -->
-                                <a @click.prevent="tab = 'tab1'" href="#"
+                                <a @click.prevent="tab = '{{ $serviceCategories->first()->id }}'" href="#"
                                     class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-white bg-primary"
-                                    :class="{ '  text-white bg-primary': tab === 'tab1' }">
-                                    Produk Teknologi Informasi
+                                    :class="{ '  text-white bg-primary': tab === '{{ $serviceCategories->first()->id }}' }">
+                                    {{ $serviceCategories->first()->title }}
                                 </a>
                             </li>
-                            <li class="-mb-px">
-                                <a @click.prevent="tab = 'tab2'" href="#"
-                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-gray-400"
-                                    :class="{ '  text-white bg-primary': tab === 'tab2' }">
-                                    Produk Konsultan Manajemen
-                                </a>
-                            </li>
+
+                            {{-- loop except 1 --}}
+                            @foreach ($serviceCategories->skip(1) as $serviceCategory)
+                                <li class="-mb-px">
+                                    <a @click.prevent="tab = '{{ $serviceCategory->id }}'" href="#"
+                                        class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-white bg-gray-200"
+                                        :class="{ '  text-white bg-primary': tab === '{{ $serviceCategory->id }}' }">
+                                        {{ $serviceCategory->title }}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                         <div class="py-4 pt-4 text-left content mt-8">
                             <!-- show tab1 only -->
-                            <div x-show="tab==='tab1'" class="text-gray-500" style="">
-                                <main class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="easel-outline" class="text-primary"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Jasa Pendidikan Komputer (Teknologi Informasi dan Komunikasi) Swasta
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Kursus untuk menambah keahlian dalam bidang komputer, teknologi informasi,
-                                            dan komunikasi.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="play-circle-outline" class="text-danger"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Aktivitas Jasa Multimedia Lainnya
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Layanan konvergen radio dan televisi, video, audio, teks, grafik dan data
-                                            yang disalurkan melalui jaringan protokol internet.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="globe-outline" class="text-success"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Aktivitas Teknologi Informasi dan Jasa Komputer Lainnya
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Pemulihan kerusakan, instalasi personal komputer dan perangkat lunak, serta
-                                            manajemen insiden dan digital forensic.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="code-outline" class="text-warning"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Aktivitas Jasa Informasi Lainnya YTDL
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Jasa informasi berbasis telepon, pencarian informasi atas dasar balas jasa
-                                            atau kontrak dan jasa kliping berita, dan lain-lain.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="flag-outline" class="text-black"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Aktivitas Pengembangan Aplikasi Perdagangan Melalui Internet
-                                                (E-Commerce)
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Pengembangan aplikasi perdagangan, konsultasi, analisis dan pemograman
-                                            aplikasi melalui internet.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                </main>
-                            </div>
-                            <div x-show="tab==='tab2'" class="text-gray-500" style="display: none;">
-                                <main></main>
-                            </div>
+                            @foreach ($serviceCategories as $serviceCategory)
+                                <div x-show="tab==='{{ $serviceCategory->id }}'" class="text-gray-500">
+                                    <main class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        @foreach ($serviceCategory->services as $service)
+                                            <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
+                                                <div
+                                                    class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
+                                                    <ion-icon name="{{ $service->icon }}"
+                                                        class="text-{{ $service->icon_color }}-600"
+                                                        size="large"></ion-icon>
+                                                </div>
+                                                <a href="{{ route('user.service.detail', $service->id) }}">
+                                                    <h5
+                                                        class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
+                                                        {{ $service->title }}
+                                                    </h5>
+                                                </a>
+                                                <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
+                                                    {{ $service->description }}
+                                                </p>
+                                                <a href="{{ route('user.service.detail', $service->id) }}"
+                                                    class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
+                                                    Selengkapnya
+                                                    <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
+                                                        size="small"></ion-icon>
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    </main>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -307,10 +244,7 @@
                             </div>
                             <div class="mt-6 lg:max-w-7xl">
                                 <p class="text-gray-400 text-xs 2xl:text-sm">
-                                    Nabila Zafira Mahalia, yang dikenal juga sebagai NaZMa Office, didirikan pada tahun
-                                    2007. Dengan pengalaman mencapai lebih dari 10 tahun, tepatnya sekitar 12 tahun,
-                                    NaZMa Office telah mengembangkan keahlian yang mendalam dalam bidang konsultan IT
-                                    dan layanan manajemen.
+                                    {{ $companyLandingSetting->about_us }}
                                 </p>
                                 <ul role="list" class="grid md:grid-cols-2 gap-4 list-none lg:gap-6">
                                     <li>
@@ -363,26 +297,13 @@
             <div class="">
                 <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8">
                     <div class="mt-6 grid gap-5 md:gap-0.5 md:grid-flow-col lg:mt-8">
-                        <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 2.svg') }}"
-                                alt=" logo">
-                        </div>
-                        <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 3.svg') }}"
-                                alt="logo">
-                        </div>
-                        <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 4.svg') }}"
-                                alt="logo">
-                        </div>
-                        <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 5.svg') }}"
-                                alt="logo">
-                        </div>
-                        <div class="flex justify-center col-span-1 px-8">
-                            <img class="max-h-12 blur-mode" src="{{ asset('assets/images/partner/image 6.svg') }}"
-                                alt="logo">
-                        </div>
+                        @foreach ($partners as $partner)
+                            <div class="flex justify-center col-span-1 px-8">
+                                <img class="max-h-12 blur-mode"
+                                    src="{{ asset('storage/partner/' . $partner->image) }}"
+                                    class="w-full h-20 object-cover object-center" alt=" logo">
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -394,138 +315,36 @@
         <p class="text-xl font-semibold tracking-tight text-black text-center">
             Apa Kata Mereka
         </p>
-        <div id="testimonial">
-            <div class="carousel carousel-center p-4 space-x-4 w-full">
-                <div id="item1" class="carousel-item">
-                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
-                        <div class="flex justify-between items-center mb-4">
-                            <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
-                            <div class="flex items-center">
-                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
-                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
+        <div id="testimonial" class="mt-8">
+            <div class="carousel carousel-center p-4 space-x-4 w-full place-content-center">
+                @foreach ($testimonials as $testimonial)
+                    <div id="item{{ $testimonial->id }}" class="carousel-item">
+                        <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
+                            <div class="flex justify-between items-center mb-4">
+                                <img src="{{ asset('storage/testimonial/' . $testimonial->profile_picture) }}"
+                                    class=" blur-mode w-16 h-16 object-center object-cover rounded-full"
+                                    alt="">
+                                <div class="flex items-center">
+                                    <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
+                                    <span class="text-xs 2xl:text-sm text-primary">
+                                        {{ number_format($testimonial->rating, 1, '.', ',') }}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <a href="#">
-                            <h5 class="text-md font-medium tracking-tight text-gray-900">
-                                Faisal Salim
-                            </h5>
-                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
-                                Business Man
-                            </span>
-                        </a>
-                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
-                            yang kami
-                            miliki
-                        </p>
-                    </div>
-                </div>
-                <div id="item2" class="carousel-item">
-
-                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
-                        <div class="flex justify-between items-center mb-4">
-                            <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
-                            <div class="flex items-center">
-                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
-                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
+                            <div>
+                                <h5 class="text-md font-medium tracking-tight text-gray-900">
+                                    {{ ucwords($testimonial->fullname) }}
+                                </h5>
+                                <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
+                                    {{ ucwords($testimonial->job) }}
+                                </span>
                             </div>
+                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
+                                {{ $testimonial->testimonial }}
+                            </p>
                         </div>
-                        <a href="#">
-                            <h5 class="text-md font-medium tracking-tight text-gray-900">
-                                Faisal Salim
-                            </h5>
-                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
-                                Business Man
-                            </span>
-                        </a>
-                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
-                            yang kami
-                            miliki
-                        </p>
                     </div>
-
-                </div>
-                <div id="item3" class="carousel-item">
-
-                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
-                        <div class="flex justify-between items-center mb-4">
-                            <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
-                            <div class="flex items-center">
-                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
-                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <h5 class="text-md font-medium tracking-tight text-gray-900">
-                                Faisal Salim
-                            </h5>
-                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
-                                Business Man
-                            </span>
-                        </a>
-                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
-                            yang kami
-                            miliki
-                        </p>
-                    </div>
-
-                </div>
-                <div id="item4" class="carousel-item">
-                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
-                        <div class="flex justify-between items-center mb-4">
-                            <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
-                            <div class="flex items-center">
-                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
-                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <h5 class="text-md font-medium tracking-tight text-gray-900">
-                                Faisal Salim
-                            </h5>
-                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
-                                Business Man
-                            </span>
-                        </a>
-                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
-                            yang kami
-                            miliki
-                        </p>
-                    </div>
-
-                </div>
-                <div id="item5" class="carousel-item">
-                    <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
-                        <div class="flex justify-between items-center mb-4">
-                            <img src="{{ asset('assets/images/noimage.jpg') }}"
-                                class=" blur-mode w-16 h-16 object-center object-cover rounded-full" alt="">
-                            <div class="flex items-center">
-                                <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
-                                <span class="text-xs 2xl:text-sm text-primary">5.0</span>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <h5 class="text-md font-medium tracking-tight text-gray-900">
-                                Faisal Salim
-                            </h5>
-                            <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
-                                Business Man
-                            </span>
-                        </a>
-                        <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                            Tim IT NaZMa sangat responsif dan selalu siap membantu kami dengan pertanyaan atau masalah
-                            yang kami
-                            miliki
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
