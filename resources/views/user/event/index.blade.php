@@ -64,7 +64,7 @@
 
         <div class="max-w-7xl mx-auto px-8 2xl:px-0">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
-                @for ($i = 1; $i <= 9; $i++)
+                @foreach($events as $event)
                     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
                         <a href="#">
                             <img class="rounded-xl" src="{{ asset('assets/images/hero2.jpg') }}" alt="" />
@@ -72,25 +72,29 @@
                         <div class="mt-4">
                             <a href="#">
                                 <h5 class="mb-2 text-lg font-semibold tracking-tight line-clamp-2 text-gray-900">
-                                    Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
+                                    {{$event->title}}
                                 </h5>
                             </a>
                             <div class="flex items-center mt-4 text-xs 2xl:text-sm">
                                 <ion-icon name="calendar-outline" class="text-primary me-2"></ion-icon>
                                 <span class="text-gray-400">
-                                    12 Agustus 2021
+                                    {{date('d F Y', strtotime($event->event_date))}}
                                 </span>
                             </div>
                             <div class="flex items-center  text-xs 2xl:text-sm">
                                 <ion-icon name="time-outline" class="text-primary me-2"></ion-icon>
                                 <span class="text-gray-400">
-                                    08.00 - 12.00 WIB
+                                    {{date('H:i'),strtotime(($event->event_time))}} WIB
                                 </span>
                             </div>
                             <div class="mt-6 flex justify-between items-end">
                                 <div>
-                                    <p class="text-sm text-danger animate-pulse line-through">Rp. 5.000.000</p>
-                                    <p class="text-gray-400 text-lg font-semibold">Rp. 2.000.000</p>
+                                    @if ($event->discount === null)
+                                    <p class="text-gray-400 text-lg font-semibold mt-5">Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
+                                    @else
+                                    <p class="text-sm text-danger animate-pulse line-through">Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
+                                    <p class="text-gray-400 text-lg font-semibold">Rp.{{ number_format($event->discount, 0, ',', '.') }}</p>
+                                    @endif
                                 </div>
                                 <div class="flex items-center text-xs 2xl:text-sm">
                                     <div class="w-3 h-3 rounded-full bg-success mr-2"></div>
@@ -101,7 +105,7 @@
                             </div>
                         </div>
                     </div>
-                @endfor
+                @endforeach
             </div>
 
             <div class="flex justify-center mt-10">
