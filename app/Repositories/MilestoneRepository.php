@@ -16,7 +16,7 @@ class MilestoneRepository implements MilestoneInterface
 
     public function getAll()
     {
-        return $this->milestone->orderBy('year', 'desc')->get();
+        return $this->milestone->get();
     }
 
     public function getAllWithPagination()

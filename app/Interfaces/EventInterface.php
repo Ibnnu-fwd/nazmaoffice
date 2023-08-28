@@ -15,7 +15,6 @@ interface EventInterface
     public function settingNew($data);
     public function settingUpdate($data);
 
-
     // Rundown
     public function rundownGetByEventId($id);
     public function rundownStore($data);

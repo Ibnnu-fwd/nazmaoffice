@@ -37,7 +37,7 @@
                     <tr>
                         <th scope="col" class="p-4">Nama</th>
                         <th scope="col" class="p-4">Gambar</th>
-                        <th scope="col" class="p-4">Pekerjaan</th>
+                        <th scope="col" class="p-4">Posisi</th>
                         <th scope="col" class="p-4">Media Sosial</th>
                         <th scope="col" class="p-4">Aksi</th>
                     </tr>
@@ -132,7 +132,18 @@
 
                         <x-input-file id="image" name="image" label="Gambar" required />
 
-                        <x-input id="job" name="job" label="Pekerjaan" required />
+                        <x-select id="job" name="job" label="Posisi" required>
+                            <option value="">Pilih Posisi</option>
+                            <option id="Trainer" value="Trainer">Trainer</option>
+                            <option id="Kreatif" value="Kreatif">Kreatif</option>
+                            <option id="Owner" value="Owner">Owner</option>
+                            <option id="Marketing" value="Marketing">Marketing</option>
+                            <option id="Full Stack Developer" value="Full Stack Developer">Full Stack Developer
+                            </option>
+                            <option id="Data Analyst" value="Data Analyst">Data Analyst</option>
+                            <option id="Konten Kreator" value="Konten Kreator">Konten Kreator</option>
+                            <option id="Desain Grafis" value="Desain Grafis">Desain Grafis</option>
+                        </x-select>
 
                         <x-input id="facebook" name="facebook" label="Facebook" />
 
