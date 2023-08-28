@@ -16,7 +16,7 @@ class BlogCategoryRepository implements BlogCategoryInterface
 
     public function getAll()
     {
-        return $this->blogCategory->paginate(5);
+        return $this->blogCategory->paginate(10);
     }
 
     public function getAllWithoutPagination()

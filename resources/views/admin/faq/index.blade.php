@@ -47,7 +47,7 @@
                                 {{ $data->question }}
                             </th>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ $data->answer }}
+                                {{ Str::limit($data->answer, 50) }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">
@@ -204,6 +204,7 @@
                 $('#btnAddCategory').click(function(e) {
                     e.preventDefault();
                     $('input[name="title"]').val('');
+                    $('form').trigger('reset');
                     let url = "{{ route('admin.faq.store') }}";
                     $('form').attr('action', url);
                     $('#modal-title').text('Formulir Tambah FAQ');

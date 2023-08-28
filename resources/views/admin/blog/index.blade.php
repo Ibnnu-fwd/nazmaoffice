@@ -165,6 +165,9 @@
 
                         <x-textarea id="content" name="content" label="Konten" required></x-textarea>
 
+                        <x-input id="tag" name="tag" label="Tags" type="text"
+                            placeholder="Masukan tags blog, pisahkan dengan koma (,)" required />
+
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b">
@@ -254,7 +257,7 @@
                             $('#blog_category_id').val(data.blog_category_id);
                             $('#title').val(data.title);
                             $('#author_name').val(data.author_name);
-                            CKEDITOR.instances['content'].setData(data.content);
+                            CKEDITOR.instances['content'].insertHtml(data.content);
                         }
                     });
                 }

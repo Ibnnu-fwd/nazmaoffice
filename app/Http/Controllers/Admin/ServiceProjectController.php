@@ -41,16 +41,17 @@ class ServiceProjectController extends Controller
         $request->validate([
             'service_id'     => ['required', 'exists:services,id'],
             'title'          => ['required', 'string', 'max:255'],
-            'taken_at'       => ['required', 'date'],
-            'due_at'         => ['required', 'date'],
-            'customer_name'  => ['required', 'string', 'max:255'],
-            'customer_phone' => ['required', 'string', 'max:255'],
+            'taken_at'       => ['nullable', 'date'],
+            'due_at'         => ['nullable', 'date'],
+            'customer_name'  => ['nullable', 'string', 'max:255'],
+            'customer_phone' => ['nullable', 'string', 'max:255'],
             'status'         => ['required', 'string', 'max:255'],
             'price'          => ['required'],
             'image_1'        => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'image_2'        => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'image_3'        => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
-            'tag'           => ['required', 'string', 'max:255'],
+            'tag'            => ['required', 'string', 'max:255'],
+            'location'       => ['nullable', 'string', 'max:255'],
         ]);
 
         try {
@@ -67,16 +68,17 @@ class ServiceProjectController extends Controller
         $request->validate([
             'service_id'     => ['required', 'exists:services,id'],
             'title'          => ['required', 'string', 'max:255'],
-            'taken_at'       => ['required', 'date'],
-            'due_at'         => ['required', 'date'],
-            'customer_name'  => ['required', 'string', 'max:255'],
-            'customer_phone' => ['required', 'string', 'max:255'],
+            'taken_at'       => ['nullable', 'date'],
+            'due_at'         => ['nullable', 'date'],
+            'customer_name'  => ['nullable', 'string', 'max:255'],
+            'customer_phone' => ['nullable', 'string', 'max:255'],
             'status'         => ['required', 'string', 'max:255'],
             'price'          => ['required'],
             'image_1'        => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'image_2'        => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'image_3'        => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'tag'            => ['required', 'string', 'max:255'],
+            'location'       => ['nullable', 'string', 'max:255'],
         ]);
 
         try {

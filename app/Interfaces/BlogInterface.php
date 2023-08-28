@@ -11,4 +11,5 @@ interface BlogInterface
     public function destroy($id);
 
     public function countBlog();
+    public function getBySlug($slug);
 }
