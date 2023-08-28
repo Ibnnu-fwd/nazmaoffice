@@ -51,12 +51,12 @@
         </div>
 
         <form class="max-w-xl mx-auto mt-8 px-4 md:px-0">
-            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+            <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
             <div class="relative">
                 <div class="absolute inset-y-0 left-3 flex items-center pl-3 pointer-events-none">
                     <ion-icon name="search-outline" class="text-gray-300 w-6 h-6"></ion-icon>
                 </div>
-                <input type="search" id="default-search"
+                <input type="search" id="search" name="search"
                     class="custom-input border border-gray-200 focus:border focus:border-gray-200 block w-full p-5 pl-14 text-md font-light text-gray-900 rounded-full"
                     placeholder="Cari" required>
             </div>
@@ -64,36 +64,40 @@
 
         <div class="max-w-7xl mx-auto px-8 2xl:px-0">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
-                @foreach($events as $event)
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
+                @foreach ($events as $event)
+                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4"
+                        id="event-{{ $event->id }}">
                         <a href="#">
                             <img class="rounded-xl" src="{{ asset('assets/images/hero2.jpg') }}" alt="" />
                         </a>
                         <div class="mt-4">
                             <a href="#">
                                 <h5 class="mb-2 text-lg font-semibold tracking-tight line-clamp-2 text-gray-900">
-                                    {{$event->title}}
+                                    {{ $event->title }}
                                 </h5>
                             </a>
                             <div class="flex items-center mt-4 text-xs 2xl:text-sm">
                                 <ion-icon name="calendar-outline" class="text-primary me-2"></ion-icon>
                                 <span class="text-gray-400">
-                                    {{date('d F Y', strtotime($event->event_date))}}
+                                    {{ date('d F Y', strtotime($event->event_date)) }}
                                 </span>
                             </div>
                             <div class="flex items-center  text-xs 2xl:text-sm">
                                 <ion-icon name="time-outline" class="text-primary me-2"></ion-icon>
                                 <span class="text-gray-400">
-                                    {{date('H:i'),strtotime(($event->event_time))}} WIB
+                                    {{ date('H:i'), strtotime($event->event_time) }} WIB
                                 </span>
                             </div>
                             <div class="mt-6 flex justify-between items-end">
                                 <div>
                                     @if ($event->discount === null)
-                                    <p class="text-gray-400 text-lg font-semibold mt-5">Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
+                                        <p class="text-gray-400 text-lg font-semibold mt-5">
+                                            Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
                                     @else
-                                    <p class="text-sm text-danger animate-pulse line-through">Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
-                                    <p class="text-gray-400 text-lg font-semibold">Rp.{{ number_format($event->discount, 0, ',', '.') }}</p>
+                                        <p class="text-sm text-danger animate-pulse line-through">
+                                            Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
+                                        <p class="text-gray-400 text-lg font-semibold">
+                                            Rp.{{ number_format($event->discount, 0, ',', '.') }}</p>
                                     @endif
                                 </div>
                                 <div class="flex items-center text-xs 2xl:text-sm">
@@ -109,12 +113,26 @@
             </div>
 
             <div class="flex justify-center mt-10">
-                <button
-                    class="items-center justify-center w-fit px-6 py-3  text-center text-gray-400 duration-200 bg-gray-100 rounded-full inline-flex lg:w-auto text-xs 2xl:text-sm">
+                <button id="load-more"
+                    class="items-center justify-center w-fit px-6 py-3 text-center text-gray-400 duration-200 bg-gray-100 rounded-full inline-flex lg:w-auto text-xs 2xl:text-sm">
                     Muat Lebih Banyak
                 </button>
             </div>
         </div>
     </section>
+
+    @push('js-internal')
+        <script>
+            $(function() {
+                $('#search').on('keyup', function() {
+                    $value = $(this).val();
+                    //    filter the event card
+                    $('div[id^="event-"]').filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf($value) > -1)
+                    });
+                })
+            });
+        </script>
+    @endpush
 
 </x-guest-layout>
