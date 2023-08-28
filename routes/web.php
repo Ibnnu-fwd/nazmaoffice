@@ -34,7 +34,7 @@ Route::get('gallery', [UserGalleryController::class, 'index'])->name('user.galle
 Route::get('blog', [UserBlogController::class, 'index'])->name('user.blog');
 Route::get('blog/{id}', [HomeController::class, 'blogDetail'])->name('user.blog.detail');
 Route::get('event', [UserEventController::class, 'index'])->name('user.event');
-Route::get('event/{id}', [HomeController::class, 'eventDetail'])->name('user.event.detail');
+Route::get('event/{id}', [UserEventController::class, 'getById'])->name('user.event.detail');
 Route::get('service', [HomeController::class, 'service'])->name('user.service');
 Route::get('service/{id}', [HomeController::class, 'serviceDetail'])->name('user.service.detail');
 

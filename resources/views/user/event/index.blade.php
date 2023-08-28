@@ -66,9 +66,8 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
                 @foreach($events as $event)
                     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
-                        <a href="#">
-                            <img class="rounded-xl" src="{{ asset('assets/images/hero2.jpg') }}" alt="" />
-                        </a>
+                        <a href="{{route('user.event.detail', $event->id)}}">
+                            <img class="w-full h-52 rounded-xl blur-mode" src="{{ asset('storage/event/thumbnail/' . $event->thumbnail) }}" alt="" />
                         <div class="mt-4">
                             <a href="#">
                                 <h5 class="mb-2 text-lg font-semibold tracking-tight line-clamp-2 text-gray-900">
@@ -104,6 +103,7 @@
                                 </div>
                             </div>
                         </div>
+                    </a>
                     </div>
                 @endforeach
             </div>

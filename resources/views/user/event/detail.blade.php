@@ -10,13 +10,10 @@
                                 NaZMa Event
                             </p>
                             <p class="text-2xl font-semibold leading-snug mt-2 tracking-tight text-black sm:text-4xl">
-                                Pelatihan Pembuatan Logo dan Company Profile
+                                {{$event->title}}
                             </p>
                             <p class="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                                Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan dalam
-                                merancang logo dan menciptakan profil perusahaan yang menarik. Dalam era bisnis yang
-                                kompetitif, memiliki identitas visual yang kuat dan profil perusahaan yang
-                                profesional sangatlah penting
+                                {{$event->description}}
                             </p>
                         </div>
                         <div class="flex items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
@@ -41,11 +38,10 @@
         <div class="max-w-7xl mx-auto px-8 lg:px-12 2xl:px-0">
             <h1 class="text-2xl font-semibold tracking-tight text-primary">Study Case</h1>
             <h1 class="text-xl font-medium tracking-tight text-black">
-                Jelajahi Kreatifitas Untuk Tingkatkan Branding Bisnis
+                {{$event->study_case}}
             </h1>
             <p class="text-xs 2xl:text-sm text-gray-400 xl:w-1/2 mt-3">
-                Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan dalam merancang logo dan
-                menciptakan profil perusahaan yang menarik
+                {{$event->study_case_description}}
             </p>
 
             <div class="">
@@ -93,15 +89,14 @@
                 </p>
             </div>
             <div class="flex flex-wrap gap-8 lg:gap-16 justify-center">
-                @for ($i = 1; $i <= 3; $i++)
                     <div class="flex flex-col items-center text-center text-gray-500">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                             alt="Person Avatar">
                         <h3 class="mb-1 text-lg font-semibold tracking-tight text-gray-900">
-                            <a href="#">Person Name</a>
+                            <a href="#">name</a>
                         </h3>
-                        <p class="text-md">Role</p>
+                        <p class="text-md">role</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 <a href="#" class="text-[#39569c] hover:text-gray-900 dark:hover:text-white">
@@ -141,7 +136,6 @@
                             </li>
                         </ul>
                     </div>
-                @endfor
             </div>
         </div>
     </section>
