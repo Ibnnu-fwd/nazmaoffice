@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutPageSettingController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogCategoryController;
@@ -44,6 +45,13 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/', [CompanyLandingSettingController::class, 'index'])->name('admin.company-landing-setting');
         Route::post('store', [CompanyLandingSettingController::class, 'store'])->name('admin.company-landing-setting.store');
         Route::post('update', [CompanyLandingSettingController::class, 'update'])->name('admin.company-landing-setting.update');
+    });
+
+    // About Page Setting
+    Route::group(['prefix' => 'about-page-setting'], function () {
+        Route::get('/', [AboutPageSettingController::class, 'index'])->name('admin.about-page-setting');
+        Route::post('store', [AboutPageSettingController::class, 'store'])->name('admin.about-page-setting.store');
+        Route::post('update', [AboutPageSettingController::class, 'update'])->name('admin.about-page-setting.update');
     });
 
     // Blog

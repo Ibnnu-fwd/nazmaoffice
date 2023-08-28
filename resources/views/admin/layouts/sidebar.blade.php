@@ -31,9 +31,19 @@
                 active="{{ request()->routeIs('admin.team') }}" />
             <x-sidebar-menu name="Galeri" icon="fas fa-images" route="{{ route('admin.gallery') }}"
                 active="{{ request()->routeIs('admin.gallery') }}" />
-            <x-sidebar-menu name="Pengaturan Landing" icon="fas fa-cog"
+            <x-sidebar-menu name="Faq" icon="fas fa-question" route="{{ route('admin.faq') }}"
+                active="{{ request()->routeIs('admin.faq') }}" />
+
+            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Pengaturan Halaman</p>
+
+            <x-sidebar-menu name="Landing" icon="fas fa-sticky-note"
                 route="{{ route('admin.company-landing-setting') }}"
                 active="{{ request()->routeIs('admin.company-landing-setting') }}" />
+            <x-sidebar-menu name="Acara" icon="fas fa-sticky-note" route="{{ route('admin.event.setting') }}"
+                active="{{ request()->routeIs('admin.event.setting') }}" />
+            <x-sidebar-menu name="Tentang Kami" icon="fas fa-sticky-note"
+                route="{{ route('admin.about-page-setting') }}"
+                active="{{ request()->routeIs('admin.about-page-setting') }}" />
 
             <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Blog</p>
 
@@ -48,8 +58,6 @@
                 active="{{ request()->routeIs('admin.event') }}" />
             <x-sidebar-menu name="Peserta" icon="fas fa-users" route="{{ route('admin.event-participant') }}"
                 active="{{ request()->routeIs('admin.event-participant') }}" />
-            <x-sidebar-menu name="Konfigurasi Halaman" icon="fas fa-cog" route="{{ route('admin.event.setting') }}"
-                active="{{ request()->routeIs('admin.event.setting') }}" />
 
             <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Layanan</p>
 
