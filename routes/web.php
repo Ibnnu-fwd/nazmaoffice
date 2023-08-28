@@ -29,8 +29,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
 Route::get('about', [AboutPageController::class, 'about'])->name('user.about');
-Route::get('gallery', [UserGalleryController::class, 'gallery'])->name('user.gallery');
-Route::get('blog', [HomeController::class, 'blog'])->name('user.blog');
+Route::get('gallery', [UserGalleryController::class, 'index'])->name('user.gallery');
+Route::get('blog', [HomeController::class, 'index'])->name('user.blog');
 Route::get('blog/{id}', [HomeController::class, 'blogDetail'])->name('user.blog.detail');
 Route::get('event', [HomeController::class, 'event'])->name('user.event');
 Route::get('event/{id}', [HomeController::class, 'eventDetail'])->name('user.event.detail');
