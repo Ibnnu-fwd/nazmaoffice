@@ -26,6 +26,25 @@ class ServiceProjectRepository implements ServiceProjectInterface
         return $this->serviceProject->with('service')->find($id);
     }
 
+    public function groupByMonth($year)
+    {
+        $serviceProjects = $this->serviceProject->with('service')->get();
+
+        $data = [];
+        $serviceProjects->each(function ($serviceProject) use (&$data) {
+            $month          = date('m', strtotime($serviceProject->taken_at));
+            $data[$month][] = $serviceProject;
+        });
+
+        // change key to month name
+        foreach ($data as $key => $value) {
+            $data[date('F', mktime(0, 0, 0, $key, 10))] = $value;
+            unset($data[$key]);
+        }
+
+        return $data;
+    }
+
     public function getByServiceid($id)
     {
         return $this->serviceProject->with('service')->where('service_id', $id)->get();

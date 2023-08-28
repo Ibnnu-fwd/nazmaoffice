@@ -111,56 +111,58 @@
 
     {{-- Insight --}}
     <section class="bg-white">
-        <p class="text-xl font-semibold text-black text-center pt-12 mb-2 mx-2 md:mx-0">
-            Terima Kasih Telah Mempercayai Kami
-        </p>
-        <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-4 lg:grid-cols-4 max-w-4xl mx-auto">
-            <figure class="flex justify-center flex-col">
-                <ion-icon name="storefront-outline"
-                    class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
-                <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
-                    1000+
-                </p>
-                <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
-                    Mitra Usaha
-                </p>
-            </figure>
-            <figure class="flex justify-center flex-col">
-                <ion-icon name="bookmarks-outline"
-                    class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
-                <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
-                    1000+
-                </p>
-                <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
-                    Event Edukatif
-                </p>
-            </figure>
-            <figure class="flex justify-center flex-col">
-                <ion-icon name="people-outline"
-                    class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
-                <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
-                    1000+
-                </p>
-                <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
-                    Mentor Profesional
-                </p>
-            </figure>
-            <figure class="flex justify-center flex-col">
-                <ion-icon name="person-add-outline"
-                    class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
-                <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
-                    1000+
-                </p>
-                <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
-                    Mitra Usaha
-                </p>
-            </figure>
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <p class="text-xl font-semibold text-black text-center pt-12 mb-2 mx-2 md:mx-0">
+                Terima Kasih Telah Mempercayai Kami
+            </p>
+            <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-4 lg:grid-cols-4 max-w-4xl mx-auto">
+                <figure class="flex justify-center flex-col">
+                    <ion-icon name="storefront-outline"
+                        class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
+                    <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                        1000+
+                    </p>
+                    <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
+                        Mitra Usaha
+                    </p>
+                </figure>
+                <figure class="flex justify-center flex-col">
+                    <ion-icon name="bookmarks-outline"
+                        class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
+                    <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                        1000+
+                    </p>
+                    <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
+                        Event Edukatif
+                    </p>
+                </figure>
+                <figure class="flex justify-center flex-col">
+                    <ion-icon name="people-outline"
+                        class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
+                    <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                        1000+
+                    </p>
+                    <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
+                        Mentor Profesional
+                    </p>
+                </figure>
+                <figure class="flex justify-center flex-col">
+                    <ion-icon name="person-add-outline"
+                        class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
+                    <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                        1000+
+                    </p>
+                    <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
+                        Mitra Usaha
+                    </p>
+                </figure>
+            </div>
         </div>
     </section>
 
     {{-- Services --}}
     <section>
-        <p class="text-xl font-semibold text-black text-center pt-12 mb-6 mx-2 md:mx-0">
+        <p class="text-xl font-semibold text-black text-center pt-12 mb-6 mx-2 md:mx-0" data-aos="fade-up">
             Layanan Yang Kami Miliki
         </p>
         <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
@@ -191,7 +193,8 @@
                         <div class="py-4 pt-4 text-left content mt-8">
                             <!-- show tab1 only -->
                             @foreach ($serviceCategories as $serviceCategory)
-                                <div x-show="tab==='{{ $serviceCategory->id }}'" class="text-gray-500">
+                                <div x-show="tab==='{{ $serviceCategory->id }}'" class="text-gray-500"
+                                    data-aos="fade-up" data-aos-duration="1000">
                                     <main class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                         @foreach ($serviceCategory->services as $service)
                                             <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
@@ -234,7 +237,7 @@
             <div class="w-full mx-auto text-left">
                 <div class="relative flex-col items-center m-auto align-middle">
                     <div class="items-center gap-12 text-left lg:gap-24 lg:inline-flex">
-                        <div class="flex flex-col m-auto md:order-first">
+                        <div class="flex flex-col m-auto md:order-first" data-aos="fade-right">
                             <div class="max-w-xl">
                                 <div>
                                     <p class="text-xl font-semibold tracking-tight text-black">
@@ -242,7 +245,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="mt-6 lg:max-w-7xl">
+                            <div class="mt-6 lg:max-w-7xl" data-aos="fade-right" data-aos-duration="1000">
                                 <p class="text-gray-400 text-xs 2xl:text-sm">
                                     {{ $companyLandingSetting->about_us }}
                                 </p>
@@ -278,7 +281,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="order-first block w-full mt-8 lg:mt-0">
+                        <div class="order-first block w-full mt-8 lg:mt-0" data-aos="fade-left"
+                            data-aos-duration="1000">
                             <img class=" object-cover object-center rounded-lg w-full mx-auto bg-gray-300 lg:ml-auto h-60 md:h-80 blur-mode"
                                 alt="hero" src="{{ asset('assets/images/hero2.jpg') }}">
                         </div>
@@ -296,7 +300,7 @@
         <div>
             <div class="">
                 <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8">
-                    <div class="mt-6 grid gap-5 md:gap-0.5 md:grid-flow-col lg:mt-8">
+                    <div class="mt-6 grid gap-5 md:gap-0.5 md:grid-flow-col lg:mt-8" data-aos="fade-up">
                         @foreach ($partners as $partner)
                             <div class="flex justify-center col-span-1 px-8">
                                 <img class="max-h-12 blur-mode"
@@ -316,7 +320,8 @@
             Apa Kata Mereka
         </p>
         <div id="testimonial" class="mt-8">
-            <div class="carousel carousel-center p-4 space-x-4 w-full place-content-center">
+            <div class="carousel carousel-center p-4 space-x-4 w-full place-content-center" data-aos="fade-up"
+                data-aos-duration="1000">
                 @foreach ($testimonials as $testimonial)
                     <div id="item{{ $testimonial->id }}" class="carousel-item">
                         <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
@@ -358,7 +363,8 @@
             Kami telah berkontribusi dalam berbagai kegiatan untuk memajukan usaha <br> individu, kelompok, maupun UMKM
         </p>
         <div class="max-w-7xl mx-auto px-4 mt-16">
-            <div class="carousel carousel-center space-x-2 gap-x-8 w-full">
+            <div class="carousel carousel-center space-x-2 gap-x-8 w-full" data-aos="fade-up"
+                data-aos-duration="1000">
                 @foreach ($serviceProjects as $serviceProject)
                     <div class="carousel-item w-full lg:w-1/2">
                         <div
@@ -405,13 +411,13 @@
     <section class="py-12 bg-white">
         <div class="max-w-7xl px-4 md:px-8 mx-auto">
             <div class="flex justify-between items-center">
-                <div>
+                <div data-aos="fade-right" data-aos-duration="1000">
                     <p class="font-semibold tracking-tight text-black text-xl">Informasi Terbaru</p>
                     <p class="text-gray-400 text-xs 2xl:text-sm">
                         Kami melakukan press release setiap kegiatan. Jangan sampai ketinggalan
                     </p>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-duration="1000">
                     <a href="{{ route('user.blog') }}"
                         class="inline-flex items-center justify-center px-3 py-2 text-xs 2xl:text-sm text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
                         Lihat Semua
@@ -419,7 +425,7 @@
                 </div>
             </div>
 
-            <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
+            <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-duration="1000">
                 @forelse ($blogs as $blog)
                     <a href="{{ route('user.blog.detail', $blog->slug) }}">
                         <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
@@ -457,7 +463,8 @@
 
         <div id="accordion-arrow-icon" data-accordion="open" class="mt-8 mx-4 md:mx-0">
             @forelse ($faqs as $faq)
-                <h2 id="accordion-arrow-icon-heading-{{ $faq->id }}" class="rounded-lg mb-3 bg-white">
+                <h2 id="accordion-arrow-icon-heading-{{ $faq->id }}" class="rounded-lg mb-3 bg-white"
+                    data-aos="fade-up" data-aos-duration="1000">
                     <button type="button"
                         class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
                         data-accordion-target="#accordion-arrow-icon-body-{{ $faq->id }}" aria-expanded="false"

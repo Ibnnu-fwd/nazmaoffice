@@ -12,4 +12,5 @@ interface ServiceProjectInterface
     public function destroy($id);
 
     public function countProject();
+    public function groupByMonth($year);
 }

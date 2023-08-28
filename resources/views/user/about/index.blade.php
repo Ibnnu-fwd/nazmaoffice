@@ -108,7 +108,7 @@
 
     {{-- Milestone --}}
     <section class="bg-white py-20 px-4 md:px-8">
-        <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16 text-center">
+        <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16 text-center" data-aos="fade-up" data-aos-delay="1000">
             <h2 class="mb-4 text-xl tracking-tight font-semibold text-gray-900">
                 Perjalanan Kami
             </h2>
@@ -116,7 +116,7 @@
                 Tahun demi tahun, kami terus berkembang dan berinovasi <br> untuk mengedukasi berbagai kalangan bisnis
             </p>
         </div>
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto" data-aos="fade-up" data-aos-delay="1000">
             <div class="grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-8">
                 @foreach ($milestones as $milestone)
                     <div class="relative">
@@ -142,7 +142,8 @@
 
     {{-- Teams --}}
     <section class=bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6" data-aos="fade-up"
+            data-aos-delay="1000">
             <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
                 <h2 class="mb-4 text-xl tracking-tight font-semibold text-gray-900">
                     Tim Dibalik NaZMa Office
@@ -323,7 +324,8 @@
             Apa Kata Mereka
         </p>
         <div id="testimonial" class="mt-8">
-            <div class="carousel carousel-center p-4 space-x-4 w-full place-content-center">
+            <div class="carousel carousel-center p-4 space-x-4 w-full place-content-center" data-aos="fade-up"
+                data-aos-delay="1000">
                 @foreach ($testimonials as $testimonial)
                     <div id="item{{ $testimonial->id }}" class="carousel-item">
                         <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">

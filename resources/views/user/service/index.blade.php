@@ -5,7 +5,7 @@
             <div class="relative flex-col items-start m-auto align-middle">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
                     <div class="relative items-center gap-12 m-auto lg:inline-flex md:order-first">
-                        <div class="max-w-xl text-center lg:text-left">
+                        <div class="max-w-xl text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
                             <div>
                                 <p
                                     class="text-2xl font-semibold leading-snug mt-2 tracking-tight text-black md:text-4xl xl:text-6xl">
@@ -29,7 +29,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="order-first hidden lg:flex w-full mt-12 lg:mt-0 justify-end">
+                    <div class="order-first hidden lg:flex w-full mt-12 lg:mt-0 justify-end" data-aos="fade-left"
+                        data-aos-duration="1000">
                         <img class="object-contain blur-mode object-center h-[500px]" alt="hero"
                             src="{{ asset('assets/images/service-hero.svg') }}">
                     </div>
@@ -54,7 +55,7 @@
                     <div>
                         <div class="grid grid-cols-2 gap-12 lg:grid-cols-4 lg:space-y-0">
                             @for ($i = 1; $i <= 4; $i++)
-                                <div>
+                                <div data-aos="fade-up" data-aos-duration="1000">
                                     <div>
                                         <div
                                             class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg">
@@ -78,151 +79,68 @@
 
     {{-- Services --}}
     <section>
-        <p class="text-xl font-semibold text-black text-center pt-12 mb-6 mx-2 md:mx-0">
+        <p class="text-xl font-semibold text-black text-center pt-12 mb-3 mx-2 md:mx-0" data-aos="fade-up">
             Layanan Yang Kami Miliki
         </p>
         <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
             <div class="justify-center w-full lg:p-10 max-auto">
                 <div class="justify-center w-full text-center">
 
-                    <div x-data="{ tab: 'tab1' }">
+                    <div x-data="{ tab: '{{ $serviceCategories->first()->id }}' }">'
                         <ul class="md:flex gap-3 text-gray-500 justify-center">
                             <li class="-mb-px">
-                                <!-- event handler set state to 'tab1' and add conditional :class for active state -->
-                                <a @click.prevent="tab = 'tab1'" href="#"
+                                <a @click.prevent="tab = '{{ $serviceCategories->first()->id }}'" href="#"
                                     class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-white bg-primary"
-                                    :class="{ '  text-white bg-primary': tab === 'tab1' }">
-                                    Produk Teknologi Informasi
+                                    :class="{ '  text-white bg-primary': tab === '{{ $serviceCategories->first()->id }}' }">
+                                    {{ $serviceCategories->first()->title }}
                                 </a>
                             </li>
-                            <li class="-mb-px">
-                                <a @click.prevent="tab = 'tab2'" href="#"
-                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-gray-400"
-                                    :class="{ '  text-white bg-primary': tab === 'tab2' }">
-                                    Produk Konsultan Manajemen
-                                </a>
-                            </li>
+
+                            {{-- loop except 1 --}}
+                            @foreach ($serviceCategories->skip(1) as $serviceCategory)
+                                <li class="-mb-px">
+                                    <a @click.prevent="tab = '{{ $serviceCategory->id }}'" href="#"
+                                        class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-white bg-gray-200"
+                                        :class="{ '  text-white bg-primary': tab === '{{ $serviceCategory->id }}' }">
+                                        {{ $serviceCategory->title }}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                         <div class="py-4 pt-4 text-left content mt-8">
                             <!-- show tab1 only -->
-                            <div x-show="tab==='tab1'" class="text-gray-500" style="">
-                                <main class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="easel-outline" class="text-primary"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Jasa Pendidikan Komputer (Teknologi Informasi dan Komunikasi) Swasta
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Kursus untuk menambah keahlian dalam bidang komputer, teknologi informasi,
-                                            dan komunikasi.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="play-circle-outline" class="text-danger"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Aktivitas Jasa Multimedia Lainnya
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Layanan konvergen radio dan televisi, video, audio, teks, grafik dan data
-                                            yang disalurkan melalui jaringan protokol internet.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="globe-outline" class="text-success"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Aktivitas Teknologi Informasi dan Jasa Komputer Lainnya
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Pemulihan kerusakan, instalasi personal komputer dan perangkat lunak, serta
-                                            manajemen insiden dan digital forensic.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="code-outline" class="text-warning"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Aktivitas Jasa Informasi Lainnya YTDL
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Jasa informasi berbasis telepon, pencarian informasi atas dasar balas jasa
-                                            atau kontrak dan jasa kliping berita, dan lain-lain.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                    <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
-                                        <div class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                            <ion-icon name="flag-outline" class="text-black"
-                                                size="large"></ion-icon>
-                                        </div>
-                                        <a href="#">
-                                            <h5
-                                                class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
-                                                Aktivitas Pengembangan Aplikasi Perdagangan Melalui Internet
-                                                (E-Commerce)
-                                            </h5>
-                                        </a>
-                                        <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
-                                            Pengembangan aplikasi perdagangan, konsultasi, analisis dan pemograman
-                                            aplikasi melalui internet.
-                                        </p>
-                                        <a href="#"
-                                            class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
-                                            Selengkapnya
-                                            <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
-                                                size="small"></ion-icon>
-                                        </a>
-                                    </div>
-                                </main>
-                            </div>
-                            <div x-show="tab==='tab2'" class="text-gray-500" style="display: none;">
-                                <main></main>
-                            </div>
+                            @foreach ($serviceCategories as $serviceCategory)
+                                <div x-show="tab==='{{ $serviceCategory->id }}'" class="text-gray-500"
+                                    data-aos="fade-up" data-aos-duration="1000">
+                                    <main class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        @foreach ($serviceCategory->services as $service)
+                                            <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
+                                                <div
+                                                    class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
+                                                    <ion-icon name="{{ $service->icon }}"
+                                                        class="text-{{ $service->icon_color }}-600"
+                                                        size="large"></ion-icon>
+                                                </div>
+                                                <a href="{{ route('user.service.detail', $service->id) }}">
+                                                    <h5
+                                                        class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
+                                                        {{ $service->title }}
+                                                    </h5>
+                                                </a>
+                                                <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
+                                                    {{ $service->description }}
+                                                </p>
+                                                <a href="{{ route('user.service.detail', $service->id) }}"
+                                                    class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
+                                                    Selengkapnya
+                                                    <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
+                                                        size="small"></ion-icon>
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    </main>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -244,43 +162,57 @@
                 <div class="max-w-xl py-12 mx-auto text-left lg:max-w-7xl">
                     <div>
                         <div class="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:space-y-0">
-                            @for ($i = 1; $i <= 4; $i++)
-                                <div>
+                            @foreach ($serviceProjects as $key => $value)
+                                <div data-aos="fade-up" data-aos-duration="1000">
                                     <div>
                                         <div
                                             class="flex items-center justify-center text-xs 2xl:text-sm font-medium w-full py-3
-                                            {{ $i == 1 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-400 ' }} rounded-full">
-                                            Agustus
+                                        {{ $loop->first == 1 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-400 hover:bg-primary hover:text-white' }} rounded-full">
+                                            {{ $key }}
                                         </div>
                                     </div>
                                     <div class="mt-4">
-                                        @for ($j = 1; $j <= 6; $j++)
+                                        @foreach ($value as $project)
                                             <div class="max-w-sm bg-white border border-gray-200 rounded-xl  p-4 mb-6">
                                                 <div class="">
                                                     <a href="#">
                                                         <h5
                                                             class="mb-2 text-xs 2xl:text-sm font-medium tracking-tight line-clamp-2 text-gray-900">
-                                                            Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
+                                                            {{ $project->title }}
                                                         </h5>
                                                     </a>
+                                                    <p class="mb-3 text-xs 2xl:text-sm font-normal text-gray-500">
+                                                        @if ($project->due_at)
+                                                            <p
+                                                                class="mb-3 text-xs 2xl:text-sm font-normal text-gray-500">
+                                                                {{ date('d F Y', strtotime($project->taken_at)) }} -
+                                                                {{ date('d F Y', strtotime($project->due_at)) }}
+                                                            </p>
+                                                        @else
+                                                            <p
+                                                                class="mb-3 text-xs 2xl:text-sm font-normal text-gray-500">
+                                                                {{ date('d F Y', strtotime($project->taken_at)) }}
+                                                            </p>
+                                                        @endif
+                                                    </p>
                                                     <div class="mt-6 flex justify-between">
                                                         <div
                                                             class="py-1.5 px-5 text-xs 2xl:text-sm rounded-full bg-gray-100 text-gray-400">
-                                                            Website
+                                                            {{ $project->tag }}
                                                         </div>
                                                         <div class="flex items-center">
                                                             <div class="w-3 h-3 rounded-full bg-success mr-2"></div>
                                                             <span class="text-gray-400 text-xs 2xl:text-sm">
-                                                                12 Agustus 2021
+                                                                {{ $project->status }}
                                                             </span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        @endfor
+                                        @endforeach
                                     </div>
                                 </div>
-                            @endfor
+                            @endforeach
                         </div>
                     </div>
                 </div>

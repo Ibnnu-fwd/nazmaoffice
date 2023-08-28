@@ -6,7 +6,8 @@
             <div class="relative flex-col items-start m-auto align-middle">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-24">
                     <div class="relative items-center gap-12 m-auto lg:inline-flex md:order-first">
-                        <div class="max-w-xl text-center lg:text-left m-auto">
+                        <div class="max-w-xl text-center lg:text-left m-auto" data-aos="fade-right"
+                            data-aos-duration="1000">
                             <div>
                                 <p class="text-gray-400">
                                     Telah diikuti lebih dari 100+ unit usaha 🔥
@@ -33,7 +34,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="order-first hidden lg:block w-full mt-12 aspect-square lg:mt-0">
+                    <div class="order-first hidden lg:block w-full mt-12 aspect-square lg:mt-0" data-aos="fade-left"
+                        data-aos-duration="1000">
                         <img class="object-cover object-center w-full mx-auto lg:ml-auto" alt="hero"
                             src="{{ asset('assets/images/event-hero.svg') }}">
                     </div>
@@ -64,10 +66,12 @@
 
         <div class="max-w-7xl mx-auto px-8 2xl:px-0">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
-                @foreach($events as $event)
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
+                @foreach ($events as $event)
+                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
+                        data-aos-duration="1000" id="event-{{ $event->id }}">
                         <a href="#">
-                            <img class="w-full h-52 rounded-xl blur-mode" src="{{ asset('storage/event/thumbnail/' . $event->thumbnail) }}" alt="" />
+                            <img class="w-full h-52 rounded-xl blur-mode"
+                                src="{{ asset('storage/event/thumbnail/' . $event->thumbnail) }}" alt="" />
                         </a>
                         <div class="mt-4">
                             <a href="#">
@@ -107,7 +111,7 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                        </a>
                     </div>
                 @endforeach
             </div>

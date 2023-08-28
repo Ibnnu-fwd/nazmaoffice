@@ -12,28 +12,23 @@ class EventController extends Controller
 {
     private $event;
 
-    public function __construct(EventInterface $event, EventInterface $eventSpeaker)
+    public function __construct(EventInterface $event)
     {
         $this->event = $event;
-        $this->eventSpeaker = $eventSpeaker;
     }
 
     public function index()
     {
         return view('user.event.index', [
-            'events'     => $this->event->getWithPaginate(10),
+            'events'     => $this->event->getAll(),
             'eventTypes' => Event::EVENT_TYPES
-        ]);        
+        ]);
     }
 
     public function getById(Request $request)
     {
-        return view('user.event.detail',[
-            'event'=>$this->event->getById($request->id),
-            
-
+        return view('user.event.detail', [
+            'event' => $this->event->getById($request->id),
         ]);
     }
-
-
 }
