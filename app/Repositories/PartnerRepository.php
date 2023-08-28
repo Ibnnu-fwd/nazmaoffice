@@ -58,4 +58,9 @@ class PartnerRepository implements PartnerInterface
         Storage::delete('public/partner/' . $partner->image);
         return $partner->delete();
     }
+
+    public function countPartner()
+    {
+        return $this->partner->get()->count();
+    }
 }

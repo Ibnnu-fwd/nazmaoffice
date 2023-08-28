@@ -15,7 +15,8 @@
                                 <div class="flex-1 text-right md:text-center">
                                     <h2 class="font-semibold text-xs 2xl:text-sm uppercase text-gray-600">Total Projek
                                     </h2>
-                                    <p class="font-bold text-md">10 Projek<span class="text-green-500"></p>
+                                    <p class="font-bold text-md">{{$countOfServiceProject}}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -34,25 +35,7 @@
                                 <div class="flex-1 text-right md:text-center">
                                     <h2 class="font-semibold text-xs 2xl:text-sm uppercase text-gray-600">Total
                                         Testimoni</h2>
-                                    <p class="font-bold text-md">10 Testimoni<span class="text-green-500"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/Metric Card-->
-                    </div>
-                    <div class="w-full md:w-1/2 xl:w-1/3 p-6">
-                        <!--Metric Card-->
-                        <div
-                            class="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
-                            <div class="flex flex-row items-center">
-                                <div class="flex-shrink pr-4">
-                                    <div class="rounded-full p-5 bg-pink-600"><i
-                                            class="fas fa-users fa-2x fa-inverse"></i></div>
-                                </div>
-                                <div class="flex-1 text-right md:text-center">
-                                    <h2 class="font-semibold text-xs 2xl:text-sm uppercase text-gray-600">Total Pelatih
-                                    </h2>
-                                    <p class="font-bold text-md">249 Pelatih<span class="text-pink-500"></p>
+                                    <p class="font-bold text-md">{{$countOfTestimonial}}</p>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +52,7 @@
                                 </div>
                                 <div class="flex-1 text-right md:text-center">
                                     <h2 class="font-semibold text-xs 2xl:text-sm uppercase text-gray-600">Total Tim</h2>
-                                    <p class="font-bold text-md">2 Tim<span class="text-yellow-600"></p>
+                                    <p class="font-bold text-md">{{$countOfTeam}}</p>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +70,7 @@
                                 <div class="flex-1 text-right md:text-center">
                                     <h2 class="font-semibold text-xs 2xl:text-sm uppercase text-gray-600">Total
                                         Partnership</h2>
-                                    <p class="font-bold text-md">152 Partner</p>
+                                    <p class="font-bold text-md">{{$countOfTeam}}</p>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +88,7 @@
                                 <div class="flex-1 text-right md:text-center">
                                     <h2 class="font-semibold text-xs 2xl:text-sm uppercase text-gray-600">Total Blog
                                     </h2>
-                                    <p class="font-bold text-md">7 blog</p>
+                                    <p class="font-bold text-md">{{$countOfBlog}}</p>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +106,7 @@
                                 <div class="flex-1 text-right md:text-center">
                                     <h2 class="font-semibold text-xs 2xl:text-sm uppercase text-gray-600">Total Galeri
                                     </h2>
-                                    <p class="font-bold text-md">3 Foto<span class="text-red-500"></p>
+                                    <p class="font-bold text-md">{{$countOfGallery}}</p>
                                 </div>
                             </div>
                         </div>

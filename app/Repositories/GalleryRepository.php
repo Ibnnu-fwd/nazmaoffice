@@ -82,4 +82,11 @@ class GalleryRepository implements GalleryInterface
     {
         return $this->gallery->find($id);
     }
+
+    public function countGallery()
+    {
+        return $this->gallery->get()->count();
+
+    }
+
 }

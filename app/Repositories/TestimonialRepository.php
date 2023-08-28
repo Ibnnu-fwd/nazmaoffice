@@ -82,4 +82,10 @@ class TestimonialRepository implements TestimonialInterface
             return false;
         }
     }
+
+
+    public function countTestimonial()
+    {
+        return $this->testimonial->get()->count();
+    }
 }

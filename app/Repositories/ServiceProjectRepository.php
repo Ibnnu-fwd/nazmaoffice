@@ -119,4 +119,9 @@ class ServiceProjectRepository implements ServiceProjectInterface
 
         $serviceProject->delete();
     }
+
+    public function countProject()
+    {
+        return $this->serviceProject->get()->count();
+    }
 }

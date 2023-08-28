@@ -105,4 +105,11 @@ class BlogRepository implements BlogInterface
 
         $blog->delete();
     }
+
+
+    public function countBlog()
+    {
+        return $this->blog->get()->count();
+    }
 }
+    

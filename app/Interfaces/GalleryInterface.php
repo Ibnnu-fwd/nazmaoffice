@@ -9,4 +9,7 @@ interface GalleryInterface
     public function update($data, $id);
     public function destroy($id);
     public function getById($id);
+
+
+    public function countGallery();
 }

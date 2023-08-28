@@ -81,4 +81,10 @@ class TeamRepository implements TeamInterface
             return false;
         }
     }
+
+    public function countTeam()
+    {
+        return $this->team->get()->count();
+    }
 }
+    

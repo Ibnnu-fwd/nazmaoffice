@@ -10,4 +10,6 @@ interface PartnerInterface
     public function update($id, $data);
     public function getById($id);
     public function destroy($id);
+
+    public function countPartner();
 }
