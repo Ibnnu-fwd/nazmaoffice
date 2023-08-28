@@ -5,9 +5,11 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Interfaces\BlogInterface;
 use App\Interfaces\CompanyLandingSettingInterface;
+use App\Interfaces\FaqInterface;
 use App\Interfaces\PartnerInterface;
 use App\Interfaces\ServiceCategoryInterface;
 use App\Interfaces\ServiceInterface;
+use App\Interfaces\ServiceProjectInterface;
 use App\Interfaces\TestimonialInterface;
 use Illuminate\Http\Request;
 
@@ -19,8 +21,10 @@ class HomeController extends Controller
     private $testimonial;
     private $blog;
     private $partner;
+    private $serviceProject;
+    private $faq;
 
-    public function __construct(CompanyLandingSettingInterface $companyLandingSetting, ServiceInterface $service, ServiceCategoryInterface $serviceCategory, TestimonialInterface $testimonial, BlogInterface $blog, PartnerInterface $partner)
+    public function __construct(CompanyLandingSettingInterface $companyLandingSetting, ServiceInterface $service, ServiceCategoryInterface $serviceCategory, TestimonialInterface $testimonial, BlogInterface $blog, PartnerInterface $partner, ServiceProjectInterface $serviceProject, FaqInterface $faq)
     {
         $this->companyLandingSetting = $companyLandingSetting;
         $this->service               = $service;
@@ -28,6 +32,8 @@ class HomeController extends Controller
         $this->testimonial           = $testimonial;
         $this->blog                  = $blog;
         $this->partner               = $partner;
+        $this->serviceProject        = $serviceProject;
+        $this->faq                   = $faq;
     }
 
     public function index()
@@ -39,6 +45,8 @@ class HomeController extends Controller
             'testimonials'          => $this->testimonial->getAll(),
             'blogs'                 => $this->blog->getAll(),
             'partners'              => $this->partner->getAll(),
+            'serviceProjects'       => $this->serviceProject->getAll(),
+            'faqs'                  => $this->faq->getAll()
         ]);
     }
 
@@ -61,9 +69,11 @@ class HomeController extends Controller
     /* 
         * This function is used to display the blog detail page
     */
-    public function blogDetail($id)
+    public function blogDetail($slug)
     {
-        return view('user.blog.detail');
+        return view('user.blog.detail', [
+            'blog' => $this->blog->getBySlug($slug)
+        ]);
     }
 
     /* 

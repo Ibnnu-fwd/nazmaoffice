@@ -34,7 +34,8 @@ class BlogController extends Controller
             'main_image'       => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
             'title'            => ['required'],
             'author_name'      => ['required'],
-            'content'          => ['required']
+            'content'          => ['required'],
+            'tag'              => ['nullable'],
         ]);
 
         try {
@@ -66,7 +67,8 @@ class BlogController extends Controller
             'main_image'       => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
             'title'            => ['required'],
             'author_name'      => ['required'],
-            'content'          => ['required']
+            'content'          => ['required'],
+            'tag'              => ['nullable'],
         ]);
 
         try {

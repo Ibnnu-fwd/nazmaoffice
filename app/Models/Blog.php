@@ -19,6 +19,10 @@ class Blog extends Model
         'title',
         'published_date',
         'content',
+        'tag',
+        'meta_description',
+        'meta_keyword',
+        'slug',
     ];
 
     public function blogCategory()

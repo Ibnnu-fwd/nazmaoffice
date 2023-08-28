@@ -357,104 +357,46 @@
         <p class="text-gray-400 text-center text-xs 2xl:text-sm">
             Kami telah berkontribusi dalam berbagai kegiatan untuk memajukan usaha <br> individu, kelompok, maupun UMKM
         </p>
-        <div class="max-w-7xl mx-auto px-4 mt-8">
-            <div class="carousel carousel-center md:mx-4 gap-x-8 w-full">
-                <div class="carousel-item w-full lg:w-1/2">
-                    <div
-                        class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
-                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
-                            src="{{ asset('assets/images/hero1.jpg') }}" alt="">
-                        <div class="leading-normal col-span-2">
-                            <h5 class="mb-2 text-lg font-medium line-clamp-2 tracking-tight text-gray-900">
-                                Noteworthy technology acquisitions 2021</h5>
-                            <p class="font-normal text-gray-400 mb-4 line-clamp-2 text-xs 2xl:text-sm">
-                                Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
-                                ilmu dan sharing pengalaman bisnisnya
-                            </p>
+        <div class="max-w-7xl mx-auto px-4 mt-16">
+            <div class="carousel carousel-center space-x-2 gap-x-8 w-full">
+                @foreach ($serviceProjects as $serviceProject)
+                    <div class="carousel-item w-full lg:w-1/2">
+                        <div
+                            class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
+                            <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
+                                src="{{ asset('assets/images/hero1.jpg') }}" alt="">
+                            <div class="leading-normal col-span-2">
+                                <h5 class="mb-2 text-lg font-medium line-clamp-2 tracking-tight text-gray-900">
+                                    {{ $serviceProject->title }}
+                                </h5>
+                                <p class="font-normal text-gray-400 mb-4 line-clamp-3 text-xs 2xl:text-sm">
+                                    {{ $serviceProject->description }}
+                                </p>
 
-                            <ul class="space-y-1 text-left text-gray-500 dark:text-gray-400 text-xs 2xl:text-sm">
-                                <li class="flex items-center space-x-3">
-                                    <ion-icon name="calendar"
-                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
-                                    <span>12 Agustus 2023</span>
-                                </li>
-                                <li class="flex items-center space-x-3">
-                                    <ion-icon name="navigate"
-                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
-                                    <span>Kabupaten Sleman, Yogyakarta</span>
-                                </li>
-                            </ul>
-                            <button
-                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-sm font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
-                                Selengkapnya
-                            </button>
+                                <ul class="space-y-1 text-left text-gray-500 dark:text-gray-400 text-xs 2xl:text-sm">
+                                    <li class="flex items-center space-x-3">
+                                        <ion-icon name="calendar"
+                                            class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
+                                        <span>
+                                            {{ date('d F Y', strtotime($serviceProject->taken_at)) }}
+                                        </span>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <ion-icon name="navigate"
+                                            class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
+                                        <span>
+                                            {{ $serviceProject->location }}
+                                        </span>
+                                    </li>
+                                </ul>
+                                <button
+                                    class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-sm font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                    Selengkapnya
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item w-full lg:w-1/2">
-                    <div
-                        class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
-                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
-                            src="{{ asset('assets/images/hero1.jpg') }}" alt="">
-                        <div class="leading-normal col-span-2">
-                            <h5 class="mb-2 text-lg font-medium line-clamp-2 tracking-tight text-gray-900">
-                                Noteworthy technology acquisitions 2021</h5>
-                            <p class="font-normal text-gray-400 mb-4 line-clamp-2 text-xs 2xl:text-sm">
-                                Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
-                                ilmu dan sharing pengalaman bisnisnya
-                            </p>
-
-                            <ul class="space-y-1 text-left text-gray-500 dark:text-gray-400 text-xs 2xl:text-sm">
-                                <li class="flex items-center space-x-3">
-                                    <ion-icon name="calendar"
-                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
-                                    <span>12 Agustus 2023</span>
-                                </li>
-                                <li class="flex items-center space-x-3">
-                                    <ion-icon name="navigate"
-                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
-                                    <span>Kabupaten Sleman, Yogyakarta</span>
-                                </li>
-                            </ul>
-                            <button
-                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-sm font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
-                                Selengkapnya
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item w-full lg:w-1/2">
-                    <div
-                        class="grid md:grid-cols-3 p-8 gap-x-8 items-start bg-white border border-gray-200 rounded-lg hover:bg-gray-100">
-                        <img class="hidden md:inline-block object-cover rounded-lg md:w-52 md:h-52 lg:h-40 object-center blur-mode"
-                            src="{{ asset('assets/images/hero1.jpg') }}" alt="">
-                        <div class="leading-normal col-span-2">
-                            <h5 class="mb-2 text-lg font-medium line-clamp-2 tracking-tight text-gray-900">
-                                Noteworthy technology acquisitions 2021</h5>
-                            <p class="font-normal text-gray-400 mb-4 line-clamp-2 text-xs 2xl:text-sm">
-                                Pelatihan Home Business Angkatan 11 Pembisnis muda di Yogyakarta berkumpul mengupgrade
-                                ilmu dan sharing pengalaman bisnisnya
-                            </p>
-
-                            <ul class="space-y-1 text-left text-gray-500 dark:text-gray-400 text-xs 2xl:text-sm">
-                                <li class="flex items-center space-x-3">
-                                    <ion-icon name="calendar"
-                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
-                                    <span>12 Agustus 2023</span>
-                                </li>
-                                <li class="flex items-center space-x-3">
-                                    <ion-icon name="navigate"
-                                        class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
-                                    <span>Kabupaten Sleman, Yogyakarta</span>
-                                </li>
-                            </ul>
-                            <button
-                                class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-sm font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
-                                Selengkapnya
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -470,70 +412,35 @@
                     </p>
                 </div>
                 <div>
-                    <button
+                    <a href="{{ route('user.blog') }}"
                         class="inline-flex items-center justify-center px-3 py-2 text-xs 2xl:text-sm text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
                         Lihat Semua
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-4">
-                <figure>
-                    <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
-                        src="{{ asset('assets/images/hero1.jpg') }}" alt="">
+                @forelse ($blogs as $blog)
+                    <a href="{{ route('user.blog.detail', $blog->slug) }}">
+                        <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
+                            src="{{ asset('storage/blogs/thumbnail/' . $blog->thumbnail) }}" alt="">
 
-                    <p class="mt-5 text-md font-semibold leading-6 text-black">
-                        Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
+                        <p class="mt-5 text-md font-semibold leading-6 text-black">
+                            {{ $blog->title }}
+                        </p>
+                        <div class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
+                            {!! $blog->content !!}
+                        </div>
+                        <hr class="text-gray-300 my-4 opacity-30">
+                        <p class="uppercase text-gray-400 text-xs 2xl:text-sm">
+                            {{ date('d F Y', strtotime($blog->published_date)) }}
+                        </p>
+                    </a>
+                @empty
+                    <p class="text-center text-gray-400 text-xs 2xl:text-sm">
+                        Belum ada blog
                     </p>
-                    <p class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
-                        Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
-                        Bimbingan…
-                    </p>
-                    <hr class="text-gray-300 my-4 opacity-30">
-                    <p class="uppercase text-gray-400 text-xs 2xl:text-sm">12 agustus 2023</p>
-                </figure>
-                <figure>
-                    <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
-                        src="{{ asset('assets/images/hero1.jpg') }}" alt="">
-
-                    <p class="mt-5 text-md font-semibold leading-6 text-black">
-                        Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
-                    </p>
-                    <p class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
-                        Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
-                        Bimbingan…
-                    </p>
-                    <hr class="text-gray-300 my-4 opacity-30">
-                    <p class="uppercase text-gray-400 text-xs 2xl:text-sm">12 agustus 2023</p>
-                </figure>
-                <figure>
-                    <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
-                        src="{{ asset('assets/images/hero2.jpg') }}" alt="">
-
-                    <p class="mt-5 text-md font-semibold leading-6 text-black">
-                        Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
-                    </p>
-                    <p class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
-                        Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
-                        Bimbingan…
-                    </p>
-                    <hr class="text-gray-300 my-4 opacity-30">
-                    <p class="uppercase text-gray-400 text-xs 2xl:text-sm">12 agustus 2023</p>
-                </figure>
-                <figure>
-                    <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
-                        src="{{ asset('assets/images/hero3.jpg') }}" alt="">
-
-                    <p class="mt-5 text-md font-semibold leading-6 text-black">
-                        Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
-                    </p>
-                    <p class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
-                        Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
-                        Bimbingan…
-                    </p>
-                    <hr class="text-gray-300 my-4 opacity-30">
-                    <p class="uppercase text-gray-400 text-xs 2xl:text-sm">12 agustus 2023</p>
-                </figure>
+                @endforelse
             </div>
         </div>
     </section>
@@ -549,84 +456,27 @@
 
 
         <div id="accordion-arrow-icon" data-accordion="open" class="mt-8 mx-4 md:mx-0">
-            <h2 id="accordion-arrow-icon-heading-2" class="rounded-lg mb-3 bg-white">
-                <button type="button"
-                    class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
-                    data-accordion-target="#accordion-arrow-icon-body-2" aria-expanded="false"
-                    aria-controls="accordion-arrow-icon-body-2">
-                    <span>Apa itu website NaZMa Office?</span>
-                    <ion-icon name="chevron-down-circle-outline" data-accordion-icon
-                        class="shrink-0 -mr-0.5 w-6 h-6"></ion-icon>
-                </button>
-            </h2>
-            <div id="accordion-arrow-icon-body-2" class="hidden mb-4"
-                aria-labelledby="accordion-arrow-icon-heading-2">
-                <div class="p-5 bg-white rounded-lg">
-                    <p class="text-gray-400 text-xs 2xl:text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quae, officiis veniam
-                        similique animi architecto soluta nostrum, sed quaerat fuga vitae atque ipsam et nisi quo
-                        eveniet voluptatem sint dignissimos.
-                    </p>
+            @forelse ($faqs as $faq)
+                <h2 id="accordion-arrow-icon-heading-{{ $faq->id }}" class="rounded-lg mb-3 bg-white">
+                    <button type="button"
+                        class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                        data-accordion-target="#accordion-arrow-icon-body-{{ $faq->id }}" aria-expanded="false"
+                        aria-controls="accordion-arrow-icon-body-{{ $faq->id }}">
+                        <span>{{ $faq->question }}</span>
+                        <ion-icon name="chevron-down-circle-outline" data-accordion-icon
+                            class="shrink-0 -mr-0.5 w-6 h-6"></ion-icon>
+                    </button>
+                </h2>
+                <div id="accordion-arrow-icon-body-{{ $faq->id }}" class="hidden mb-4"
+                    aria-labelledby="accordion-arrow-icon-heading-{{ $faq->id }}">
+                    <div class="p-5 bg-white rounded-lg">
+                        <p class="text-gray-400 text-xs 2xl:text-sm">
+                            {{ $faq->answer }}
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <h2 id="accordion-arrow-icon-heading-3" class="rounded-lg mb-3 bg-white">
-                <button type="button"
-                    class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
-                    data-accordion-target="#accordion-arrow-icon-body-3" aria-expanded="false"
-                    aria-controls="accordion-arrow-icon-body-3">
-                    <span>Kapan saja jam operasional NaZMa Office?</span>
-                    <ion-icon name="chevron-down-circle-outline" data-accordion-icon
-                        class="shrink-0 -mr-0.5 w-6 h-6"></ion-icon>
-                </button>
-            </h2>
-            <div id="accordion-arrow-icon-body-3" class="hidden mb-4"
-                aria-labelledby="accordion-arrow-icon-heading-3">
-                <div class="p-5 bg-white rounded-lg">
-                    <p class="text-gray-400 text-xs 2xl:text-sm">
-                        Jam kerja admin: <br>
-                        Setiap hari (Senin-Minggu) <br>
-                        Jam 09:00-19:00 WIB
-                    </p>
-                </div>
-            </div>
-            <h2 id="accordion-arrow-icon-heading-4" class="rounded-lg mb-3 bg-white">
-                <button type="button"
-                    class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
-                    data-accordion-target="#accordion-arrow-icon-body-4" aria-expanded="false"
-                    aria-controls="accordion-arrow-icon-body-4">
-                    <span>Bagaimana cara menghubungi NaZMa Office?</span>
-                    <ion-icon name="chevron-down-circle-outline" data-accordion-icon
-                        class="shrink-0 -mr-0.5 w-6 h-6"></ion-icon>
-                </button>
-            </h2>
-            <div id="accordion-arrow-icon-body-4" class="hidden mb-4"
-                aria-labelledby="accordion-arrow-icon-heading-4">
-                <div class="p-5 bg-white rounded-lg">
-                    <p class="text-gray-400 text-xs 2xl:text-sm">
-                        Anda dapat menghubungi kami melalui email, telepon, atau mengisi form yang telah kami sediakan
-                        pada halaman kontak.
-                    </p>
-                </div>
-            </div>
-            <h2 id="accordion-arrow-icon-heading-5" class="rounded-lg mb-3 bg-white">
-                <button type="button"
-                    class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
-                    data-accordion-target="#accordion-arrow-icon-body-5" aria-expanded="false"
-                    aria-controls="accordion-arrow-icon-body-5">
-                    <span>Bagaimana cara memesan produk NaZMa Office?</span>
-                    <ion-icon name="chevron-down-circle-outline" data-accordion-icon
-                        class="shrink-0 -mr-0.5 w-6 h-6"></ion-icon>
-                </button>
-            </h2>
-            <div id="accordion-arrow-icon-body-5" class="hidden mb-4"
-                aria-labelledby="accordion-arrow-icon-heading-5">
-                <div class="p-5 bg-white rounded-lg">
-                    <p class="text-gray-400 text-xs 2xl:text-sm">
-                        Anda dapat memesan produk kami melalui website ini, atau menghubungi kami melalui email,
-                        telepon, atau mengisi form yang telah kami sediakan pada halaman kontak.
-                    </p>
-                </div>
-            </div>
+            @empty
+            @endforelse
         </div>
 
     </section>

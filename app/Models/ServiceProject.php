@@ -22,7 +22,9 @@ class ServiceProject extends Model
         'image_1',
         'image_2',
         'image_3',
-        'tag'
+        'tag',
+        'description',
+        'location'
     ];
 
     public function service()

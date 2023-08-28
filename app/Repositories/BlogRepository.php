@@ -18,7 +18,7 @@ class BlogRepository implements BlogInterface
 
     public function getAll()
     {
-        return $this->blog->with(['blogCategory'])->paginate(5);
+        return $this->blog->with(['blogCategory'])->paginate(10);
     }
 
     public function getById($id)
@@ -34,6 +34,12 @@ class BlogRepository implements BlogInterface
         $fileNameMainImage = uniqid() . '.' . $data['main_image']->extension();
         $data['main_image']->storeAs('public/blogs/main-image', $fileNameMainImage);
 
+        $slug = str_replace(' ', '-', strtolower($data['title']));
+        $isSlugExist = $this->blog->where('slug', $slug)->first();
+        if ($isSlugExist) {
+            $slug = $slug . '-' . uniqid();
+        }
+
         DB::beginTransaction();
         try {
             $this->blog->create([
@@ -43,7 +49,11 @@ class BlogRepository implements BlogInterface
                 'title'            => $data['title'],
                 'author_name'      => $data['author_name'],
                 'content'          => $data['content'],
-                'published_date'   => date('Y-m-d H:i:s')
+                'published_date'   => date('Y-m-d H:i:s'),
+                'tag'              => str_replace(',', '-', $data['tag']),
+                'meta_description' => substr(strip_tags($data['content']), 0, 160),
+                'meta_keyword'     => str_replace(',', '-', $data['tag']),
+                'slug'             => $slug
             ]);
         } catch (\Throwable $th) {
             throw $th;
@@ -72,6 +82,14 @@ class BlogRepository implements BlogInterface
         $fileNameMainImage = uniqid() . '.' . $data['main_image']->extension();
         $data['main_image']->storeAs('public/blogs/main-image', $fileNameMainImage);
 
+        $slug = str_replace(' ', '-', strtolower($data['title']));
+
+        // check if slug is exist
+        $isSlugExist = $this->blog->where('slug', $slug)->first();
+        if ($isSlugExist) {
+            $slug = $slug . '-' . uniqid();
+        }
+
         DB::beginTransaction();
         try {
             $blog->update([
@@ -81,7 +99,11 @@ class BlogRepository implements BlogInterface
                 'title'            => $data['title'],
                 'author_name'      => $data['author_name'],
                 'content'          => $data['content'],
-                'published_date'   => date('Y-m-d H:i:s')
+                'published_date'   => date('Y-m-d H:i:s'),
+                'tag'              => str_replace(',', '-', $data['tag']),
+                'meta_description' => substr(strip_tags($data['content']), 0, 160),
+                'meta_keyword'     => str_replace(',', '-', $data['tag']),
+                'slug'             => $slug
             ]);
         } catch (\Throwable $th) {
             throw $th;
@@ -111,5 +133,9 @@ class BlogRepository implements BlogInterface
     {
         return $this->blog->get()->count();
     }
+
+    public function getBySlug($slug)
+    {
+        return $this->blog->with(['blogCategory'])->where('slug', $slug)->first();
+    }
 }
-    

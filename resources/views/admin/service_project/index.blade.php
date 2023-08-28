@@ -47,6 +47,8 @@
                         <th scope="col" class="p-4">Gambar 2</th>
                         <th scope="col" class="p-4">Gambar 3</th>
                         <th scope="col" class="p-4">Tag</th>
+                        <th scope="col" class="p-4">Deskripsi</th>
+                        <th scope="col" class="p-4">Lokasi</th>
                         <th scope="col" class="p-4">Aksi</th>
                     </tr>
                 </thead>
@@ -60,10 +62,10 @@
                                 {{ $data->title }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ date('d-m-Y', strtotime($data->taken_at)) }}
+                                {{ $data->taken_at ? date('d-m-Y', strtotime($data->taken_at)) : '-' }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ date('d-m-Y', strtotime($data->due_at)) }}
+                                {{ $data->due_at ? date('d-m-Y', strtotime($data->due_at)) : '-' }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $data->customer_name }}
@@ -78,19 +80,37 @@
                                 {{ number_format($data->price, 0, ',', '.') }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ $data->image_1 ? asset('storage/service_project/' . $data->image_1) : asset('assets/images/noimage.jpg') }}"
-                                    alt="" class="w-20 h-20 rounded-lg object-cover object-center">
+                                @if ($data->image_1)
+                                    <a href="{{ asset('storage/service_project/' . $data->image_1) }}" target="_blank"
+                                        class="text-primary underline">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                @endif
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ $data->image_2 ? asset('storage/service_project/' . $data->image_2) : asset('assets/images/noimage.jpg') }}"
-                                    alt="" class="w-20 h-20 rounded-lg object-cover object-center">
+                                @if ($data->image_2)
+                                    <a href="{{ asset('storage/service_project/' . $data->image_2) }}" target="_blank"
+                                        class="text-primary underline">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                @endif
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ $data->image_3 ? asset('storage/service_project/' . $data->image_3) : asset('assets/images/noimage.jpg') }}"
-                                    alt="" class="w-20 h-20 rounded-lg object-cover object-center">
+                                @if ($data->image_3)
+                                    <a href="{{ asset('storage/service_project/' . $data->image_3) }}" target="_blank"
+                                        class="text-primary underline">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                @endif
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $data->tag }}
+                            </td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                {{ Str::limit($data->description, 20) }}
+                            </td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                {{ $data->location ?? '-' }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">
@@ -152,11 +172,11 @@
 
                         <x-input id="taken_at" name="taken_at" label="Tgl. Kesepakatan" type="date" required />
 
-                        <x-input id="due_at" name="due_at" label="Tgl. Penyelesaian" type="date" required />
+                        <x-input id="due_at" name="due_at" label="Tgl. Penyelesaian" type="date" />
 
-                        <x-input id="customer_name" name="customer_name" label="Pelanggan" required />
+                        <x-input id="customer_name" name="customer_name" label="Pelanggan" />
 
-                        <x-input id="customer_phone" name="customer_phone" label="No. Telefon" required />
+                        <x-input id="customer_phone" name="customer_phone" label="No. Telefon" />
 
                         <x-select id="status" name="status" label="Status" required>
                             <option value="">Pilih Status</option>
@@ -174,6 +194,10 @@
                         <x-input-file id="image_3" name="image_3" label="Gambar 3" />
 
                         <x-input id="tag" name="tag" label="Tag" required />
+
+                        <x-textarea id="description" name="description" label="Deskripsi" required />
+
+                        <x-input id="location" name="location" label="Lokasi" />
 
                     </div>
 
@@ -258,6 +282,8 @@
                         $('#create-modal #status').val(data.status);
                         $('#create-modal #price').val(data.price);
                         $('#create-modal #tag').val(data.tag);
+                        $('#create-modal #description').val(data.description);
+                        $('#create-modal #location').val(data.location);
                     },
                     error: function() {
                         Swal.fire({

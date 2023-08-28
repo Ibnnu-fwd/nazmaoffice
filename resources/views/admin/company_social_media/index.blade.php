@@ -48,11 +48,13 @@
                                 {{ $data->title ?? '-' }}
                             </th>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <i class="{{ $data->icon }}"></i>
+                                {!! $data->icon ?? '-' !!}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <a class="text-blue-700 hover:underline" href="{{ $data->link ?? '#' }}"
-                                    target="_blank">{{ $data->link ?? '-' }}</a>
+                                    target="_blank">
+                                    {{ Str::limit($data->link, 20) }}
+                                </a>
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">

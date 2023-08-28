@@ -57,6 +57,11 @@
         .blur-mode.loaded::before {
             content: none;
         }
+
+        #social-media ion-icon {
+            font-size: 1.5rem;
+            color: #777777;
+        }
     </style>
 
     <!-- Scripts -->
@@ -70,7 +75,7 @@
 
     {{ $slot }}
 
-    @include('user.layouts.footer')
+    <x-footer />
 
     <!-- Flowbite -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
