@@ -25,6 +25,14 @@ class BlogController extends Controller
         ]);
     }
 
+    public function detail($slug)
+    {
+        return view('user.blog.detail', [
+            'blog'           => $this->blog->getBySlug($slug),
+            'blogs'          => $this->blog->getRelatedBlogs($slug),
+        ]);
+    }
+
     public function search(Request $request)
     {
         return view('user.blog.list', [

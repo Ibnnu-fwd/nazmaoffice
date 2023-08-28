@@ -14,4 +14,5 @@ interface BlogInterface
     public function getBySlug($slug);
     public function search($data);
     public function filter($category_id);
+    public function getRelatedBlogs($slug);
 }

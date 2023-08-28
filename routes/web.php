@@ -35,7 +35,7 @@ Route::get('gallery', [UserGalleryController::class, 'index'])->name('user.galle
 // Blog
 Route::get('blog', [UserBlogController::class, 'index'])->name('user.blog');
 Route::get('blog/search', [UserBlogController::class, 'search'])->name('user.blog.search');
-Route::get('blog/{id}', [HomeController::class, 'blogDetail'])->name('user.blog.detail');
+Route::get('blog/{id}', [UserBlogController::class, 'detail'])->name('user.blog.detail');
 Route::get('blog/filter/{category_id}', [UserBlogController::class, 'filter'])->name('user.blog.filter');
 
 Route::get('event', [UserEventController::class, 'index'])->name('user.event');

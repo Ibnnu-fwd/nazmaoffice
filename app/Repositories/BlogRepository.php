@@ -50,7 +50,7 @@ class BlogRepository implements BlogInterface
                 'author_name'      => $data['author_name'],
                 'content'          => $data['content'],
                 'published_date'   => date('Y-m-d H:i:s'),
-                'tag'              => str_replace(',', '-', $data['tag']),
+                'tag'              => str_replace(',', ' - ', $data['tag']),
                 'meta_description' => substr(strip_tags($data['content']), 0, 160),
                 'meta_keyword'     => str_replace(',', '-', $data['tag']),
                 'slug'             => $slug
@@ -100,7 +100,7 @@ class BlogRepository implements BlogInterface
                 'author_name'      => $data['author_name'],
                 'content'          => $data['content'],
                 'published_date'   => date('Y-m-d H:i:s'),
-                'tag'              => str_replace(',', '-', $data['tag']),
+                'tag'              => str_replace(',', ' - ', $data['tag']),
                 'meta_description' => substr(strip_tags($data['content']), 0, 160),
                 'meta_keyword'     => str_replace(',', '-', $data['tag']),
                 'slug'             => $slug
@@ -150,5 +150,22 @@ class BlogRepository implements BlogInterface
     public function filter($category_id)
     {
         return $this->blog->with(['blogCategory'])->where('blog_category_id', $category_id)->get();
+    }
+
+    public function getRelatedBlogs($slug)
+    {
+        $blog = $this->getBySlug($slug);
+        $tags = explode('-', $blog->tag);
+
+        return $this->blog->with(['blogCategory'])
+            ->where('blog_category_id', $blog->blog_category_id)
+            ->where('id', '!=', $blog->id)
+            ->where(function ($query) use ($tags) {
+                foreach ($tags as $tag) {
+                    $query->orWhere('tag', 'like', '%' . $tag . '%');
+                }
+            })
+            ->limit(3)
+            ->get();
     }
 }
