@@ -138,4 +138,17 @@ class BlogRepository implements BlogInterface
     {
         return $this->blog->with(['blogCategory'])->where('slug', $slug)->first();
     }
+
+    public function search($data)
+    {
+        return $this->blog->with(['blogCategory'])
+            ->where('title', 'like', '%' . $data->search . '%')
+            ->orWhere('content', 'like', '%' . $data->search . '%')
+            ->get();
+    }
+
+    public function filter($category_id)
+    {
+        return $this->blog->with(['blogCategory'])->where('blog_category_id', $category_id)->get();
+    }
 }

@@ -31,8 +31,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
 Route::get('about', [AboutPageController::class, 'about'])->name('user.about');
 Route::get('gallery', [UserGalleryController::class, 'index'])->name('user.gallery');
+
+// Blog
 Route::get('blog', [UserBlogController::class, 'index'])->name('user.blog');
+Route::get('blog/search', [UserBlogController::class, 'search'])->name('user.blog.search');
 Route::get('blog/{id}', [HomeController::class, 'blogDetail'])->name('user.blog.detail');
+Route::get('blog/filter/{category_id}', [UserBlogController::class, 'filter'])->name('user.blog.filter');
+
 Route::get('event', [UserEventController::class, 'index'])->name('user.event');
 Route::get('event/{id}', [HomeController::class, 'eventDetail'])->name('user.event.detail');
 Route::get('service', [HomeController::class, 'service'])->name('user.service');
