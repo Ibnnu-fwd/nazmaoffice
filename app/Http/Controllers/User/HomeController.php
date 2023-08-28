@@ -16,14 +16,6 @@ class HomeController extends Controller
     }
 
     /* 
-        * This function is used to display the about page
-    */
-    public function about()
-    {
-        return view('user.about.index');
-    }
-
-    /* 
         * This function is used to display the gallery page
     */
     public function gallery()
