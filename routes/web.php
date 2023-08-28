@@ -7,7 +7,6 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\User\BlogController as UserBlogController;
-use App\Http\Controllers\Admin\CkeditorController;
 use App\Http\Controllers\Admin\CompanyAddressController;
 use App\Http\Controllers\Admin\CompanyLandingSettingController;
 use App\Http\Controllers\Admin\CompanySocialMediaController;
@@ -26,6 +25,7 @@ use App\Http\Controllers\Admin\ServiceProjectController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\ServiceTestimonialController;
+use App\Http\Controllers\User\ServiceController as UserServiceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('user.home');
@@ -40,8 +40,10 @@ Route::get('blog/filter/{category_id}', [UserBlogController::class, 'filter'])->
 
 Route::get('event', [UserEventController::class, 'index'])->name('user.event');
 Route::get('event/{id}', [HomeController::class, 'eventDetail'])->name('user.event.detail');
-Route::get('service', [HomeController::class, 'service'])->name('user.service');
-Route::get('service/{id}', [HomeController::class, 'serviceDetail'])->name('user.service.detail');
+
+// Service
+Route::get('service', [UserServiceController::class, 'index'])->name('user.service');
+Route::get('service/{id}', [UserServiceController::class, 'detail'])->name('user.service.detail');
 
 Route::get('/login-page', [AdminController::class, 'login'])->name('admin.login');
 

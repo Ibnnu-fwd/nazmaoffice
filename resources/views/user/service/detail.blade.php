@@ -10,15 +10,17 @@
                                 Layanan NaZMa Office
                             </p>
                             <p class="text-2xl font-semibold leading-snug mt-2 tracking-tight text-black sm:text-4xl">
-                                Pelatihan Pembuatan Logo dan Company Profile
+                                {{ $service->title }}
                             </p>
                             <p class="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                                Kursus untuk menambah keahlian dalam bidang komputer, teknologi informasi, dan
-                                komunikasi.
+                                {{ $service->description }}
                             </p>
                         </div>
                         <div class="flex items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
-                            <a href="#"
+                            <a href="
+                            https://api.whatsapp.com/send?phone=62895389141779&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20{{ $service->phone }}
+                            "
+                                target="_blank"
                                 class="items-center justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
                                 Daftar Sekarang
                             </a>
@@ -26,8 +28,8 @@
                     </div>
                 </div>
                 <div class="order-first hidden lg:block w-full lg:mt-0">
-                    <img class="object-cover object-center blur-mode w-full mx-auto lg:ml-auto rounded-xl"
-                        alt="hero" src="{{ asset('assets/images/hero1.jpg') }}">
+                    <img class="object-cover h-[25rem] object-center blur-mode w-full mx-auto lg:ml-auto rounded-xl"
+                        alt="hero" src="{{ asset('storage/services/' . $service->hero_image) }}">
                 </div>
             </div>
         </div>
@@ -50,26 +52,24 @@
                             </div>
                             <div class="mt-6 lg:max-w-7xl">
                                 <ul role="list" class="grid grid-cols-2 gap-4 list-none lg:gap-6">
-                                    @for ($i = 1; $i <= 4; $i++)
+                                    @foreach ($service->serviceBenefits as $benefit)
                                         <li>
                                             <div>
-                                                <p class="mt-5 text-md font-medium leading-6 text-black">
-                                                    Developer experience
+                                                <p class="mt-5 text-md font-semibold leading-6 text-black">
+                                                    {{ $benefit->title }}
                                                 </p>
                                             </div>
                                             <div class="mt-2 text-xs 2xl:text-sm text-gray-500">
-                                                Plus, our platform is constantly evolving to meet the
-                                                changing needs of the tech industry, ensuring you'll always
-                                                be ahead.
+                                                {{ $benefit->description }}
                                             </div>
                                         </li>
-                                    @endfor
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
                         <div class="order-first block w-full mt-12 lg:mt-0">
-                            <img class="object-cover object-center blur-mode rounded-xl w-full mx-auto bg-gray-300 border lg:ml-auto"
-                                alt="hero" src="{{ asset('assets/images/hero3.jpg') }}">
+                            <img class="object-cover h-[25rem] object-center blur-mode rounded-xl w-full mx-auto bg-gray-300 border lg:ml-auto"
+                                alt="hero" src="{{ asset('storage/services/' . $service->benefit_image) }}">
                         </div>
                     </div>
                 </div>
@@ -87,24 +87,25 @@
                 </h2>
             </div>
             <div class="grid md:grid-cols-4 gap-6">
-                @for ($i = 1; $i <= 4; $i++)
+                @foreach ($service->serviceProjects as $project)
                     <div class="bg-white border border-gray-200 rounded-lg shadow p-4">
                         <a href="#">
-                            <img class="rounded-xl" src="{{ asset('assets/images/hero2.jpg') }}" alt="" />
+                            <img class="rounded-xl" src="{{ asset('storage/service_project/' . $project->image_1) }}"
+                                alt="" />
                         </a>
                         <div class="mt-4 text-start">
-                            <a href="#">
+                            <a href="#" onclick="event.preventDefault();">
                                 <h5
-                                    class="mb-2 text-xs 2xl:text-sm font-semibold tracking-tight line-clamp-2 text-gray-900">
-                                    Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
+                                    class="mb-2 text-md 2xl:text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                    {{ $project->title }}
                                 </h5>
                             </a>
                             <p class="font-normal text-xs 2xl:text-sm text-gray-400">
-                                12 Agustus 2023
+                                {{ date('d F Y', strtotime($project->created_at)) }}
                             </p>
                         </div>
                     </div>
-                @endfor
+                @endforeach
             </div>
         </div>
     </section>
@@ -122,7 +123,10 @@
                 </p>
             </div>
             <div class="flex items-center justify-start md:justify-end mt-6 md:mt-0">
-                <a href="#"
+                <a href="
+                https://api.whatsapp.com/send?phone=62895389141779&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20{{ $service->phone }}
+                "
+                    target="_blank"
                     class="items-center text-xs 2xl:text-sm justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
                     Daftar Sekarang
                 </a>
