@@ -38,8 +38,9 @@ Route::get('blog/search', [UserBlogController::class, 'search'])->name('user.blo
 Route::get('blog/{id}', [UserBlogController::class, 'detail'])->name('user.blog.detail');
 Route::get('blog/filter/{category_id}', [UserBlogController::class, 'filter'])->name('user.blog.filter');
 
+// Event
 Route::get('event', [UserEventController::class, 'index'])->name('user.event');
-Route::get('event/{id}', [UserEventController::class, 'getById'])->name('user.event.detail');
+Route::get('event/{id}', [UserEventController::class, 'detail'])->name('user.event.detail');
 
 //Service
 Route::get('service', [UserServiceController::class, 'index'])->name('user.service');

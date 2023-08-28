@@ -116,7 +116,8 @@
                 Terima Kasih Telah Mempercayai Kami
             </p>
             <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-4 lg:grid-cols-4 max-w-4xl mx-auto">
-                <figure class="flex justify-center flex-col">
+                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="300">
                     <ion-icon name="storefront-outline"
                         class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
                     <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
@@ -126,7 +127,9 @@
                         Mitra Usaha
                     </p>
                 </figure>
-                <figure class="flex justify-center flex-col">
+                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="600">
+
                     <ion-icon name="bookmarks-outline"
                         class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
                     <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
@@ -136,7 +139,9 @@
                         Event Edukatif
                     </p>
                 </figure>
-                <figure class="flex justify-center flex-col">
+                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="900">
+
                     <ion-icon name="people-outline"
                         class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
                     <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
@@ -146,7 +151,9 @@
                         Mentor Profesional
                     </p>
                 </figure>
-                <figure class="flex justify-center flex-col">
+                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="1200">
+
                     <ion-icon name="person-add-outline"
                         class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
                     <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
@@ -194,7 +201,8 @@
                             <!-- show tab1 only -->
                             @foreach ($serviceCategories as $serviceCategory)
                                 <div x-show="tab==='{{ $serviceCategory->id }}'" class="text-gray-500"
-                                    data-aos="fade-up" data-aos-duration="1000">
+                                    data-aos="fade-up" data-aos-duration="1000"
+                                    data-aos-delay="{{ $loop->iteration * 300 }}">
                                     <main class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                         @foreach ($serviceCategory->services as $service)
                                             <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
@@ -427,7 +435,8 @@
 
             <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-duration="1000">
                 @forelse ($blogs as $blog)
-                    <a href="{{ route('user.blog.detail', $blog->slug) }}">
+                    <a href="{{ route('user.blog.detail', $blog->slug) }}" data-aos="fade-up"
+                        data-aos-duration="1000" data-aos-delay="{{ $loop->iteration * 300 }}">
                         <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
                             src="{{ asset('storage/blogs/thumbnail/' . $blog->thumbnail) }}" alt="">
 

@@ -119,7 +119,7 @@
         <div class="max-w-7xl mx-auto" data-aos="fade-up" data-aos-delay="1000">
             <div class="grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-8">
                 @foreach ($milestones as $milestone)
-                    <div class="relative">
+                    <div class="relative" data-aos="fade-left" data-aos-delay="{{ $loop->iteration * 450 }}">
                         <div class="items-center hidden md:flex">
                             <div
                                 class="z-10 flex items-center justify-center w-4 h-4 bg-orange-700 rounded-full ring-white shrink-0">
@@ -154,7 +154,8 @@
             </div>
             <div class="flex flex-col items-center justify-center mb-8">
                 @foreach ($teams->where('job', 'Owner') as $team)
-                    <div class="text-center text-gray-500">
+                    <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500"
+                        data-aos-delay="{{ $loop->iteration * 300 }}">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
                         <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
@@ -208,7 +209,8 @@
             </div>
             <div class="flex w-full justify-center mb-8 flex-wrap gap-16 md:gap-8">
                 @foreach ($teams->where('job', '==', 'Trainer') as $team)
-                    <div class="text-center text-gray-500">
+                    <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500"
+                        data-aos-delay="{{ $loop->iteration * 300 }}">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
                         <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
@@ -263,7 +265,7 @@
 
             <div class="flex w-full justify-center mb-8 flex-wrap gap-16 md:gap-8">
                 @foreach ($teams->where('job', '==', 'Kreatif') as $team)
-                    <div class="text-center text-gray-500">
+                    <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
                         <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">

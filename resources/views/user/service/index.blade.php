@@ -65,7 +65,7 @@
                                             Real-time Sync
                                         </p>
                                     </div>
-                                    <div class="mt-4 text-base text-xs 2xl:text-sm text-gray-500">
+                                    <div class="mt-4 text-xs 2xl:text-sm text-gray-500">
                                         Anda akan menemukan diskusi-diskusi yang mendalam tentang berbagai topik menarik
                                     </div>
                                 </div>

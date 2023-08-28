@@ -48,7 +48,7 @@
     <section class="bg-white py-24">
         <div class="max-w-md mx-auto text-center px-4 md:px-0">
             <h1 class="text-xl font-semibold text-black">
-                Dokumentasi Kegiatan
+                Daftar Event
             </h1>
         </div>
 
@@ -64,13 +64,14 @@
             </div>
         </form>
 
-        <div class="max-w-7xl mx-auto px-8 2xl:px-0">
+        <div class="max-w-7xl mx-auto px-8 2xl:px-0 mt-12">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
                 @foreach ($events as $event)
                     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
-                        data-aos-duration="1000" id="event-{{ $event->id }}">
+                        data-aos-duration="1000" id="event-{{ $event->id }}"
+                        onclick="window.location='{{ route('user.event.detail', $event->id) }}'">
                         <a href="#">
-                            <img class="w-full h-52 rounded-xl blur-mode"
+                            <img class="w-full h-52 rounded-xl blur-mode object-center object-cover"
                                 src="{{ asset('storage/event/thumbnail/' . $event->thumbnail) }}" alt="" />
                         </a>
                         <div class="mt-4">

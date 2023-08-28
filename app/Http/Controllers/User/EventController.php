@@ -25,10 +25,10 @@ class EventController extends Controller
         ]);
     }
 
-    public function getById(Request $request)
+    public function detail($id)
     {
         return view('user.event.detail', [
-            'event' => $this->event->getById($request->id),
+            'event' => $this->event->getById($id),
         ]);
     }
 }

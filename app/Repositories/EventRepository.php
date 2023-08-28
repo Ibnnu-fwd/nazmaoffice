@@ -128,7 +128,7 @@ class EventRepository implements EventInterface
 
     public function getById($id)
     {
-        return $this->event->with(['eventRundown', 'eventSpeaker'])->findOrFail($id);
+        return $this->event->with(['eventRundowns', 'eventSpeakers'])->findOrFail($id);
     }
 
     public function destroy($id)
