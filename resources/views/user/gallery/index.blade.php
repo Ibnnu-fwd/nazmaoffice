@@ -21,58 +21,35 @@
             </div>
         </form>
 
+        @foreach ($groupedGalleries as $year => $galleries)
+
         <div>
             <div class="flex justify-between items-center md:px-48 mt-16">
-                <h1 class="text-gray-300 text-4xl font-bold">2022</h1>
-                <ion-icon class="text-gray-300 text-5xl" name="chevron-down-circle-outline"></ion-icon>
+                <h1 class="text-gray-300 text-4xl font-bold">{{ $year }}</h1>
+                <ion-icon class="text-gray-300 text-5xl" name="chevron-down-circle-outline"></ion-icon> 
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
-                @for ($i = 1; $i <= 9; $i++)
+                @foreach($galleries as $gallery)
                     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
                         <a href="#">
-                            <img class="w-full h-52 rounded-xl blur-mode" src="{{ asset('assets/images/hero2.jpg') }}"
+                            <img class="w-full h-52 rounded-xl blur-mode" src="{{ asset('storage/gallery/' . $gallery->image) }}"
                                 alt="" />
                         </a>
                         <div class="mt-4">
                             <a href="#">
                                 <h5 class="mb-2 text-2lg font-semibold tracking-tight line-clamp-2 text-gray-900">
-                                    Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
+                                    {{$gallery->title}}
                                 </h5>
                             </a>
                             <p class="font-normal text-gray-400">
-                                12 Agustus 2023
+                                {{date('d F Y', strtotime($gallery->created_at))}}
                             </p>
                         </div>
                     </div>
-                @endfor
+                @endforeach
             </div>
         </div>
-        <div>
-            <div class="flex justify-between items-center md:px-48 mt-16">
-                <h1 class="text-gray-300 text-4xl font-bold">2022</h1>
-                <ion-icon class="text-gray-300 text-5xl" name="chevron-down-circle-outline"></ion-icon>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
-                @for ($i = 1; $i <= 9; $i++)
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4">
-                        <a href="#">
-                            <img class="rounded-xl" src="{{ asset('assets/images/hero2.jpg') }}" alt="" />
-                        </a>
-                        <div class="mt-4">
-                            <a href="#">
-                                <h5 class="mb-2 text-2lg font-medium tracking-tight line-clamp-2 text-gray-900">
-                                    Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
-                                </h5>
-                            </a>
-                            <p class="font-normal text-gray-400">
-                                12 Agustus 2023
-                            </p>
-                        </div>
-                    </div>
-                @endfor
-            </div>
-        </div>
+        @endforeach
     </section>
 </x-guest-layout>

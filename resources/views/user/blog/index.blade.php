@@ -38,73 +38,49 @@
         </div>
 
         <h1 class="text-2xl font-semibold text-black tracking-tight mt-10">
-            Featured Artikel
+            Artikel Unggulan
         </h1>
+
         <div class="grid md:grid-cols-2 gap-6 mt-6">
-            <a href="">
-                <img src="{{ asset('assets/images/hero1.jpg') }}"
-                    class="w-full md:h-72 lg:h-96 rounded-xl object-cover object-center blur-mode mb-4" alt="">
-                <p class="text-gray-400 mb-1 text-xs 2xl:text-sm">12 Agustus 2023</p>
+            @if ($blogs->count() > 0)
+            <?php $firstBlog = $blogs->first(); ?>
+            <a href="{{route('user.blog.detail', $firstBlog->id)}}">
+                <img src="{{ asset('storage/blogs/thumbnail/' . $firstBlog->thumbnail) }}"
+                class="w-full md:h-72 lg:h-96 rounded-xl object-cover object-center blur-mode mb-4" alt="">
+                <p class="text-gray-400 mb-1 text-xs 2xl:text-sm">{{date('d F Y', strtotime($firstBlog->created_at))}}</p>
                 <h1 class="text-xl font-semibold text-black tracking-tight mb-3 line-clamp-2">
-                    BIMTEK Packaging, Design, dan Branding di Wilayah Sleman
+                    {{ $firstBlog->title }}
                 </h1>
-                <p class="text-gray-400 line-clamp-3 text-xs 2xl:text-md">
-                    Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman kembali menyelenggarakan
-                    Bimbingan…
-                </p>
+                <div class="text-gray-400 line-clamp-3 text-xs 2xl:text-md">
+                    {!!$firstBlog->content!!}
+                </div>
             </a>
+            @endif
+
+                
             <div class="grid grid-cols-1 gap-y-6 place-content-start">
-                <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
-                    <img src="{{ asset('assets/images/hero2.jpg') }}"
-                        class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
-                        alt="">
-                    <div class="col-span-2">
-                        <span class="text-gray-400 text-xs 2xl:text-sm">20 Agustus 2023</span>
-                        <span class="text-md font-medium text-black line-clamp-2 mt-2">
-                            Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
-                        </span>
-                        <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-sm">
-                            Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman...
-                        </p>
-                        <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
-                                name="chevron-forward-outline"></ion-icon>
+                @foreach($blogs->take(3) as $blog )
+
+                <a href="{{route('user.blog.detail', $blog->id)}}">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
+                        <img src="{{ asset('storage/blogs/thumbnail/' . $blog->thumbnail) }}"
+                            class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
+                            alt="">
+                        <div class="col-span-2">
+                            <span class="text-gray-400 text-xs 2xl:text-sm">{{date('d F Y', strtotime($blog->created_at))}}</span>
+                            <span class="text-md font-medium text-black line-clamp-2 mt-2">
+                                {{$blog->title}}
+                            </span>
+                            <div class="mt-3 text-xs 2xl:text-sm text-gray-400 line-clamp-2">
+                                {!!$blog->content!!}
+                            </div>
+                            <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
+                                    name="chevron-forward-outline"></ion-icon>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
-                    <img src="{{ asset('assets/images/hero2.jpg') }}"
-                        class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
-                        alt="">
-                    <div class="col-span-2">
-                        <span class="text-gray-400 text-xs 2xl:text-sm">20 Agustus 2023</span>
-                        <span class="text-md font-medium text-black line-clamp-2 mt-2">
-                            Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
-                        </span>
-                        <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-sm">
-                            Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman...
-                        </p>
-                        <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
-                                name="chevron-forward-outline"></ion-icon>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
-                    <img src="{{ asset('assets/images/hero2.jpg') }}"
-                        class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
-                        alt="">
-                    <div class="col-span-2">
-                        <span class="text-gray-400 text-xs 2xl:text-sm">20 Agustus 2023</span>
-                        <span class="text-md font-medium text-black line-clamp-2 mt-2">
-                            Bimbingan Teknis Strategi Pemasaran di Wilayah Sleman
-                        </span>
-                        <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-sm">
-                            Sleman – Dinas Koperasi, Usaha Kecil, dan Menengah Kabupaten Sleman...
-                        </p>
-                        <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
-                                name="chevron-forward-outline"></ion-icon>
-                        </div>
-                    </div>
-                </div>
+                </a>
+                @endforeach
             </div>
         </div>
 
@@ -116,27 +92,24 @@
             <div class="relative items-center w-full">
 
                 <div class="grid grid-cols-2 gap-x-6 gap-y-8 mt-8 md:grid-cols-2 lg:grid-cols-4">
-                    @for ($i = 1; $i <= 6; $i++)
-                        <figure>
-                            <img class="w-full bg-gray-200 rounded-lg object-cover object-center blur-mode"
-                                src="{{ asset('assets/images/hero1.jpg') }}" alt="" width="1310"
-                                height="873">
-
-                            <p class="mt-5 text-sm font-normal leading-6 text-gray-400">
-                                12 Agustus 2023
-                            </p>
-                            <p class="mt-3 text-md text-black font-semibold line-clamp-2">
-                                Your design portfolio website shouldn’t just be a portfolio
-                            </p>
-                            <p class="mt-3 text-xs 2xl:text-sm text-gray-400 line-clamp-2">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deserunt sapiente quas
-                                quam
-                                ducimus, culpa voluptatibus voluptatem esse, distinctio, odio iure.
-                            </p>
-                        </figure>
-                    @endfor
+                    @foreach ($blogs as $blog)
+                    <figure class="max-w-full z-10">
+                        <img class="w-full bg-gray-200 rounded-lg h-52 object-cover object-center blur-mode"
+                            src="{{ asset('storage/blogs/thumbnail/' . $blog->thumbnail) }}" alt="{{$blog->title}}" />
+                    
+                        <p class="mt-5 text-sm font-normal leading-6 text-gray-400">
+                            {{date('d F Y', strtotime($blog->created_at))}}
+                        </p>
+                        <p class="mt-3 text-md text-black font-semibold line-clamp-2">
+                            {{$blog->title}}
+                        </p>
+                        <div class="mt-3 text-xs 2xl:text-sm text-gray-400 line-clamp-2">
+                            {!! $blog->content !!}
+                        </div>
+                    </figure>
+                    
+                    @endforeach
                 </div>
-
             </div>
         </section>
     </section>
