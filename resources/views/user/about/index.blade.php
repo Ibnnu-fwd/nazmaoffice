@@ -159,12 +159,12 @@
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
                         <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
-                            <a href="#">{{ $team->name }}</a>
+                            <span>{{ $team->name }}</span>
                         </h3>
                         <p class="text-xs 2xl:text-sm">{{ $team->job }}</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
-                                <a href={{ $team->facebook }}
+                                <a href="{{ $team->facebook }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path fill-rule="evenodd"
@@ -174,7 +174,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href={{ $team->twitter }}
+                                <a href="{{ $team->twitter }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
@@ -184,7 +184,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href={{ $team->instagram }}
+                                <a href="{{ $team->instagram }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white dark:text-gray-300">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path fill-rule="evenodd"
@@ -194,7 +194,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href={{ $team->linkedin }}
+                                <a href="{{ $team->linkedin }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path fill-rule="evenodd"
@@ -214,12 +214,12 @@
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
                         <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
-                            <a href="#">{{ $team->name }}</a>
+                            <span>{{ $team->name }}</span>
                         </h3>
                         <p class="text-xs 2xl:text-sm">{{ $team->job }}</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
-                                <a href={{ $team->facebook }}
+                                <a href="{{ $team->facebook }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path fill-rule="evenodd"
@@ -229,7 +229,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href={{ $team->twitter }}
+                                <a href="{{ $team->twitter }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
@@ -239,7 +239,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href={{ $team->instagram }}
+                                <a href="{{ $team->instagram }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white dark:text-gray-300">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path fill-rule="evenodd"
@@ -249,7 +249,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href={{ $team->linkedin }}
+                                <a href="{{ $team->linkedin }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path fill-rule="evenodd"
@@ -269,12 +269,12 @@
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
                         <h3 class="mb-1 text-sm 2xl:text-xl font-semibold tracking-tight text-gray-900">
-                            <a href="#">{{ $team->name }}</a>
+                            <span>{{ $team->name }}</span>
                         </h3>
                         <p class="text-xs 2xl:text-sm">{{ $team->job }}</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
-                                <a href={{ $team->facebook }}
+                                <a href="{{ $team->facebook }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path fill-rule="evenodd"
@@ -284,7 +284,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href={{ $team->twitter }}
+                                <a href="{{ $team->twitter }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path
@@ -294,7 +294,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href={{ $team->instagram }}
+                                <a href="{{ $team->instagram }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white dark:text-gray-300">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path fill-rule="evenodd"
@@ -304,7 +304,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href={{ $team->linkedin }}
+                                <a href="{{ $team->linkedin }}"
                                     class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                         <path fill-rule="evenodd"

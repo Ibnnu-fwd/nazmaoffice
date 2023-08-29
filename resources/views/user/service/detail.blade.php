@@ -43,7 +43,12 @@
             <div class="w-full mx-auto text-left">
                 <div class="relative flex-col items-center m-auto align-middle">
                     <div class="items-center gap-12 text-left lg:gap-24 lg:inline-flex">
-                        <div class="flex flex-col m-auto md:order-first" data-aos="fade-right" data-aos-delay="300"
+                        <div class="order-first block w-full mt-12 lg:mt-0" data-aos="fade-right" data-aos-delay="300"
+                            data-aos-duration="1000">
+                            <img class="object-cover h-[25rem] object-center blur-mode rounded-xl w-full mx-auto bg-gray-300 border lg:ml-auto"
+                                alt="hero" src="{{ asset('storage/services/' . $service->benefit_image) }}">
+                        </div>
+                        <div class="flex flex-col m-auto md:order-first" data-aos="fade-left" data-aos-delay="300"
                             data-aos-duration="1000">
                             <div class="max-w-xl">
                                 <div>
@@ -68,11 +73,6 @@
                                     @endforeach
                                 </ul>
                             </div>
-                        </div>
-                        <div class="order-first block w-full mt-12 lg:mt-0" data-aos="fade-left" data-aos-delay="300"
-                            data-aos-duration="1000">
-                            <img class="object-cover h-[25rem] object-center blur-mode rounded-xl w-full mx-auto bg-gray-300 border lg:ml-auto"
-                                alt="hero" src="{{ asset('storage/services/' . $service->benefit_image) }}">
                         </div>
                     </div>
                 </div>

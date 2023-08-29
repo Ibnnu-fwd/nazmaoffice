@@ -44,7 +44,7 @@
                     @forelse ($galleries as $data)
                         <tr class="border-b hover:bg-gray-100 dark:hover:bg-gray-700">
                             <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ $data->title ?? '-' }}
+                                {{ Str::limit($data->title, 50) }}
                             </th>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <img src="{{ asset('storage/gallery/' . $data->image) }}"

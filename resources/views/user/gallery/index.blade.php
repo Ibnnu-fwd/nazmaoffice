@@ -4,7 +4,7 @@
             <h1 class="text-2xl md:text-4xl font-semibold text-black">
                 Dokumentasi Kegiatan
             </h1>
-            <p class="text-gray-400 text-xs 2xl:text-md">
+            <p class="text-gray-400 text-sm 2xl:text-md">
                 Rangkaian peristiwa tahun ke tahun yang telah kami lewati
             </p>
         </div>
@@ -28,21 +28,21 @@
                     <ion-icon class="text-gray-300 text-5xl" name="chevron-down-circle-outline"></ion-icon>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
                     @foreach ($galleries as $gallery)
-                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4"
+                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4 h-fit"
                             data-gallery-id="{{ $gallery->id }}">
                             <a href="#">
-                                <img class="w-full h-52 rounded-xl blur-mode"
+                                <img class="w-full h-52 rounded-xl blur-mode object-cover object-center"
                                     src="{{ asset('storage/gallery/' . $gallery->image) }}" alt="" />
                             </a>
                             <div class="mt-4">
                                 <a href="#">
-                                    <h5 class="mb-2 text-2lg font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                    <h5 class="mb-2 text-sm font-semibold tracking-tight line-clamp-2 text-gray-900">
                                         {{ $gallery->title }}
                                     </h5>
                                 </a>
-                                <p class="font-normal text-gray-400">
+                                <p class="font-normal text-gray-400 text-sm">
                                     {{ date('d F Y', strtotime($gallery->created_at)) }}
                                 </p>
                             </div>
