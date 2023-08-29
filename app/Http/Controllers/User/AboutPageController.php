@@ -28,16 +28,21 @@ class AboutPageController extends Controller
     */
     public function about()
     {
-        $milestones   = $this->milestones->getAll();
-        $teams        = $this->teams->getAll();
-        $testimonials = $this->testimonials->getAll();
-        $aboutPage    = $this->aboutPageSetting->get();
+        $milestones         = $this->milestones->getAll();
+        $teams              = $this->teams->getAll();
+        $testimonials       = $this->testimonials->getAll();
+        $aboutPage          = $this->aboutPageSetting->get();
+        $owners             = $teams->where('job', 'Owner');
+        $opeationalManagers = $teams->where('job', 'Manajer Operasional');
+
+        $topJob = array_merge($owners->toArray(), $opeationalManagers->toArray());
 
         return view('user.about.index', [
-            'milestones'   => $milestones,
-            'teams'        => $teams,
-            'testimonials' => $testimonials,
-            'aboutPage'    => $aboutPage
+            'milestones'         => $milestones,
+            'teams'              => $teams,
+            'testimonials'       => $testimonials,
+            'aboutPage'          => $aboutPage,
+            'topJob'             => $topJob,
         ]);
     }
 }

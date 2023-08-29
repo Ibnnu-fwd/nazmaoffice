@@ -18,8 +18,12 @@
                             </p>
                         </div>
                         <div class="flex items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
-                            <a href="#"
-                                class="items-center justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
+                            <a href="https://api.whatsapp.com/send?phone={{ $event->phone }}&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20{{ rawurlencode($event->title) }}"
+                                target="_blank"
+                                class="items-center
+                                justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2
+                                border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white
+                                hover:border-purple-600 lg:w-auto text-sm">
                                 Daftar Sekarang
                             </a>
                         </div>
@@ -178,8 +182,12 @@
                 </p>
             </div>
             <div class="flex items-center justify-start md:justify-end mt-6 md:mt-0">
-                <a href="#"
-                    class="items-center text-xs 2xl:text-sm justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
+                <a href="https://api.whatsapp.com/send?phone={{ $event->phone }}&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20{{ rawurlencode($event->title) }}"
+                    target="_blank"
+                    class="items-center
+                    justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2
+                    border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white
+                    hover:border-purple-600 lg:w-auto text-sm">
                     Daftar Sekarang
                 </a>
             </div>

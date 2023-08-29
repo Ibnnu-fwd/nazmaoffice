@@ -291,7 +291,7 @@
                         </div>
                         <div class="order-first block w-full mt-8 lg:mt-0" data-aos="fade-left"
                             data-aos-duration="1000">
-                            <img class=" object-cover object-center rounded-lg w-full mx-auto bg-gray-300 lg:ml-auto h-60 md:h-80 blur-mode"
+                            <img class=" object-cover object-center rounded-2xl shadow-xl w-full mx-auto bg-gray-300 lg:ml-auto h-60 md:h-80 blur-mode"
                                 alt="hero" src="{{ asset('assets/images/hero2.jpg') }}">
                         </div>
                     </div>

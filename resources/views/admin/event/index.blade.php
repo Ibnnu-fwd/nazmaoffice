@@ -166,7 +166,11 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="7" class="text-center py-4">Tidak ada data</td>
+                            <td colspan="15"
+                                class="px-4 py-3 font-medium text-gray-400 whitespace-nowrap text-center">
+                                Tidak ada data
+                            </td>
+                        </tr>
                     @endforelse
                 </tbody>
             </table>

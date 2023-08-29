@@ -137,6 +137,7 @@
                             <option id="Trainer" value="Trainer">Trainer</option>
                             <option id="Kreatif" value="Kreatif">Kreatif</option>
                             <option id="Owner" value="Owner">Owner</option>
+                            <option id="Manajer Operasional" value="Manajer Operasional">Manajer Operasional</option>
                             <option id="Marketing" value="Marketing">Marketing</option>
                             <option id="Full Stack Developer" value="Full Stack Developer">Full Stack Developer
                             </option>
