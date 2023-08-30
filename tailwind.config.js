@@ -16,6 +16,17 @@ module.exports = {
             },
 
             colors: {
+                lime: {
+                    100: "#F2FDE0",
+                    200: "#E0FCC2",
+                    300: "#CFFBA3",
+                    400: "#BDFB85",
+                    500: "#ABFA66",
+                    600: "#9AF947",
+                    700: "#89F828",
+                    800: "#77F70A",
+                    900: "#66E209",
+                },
                 primary  : "#2C2F75",
                 secondary: "#ED2B2A",
                 info     : "#F15A59",
