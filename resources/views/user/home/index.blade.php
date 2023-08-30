@@ -30,9 +30,9 @@
                         <br>With Exellence
                     </h1>
                     <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
-                        Namun, kalau kamu mau belajar sambil berkarya, suka tantangan, siap mengikuti perubahan dengan
+                        Namun, kalau anda mau belajar sambil berkarya, suka tantangan, siap mengikuti perubahan dengan
                         cepat, ingin berinovasi dan punya visi yang sama dalam mengedukasi Indonesia, maka kami adalah
-                        tempat yang tepat untukmu berkembang
+                        tempat yang tepat untuk anda berkembang
                     </p>
                 </div>
             </div>

@@ -8,6 +8,8 @@
 
     <title>{{ config('app.name', 'NaZMa Office') }}</title>
 
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/logo nazma elipse -01.ico') }}">
+
     <!-- Fonts -->
     {{-- <link href="https://fonts.cdnfonts.com/css/rubik" rel="stylesheet"> --}}
     {{-- <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet"> --}}

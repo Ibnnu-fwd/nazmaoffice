@@ -6,7 +6,7 @@
                     Laman Blog
                 </h1>
                 <p class="text-md hidden md:block">
-                    Kami mendokumentasikan dan mempublikasikannya untuk kamu
+                    Kami mendokumentasikan dan mempublikasikannya untuk anda
                 </p>
             </div>
             <form class="md:mt-6 px-4 md:px-20 xl:px-40 transform -translate-y-20 sm:-translate-y-14">

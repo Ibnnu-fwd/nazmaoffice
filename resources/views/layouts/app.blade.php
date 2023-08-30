@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/logo nazma elipse -01.ico') }}">
 
     <!-- Fonts -->
     <link href="https://fonts.cdnfonts.com/css/lexend-deca" rel="stylesheet">
