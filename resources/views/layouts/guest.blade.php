@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <style>
+        html {
+            overflow-x: hidden;
+        }
+
         .blur-mode {
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
