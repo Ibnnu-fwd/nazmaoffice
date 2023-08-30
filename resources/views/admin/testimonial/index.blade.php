@@ -195,6 +195,8 @@
                     },
                     dataType: 'JSON',
                     success: function(data) {
+                        // remove required attribute from input file
+                        $('#create-modal #profile_picture').removeAttr('required');
                         $('#create-modal #fullname').val(data.fullname);
                         $('#create-modal #job').val(data.job);
                         $('#create-modal #rating').val(data.rating);
@@ -216,6 +218,8 @@
             $(function() {
                 $('#btnAdd').click(function(e) {
                     e.preventDefault();
+                    // add required attribute to input file
+                    $('#create-modal #profile_picture').attr('required', '');
                     $('#create-modal form').attr('action', "{{ route('admin.testimonial.store') }}");
                     $('#create-modal form').trigger('reset');
                     $('#create-modal #modal-title').text('Formulir Tambah Testimoni');

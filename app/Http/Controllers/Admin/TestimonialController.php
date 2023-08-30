@@ -45,7 +45,7 @@ class TestimonialController extends Controller
     {
         $request->validate([
             'fullname'        => ['required'],
-            'profile_picture' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'profile_picture' => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'job'             => ['required'],
             'rating'          => ['required'],
             'testimonial'     => ['required']

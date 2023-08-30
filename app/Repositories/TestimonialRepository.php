@@ -48,11 +48,12 @@ class TestimonialRepository implements TestimonialInterface
     {
         $testimonial = $this->testimonial->find($id);
 
-        Storage::delete('public/testimonial/' . $testimonial->profile_picture);
-
-        $fileNameProfilePicture = uniqid() . '.' . $data['profile_picture']->extension();
-        $data['profile_picture']->storeAs('public/testimonial', $fileNameProfilePicture);
-        $data['profile_picture'] = $fileNameProfilePicture;
+        if (isset($data['profile_picture'])) {
+            Storage::delete('public/testimonial/' . $testimonial->profile_picture);
+            $fileNameProfilePicture = uniqid() . '.' . $data['profile_picture']->extension();
+            $data['profile_picture']->storeAs('public/testimonial', $fileNameProfilePicture);
+            $data['profile_picture'] = $fileNameProfilePicture;
+        }
 
         DB::beginTransaction();
 
