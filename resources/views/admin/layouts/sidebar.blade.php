@@ -68,6 +68,26 @@
             <x-sidebar-menu name="Layanan" icon="fas fa-th-large" route="{{ route('admin.service') }}"
                 active="{{ request()->routeIs('admin.service') }}" />
 
+            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Jadwal</p>
+
+            <x-sidebar-menu name="Coaching" icon="fas fa-business-time"
+                route="{{ route('admin.coaching-schedule') }}"
+                active="{{ request()->routeIs('admin.coaching-schedule') }}" />
+
+            <!-- Logout -->
+            <li>
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <a class="flex items-center py-3 pl-6 nav-item hover:text-orange-400 rounded-md"
+                        onclick="event.preventDefault(); this.closest('form').submit();">
+                        <i
+                            class="fas fa-sign-out-alt text-white w-4 h-4 transition duration-75  group-hover:text-orange-400 "></i>
+                        <span class="ml-3 text-white">
+                            Keluar
+                        </span>
+                    </a>
+                </form>
+            </li>
         </ul>
     </div>
 </aside>

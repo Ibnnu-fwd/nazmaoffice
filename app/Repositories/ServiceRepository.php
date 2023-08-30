@@ -47,7 +47,7 @@ class ServiceRepository implements ServiceInterface
 
     public function getById($id)
     {
-        return $this->service->with('serviceCategory')->findOrFail($id);
+        return $this->service->with(['serviceCategory', 'serviceProjects', 'subServices'])->findOrFail($id);
     }
 
     public function update($id, $data)

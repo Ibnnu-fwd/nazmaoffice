@@ -37,6 +37,52 @@
         </div>
     </section>
 
+    {{-- Sub Services --}}
+    <section aria-labelledby="feature-five" id="feature-five" class="overflow-y-auto bg-white lg:min-h-fit">
+        <div class="px-8 py-24 mx-auto lg:px-16 max-w-7xl md:px-12 xl:px-0 lg:flex">
+            <div class="lg:w-1/2">
+                <div class="top-0 pt-8 pb-16 lg:sticky">
+                    <div>
+                        <div class="lg:pr-24 md:pr-12">
+                            <div>
+                                <p class="text-lg capitalize font-semibold tracking-tight text-black sm:text-2xl">
+                                    Kami akan membantu anda
+                                </p>
+                                <p class="max-w-xl mt-4 text-xs 2xl:text-sm tracking-tight text-gray-400">
+                                    Dengan layanan kami, kami akan membantu anda untuk membangun bisnis anda dengan
+                                    cepat dan efisien dengan biaya yang terjangkau dan hasil yang memuaskan
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="flex-shrink-0">
+                    <div>
+                        <ul class="grid grid-cols-1 gap-12 mt-6 list-none lg:mt-0 lg:gap-24" role="list">
+                            @forelse ($service->subServices as $subService)
+                                <li>
+                                    <div>
+                                        <p class="mt-5 text-md font-medium leading-6 text-black">
+                                            {{ $subService->title }}
+                                        </p>
+                                    </div>
+                                    <div class="mt-2 text-xs 2xl:text-sm text-gray-500">
+                                        {{ $subService->description }}
+                                    </div>
+                                </li>
+                            @empty
+                            @endforelse
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     {{-- Benefit --}}
     <section class="bg-white">
         <div class="relative items-center w-full px-5 py-24 mx-auto md:px-12 2xl:px-0 max-w-7xl">

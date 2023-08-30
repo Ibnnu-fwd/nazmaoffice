@@ -22,34 +22,35 @@ class AdminController extends Controller
     private $blog;
     private $gallery;
 
-    public function __construct(ServiceProjectInterface $serviceProject, TestimonialInterface $testimonial, TeamInterface $team, PartnerInterface $partner, BlogInterface $blog, GalleryInterface $gallery) {
+    public function __construct(ServiceProjectInterface $serviceProject, TestimonialInterface $testimonial, TeamInterface $team, PartnerInterface $partner, BlogInterface $blog, GalleryInterface $gallery)
+    {
         $this->serviceProject = $serviceProject;
-        $this->testimonial = $testimonial;
-        $this->team = $team;
-        $this->partner = $partner;
-        $this->blog = $blog;
-        $this->gallery = $gallery;
+        $this->testimonial    = $testimonial;
+        $this->team           = $team;
+        $this->partner        = $partner;
+        $this->blog           = $blog;
+        $this->gallery        = $gallery;
     }
-    
+
     public function index()
     {
         $countOfServiceProject = $this->serviceProject->countProject();
-        $countOfTestimonial = $this->testimonial->countTestimonial();
-        $countOfTeam = $this->team->countTeam();
-        $countOfPartner = $this->partner->countPartner();
-        $countOfBlog = $this->blog->countBlog();
-        $countOfGallery = $this->gallery->countGallery();
+        $countOfTestimonial    = $this->testimonial->countTestimonial();
+        $countOfTeam           = $this->team->countTeam();
+        $countOfPartner        = $this->partner->countPartner();
+        $countOfBlog           = $this->blog->countBlog();
+        $countOfGallery        = $this->gallery->countGallery();
 
         return view('admin.home.index', [
-        'countOfServiceProject' => $countOfServiceProject,
-            'countOfTestimonial' => $countOfTestimonial,
-            'countOfTeam' => $countOfTeam,
-            'countOfPartner' => $countOfPartner,
-            'countOfBlog' => $countOfBlog,
-            'countOfGallery' => $countOfGallery
-    ]);
+            'countOfServiceProject' => $countOfServiceProject,
+            'countOfTestimonial'    => $countOfTestimonial,
+            'countOfTeam'           => $countOfTeam,
+            'countOfPartner'        => $countOfPartner,
+            'countOfBlog'           => $countOfBlog,
+            'countOfGallery'        => $countOfGallery
+        ]);
     }
-    
+
 
     public function login()
     {
@@ -70,7 +71,7 @@ class AdminController extends Controller
     {
         return view('admin.project.index');
     }
-    
+
     public function trainers()
     {
         return view('admin.trainers.index');
@@ -100,5 +101,4 @@ class AdminController extends Controller
     {
         return view('admin.event.index');
     }
-
 }

@@ -136,7 +136,7 @@
                             <option value="">Pilih Posisi</option>
                             <option id="Trainer" value="Trainer">Trainer</option>
                             <option id="Kreatif" value="Kreatif">Kreatif</option>
-                            <option id="Owner" value="Owner">Owner</option>
+                            <option id="Direktur Utama" value="Direktur Utama">Direktur Utama</option>
                             <option id="Manajer Operasional" value="Manajer Operasional">Manajer Operasional</option>
                             <option id="Marketing" value="Marketing">Marketing</option>
                             <option id="Full Stack Developer" value="Full Stack Developer">Full Stack Developer
@@ -228,6 +228,8 @@
                     },
                     dataType: 'JSON',
                     success: function(data) {
+                        // remove required attribute in image
+                        $('#create-modal #image').removeAttr('required');
                         $('#create-modal #name').val(data.name);
                         $('#create-modal #job').val(data.job);
                         $('#create-modal #facebook').val(data.facebook);
@@ -251,6 +253,8 @@
             $(function() {
                 $('#btnAdd').click(function(e) {
                     e.preventDefault();
+                    // add required attribute in image
+                    $('#create-modal #image').attr('required', '');
                     $('#create-modal form').attr('action', "{{ route('admin.team.store') }}");
                     $('#create-modal form').trigger('reset');
                     $('#create-modal #modal-title').text('Formulir Tambah Tim');

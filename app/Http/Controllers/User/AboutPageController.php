@@ -32,7 +32,7 @@ class AboutPageController extends Controller
         $teams              = $this->teams->getAll();
         $testimonials       = $this->testimonials->getAll();
         $aboutPage          = $this->aboutPageSetting->get();
-        $owners             = $teams->where('job', 'Owner');
+        $owners             = $teams->where('job', 'Direktur Utama');
         $opeationalManagers = $teams->where('job', 'Manajer Operasional');
 
         $topJob = array_merge($owners->toArray(), $opeationalManagers->toArray());

@@ -27,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(\App\Interfaces\ServiceProjectInterface::class, \App\Repositories\ServiceProjectRepository::class);
         $this->app->bind(\App\Interfaces\FaqInterface::class, \App\Repositories\FaqRepository::class);
         $this->app->bind(\App\Interfaces\AboutPageSettingInterface::class, \App\Repositories\AboutPageSettingRepository::class);
+        $this->app->bind(\App\Interfaces\CoachingScheduleInterface::class, \App\Repositories\CoachingScheduleRepository::class);
+        $this->app->bind(\App\Interfaces\SubServiceInterface::class, \App\Repositories\SubServiceRepository::class);
     }
 
     public function boot()

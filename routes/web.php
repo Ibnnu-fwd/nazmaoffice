@@ -6,6 +6,7 @@ use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\CoachingScheduleController;
 use App\Http\Controllers\User\BlogController as UserBlogController;
 use App\Http\Controllers\Admin\CompanyAddressController;
 use App\Http\Controllers\Admin\CompanyLandingSettingController;
@@ -22,6 +23,7 @@ use App\Http\Controllers\Admin\ServiceBenefitController;
 use App\Http\Controllers\Admin\ServiceCategoryController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\ServiceProjectController;
+use App\Http\Controllers\Admin\SubServiceController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\ServiceTestimonialController;
@@ -48,7 +50,7 @@ Route::get('service/{id}', [UserServiceController::class, 'detail'])->name('user
 
 Route::get('/login-page', [AdminController::class, 'login'])->name('admin.login');
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     // Dashboard
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 
@@ -57,6 +59,15 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/', [CompanyLandingSettingController::class, 'index'])->name('admin.company-landing-setting');
         Route::post('store', [CompanyLandingSettingController::class, 'store'])->name('admin.company-landing-setting.store');
         Route::post('update', [CompanyLandingSettingController::class, 'update'])->name('admin.company-landing-setting.update');
+    });
+
+    // Coaching Schedule
+    Route::prefix('coaching-schedule')->group(function () {
+        Route::get('/', [CoachingScheduleController::class, 'index'])->name('admin.coaching-schedule');
+        Route::post('get-by-id', [CoachingScheduleController::class, 'getById'])->name('admin.coaching-schedule.get-by-id');
+        Route::post('update/{id}', [CoachingScheduleController::class, 'update'])->name('admin.coaching-schedule.update');
+        Route::post('store', [CoachingScheduleController::class, 'store'])->name('admin.coaching-schedule.store');
+        Route::post('destroy/{id}', [CoachingScheduleController::class, 'destroy'])->name('admin.coaching-schedule.destroy');
     });
 
     // About Page Setting
@@ -202,6 +213,13 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('{id}/update', [ServiceController::class, 'update'])->name('admin.service.update');
         Route::post('{id}/destroy', [ServiceController::class, 'destroy'])->name('admin.service.destroy');
         Route::post('{id}/recover', [ServiceController::class, 'recover'])->name('admin.service.recover');
+
+        // Sub Service
+        Route::get('{service_id}/sub-service', [SubServiceController::class, 'index'])->name('admin.sub-service');
+        Route::post('{service_id}/sub-service/store', [SubServiceController::class, 'store'])->name('admin.sub-service.store');
+        Route::post('sub-service/{id}/update', [SubServiceController::class, 'update'])->name('admin.sub-service.update');
+        Route::post('sub-service/{id}/destroy', [SubServiceController::class, 'destroy'])->name('admin.sub-service.destroy');
+        Route::post('sub-service/get-by-id', [SubServiceController::class, 'getById'])->name('admin.sub-service.get-by-id');
 
         // Service Benefit
         Route::get('{service_id}/benefit', [ServiceBenefitController::class, 'index'])->name('admin.service.benefit');

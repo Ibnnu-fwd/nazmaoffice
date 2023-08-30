@@ -48,10 +48,12 @@ class TeamRepository implements TeamInterface
     {
         $team = $this->team->find($id);
 
-        Storage::delete('public/teams/' . $team->image);
-        $filenameProfilePicture = uniqid() . '.' . $data['image']->extension();
-        $data['image']->storeAs('public/teams', $filenameProfilePicture);
-        $data['image'] = $filenameProfilePicture;
+        if (isset($data['image'])) {
+            Storage::delete('public/teams/' . $team->image);
+            $filenameProfilePicture = uniqid() . '.' . $data['image']->extension();
+            $data['image']->storeAs('public/teams', $filenameProfilePicture);
+            $data['image'] = $filenameProfilePicture;
+        }
 
         DB::beginTransaction();
 
@@ -87,4 +89,3 @@ class TeamRepository implements TeamInterface
         return $this->team->get()->count();
     }
 }
-    

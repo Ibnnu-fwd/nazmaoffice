@@ -47,7 +47,7 @@ class TeamController extends Controller
     {
         $request->validate([
             'name'      => ['required'],
-            'image'     => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'image'     => ['nullable', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'job'       => ['required'],
             'facebook'  => ['nullable'],
             'twitter'   => ['nullable'],
