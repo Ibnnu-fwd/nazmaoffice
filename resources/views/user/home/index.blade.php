@@ -25,7 +25,7 @@
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
                 <div
                     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
+                    <h1 class="font-semibold text-2xl md:text-3xl lg:text-7xl" id="header-title">
                         We'll Finish It
                         <br>With Exellence
                     </h1>
@@ -44,7 +44,7 @@
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
                 <div
                     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
+                    <h1 class="font-semibold text-2xl md:text-3xl lg:text-7xl" id="header-title">
                         Dengan Kualitas Terbaik
                     </h1>
                     <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
@@ -61,7 +61,7 @@
                 <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
                 <div
                     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
+                    <h1 class="font-semibold text-2xl md:text-3xl lg:text-7xl" id="header-title">
                         Team Profesional
                     </h1>
                     <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
