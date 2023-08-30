@@ -169,7 +169,7 @@
             <div class="justify-center w-full lg:p-10 max-auto">
                 <div class="justify-center w-full text-center">
 
-                    <div x-data="{ tab: '{{ $serviceCategories->first()->id }}' }">'
+                    <div x-data="{ tab: '{{ $serviceCategories->first()->id }}' }">
                         <ul class="md:flex gap-3 text-gray-500 justify-center">
                             <li class="-mb-px">
                                 <a @click.prevent="tab = '{{ $serviceCategories->first()->id }}'" href="#"
