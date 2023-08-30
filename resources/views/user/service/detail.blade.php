@@ -156,6 +156,7 @@
                         </div>
                     </div>
                 @empty
+                    <div></div>
                     <div class="bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
                         data-aos-delay="300" data-aos-duration="1000">
                         <div class="mt-4 text-center">
@@ -167,6 +168,7 @@
                             </a>
                         </div>
                     </div>
+                    <div></div>
                 @endforelse
             </div>
         </div>
