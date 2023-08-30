@@ -45,7 +45,7 @@
                 </li>
                 <li>
                     <a href="{{ route('user.gallery') }}"
-                        class="px-4 py-8 mr-0 md:mr-3 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.gallery') ? 'text-primary' : '' }}">
+                        class="px-4 md:py-8 mr-0 md:mr-3 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.gallery') ? 'text-primary' : '' }}">
                         Galeri
                     </a>
                 </li>

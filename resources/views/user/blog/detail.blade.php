@@ -27,7 +27,7 @@
 
     <section class="max-w-4xl mx-auto mt-10 px-8 lg:px-0">
         <img src="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}"
-            class="w-full h-48 md:h-96 object-cover object-center blur-mode rounded-xl" alt="">
+            class="w-full h-48 md:h-[500px] object-cover object-center blur-mode rounded-xl" alt="">
         <div class="mt-8 leading-6 text-justify -tracking-tight text-sm 2xl:text-lg">
             {!! $blog->content !!}
         </div>
