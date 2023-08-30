@@ -63,8 +63,8 @@ class BlogController extends Controller
     {
         $request->validate([
             'blog_category_id' => ['required', 'exists:blog_categories,id'],
-            'thumbnail'        => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
-            'main_image'       => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
+            'thumbnail'        => ['nullable', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
+            'main_image'       => ['nullable', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
             'title'            => ['required'],
             'author_name'      => ['required'],
             'content'          => ['required'],

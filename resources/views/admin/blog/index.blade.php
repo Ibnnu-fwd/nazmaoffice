@@ -254,10 +254,15 @@
                         },
                         dataType: 'JSON',
                         success: function(data) {
+                            // remove required attribute from input type file
+                            $('#thumbnail').removeAttr('required');
+                            $('#main_image').removeAttr('required');
                             $('#blog_category_id').val(data.blog_category_id);
                             $('#title').val(data.title);
                             $('#author_name').val(data.author_name);
                             CKEDITOR.instances['content'].insertHtml(data.content);
+                            let tag = data.tag.split('-');
+                            $('#tag').val(tag.join(', '));
                         }
                     });
                 }
@@ -269,6 +274,9 @@
                 $(function() {
                     $('#btnAddCategory').click(function(e) {
                         e.preventDefault();
+                        // add required attribute to input type file
+                        $('#thumbnail').attr('required', true);
+                        $('#main_image').attr('required', true);
                         $('#create-modal form').attr('action', "{{ route('admin.blog.store') }}");
                         $('#create-modal form').trigger('reset');
                         resetClassicEditor();
