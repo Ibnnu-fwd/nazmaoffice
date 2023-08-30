@@ -79,14 +79,14 @@
 
     {{-- Services --}}
     <section>
-        <p class="text-xl font-semibold text-black text-center pt-12 mb-3 mx-2 md:mx-0" data-aos="fade-up">
+        <p class="text-xl font-semibold text-black text-center pt-12 mb-6 mx-2 md:mx-0" data-aos="fade-up">
             Layanan Yang Kami Miliki
         </p>
         <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
             <div class="justify-center w-full lg:p-10 max-auto">
                 <div class="justify-center w-full text-center">
 
-                    <div x-data="{ tab: '{{ $serviceCategories->first()->id }}' }">'
+                    <div x-data="{ tab: '{{ $serviceCategories->first()->id }}' }">
                         <ul class="md:flex gap-3 text-gray-500 justify-center">
                             <li class="-mb-px">
                                 <a @click.prevent="tab = '{{ $serviceCategories->first()->id }}'" href="#"
@@ -111,14 +111,15 @@
                             <!-- show tab1 only -->
                             @foreach ($serviceCategories as $serviceCategory)
                                 <div x-show="tab==='{{ $serviceCategory->id }}'" class="text-gray-500"
-                                    data-aos="fade-up" data-aos-duration="1000">
+                                    data-aos="fade-up" data-aos-duration="1000"
+                                    data-aos-delay="{{ $loop->iteration * 300 }}">
                                     <main class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                                         @foreach ($serviceCategory->services as $service)
                                             <div class="max-w-sm p-6 bg-white rounded-lg shadow-sm">
                                                 <div
                                                     class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
-                                                    <ion-icon name="{{ $service->icon }}"
-                                                        class="text-{{ $service->icon_color }}-600"
+                                                    <ion-icon name="{{ $service->icon }}" class=""
+                                                        style="color: {{ $service->icon_color }} !important;"
                                                         size="large"></ion-icon>
                                                 </div>
                                                 <a href="{{ route('user.service.detail', $service->id) }}">
