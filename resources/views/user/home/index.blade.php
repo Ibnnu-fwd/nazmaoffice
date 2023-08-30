@@ -116,51 +116,44 @@
                 Terima Kasih Telah Mempercayai Kami
             </p>
             <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-4 lg:grid-cols-4 max-w-4xl mx-auto">
-                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-delay="300">
-                    <ion-icon name="storefront-outline"
-                        class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
+                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="{{ asset('assets/images/icon/drive-download-20230830T061719Z-001/Mitra.svg') }}"
+                        class="w-24 h-24 text-gray-300 hover:text-primary self-center object-center" />
                     <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
-                        1000+
+                        1.115
                     </p>
                     <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
                         Mitra Usaha
                     </p>
                 </figure>
-                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-delay="600">
-
-                    <ion-icon name="bookmarks-outline"
-                        class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
+                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="{{ asset('assets/images/icon/drive-download-20230830T061719Z-001/Event edukatif.svg') }}"
+                        class="w-24 h-24 text-gray-300 hover:text-primary self-center object-center" />
                     <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
-                        1000+
+                        310
                     </p>
                     <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
                         Event Edukatif
                     </p>
                 </figure>
-                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-delay="900">
-
-                    <ion-icon name="people-outline"
-                        class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
+                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="{{ asset('assets/images/icon/drive-download-20230830T061719Z-001/Mentor profesional.svg') }}"
+                        class="w-24 h-24 text-gray-300 hover:text-primary self-center object-center" />
                     <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
-                        1000+
+                        500+
                     </p>
                     <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
-                        Mentor Profesional
+                        Program Sertifikasi
                     </p>
                 </figure>
-                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000"
-                    data-aos-delay="1200">
-
-                    <ion-icon name="person-add-outline"
-                        class="w-12 h-12 text-gray-300 hover:text-primary self-center object-center"></ion-icon>
+                <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="{{ asset('assets/images/icon/drive-download-20230830T061719Z-001/Peserta event.svg') }}"
+                        class="w-24 h-24 text-gray-300 hover:text-primary self-center object-center" />
                     <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
-                        1000+
+                        10.000+
                     </p>
                     <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
-                        Mitra Usaha
+                        Peserta Event
                     </p>
                 </figure>
             </div>
@@ -275,7 +268,7 @@
                                     <li>
                                         <div>
                                             <p class="mt-5 text-md font-semibold leading-6 text-black">
-                                                Dibidang konsultan:
+                                                Di bidang konsultan:
                                             </p>
                                         </div>
                                         <ul class="list-disc list-inside mt-3 text-xs 2xl:text-sm text-gray-400">
