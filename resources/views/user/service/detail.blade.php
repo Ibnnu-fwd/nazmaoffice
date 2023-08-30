@@ -136,7 +136,7 @@
                 </h2>
             </div>
             <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-6">
-                @foreach ($service->serviceProjects as $project)
+                @forelse ($service->serviceProjects as $project)
                     <div class="bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
                         data-aos-delay="300" data-aos-duration="1000">
                         <a href="#">
@@ -155,7 +155,19 @@
                             </p>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <div class="bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
+                        data-aos-delay="300" data-aos-duration="1000">
+                        <div class="mt-4 text-center">
+                            <a href="#" onclick="event.preventDefault();">
+                                <h5
+                                    class="mb-2 text-md 2xl:text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                    Belum ada proyek
+                                </h5>
+                            </a>
+                        </div>
+                    </div>
+                @endforelse
             </div>
         </div>
     </section>
