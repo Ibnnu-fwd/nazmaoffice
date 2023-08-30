@@ -38,7 +38,7 @@
     </section>
 
     {{-- Sub Services --}}
-    @if ($service->subServices !== null)
+    @if (!empty($service->subService))
         <section aria-labelledby="feature-five" id="feature-five" class="overflow-y-auto bg-white lg:min-h-fit">
             <div class="px-8 py-8 xl:py-24 mx-auto lg:px-16 max-w-7xl md:px-12 xl:px-0 lg:flex">
                 <div class="lg:w-1/2">
