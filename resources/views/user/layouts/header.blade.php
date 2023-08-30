@@ -21,26 +21,26 @@
             <ul class="space-y-2 list-none md:space-y-0 md:items-center md:inline-flex">
                 <li>
                     <a href="{{ route('user.home') }}"
-                        class="px-4 py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.home') ? 'text-primary' : '' }}
+                        class="px-4 md:py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.home') ? 'text-primary' : '' }}
                         }}">
                         Beranda
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('user.about') }}"
-                        class="px-4 py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.about') ? 'text-primary' : '' }}">
+                        class="px-4 md:py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.about') ? 'text-primary' : '' }}">
                         Tentang Kami
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('user.service') }}"
-                        class="px-4 py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.service') || request()->routeIs('user.service.detail') ? 'text-primary' : '' }}">
+                        class="px-4 md:py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.service') || request()->routeIs('user.service.detail') ? 'text-primary' : '' }}">
                         Layanan
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('user.blog') }}"
-                        class="px-4 py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.blog') || request()->routeIs('user.blog.detail') ? 'text-primary' : '' }}">
+                        class="px-4 md:py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.blog') || request()->routeIs('user.blog.detail') ? 'text-primary' : '' }}">
                         Blog </a>
                 </li>
                 <li>

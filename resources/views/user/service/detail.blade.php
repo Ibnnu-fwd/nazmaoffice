@@ -39,7 +39,7 @@
 
     {{-- Sub Services --}}
     <section aria-labelledby="feature-five" id="feature-five" class="overflow-y-auto bg-white lg:min-h-fit">
-        <div class="px-8 py-24 mx-auto lg:px-16 max-w-7xl md:px-12 xl:px-0 lg:flex">
+        <div class="px-8 py-8 xl:py-24 mx-auto lg:px-16 max-w-7xl md:px-12 xl:px-0 lg:flex">
             <div class="lg:w-1/2">
                 <div class="top-0 pt-8 pb-16 lg:sticky">
                     <div>
@@ -81,17 +81,15 @@
         </div>
     </section>
 
-
-
     {{-- Benefit --}}
     <section class="bg-white">
-        <div class="relative items-center w-full px-5 py-24 mx-auto md:px-12 2xl:px-0 max-w-7xl">
+        <div class="relative items-center w-full px-5 py-8 xl:py-24 mx-auto md:px-12 2xl:px-0 max-w-7xl">
             <div class="w-full mx-auto text-left">
                 <div class="relative flex-col items-center m-auto align-middle">
                     <div class="items-center gap-12 text-left lg:gap-24 lg:inline-flex">
                         <div class="order-first block w-full mt-12 lg:mt-0" data-aos="fade-right" data-aos-delay="300"
                             data-aos-duration="1000">
-                            <img class="object-cover h-[25rem] object-center blur-mode rounded-xl w-full mx-auto bg-gray-300 border lg:ml-auto"
+                            <img class="hidden 2xl:inline-block object-cover h-[25rem] object-center blur-mode rounded-xl w-full mx-auto bg-gray-300 border lg:ml-auto"
                                 alt="hero" src="{{ asset('storage/services/' . $service->benefit_image) }}">
                         </div>
                         <div class="flex flex-col m-auto md:order-first" data-aos="fade-left" data-aos-delay="300"
@@ -135,7 +133,7 @@
                     Proyek yang telah kami kerjakan
                 </h2>
             </div>
-            <div class="grid md:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-6">
                 @foreach ($service->serviceProjects as $project)
                     <div class="bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
                         data-aos-delay="300" data-aos-duration="1000">

@@ -152,7 +152,7 @@
                     Kami adalah tim yang berdedikasi untuk mengedukasi Indonesia melalui media digital
                 </p>
             </div>
-            <div class="flex flex-row items-center justify-center gap-16 mb-8">
+            <div class="flex flex-row items-center justify-center gap-4 mb-8">
                 @foreach ($topJob as $team)
                     <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500"
                         data-aos-delay="{{ $loop->iteration * 300 }}">
@@ -195,7 +195,7 @@
                     </div>
                 @endforeach
             </div>
-            <div class="flex w-full justify-center mb-8 flex-wrap gap-16 md:gap-16">
+            <div class="flex w-full justify-center mb-8 flex-wrap gap-4 md:gap-16">
                 @foreach ($teams->where('job', '==', 'Trainer') as $team)
                     <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
@@ -238,7 +238,7 @@
                 @endforeach
             </div>
 
-            <div class="flex w-full justify-center mb-8 flex-wrap gap-16 md:gap-8">
+            <div class="flex w-full justify-center mb-8 flex-wrap gap-4 md:gap-8">
                 @foreach ($teams->where('job', '==', 'Kreatif') as $team)
                     <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
@@ -289,7 +289,7 @@
             Apa Kata Mereka
         </p>
         <div id="testimonial" class="mt-8">
-            <div class="carousel carousel-center p-4 space-x-4 w-full place-content-center" data-aos="fade-up"
+            <div class="carousel carousel-center p-4 space-x-4 w-full md:place-content-center" data-aos="fade-up"
                 data-aos-delay="1000">
                 @foreach ($testimonials as $testimonial)
                     <div id="item{{ $testimonial->id }}" class="carousel-item">

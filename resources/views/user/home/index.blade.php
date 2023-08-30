@@ -328,7 +328,7 @@
             Apa Kata Mereka
         </p>
         <div id="testimonial" class="mt-8">
-            <div class="carousel carousel-center p-4 space-x-4 w-full place-content-center" data-aos="fade-up"
+            <div class="carousel carousel-center p-4 space-x-4 w-full md:place-content-center" data-aos="fade-up"
                 data-aos-duration="1000">
                 @foreach ($testimonials as $testimonial)
                     <div id="item{{ $testimonial->id }}" class="carousel-item">
