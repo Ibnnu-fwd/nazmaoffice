@@ -274,6 +274,8 @@
                     },
                     dataType: 'JSON',
                     success: function(data) {
+                        // remove attribute required from input file
+                        $('#create-modal form').find('input[type="file"]').removeAttr('required');
                         $('#service_category_id').val(data.service_category_id);
                         $('#title').val(data.title);
                         $('#icon').val(data.icon);
@@ -305,6 +307,8 @@
             $(function() {
                 $('#btnAdd').click(function(e) {
                     e.preventDefault();
+                    // add attribute required to input file
+                    $('#create-modal form').find('input[type="file"]').attr('required', '');
                     $('#create-modal form').attr('action', "{{ route('admin.service.store') }}");
                     $('#create-modal form').trigger('reset');
                     $('#create-modal #modal-title').text('Formulir Tambah Layanan');

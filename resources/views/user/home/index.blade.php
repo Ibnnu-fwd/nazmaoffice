@@ -202,7 +202,7 @@
                                                 <div
                                                     class="w-14 h-14 md:w-12 md:h-12 p-2 border border-gray-200 rounded-md">
                                                     <ion-icon name="{{ $service->icon }}"
-                                                        class="text-{{ $service->icon_color }}-600"
+                                                        class="text-[{{ $service->icon_color }}]"
                                                         size="large"></ion-icon>
                                                 </div>
                                                 <a href="{{ route('user.service.detail', $service->id) }}">

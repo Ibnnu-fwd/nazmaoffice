@@ -57,13 +57,17 @@ class ServiceRepository implements ServiceInterface
         $fileNameHeroImage    = $service->hero_image;
         $fileNameBenefitImage = $service->benefit_image;
 
-        $fileNameHeroImage = uniqid() . '.' . $data['hero_image']->extension();
-        $data['hero_image']->storeAs('public/services', $fileNameHeroImage);
-        Storage::delete('public/services/' . $service->hero_image);
+        if (isset($data['main_image'])) {
+            $fileNameHeroImage = uniqid() . '.' . $data['hero_image']->extension();
+            $data['hero_image']->storeAs('public/services', $fileNameHeroImage);
+            Storage::delete('public/services/' . $service->hero_image);
+        }
 
-        $fileNameBenefitImage = uniqid() . '.' . $data['benefit_image']->extension();
-        $data['benefit_image']->storeAs('public/services', $fileNameBenefitImage);
-        Storage::delete('public/services/' . $service->benefit_image);
+        if (isset($data['benefit_image'])) {
+            $fileNameBenefitImage = uniqid() . '.' . $data['benefit_image']->extension();
+            $data['benefit_image']->storeAs('public/services', $fileNameBenefitImage);
+            Storage::delete('public/services/' . $service->benefit_image);
+        }
 
         $data['hero_image']    = $fileNameHeroImage;
         $data['benefit_image'] = $fileNameBenefitImage;

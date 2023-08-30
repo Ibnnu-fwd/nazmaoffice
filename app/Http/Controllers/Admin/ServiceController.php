@@ -57,8 +57,8 @@ class ServiceController extends Controller
             'title'               => 'required',
             'description'         => 'required',
             'phone'               => 'required',
-            'hero_image'          => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'benefit_image'       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'hero_image'          => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'benefit_image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'teaser_link'         => 'nullable',
         ]);
 
