@@ -22,11 +22,11 @@ class GalleryController extends Controller
 
         // Group galleries by year
         $groupedGalleries = $galleries->groupBy(function ($item) {
-            return $item->created_at->format('Y'); // Group items by year
+            return date('Y', strtotime($item->published_date));
         });
 
         return view('user.gallery.index', [
-            'galleries' => $galleries,
+            'galleries'        => $galleries,
             'groupedGalleries' => $groupedGalleries
         ]);
     }
