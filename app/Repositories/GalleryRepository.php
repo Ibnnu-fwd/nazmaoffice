@@ -18,7 +18,7 @@ class GalleryRepository implements GalleryInterface
 
     public function getAll()
     {
-        return $this->gallery->orderBy('id', 'desc')->get();
+        return $this->gallery->orderBy('published_date', 'desc')->get();
     }
 
     public function store($data)
