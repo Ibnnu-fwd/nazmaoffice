@@ -308,7 +308,7 @@
                 $('#btnAdd').click(function(e) {
                     e.preventDefault();
                     // add attribute required to input file
-                    $('#create-modal form').find('input[type="file"]').attr('required', '');
+                    $('#create-modal form').find('input[type="file"]').attr('required', true);
                     $('#create-modal form').attr('action', "{{ route('admin.service.store') }}");
                     $('#create-modal form').trigger('reset');
                     $('#create-modal #modal-title').text('Formulir Tambah Layanan');
