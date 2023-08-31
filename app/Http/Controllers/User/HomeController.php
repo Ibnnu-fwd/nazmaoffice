@@ -43,7 +43,7 @@ class HomeController extends Controller
             'services'              => $this->service->getAll(),
             'serviceCategories'     => $this->serviceCategory->getAll(),
             'testimonials'          => $this->testimonial->getAll(),
-            'blogs'                 => $this->blog->getAll(),
+            'blogs'                 => $this->blog->getAll()->take(4),
             'partners'              => $this->partner->getAll(),
             'serviceProjects'       => $this->serviceProject->getAll(),
             'faqs'                  => $this->faq->getAll()
