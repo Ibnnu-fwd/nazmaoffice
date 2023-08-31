@@ -54,22 +54,68 @@
                 <div class="max-w-xl py-12 mx-auto text-left lg:max-w-7xl">
                     <div>
                         <div class="grid grid-cols-2 gap-12 lg:grid-cols-4 lg:space-y-0">
-                            @for ($i = 1; $i <= 4; $i++)
-                                <div data-aos="fade-up" data-aos-duration="1000">
-                                    <div>
-                                        <div
-                                            class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg">
-                                            <ion-icon name="cloud-upload-outline" class="text-2xl"></ion-icon>
-                                        </div>
-                                        <p class="mt-4 text-lg font-medium leading-6 text-black">
-                                            Real-time Sync
-                                        </p>
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div>
+                                    <div
+                                        class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg">
+                                        <ion-icon name="price-tag-outline" class="text-2xl"></ion-icon>
                                     </div>
-                                    <div class="mt-4 text-xs 2xl:text-sm text-gray-500">
-                                        Anda akan menemukan diskusi-diskusi yang mendalam tentang berbagai topik menarik
-                                    </div>
+                                    <p class="mt-4 text-lg font-medium leading-6 text-black">
+                                        Terjangkau
+                                    </p>
                                 </div>
-                            @endfor
+                                <div class="mt-4 text-xs 2xl:text-sm text-gray-500">
+                                    Dapatkan tawaran berbagai pilihan produk dengan harga yang terjangkau untuk semua
+                                    kalangan
+                                </div>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div>
+                                    <div
+                                        class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg">
+                                        <ion-icon name="shield-checkmark-outline" class="text-2xl"></ion-icon>
+                                    </div>
+                                    <p class="mt-4 text-lg font-medium leading-6 text-black">
+                                        Terpercaya
+                                    </p>
+                                </div>
+                                <div class="mt-4 text-xs 2xl:text-sm text-gray-500">
+                                    Kami telah beroperasi lebih dari 15 tahun dan telah berhasil membantu ratusan UMKM
+                                    untuk berkembang dan naik level
+                                </div>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div>
+                                    <div
+                                        class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg">
+                                        <ion-icon name="people-circle-outline" class="text-2xl"></ion-icon>
+                                    </div>
+                                    <p class="mt-4 text-lg font-medium leading-6 text-black">
+                                        Profesional
+                                    </p>
+                                </div>
+                                <div class="mt-4 text-xs 2xl:text-sm text-gray-500">
+                                    Nazma Office memiliki mentor dan staff bersertifikasi dan berpengalaman di
+                                    bidangnya.
+                                </div>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-duration="1000">
+                                <div>
+                                    <div
+                                        class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg">
+                                        <ion-icon name="checkmark-done-outline" class="text-2xl"></ion-icon>
+                                    </div>
+                                    <p class="mt-4 text-lg font-medium leading-6 text-black">
+                                        Kepuasan Klien
+                                    </p>
+                                </div>
+                                <div class="mt-4 text-xs 2xl:text-sm text-gray-500">
+                                    Lebih dari 90% pelanggan terdahulu merasa puas dengan produk yang kami tawarkan.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

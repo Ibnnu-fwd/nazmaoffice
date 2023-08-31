@@ -369,6 +369,10 @@
                     },
                     dataType: 'JSON',
                     success: function(data) {
+                        // remove required attribute from input file 
+                        $('#create-modal #thumbnail').removeAttr('required');
+                        $('#create-modal #hero_image').removeAttr('required');
+
                         $('#create-modal #title').val(data.title);
                         $('#create-modal #event_type').val(data.event_type);
                         $('#create-modal #description').val(data.description);
@@ -401,6 +405,10 @@
             $(function() {
                 $('#btnAddEvent').click(function(e) {
                     e.preventDefault();
+                    // add required attribute to input file
+                    $('#create-modal #thumbnail').attr('required', true);
+                    $('#create-modal #hero_image').attr('required', true);
+
                     $('#create-modal form').attr('action', "{{ route('admin.event.store') }}");
                     $('#create-modal form').trigger('reset');
                     $('#create-modal #modal-title').text('Formulir Tambah Event');
