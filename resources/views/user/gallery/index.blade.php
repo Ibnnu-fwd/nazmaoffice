@@ -28,7 +28,7 @@
                     <ion-icon class="text-gray-300 text-5xl" name="chevron-down-circle-outline"></ion-icon>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
                     @foreach ($galleries as $gallery)
                         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4 h-fit"
                             data-gallery-id="{{ $gallery->id }}">
