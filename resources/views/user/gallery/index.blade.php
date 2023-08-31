@@ -43,7 +43,7 @@
                                     </h5>
                                 </a>
                                 <p class="font-normal text-gray-400 text-sm">
-                                    {{ date('d F Y', strtotime($gallery->created_at)) }}
+                                    {{ date('d F Y', strtotime($gallery->published_date)) }}
                                 </p>
                             </div>
                         </div>
