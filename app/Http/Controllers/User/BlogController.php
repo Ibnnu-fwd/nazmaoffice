@@ -27,9 +27,12 @@ class BlogController extends Controller
 
     public function detail($slug)
     {
+        views($this->blog->getBySlug($slug))->record();
+
         return view('user.blog.detail', [
             'blog'           => $this->blog->getBySlug($slug),
             'blogs'          => $this->blog->getRelatedBlogs($slug),
+            'viewCount'      => views($this->blog->getBySlug($slug))->count(),
         ]);
     }
 

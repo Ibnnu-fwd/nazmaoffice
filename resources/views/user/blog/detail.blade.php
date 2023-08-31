@@ -20,6 +20,13 @@
                     <p class="text-gray-200">
                         {{ date('d F Y', strtotime($blog->published_date)) }}
                     </p>
+
+                    <p class="text-white mt-8">
+                        {{ $viewCount }}
+                        <strong>
+                            Pengunjung
+                        </strong>
+                    </p>
                 </div>
             </div>
         </div>
