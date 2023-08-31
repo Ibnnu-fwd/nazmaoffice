@@ -37,6 +37,7 @@
                     <tr>
                         <th scope="col" class="p-4">Judul</th>
                         <th scope="col" class="p-4">Gambar</th>
+                        <th scope="col" class="p-4">Tanggal Publish</th>
                         <th scope="col" class="p-4">Aksi</th>
                     </tr>
                 </thead>
@@ -49,6 +50,9 @@
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <img src="{{ asset('storage/gallery/' . $data->image) }}"
                                     class="w-20 h-20 object-cover object-center rounded-lg" alt="">
+                            </td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
+                                {{ date('d F Y', strtotime($data->published_date)) }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">
@@ -99,6 +103,9 @@
                         <x-input id="title" name="title" label="Judul" required />
 
                         <x-input-file id="image" name="image" label="Gambar" required />
+
+                        <x-input id="published_date" name="published_date" type="date" label="Tanggal Publish"
+                            required />
 
                     </div>
 
@@ -175,7 +182,9 @@
                     dataType: 'JSON',
                     success: function(data) {
                         $('#create-modal #title').val(data.title);
-                        $('#create-modal #image').val(data.image);
+                        $('#create-modal #published_date').val(data.published_date);
+                        // remove required attribute from image input
+                        $('form input[name="image"]').removeAttr('required');
                     },
                     error: function() {
                         Swal.fire({
@@ -196,6 +205,7 @@
                     $('#create-modal form').attr('action', "{{ route('admin.gallery.store') }}");
                     $('#create-modal form').trigger('reset');
                     $('#create-modal #modal-title').text('Formulir Tambah Galeri');
+                    $('#image').attr('required', true);
                 });
 
                 $('#search').on('keypress', function(e) {

@@ -64,6 +64,5 @@ module.exports = {
             '8xl': '5.96rem',
           }
     },
-
     plugins: [require('@tailwindcss/forms'), require('flowbite/plugin'), require('@tailwindcss/line-clamp')],
 };
