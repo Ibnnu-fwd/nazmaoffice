@@ -55,4 +55,9 @@ class Event extends Model
     {
         return $this->hasMany(EventParticipant::class, 'event_id', 'id');
     }
+
+    public function eventSylabuses()
+    {
+        return $this->hasMany(EventSylabus::class, 'event_id', 'id');
+    }
 }

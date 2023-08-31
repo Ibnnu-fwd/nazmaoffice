@@ -26,13 +26,20 @@
                                 hover:border-purple-600 lg:w-auto text-sm">
                                 Daftar Sekarang
                             </a>
+                            <a href="#content"
+                                class="items-center
+                                justify-center w-fit px-6 py-3 text-center text-gray-400 border-2 border-transparent duration-200 bg-gray-100
+                                rounded-full inline-flex hover:bg-gray300 hover:text-gray-900
+                                hover:border-gray-100 lg:w-auto text-sm">
+                                Selengkapnya
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="order-first hidden lg:block w-full lg:mt-0" data-aos="fade-left" data-aos-duration="500"
                     data-aos-delay="300">
-                    <img class="object-cover object-center w-full mx-auto lg:ml-auto rounded-2xl" alt="hero"
-                        src="{{ asset('assets/images/hero1.jpg') }}">
+                    <img class="object-cover object-center w-full mx-auto lg:ml-auto rounded-2xl shadow-xl"
+                        alt="hero" src="{{ asset('storage/event/hero_image/' . $event->hero_image) }}">
                 </div>
             </div>
         </div>
@@ -40,17 +47,44 @@
     </section>
 
     {{-- Study Case --}}
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-8 lg:px-12 2xl:px-0">
-            <h1 class="text-2xl font-semibold tracking-tight text-primary">Studi Kasus:</h1>
-            <h1 class="text-xl font-medium tracking-tight text-black">
-                {{ $event->study_case }}
-            </h1>
-            <p class="text-xs 2xl:text-sm text-gray-400 xl:w-1/2 mt-3">
-                {{ $event->study_case_description }}
-            </p>
+    <section class="py-20 bg-white" id="content" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+        <div class="max-w-3xl mx-auto px-8 lg:px-12 2xl:px-0 ">
+            <div>
+                <h1 class="text-2xl font-semibold tracking-tight text-gray-600">Studi Kasus:
+                    {{ $event->study_case }}
+                </h1>
+                <p class="text-sm 2xl:text-sm text-gray-400 mt-3">
+                    {{ $event->study_case_description }}
+                </p>
+            </div>
 
-            <div class="">
+            <div class="mt-8">
+                <h1 class="text-xl font-semibold tracking-tight text-gray-600">
+                    Materi Yang
+                    Akan Diajarkan
+                </h1>
+                <p class="text-sm 2xl:text-sm text-gray-400 mt-3">
+                    Materi dibuat terstruktur sehingga
+                    pembelajaranmu terarah
+                </p>
+            </div>
+
+            <div class=" space-y-4 mt-6">
+                @forelse ($event->eventSylabuses as $eventSylabus)
+                    <div class="flex">
+                        <div
+                            class="text-gray-400 flex items-center justify-center text-xs bg-slate-100 w-6 h-6 rounded-full">
+                            {{ $loop->iteration }}
+                        </div>
+                        <p class="ml-2 text-gray-400 text-sm">
+                            {{ $eventSylabus->title }}
+                        </p>
+                    </div>
+                @empty
+                @endforelse
+            </div>
+
+            {{-- <div class="">
                 <div class="py-12 mx-auto text-left lg:max-w-7xl">
                     <div>
                         <div class="grid grid-cols-2 gap-12 lg:grid-cols-3 lg:space-y-0">
@@ -81,11 +115,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 
-    {{-- Mentor --}}
+    {{-- Mentor
     <section class="">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-24 lg:px-6">
             <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
@@ -167,18 +201,19 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- Offering --}}
-    <section class="bg-white py-24">
-        <div class="max-w-7xl mx-auto px-8 lg:px-12 2xl:px-0 grid md:grid-cols-2 ">
-            <div>
+    <section class="bg-white py-20">
+        <div class="max-w-3xl mx-auto px-8 lg:px-12 2xl:px-0 grid md:grid-cols-3">
+            <div class="col-span-2">
                 <h1 class="text-xl xl:text-xl font-semibold mb-2">
                     Tiket Terbatas <br>
                     Jangan Sampai Ketinggalan
                 </h1>
-                <p class="text-gray-400 2xl:w-1/2 mb-4 lg:mb-0 text-xs 2xl:text-sm">
-                    Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan dalam merancang logo
+                <p class="text-gray-400 mb-4 lg:mb-0 text-xs 2xl:text-sm">
+                    Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan
+                    dalam merancang logo
                 </p>
             </div>
             <div class="flex items-center justify-start md:justify-end mt-6 md:mt-0">

@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\CompanySocialMediaController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\User\EventController as UserEventController;
 use App\Http\Controllers\Admin\EventParticipantController;
+use App\Http\Controllers\Admin\EventSylabusController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\User\GalleryController as UserGalleryController;
@@ -109,11 +110,18 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
         Route::post('activate/{id}', [EventController::class, 'activate'])->name('admin.event.activate');
 
         // Event Rundown
-        Route::get('event/{id}/rundown', [EventController::class, 'rundown'])->name('admin.event.rundown');
-        Route::post('event/{id}/rundown/store', [EventController::class, 'rundownStore'])->name('admin.event.rundown.store');
-        Route::post('rundown/{id}/destroy', [EventController::class, 'rundownDestroy'])->name('admin.event.rundown.destroy');
-        Route::post('rundown/get-by-id', [EventController::class, 'rundownGetById'])->name('admin.event.rundown.get-by-id');
-        Route::post('rundown/{id}/update', [EventController::class, 'rundownUpdate'])->name('admin.event.rundown.update');
+        // Route::get('event/{id}/rundown', [EventController::class, 'rundown'])->name('admin.event.rundown');
+        // Route::post('event/{id}/rundown/store', [EventController::class, 'rundownStore'])->name('admin.event.rundown.store');
+        // Route::post('rundown/{id}/destroy', [EventController::class, 'rundownDestroy'])->name('admin.event.rundown.destroy');
+        // Route::post('rundown/get-by-id', [EventController::class, 'rundownGetById'])->name('admin.event.rundown.get-by-id');
+        // Route::post('rundown/{id}/update', [EventController::class, 'rundownUpdate'])->name('admin.event.rundown.update');
+
+        // Event Sylabus
+        Route::get('event/{id}/sylabus', [EventSylabusController::class, 'index'])->name('admin.sylabus');
+        Route::post('event/{id}/sylabus/store', [EventSylabusController::class, 'store'])->name('admin.sylabus.store');
+        Route::post('sylabus/{id}/destroy', [EventSylabusController::class, 'destroy'])->name('admin.sylabus.destroy');
+        Route::post('sylabus/get-by-id', [EventSylabusController::class, 'getById'])->name('admin.sylabus.get-by-id');
+        Route::post('sylabus/{id}/update', [EventSylabusController::class, 'update'])->name('admin.sylabus.update');
 
         // Event Speaker
         Route::get('event/{id}/speaker', [EventController::class, 'speaker'])->name('admin.event.speaker');

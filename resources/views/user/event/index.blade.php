@@ -67,7 +67,7 @@
         <div class="max-w-7xl mx-auto px-8 2xl:px-0 mt-12">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
                 @foreach ($events as $event)
-                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
+                    <div class="max-w-sm bg-gray-50 border-slate-100 border rounded-2xl p-4" data-aos="fade-up"
                         data-aos-duration="1000" id="event-{{ $event->id }}"
                         onclick="window.location='{{ route('user.event.detail', $event->id) }}'">
                         <a href="#">
@@ -76,21 +76,24 @@
                         </a>
                         <div class="mt-4">
                             <a href="#">
-                                <h5 class="mb-2 text-lg font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                <h5 class="mb-2 text-xl font-semibold tracking-tight line-clamp-2 text-gray-900">
                                     {{ $event->title }}
                                 </h5>
                             </a>
-                            <div class="flex items-center mt-4 text-xs 2xl:text-sm">
-                                <ion-icon name="calendar-outline" class="text-primary me-2"></ion-icon>
+                            <div class="flex items-center mt-4 text-sm 2xl:text-md">
+                                <ion-icon name="calendar-outline" class="text-primary me-2 w-4 h-4"></ion-icon>
                                 <span class="text-gray-400">
                                     {{ date('d F Y', strtotime($event->event_date)) }}
                                 </span>
                             </div>
-                            <div class="flex items-center  text-xs 2xl:text-sm">
-                                <ion-icon name="time-outline" class="text-primary me-2"></ion-icon>
+                            <div class="flex items-center  text-sm 2xl:text-sm">
+                                <ion-icon name="time-outline" class="text-primary me-2 w-4 h-4"></ion-icon>
                                 <span class="text-gray-400">
                                     {{ date('H:i'), strtotime($event->event_time) }} WIB
                                 </span>
+                            </div>
+                            <div class="text-gray-400 text-xs mt-4 line-clamp-1 hover:line-clamp-2">
+                                {{ $event->location }}
                             </div>
                             <div class="mt-6 flex justify-between items-end">
                                 <div>
