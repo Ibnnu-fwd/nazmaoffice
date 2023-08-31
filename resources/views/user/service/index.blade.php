@@ -58,7 +58,7 @@
                                 <div>
                                     <div
                                         class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg">
-                                        <ion-icon name="price-tag-outline" class="text-2xl"></ion-icon>
+                                        <ion-icon name="pricetag-outline" class="text-2xl"></ion-icon>
                                     </div>
                                     <p class="mt-4 text-lg font-medium leading-6 text-black">
                                         Terjangkau
@@ -90,7 +90,7 @@
                                 <div>
                                     <div
                                         class="flex items-center justify-center w-12 h-12 bg-primary text-white rounded-lg">
-                                        <ion-icon name="people-circle-outline" class="text-2xl"></ion-icon>
+                                        <ion-icon name="ribbon-outline" class="text-2xl"></ion-icon>
                                     </div>
                                     <p class="mt-4 text-lg font-medium leading-6 text-black">
                                         Profesional
