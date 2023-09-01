@@ -71,7 +71,7 @@
             class="fixed z-50 flex flex-col md:flex-row mt-20 justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-6xl left-1/2 top-6">
             <div class="flex
     flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0">
-                <a href="https://flowbite.com/"
+                <a href="#" onclick="event.preventDefault();"
                     class="flex items-center mb-2 border-gray-200 md:pr-4 md:mr-4 md:border-r md:mb-0">
                     <img src="{{ asset('assets/images/logo circle.png') }}" class="h-10 mr-2" alt="Flowbite Logo">
                     <span class="self-center text-lg font-semibold whitespace-nowrap text-gray-400">
@@ -86,7 +86,7 @@
             <div class="flex items-center flex-shrink-0">
                 @php
                     $companyLandingSetting = \App\Models\CompanyLandingSetting::first();
-                    $message = "Halo Admin Nazma Wedding Planner, saya ingin melakukan konsultasi gratis di Jum'at ini";
+                    $message = "Halo Admin Nazma OFfice, saya ingin melakukan konsultasi gratis di Jum'at ini";
                 @endphp
                 <a href="
             https://api.whatsapp.com/send?phone={{ $companyLandingSetting->office_phone }}&text={{ $message }}
