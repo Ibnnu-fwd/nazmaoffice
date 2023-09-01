@@ -302,11 +302,11 @@
         </p>
         <div class="">
             <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8" data-aos="fade-up">
-                <div class="mt-6 grid gap-5 md:gap-0.5 md:grid-flow-col lg:mt-8 swiper-container">
+                <div class="mt-6 grid gap-5 md:grid-flow-col lg:mt-8 swiper-container">
                     <div class="swiper-wrapper">
                         @foreach ($partners as $partner)
-                            <div class="swiper-slide flex justify-center col-span-1 px-8">
-                                <img class="max-h-12 blur-mode"
+                            <div class="swiper-slide flex justify-center col-span-1">
+                                <img class="blur-mode w-full h-20 object-contain"
                                     src="{{ asset('storage/partner/' . $partner->image) }}" alt="Partner Logo" />
                             </div>
                         @endforeach
@@ -498,7 +498,7 @@
         <script>
             let swiper = new Swiper(".swiper-container", {
                 slidesPerView: "auto",
-                spaceBetween: 10,
+                spaceBetween: 2,
                 loop: true,
                 autoplay: {
                     delay: 2500,
