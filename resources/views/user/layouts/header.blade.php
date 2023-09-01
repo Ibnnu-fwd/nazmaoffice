@@ -89,7 +89,7 @@
                     $message = "Halo Admin Nazma OFfice, saya ingin melakukan konsultasi gratis di Jum'at ini";
                 @endphp
                 <a href="
-            https://api.whatsapp.com/send?phone={{ $companyLandingSetting->office_phone }}&text={{ $message }}
+            https://api.whatsapp.com/send?phone={{ $companyLandingSetting->personal_phone }}&text={{ $message }}
         "
                     target="_blank"
                     class="px-5 py-2 mr-2 text-xs font-medium text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
