@@ -17,15 +17,15 @@
                                 </p>
                             </div>
                             <div class="flex items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
-                                <a href="#"
+                                <a href="#benefit"
                                     class="items-center justify-center w-fit px-8 py-3  text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
                                     Jelajahi
                                 </a>
-                                <a href="#"
+                                {{-- <a href="#"
                                     class="inline-flex border border-gray-200 px-6 py-3 rounded-full items-center justify-center text-md text-black duration-200 hover:text-blue-500 focus:outline-none focus-visible:outline-gray-600">
                                     Tonton Teaser <ion-icon name="play-circle-outline"
                                         class="ml-2 text-primary text-xl"></ion-icon>
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
     </section>
 
     {{-- Benefit --}}
-    <section class="bg-white">
+    <section class="bg-white" id="benefit">
         <div class="relative items-center w-full px-5 py-24 mx-auto md:px-12 2xl:px-0 max-w-7xl lg:py-24">
             <div>
                 <div class="max-w-2xl mx-auto">

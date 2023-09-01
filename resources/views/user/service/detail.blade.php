@@ -18,8 +18,12 @@
                             </p>
                         </div>
                         <div class="flex items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
+                            @php
+                                $message = "Halo Admin NaZMa Office, saya ingin bertanya tentang layanan $service->title";
+                                $phone = $service->phone;
+                            @endphp
                             <a href="
-                            https://api.whatsapp.com/send?phone=62895389141779&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20{{ $service->phone }}
+                            https://api.whatsapp.com/send?phone={{ $phone }}&text={{ $message }}
                             "
                                 target="_blank"
                                 class="items-center justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
