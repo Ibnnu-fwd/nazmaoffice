@@ -11,6 +11,8 @@
                 line-height: 1.2;
             }
         </style>
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     @endpush
 
     {{-- Hero --}}
@@ -298,18 +300,18 @@
         <p class="text-xl text-black tracking-tight text-center px-10 md:px-0">
             Lebih dari <strong>100+ mitra</strong> tumbuh bersama NaZMa Office
         </p>
-        <div>
-            <div class="">
-                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8">
-                    <div class="mt-6 grid gap-5 md:gap-0.5 md:grid-flow-col lg:mt-8" data-aos="fade-up">
+        <div class="">
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8" data-aos="fade-up">
+                <div class="mt-6 grid gap-5 md:gap-0.5 md:grid-flow-col lg:mt-8 swiper-container">
+                    <div class="swiper-wrapper">
                         @foreach ($partners as $partner)
-                            <div class="flex justify-center col-span-1 px-8">
+                            <div class="swiper-slide flex justify-center col-span-1 px-8">
                                 <img class="max-h-12 blur-mode"
-                                    src="{{ asset('storage/partner/' . $partner->image) }}"
-                                    class="w-full h-20 object-cover object-center" alt=" logo">
+                                    src="{{ asset('storage/partner/' . $partner->image) }}" alt="Partner Logo" />
                             </div>
                         @endforeach
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -491,6 +493,37 @@
     </section>
 
     @push('js-internal')
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script>
+            let swiper = new Swiper(".swiper-container", {
+                slidesPerView: "auto",
+                spaceBetween: 10,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+        </script>
     @endpush
 
 </x-guest-layout>
