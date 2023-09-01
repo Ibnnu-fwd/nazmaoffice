@@ -135,51 +135,40 @@
 
 
     {{-- Project --}}
-    <section class="">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-24 2xl:px-0">
-            <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-                <h2 class="mb-4 text-2xl tracking-tight font-semibold text-gray-900">
-                    Proyek yang telah kami kerjakan
-                </h2>
-            </div>
-            <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-6">
-                @forelse ($service->serviceProjects as $project)
-                    <div class="bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
-                        data-aos-delay="300" data-aos-duration="1000">
-                        <a href="#">
-                            <img class="rounded-xl" src="{{ asset('storage/service_project/' . $project->image_1) }}"
-                                alt="" />
-                        </a>
-                        <div class="mt-4 text-start">
-                            <a href="#" onclick="event.preventDefault();">
-                                <h5
-                                    class="mb-2 text-md 2xl:text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
-                                    {{ $project->title }}
-                                </h5>
+    @if (!empty($service->serviceProjects) && count($service->serviceProjects) > 0)
+        <section class="">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-24 2xl:px-0">
+                <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
+                    <h2 class="mb-4 text-2xl tracking-tight font-semibold text-gray-900">
+                        Proyek yang telah kami kerjakan
+                    </h2>
+                </div>
+                <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-6">
+                    @forelse ($service->serviceProjects as $project)
+                        <div class="bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
+                            data-aos-delay="300" data-aos-duration="1000">
+                            <a href="#">
+                                <img class="rounded-xl"
+                                    src="{{ asset('storage/service_project/' . $project->image_1) }}" alt="" />
                             </a>
-                            <p class="font-normal text-xs 2xl:text-md text-gray-400">
-                                {{ date('d F Y', strtotime($project->created_at)) }}
-                            </p>
+                            <div class="mt-4 text-start">
+                                <a href="#" onclick="event.preventDefault();">
+                                    <h5
+                                        class="mb-2 text-md 2xl:text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                        {{ $project->title }}
+                                    </h5>
+                                </a>
+                                <p class="font-normal text-xs 2xl:text-md text-gray-400">
+                                    {{ date('d F Y', strtotime($project->created_at)) }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                @empty
-                    <div></div>
-                    <div class="bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
-                        data-aos-delay="300" data-aos-duration="1000">
-                        <div class="mt-4 text-center">
-                            <a href="#" onclick="event.preventDefault();">
-                                <h5
-                                    class="mb-2 text-md 2xl:text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
-                                    Belum ada proyek
-                                </h5>
-                            </a>
-                        </div>
-                    </div>
-                    <div></div>
-                @endforelse
+                    @empty
+                    @endforelse
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     {{-- Offering --}}
     <section class="bg-white py-24">
@@ -199,7 +188,7 @@
                 https://api.whatsapp.com/send?phone=62895389141779&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20{{ $service->phone }}
                 "
                     target="_blank"
-                    class="items-center text-xs 2xl:text-md justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
+                    class="items-center 2xl:text-md justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
                     Daftar Sekarang
                 </a>
             </div>
