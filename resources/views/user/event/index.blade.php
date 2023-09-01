@@ -14,11 +14,10 @@
                                 </p>
                                 <p
                                     class="text-2xl font-semibold leading-snug mt-2 tracking-tight text-black sm:text-6xl">
-                                    Lebih Dari <br>
-                                    Sekedar Event
+                                    {{ $eventSetting->header_title }}
                                 </p>
                                 <p class="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                                    Tumbuh bersama untuk menghadapi tantangan ekonomi dan perkembangan bisnis
+                                    {{ $eventSetting->description }}
                                 </p>
                             </div>
                             <div class="flex items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
@@ -37,7 +36,7 @@
                     <div class="order-first hidden lg:block w-full mt-12 aspect-square lg:mt-0" data-aos="fade-left"
                         data-aos-duration="1000">
                         <img class="object-cover object-center w-full mx-auto lg:ml-auto" alt="hero"
-                            src="{{ asset('assets/images/event-hero.svg') }}">
+                            src="{{ asset('storage/event/setting/' . $eventSetting->hero_image) }}">
                     </div>
                 </div>
             </div>

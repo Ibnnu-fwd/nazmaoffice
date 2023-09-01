@@ -20,8 +20,9 @@ class EventController extends Controller
     public function index()
     {
         return view('user.event.index', [
-            'events'     => $this->event->getAll(),
-            'eventTypes' => Event::EVENT_TYPES
+            'events'       => $this->event->getAll(),
+            'eventTypes'   => Event::EVENT_TYPES,
+            'eventSetting' => $this->event->getSetting()
         ]);
     }
 
