@@ -33,7 +33,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="order-first hidden lg:block w-full mt-12 aspect-square lg:mt-0" data-aos="fade-left"
+                    <div class="order-first hidden lg:block w-full mt-12 lg:mt-0" data-aos="fade-left"
                         data-aos-duration="1000">
                         <img class="object-cover object-center w-full mx-auto lg:ml-auto" alt="hero"
                             src="{{ asset('storage/event/setting/' . $eventSetting->hero_image) }}">
