@@ -52,7 +52,7 @@
     {{-- Study Case --}}
     <section class="py-20 bg-white" id="content" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
         <div class="max-w-3xl mx-auto px-8 lg:px-12 2xl:px-0 ">
-            @if ($event->study_case)
+            @if ($event->study_case != null)
                 <div>
                     <h1 class="text-2xl font-semibold tracking-tight text-gray-600">Studi Kasus:
                         {{ $event->study_case }}
