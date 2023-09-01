@@ -11,7 +11,7 @@
                         <div class="max-w-xl text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
                             <div>
                                 <p
-                                    class="text-2xl font-semibold leading-snug mt-2 tracking-tight text-black md:text-4xl xl:text-6xl">
+                                    class="text-2xl font-bold leading-snug mt-2 tracking-tight text-black md:text-4xl xl:text-6xl">
                                     Temukan Potensi Bisnis Anda Bersama Kami
                                 </p>
                                 <p class="max-w-xl mt-4 text-base tracking-tight text-gray-400">
@@ -47,7 +47,7 @@
         <div class="relative items-center w-full px-5 py-24 mx-auto md:px-12 2xl:px-0 max-w-7xl lg:py-24">
             <div>
                 <div class="max-w-2xl mx-auto">
-                    <p class="text-xl font-semibold tracking-tight text-black text-center">
+                    <p class="text-2xl font-bold tracking-tight text-black text-center">
                         Percayakan Pada Kami <br>
                         Membantu Bisnis Anda
                     </p>
@@ -67,7 +67,7 @@
                                         Terjangkau
                                     </p>
                                 </div>
-                                <div class="mt-4 text-xs 2xl:text-md text-gray-500">
+                                <div class="mt-4 text-xs 2xl:text-base text-gray-500">
                                     Dapatkan tawaran berbagai pilihan produk dengan harga yang terjangkau untuk semua
                                     kalangan
                                 </div>
@@ -83,7 +83,7 @@
                                         Terpercaya
                                     </p>
                                 </div>
-                                <div class="mt-4 text-xs 2xl:text-md text-gray-500">
+                                <div class="mt-4 text-xs 2xl:text-base text-gray-500">
                                     Kami telah beroperasi lebih dari 15 tahun dan telah berhasil membantu ratusan UMKM
                                     untuk berkembang dan naik level
                                 </div>
@@ -99,7 +99,7 @@
                                         Profesional
                                     </p>
                                 </div>
-                                <div class="mt-4 text-xs 2xl:text-md text-gray-500">
+                                <div class="mt-4 text-xs 2xl:text-base text-gray-500">
                                     Nazma Office memiliki mentor dan staff bersertifikasi dan berpengalaman di
                                     bidangnya.
                                 </div>
@@ -115,7 +115,7 @@
                                         Kepuasan Klien
                                     </p>
                                 </div>
-                                <div class="mt-4 text-xs 2xl:text-md text-gray-500">
+                                <div class="mt-4 text-xs 2xl:text-base text-gray-500">
                                     Lebih dari 90% pelanggan terdahulu merasa puas dengan produk yang kami tawarkan.
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
 
     {{-- Services --}}
     <section>
-        <p class="text-xl font-semibold text-black text-center pt-12 mb-6 mx-2 md:mx-0" data-aos="fade-up">
+        <p class="text-2xl font-bold text-black text-center pt-12 mb-6 mx-2 md:mx-0" data-aos="fade-up">
             Layanan Yang Kami Miliki
         </p>
         <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
@@ -139,7 +139,7 @@
                         <ul class="md:flex gap-3 text-gray-500 justify-center">
                             <li class="-mb-px">
                                 <a @click.prevent="tab = '{{ $serviceCategories->first()->id }}'" href="#"
-                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-md rounded-full text-white bg-primary"
+                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-base rounded-full text-white bg-primary"
                                     :class="{ '  text-white bg-primary': tab === '{{ $serviceCategories->first()->id }}' }">
                                     {{ $serviceCategories->first()->title }}
                                 </a>
@@ -149,7 +149,7 @@
                             @foreach ($serviceCategories->skip(1) as $serviceCategory)
                                 <li class="-mb-px">
                                     <a @click.prevent="tab = '{{ $serviceCategory->id }}'" href="#"
-                                        class="inline-block px-8 py-2.5 text-xs 2xl:text-md rounded-full text-white bg-gray-200"
+                                        class="inline-block px-8 py-2.5 text-xs 2xl:text-base rounded-full text-white bg-gray-200"
                                         :class="{ '  text-white bg-primary': tab === '{{ $serviceCategory->id }}' }">
                                         {{ $serviceCategory->title }}
                                     </a>
@@ -173,15 +173,15 @@
                                                 </div>
                                                 <a href="{{ route('user.service.detail', $service->id) }}">
                                                     <h5
-                                                        class="mb-2 mt-4 text-xs 2xl:text-md font-semibold tracking-tight text-gray-900">
+                                                        class="mb-2 mt-4 text-xs 2xl:text-base font-semibold tracking-tight text-gray-900">
                                                         {{ $service->title }}
                                                     </h5>
                                                 </a>
-                                                <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                                <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-base">
                                                     {{ $service->description }}
                                                 </p>
                                                 <a href="{{ route('user.service.detail', $service->id) }}"
-                                                    class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-md">
+                                                    class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-base">
                                                     Selengkapnya
                                                     <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                         size="small"></ion-icon>
@@ -203,7 +203,7 @@
         <div class="relative items-center w-full px-5 pt-24 mx-auto md:px-12 2xl:px-0 max-w-7xl lg:py-24">
             <div>
                 <div class="max-w-2xl mx-auto">
-                    <p class="text-xl font-semibold tracking-tight text-black text-center">
+                    <p class="text-2xl font-bold tracking-tight text-black text-center">
                         Jadwal Proyek NaZMa
                     </p>
                 </div>
@@ -216,7 +216,7 @@
                                 <div data-aos="fade-up" data-aos-duration="1000">
                                     <div>
                                         <div
-                                            class="flex items-center justify-center text-xs 2xl:text-md font-medium w-full py-3
+                                            class="flex items-center justify-center text-xs 2xl:text-base font-medium w-full py-3
                                         {{ $loop->first == 1 ? 'bg-primary text-white' : 'bg-gray-200 text-gray-400 hover:bg-primary hover:text-white' }} rounded-full">
                                             {{ $key }}
                                         </div>
@@ -227,32 +227,32 @@
                                                 <div class="">
                                                     <a href="#">
                                                         <h5
-                                                            class="mb-2 text-xs 2xl:text-md font-medium tracking-tight line-clamp-2 text-gray-900">
+                                                            class="mb-2 text-xs 2xl:text-base font-medium tracking-tight line-clamp-2 text-gray-900">
                                                             {{ $project->title }}
                                                         </h5>
                                                     </a>
-                                                    <p class="mb-3 text-xs 2xl:text-md font-normal text-gray-500">
+                                                    <p class="mb-3 text-xs 2xl:text-base font-normal text-gray-500">
                                                         @if ($project->due_at)
                                                             <p
-                                                                class="mb-3 text-xs 2xl:text-md font-normal text-gray-500">
+                                                                class="mb-3 text-xs 2xl:text-base font-normal text-gray-500">
                                                                 {{ date('d F Y', strtotime($project->taken_at)) }} -
                                                                 {{ date('d F Y', strtotime($project->due_at)) }}
                                                             </p>
                                                         @else
                                                             <p
-                                                                class="mb-3 text-xs 2xl:text-md font-normal text-gray-500">
+                                                                class="mb-3 text-xs 2xl:text-base font-normal text-gray-500">
                                                                 {{ date('d F Y', strtotime($project->taken_at)) }}
                                                             </p>
                                                         @endif
                                                     </p>
                                                     <div class="mt-6 flex justify-between">
                                                         <div
-                                                            class="py-1.5 px-5 text-xs 2xl:text-md rounded-full bg-gray-100 text-gray-400">
+                                                            class="py-1.5 px-5 text-xs 2xl:text-base rounded-full bg-gray-100 text-gray-400">
                                                             {{ $project->tag }}
                                                         </div>
                                                         <div class="flex items-center">
                                                             <div class="w-3 h-3 rounded-full bg-success mr-2"></div>
-                                                            <span class="text-gray-400 text-xs 2xl:text-md">
+                                                            <span class="text-gray-400 text-xs 2xl:text-base">
                                                                 {{ $project->status }}
                                                             </span>
                                                         </div>

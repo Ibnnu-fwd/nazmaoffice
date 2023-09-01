@@ -32,7 +32,7 @@
                         We'll Finish It
                         <br>With Exellence
                     </h1>
-                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
+                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block text-xs 2xl:text-base">
                         Namun, kalau anda mau belajar sambil berkarya, suka tantangan, siap mengikuti perubahan dengan
                         cepat, ingin berinovasi dan punya visi yang sama dalam mengedukasi Indonesia, maka kami adalah
                         tempat yang tepat untuk anda berkembang
@@ -50,7 +50,7 @@
                     <h1 class="font-semibold text-2xl md:text-3xl lg:text-7xl" id="header-title">
                         Dengan Kualitas Terbaik
                     </h1>
-                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
+                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block text-xs 2xl:text-base">
                         Kami adalah perusahaan yang bergerak di bidang jasa konsultan IT dan layanan manajemen. Kami
                         siap membantu Anda dalam mengembangkan bisnis Anda dengan teknologi informasi yang tepat.
                     </p>
@@ -67,7 +67,7 @@
                     <h1 class="font-semibold text-2xl md:text-3xl lg:text-7xl" id="header-title">
                         Team Profesional
                     </h1>
-                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
+                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block text-xs 2xl:text-base">
                         Kami memiliki tim yang berpengalaman dan profesional dalam bidangnya masing-masing. Kami
                         siap membantu Anda dalam mengembangkan bisnis Anda dengan teknologi informasi yang tepat.
                     </p>
@@ -115,7 +115,7 @@
     {{-- Insight --}}
     <section class="bg-white">
         <div data-aos="fade-up" data-aos-duration="1000">
-            <p class="text-2xl font-semibold text-black text-center pt-24 mb-2 mx-2 md:mx-0">
+            <p class="text-2xl font-bold text-black text-center pt-24 mb-2 mx-2 md:mx-0">
                 Terima Kasih Telah Mempercayai Kami
             </p>
             <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-4 lg:grid-cols-4 max-w-4xl mx-auto">
@@ -125,7 +125,7 @@
                     <p class="mt-3 text-3xl font-semibold leading-6 text-black text-center">
                         1.115
                     </p>
-                    <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                    <p class="mt-3 text-xs 2xl:text-base text-center text-gray-500">
                         Mitra Usaha
                     </p>
                 </figure>
@@ -135,7 +135,7 @@
                     <p class="mt-3 text-3xl font-semibold leading-6 text-black text-center">
                         310
                     </p>
-                    <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                    <p class="mt-3 text-xs 2xl:text-base text-center text-gray-500">
                         Event Edukatif
                     </p>
                 </figure>
@@ -145,7 +145,7 @@
                     <p class="mt-3 text-3xl font-semibold leading-6 text-black text-center">
                         500+
                     </p>
-                    <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                    <p class="mt-3 text-xs 2xl:text-base text-center text-gray-500">
                         Program Sertifikasi
                     </p>
                 </figure>
@@ -155,7 +155,7 @@
                     <p class="mt-3 text-3xl font-semibold leading-6 text-black text-center">
                         10.000+
                     </p>
-                    <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
+                    <p class="mt-3 text-xs 2xl:text-base text-center text-gray-500">
                         Peserta Event
                     </p>
                 </figure>
@@ -165,7 +165,7 @@
 
     {{-- Services --}}
     <section>
-        <p class="text-xl font-semibold text-black text-center pt-12 mb-6 mx-2 md:mx-0" data-aos="fade-up">
+        <p class="text-2xl font-bold text-black text-center pt-12 mb-6 mx-2 md:mx-0" data-aos="fade-up">
             Layanan Yang Kami Miliki
         </p>
         <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
@@ -176,7 +176,7 @@
                         <ul class="md:flex gap-3 text-gray-500 justify-center">
                             <li class="-mb-px">
                                 <a @click.prevent="tab = '{{ $serviceCategories->first()->id }}'" href="#"
-                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-md rounded-full text-white bg-primary"
+                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-base rounded-full text-white bg-primary"
                                     :class="{ '  text-white bg-primary': tab === '{{ $serviceCategories->first()->id }}' }">
                                     {{ $serviceCategories->first()->title }}
                                 </a>
@@ -186,7 +186,7 @@
                             @foreach ($serviceCategories->skip(1) as $serviceCategory)
                                 <li class="-mb-px">
                                     <a @click.prevent="tab = '{{ $serviceCategory->id }}'" href="#"
-                                        class="inline-block px-8 py-2.5 text-xs 2xl:text-md rounded-full text-white bg-gray-200"
+                                        class="inline-block px-8 py-2.5 text-xs 2xl:text-base rounded-full text-white bg-gray-200"
                                         :class="{ '  text-white bg-primary': tab === '{{ $serviceCategory->id }}' }">
                                         {{ $serviceCategory->title }}
                                     </a>
@@ -210,15 +210,15 @@
                                                 </div>
                                                 <a href="{{ route('user.service.detail', $service->id) }}">
                                                     <h5
-                                                        class="mb-2 mt-4 text-xs 2xl:text-md font-semibold tracking-tight text-gray-900">
+                                                        class="mb-2 mt-4 text-xs 2xl:text-base font-semibold tracking-tight text-gray-900">
                                                         {{ $service->title }}
                                                     </h5>
                                                 </a>
-                                                <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                                <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-base">
                                                     {{ $service->description }}
                                                 </p>
                                                 <a href="{{ route('user.service.detail', $service->id) }}"
-                                                    class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-md">
+                                                    class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-base">
                                                     Selengkapnya
                                                     <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                         size="small"></ion-icon>
@@ -244,23 +244,23 @@
                         <div class="flex flex-col m-auto md:order-first" data-aos="fade-right">
                             <div class="max-w-xl">
                                 <div>
-                                    <p class="text-xl font-semibold tracking-tight text-black">
+                                    <p class="text-2xl font-bold tracking-tight text-black">
                                         Tentang Kami
                                     </p>
                                 </div>
                             </div>
                             <div class="mt-6 lg:max-w-7xl" data-aos="fade-right" data-aos-duration="1000">
-                                <p class="text-gray-400 text-xs 2xl:text-md">
+                                <p class="text-gray-400 text-xs 2xl:text-base">
                                     {{ $companyLandingSetting->about_us }}
                                 </p>
                                 <ul role="list" class="grid md:grid-cols-2 gap-4 list-none lg:gap-6">
                                     <li>
                                         <div>
-                                            <p class="mt-5 text-md font-semibold leading-6 text-black">
+                                            <p class="mt-5 text-base font-semibold leading-6 text-black">
                                                 Produk unggulan kami
                                             </p>
                                         </div>
-                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-md text-gray-400">
+                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-base text-gray-400">
                                             <li>Penjualan hardware</li>
                                             <li>Pengembangan perangkat lunak</li>
                                             <li>Pelatihan IT</li>
@@ -270,11 +270,11 @@
                                     </li>
                                     <li>
                                         <div>
-                                            <p class="mt-5 text-md font-semibold leading-6 text-black">
+                                            <p class="mt-5 text-base font-semibold leading-6 text-black">
                                                 Di bidang konsultan:
                                             </p>
                                         </div>
-                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-md text-gray-400">
+                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-base text-gray-400">
                                             <li>Pelatihan InHouse</li>
                                             <li>Public course</li>
                                             <li>Sertifikasi</li>
@@ -320,12 +320,12 @@
 
     {{-- Testimonials --}}
     <section class="py-12 bg-white">
-        <p class="text-xl font-semibold tracking-tight text-black text-center">
+        <p class="text-2xl font-bold tracking-tight text-black text-center">
             Apa Kata Mereka
         </p>
         <div id="testimonial" class="mt-8">
             <div class="carousel carousel-center p-4 space-x-4 w-full md:place-content-center" data-aos="fade-up"
-                data-aos-duration="1000">
+                data-aos-delay="500">
                 @foreach ($testimonials as $testimonial)
                     <div id="item{{ $testimonial->id }}" class="carousel-item">
                         <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
@@ -335,20 +335,20 @@
                                     alt="">
                                 <div class="flex items-center">
                                     <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
-                                    <span class="text-xs 2xl:text-md text-primary">
+                                    <span class="text-xs 2xl:text-base text-primary">
                                         {{ number_format($testimonial->rating, 1, '.', ',') }}
                                     </span>
                                 </div>
                             </div>
                             <div>
-                                <h5 class="text-md font-medium tracking-tight text-gray-900">
+                                <h5 class="2xl:text-base font-semibold tracking-tight text-gray-900">
                                     {{ ucwords($testimonial->fullname) }}
                                 </h5>
-                                <span class="text-xs 2xl:text-md -mt-2 tracking-tight text-gray-400">
+                                <span class="text-xs 2xl:text-base -mt-2 tracking-tight text-gray-400">
                                     {{ ucwords($testimonial->job) }}
                                 </span>
                             </div>
-                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-base">
                                 {{ $testimonial->testimonial }}
                             </p>
                         </div>
@@ -360,10 +360,10 @@
 
     {{-- Project --}}
     <section class="py-12">
-        <p class="text-xl font-semibold tracking-tight text-black text-center">
+        <p class="text-2xl font-bold tracking-tight text-black text-center">
             Proyek Kami
         </p>
-        <p class="text-gray-400 text-center text-xs 2xl:text-md">
+        <p class="text-gray-400 text-center text-xs 2xl:text-base">
             Kami telah berkontribusi dalam berbagai kegiatan untuk memajukan usaha <br> individu, kelompok, maupun UMKM
         </p>
         <div class="max-w-7xl mx-auto px-4 mt-16">
@@ -380,11 +380,11 @@
                                     {{ $serviceProject->title }}
                                 </h5>
                                 <p
-                                    class="font-normal text-gray-400 mb-4 line-clamp-3 hover:line-clamp-none text-xs 2xl:text-md">
+                                    class="font-normal text-gray-400 mb-4 line-clamp-3 hover:line-clamp-none text-xs 2xl:text-base">
                                     {{ $serviceProject->description }}
                                 </p>
 
-                                <ul class="space-y-1 text-left text-gray-500 text-xs 2xl:text-md">
+                                <ul class="space-y-1 text-left text-gray-500 text-xs 2xl:text-base">
                                     <li class="flex items-center space-x-3">
                                         <ion-icon name="calendar"
                                             class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
@@ -401,7 +401,7 @@
                                     </li>
                                 </ul>
                                 {{-- <button
-                                    class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-md font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                    class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-base font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                                     Selengkapnya
                                 </button> --}}
                             </div>
@@ -417,39 +417,50 @@
         <div class="max-w-7xl px-4 md:px-8 mx-auto">
             <div class="flex justify-between items-center">
                 <div data-aos="fade-right" data-aos-duration="1000">
-                    <p class="font-semibold tracking-tight text-black text-xl">Informasi Terbaru</p>
-                    <p class="text-gray-400 text-xs 2xl:text-md">
-                        Kami melakukan press release setiap kegiatan. Jangan sampai ketinggalan
+                    <p class="font-bold tracking-tight text-black text-2xl">Informasi Terbaru</p>
+                    <p class="text-gray-400 text-xs 2xl:text-base">
+                        Kami terus berinovasi untuk memberikan informasi terbaru kepada Anda
                     </p>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000">
                     <a href="{{ route('user.blog') }}"
-                        class="inline-flex items-center justify-center px-3 py-2 text-xs 2xl:text-md text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
+                        class="inline-flex items-center justify-center px-3 py-2 text-xs 2xl:text-base text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black font-medium">
                         Lihat Semua
                     </a>
                 </div>
             </div>
 
-            <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="grid gap-6 py-12 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-duration="1000">
                 @forelse ($blogs as $blog)
                     <a href="{{ route('user.blog.detail', $blog->slug) }}" data-aos="fade-up"
                         data-aos-duration="1000" data-aos-delay="{{ $loop->iteration * 300 }}">
-                        <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center"
+                        <img class="w-full bg-gray-200 rounded-xl h-60 blur-mode object-cover object-center mb-4"
                             src="{{ asset('storage/blogs/thumbnail/' . $blog->thumbnail) }}" alt="">
 
-                        <p class="mt-5 text-md font-semibold leading-6 text-black">
-                            {{ $blog->title }}
-                        </p>
-                        <div class="mt-3 text-xs 2xl:text-md text-gray-500 line-clamp-3">
-                            {!! $blog->content !!}
-                        </div>
-                        <hr class="text-gray-300 my-4 opacity-30">
-                        <p class="capitalize text-gray-400 text-xs 2xl:text-md">
+                        <p class="capitalize text-gray-400 text-xs 2xl:text-base mt-2">
                             {{ date('d F Y', strtotime($blog->published_date)) }}
                         </p>
+
+                        <p class="mt-2 text-lg font-semibold leading-6 text-black">
+                            {{ $blog->title }}
+                        </p>
+                        <div class="my-3 text-xs 2xl:text-base text-gray-500 line-clamp-3">
+                            {!! $blog->content !!}
+                        </div>
+
+                        @php
+                            $tags = explode('-', $blog->tag);
+                        @endphp
+
+                        @foreach ($tags as $item)
+                            <span
+                                class="bg-gray-50 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full mb-2">
+                                {{ $item }}
+                            </span>
+                        @endforeach
                     </a>
                 @empty
-                    <p class="text-center text-gray-400 text-xs 2xl:text-md">
+                    <p class="text-center text-gray-400 text-xs 2xl:text-base">
                         Belum ada blog
                     </p>
                 @endforelse
@@ -459,10 +470,10 @@
 
     {{-- Faq --}}
     <section class="py-12 max-w-2xl mx-auto">
-        <p class="text-xl font-semibold tracking-tight text-black text-center">
+        <p class="text-2xl font-bold tracking-tight text-black text-center">
             Pertanyaan Umum
         </p>
-        <p class="text-center text-xs 2xl:text-md text-gray-400">
+        <p class="text-center text-xs 2xl:text-base text-gray-400">
             Beberapa pertanyaan yang sering diajukan untuk layanan pada website NaZMa Office.
         </p>
 
@@ -472,7 +483,7 @@
                 <h2 id="accordion-arrow-icon-heading-{{ $faq->id }}" class="rounded-lg mb-3 bg-white"
                     data-aos="fade-up" data-aos-duration="1000">
                     <button type="button"
-                        class="flex items-center text-xs 2xl:text-md justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                        class="flex items-center text-xs 2xl:text-base justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
                         data-accordion-target="#accordion-arrow-icon-body-{{ $faq->id }}" aria-expanded="false"
                         aria-controls="accordion-arrow-icon-body-{{ $faq->id }}">
                         <span>{{ $faq->question }}</span>
@@ -483,7 +494,7 @@
                 <div id="accordion-arrow-icon-body-{{ $faq->id }}" class="hidden mb-4"
                     aria-labelledby="accordion-arrow-icon-heading-{{ $faq->id }}">
                     <div class="p-5 bg-white rounded-lg">
-                        <p class="text-gray-400 text-xs 2xl:text-md">
+                        <p class="text-gray-400 text-xs 2xl:text-base">
                             {{ $faq->answer }}
                         </p>
                     </div>

@@ -10,7 +10,7 @@
                             <p class="text-danger">
                                 NaZMa Event
                             </p>
-                            <p class="text-2xl font-semibold leading-snug mt-2 tracking-tight text-black sm:text-4xl">
+                            <p class="text-2xl font-bold leading-snug mt-2 tracking-tight text-black sm:text-4xl">
                                 {{ $event->title }}
                             </p>
                             <p class="max-w-xl mt-4 text-base tracking-tight text-gray-400">
@@ -23,14 +23,14 @@
                                 class="items-center
                                 justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2
                                 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white
-                                hover:border-purple-600 lg:w-auto text-md">
+                                hover:border-purple-600 lg:w-auto text-base font-medium">
                                 Daftar Sekarang
                             </a>
                             <a href="#content"
                                 class="items-center
                                 justify-center w-fit px-6 py-3 text-center text-gray-400 border-2 border-transparent duration-200 bg-gray-100
                                 rounded-full inline-flex hover:bg-gray300 hover:text-gray-900
-                                hover:border-gray-100 lg:w-auto text-md">
+                                hover:border-gray-100 lg:w-auto text-base font-medium">
                                 Selengkapnya
                             </a>
                         </div>
@@ -54,10 +54,10 @@
         <div class="max-w-3xl mx-auto px-8 lg:px-12 2xl:px-0 ">
             @if ($event->study_case != null || $event->study_case != '-')
                 <div>
-                    <h1 class="text-2xl font-semibold tracking-tight text-gray-600">Studi Kasus:
+                    <h1 class="text-2xl font-bold tracking-tight text-gray-600">Studi Kasus:
                         {{ $event->study_case }}
                     </h1>
-                    <p class="text-sm 2xl:text-md text-gray-400 mt-3">
+                    <p class="text-sm 2xl:text-base text-gray-400 mt-3">
                         {{ $event->study_case_description }}
                     </p>
                 </div>
@@ -65,11 +65,11 @@
 
             @if (!empty($event->eventSylabuses))
                 <div class="mt-8">
-                    <h1 class="text-xl font-semibold tracking-tight text-gray-600">
+                    <h1 class="text-xl font-bold tracking-tight text-gray-600">
                         Materi Yang
                         Akan Diajarkan
                     </h1>
-                    <p class="text-sm 2xl:text-md text-gray-400 mt-3">
+                    <p class="text-sm 2xl:text-base text-gray-400 mt-3">
                         Materi dibuat terstruktur sehingga
                         pembelajaranmu terarah
                     </p>
@@ -78,11 +78,8 @@
                 <div class=" space-y-4 mt-6">
                     @forelse ($event->eventSylabuses as $eventSylabus)
                         <div class="flex">
-                            <div
-                                class="text-gray-400 flex items-center justify-center text-md bg-slate-100 w-6 h-6 rounded-full">
-                                {{ $loop->iteration }}
-                            </div>
-                            <p class="ml-2 text-gray-400 text-md">
+                            <ion-icon name="checkmark-circle" class="text-success w-7 h-7"></ion-icon>
+                            <p class="ml-2 text-gray-400 text-base">
                                 {{ $eventSylabus->title }}
                             </p>
                         </div>
@@ -214,11 +211,11 @@
     <section class="bg-white py-20">
         <div class="max-w-3xl mx-auto px-8 lg:px-12 2xl:px-0 grid md:grid-cols-3">
             <div class="col-span-2">
-                <h1 class="text-xl xl:text-xl font-semibold mb-2">
+                <h1 class="text-xl xl:text-2xl font-bold mb-2">
                     Tiket Terbatas <br>
                     Jangan Sampai Ketinggalan
                 </h1>
-                <p class="text-gray-400 mb-4 lg:mb-0 text-xs 2xl:text-md">
+                <p class="text-gray-400 mb-4 lg:mb-0 text-xs 2xl:text-base">
                     Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan
                     dalam merancang logo
                 </p>
@@ -226,10 +223,10 @@
             <div class="flex items-center justify-start md:justify-end mt-6 md:mt-0">
                 <a href="https://api.whatsapp.com/send?phone={{ $event->phone }}&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20{{ rawurlencode($event->title) }}"
                     target="_blank"
-                    class="items-center
+                    class="items-center font-medium
                     justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2
                     border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white
-                    hover:border-purple-600 lg:w-auto text-md">
+                    hover:border-purple-600 lg:w-auto text-base">
                     Daftar Sekarang
                 </a>
             </div>

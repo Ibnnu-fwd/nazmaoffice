@@ -5,7 +5,7 @@
             <h1 class="text-2xl md:text-4xl font-semibold text-black">
                 Dokumentasi Kegiatan
             </h1>
-            <p class="text-gray-400 text-sm 2xl:text-md">
+            <p class="text-gray-400 text-sm 2xl:text-base">
                 Rangkaian peristiwa tahun ke tahun yang telah kami lewati
             </p>
         </div>
@@ -39,11 +39,11 @@
                             </a>
                             <div class="mt-4">
                                 <a href="#">
-                                    <h5 class="mb-2 text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                    <h5 class="mb-2 text-base font-semibold tracking-tight line-clamp-2 text-gray-900">
                                         {{ $gallery->title }}
                                     </h5>
                                 </a>
-                                <p class="font-normal text-gray-400 text-md">
+                                <p class="font-normal text-gray-400 text-base">
                                     {{ date('d F Y', strtotime($gallery->published_date)) }}
                                 </p>
                             </div>

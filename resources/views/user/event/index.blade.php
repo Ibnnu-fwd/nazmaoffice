@@ -12,8 +12,7 @@
                                 <p class="text-gray-400">
                                     Telah diikuti lebih dari 100+ unit usaha 🔥
                                 </p>
-                                <p
-                                    class="text-2xl font-semibold leading-snug mt-2 tracking-tight text-black sm:text-6xl">
+                                <p class="text-2xl font-bold leading-snug mt-2 tracking-tight text-black sm:text-6xl">
                                     {{ $eventSetting->header_title }}
                                 </p>
                                 <p class="max-w-xl mt-4 text-base tracking-tight text-gray-400">
@@ -22,7 +21,7 @@
                             </div>
                             <div class="flex items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
                                 <a href="#"
-                                    class="items-center justify-center w-fit px-6 py-3  text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-sm">
+                                    class="items-center justify-center w-fit px-6 py-3  text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-base font-medium">
                                     Selengkapnya
                                 </a>
                                 {{-- <a href="#"
@@ -46,7 +45,7 @@
     {{-- List Of Event --}}
     <section class="bg-white py-24">
         <div class="max-w-md mx-auto text-center px-4 md:px-0">
-            <h1 class="text-xl font-semibold text-black">
+            <h1 class="text-2xl font-bold text-black">
                 Daftar Event
             </h1>
         </div>
@@ -58,7 +57,7 @@
                     <ion-icon name="search-outline" class="text-gray-300 w-6 h-6"></ion-icon>
                 </div>
                 <input type="search" id="search" name="search"
-                    class="custom-input border border-gray-200 focus:border focus:border-gray-200 block w-full p-5 pl-14 text-md font-light text-gray-900 rounded-full"
+                    class="custom-input border border-gray-200 focus:border focus:border-gray-200 block w-full p-5 pl-14 text-base font-light text-gray-900 rounded-full"
                     placeholder="Cari" required>
             </div>
         </form>
@@ -82,23 +81,23 @@
                         @endif
                         <div class="mt-4">
                             <a href="#">
-                                <h5 class="mb-2 text-xl font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                <h5 class="mb-2 text-xl font-bold tracking-tight line-clamp-2 text-gray-900">
                                     {{ $event->title }}
                                 </h5>
                             </a>
-                            <div class="flex items-center mt-4 text-md font-light">
+                            <div class="flex items-center mt-4 text-base font-light">
                                 <ion-icon name="calendar-outline" class="text-primary me-2 w-4 h-4"></ion-icon>
                                 <span class="text-gray-400">
                                     {{ date('d F Y', strtotime($event->event_date)) }}
                                 </span>
                             </div>
-                            <div class="flex items-center text-md font-light">
+                            <div class="flex items-center text-base font-light">
                                 <ion-icon name="time-outline" class="text-primary me-2 w-4 h-4"></ion-icon>
                                 <span class="text-gray-400">
                                     {{ date('H:i'), strtotime($event->event_time) }} WIB
                                 </span>
                             </div>
-                            <div class="text-gray-400 text-md mt-4 line-clamp-2 hover:line-clamp-3">
+                            <div class="text-gray-400 text-base mt-4 line-clamp-2 hover:line-clamp-3">
                                 {{ $event->location }}
                             </div>
                             <div class="mt-6 flex justify-between items-end">
@@ -107,13 +106,13 @@
                                         <p class="text-gray-400 text-lg font-semibold mt-5">
                                             Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
                                     @else
-                                        <p class="text-sm text-danger animate-pulse line-through">
+                                        <p class="text-base text-danger animate-pulse line-through">
                                             Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
                                         <p class="text-gray-400 text-lg font-semibold">
                                             Rp.{{ number_format($event->discount, 0, ',', '.') }}</p>
                                     @endif
                                 </div>
-                                <div class="flex items-center text-xs 2xl:text-sm">
+                                <div class="flex items-center text-xs 2xl:text-base">
                                     <div class="w-3 h-3 rounded-full bg-success mr-2"></div>
                                     <span class="text-gray-400">
                                         Tersedia
@@ -128,7 +127,7 @@
 
             <div class="flex justify-center mt-10">
                 <button id="load-more"
-                    class="items-center justify-center w-fit px-6 py-3 text-center text-gray-400 duration-200 bg-gray-100 rounded-full inline-flex lg:w-auto text-xs 2xl:text-sm">
+                    class="items-center justify-center w-fit px-6 py-3 text-center text-gray-400 duration-200 bg-gray-100 rounded-full inline-flex font-medium lg:w-auto text-xs 2xl:text-base">
                     Muat Lebih Banyak
                 </button>
             </div>

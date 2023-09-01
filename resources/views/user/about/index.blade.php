@@ -110,10 +110,10 @@
     {{-- Milestone --}}
     <section class="bg-white py-20 px-4 md:px-8">
         <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16 text-center" data-aos="fade-up" data-aos-delay="1000">
-            <h2 class="mb-4 text-xl tracking-tight font-semibold text-gray-900">
+            <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
                 Perjalanan Kami
             </h2>
-            <p class=" text-gray-400 text-xs 2xl:text-md">
+            <p class=" text-gray-400 text-xs 2xl:text-base">
                 Tahun demi tahun, kami terus berkembang dan berinovasi <br> untuk mengedukasi berbagai kalangan bisnis
             </p>
         </div>
@@ -128,10 +128,10 @@
                             <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                         </div>
                         <div class="mt-3 sm:pr-8">
-                            <p class="text-xs 2xl:text-md font-medium mb-3 text-gray-900">{{ $milestone->title }}</p>
+                            <p class="text-xs 2xl:text-base font-medium mb-3 text-gray-900">{{ $milestone->title }}</p>
                             <time
-                                class="block mb-2 text-xs 2xl:text-md font-normal leading-none text-gray-400 ">{{ $milestone->year }}</time>
-                            <p class="text-xs 2xl:text-md font-normal text-justify text-gray-500">
+                                class="block mb-2 text-xs 2xl:text-base font-normal leading-none text-gray-400 ">{{ $milestone->year }}</time>
+                            <p class="text-xs 2xl:text-base font-normal text-justify text-gray-500">
                                 {{ $milestone->description }}
                             </p>
                         </div>
@@ -146,11 +146,12 @@
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6" data-aos="fade-up"
             data-aos-delay="1000">
             <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-                <h2 class="mb-4 text-xl tracking-tight font-semibold text-gray-900">
+                <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
                     Tim Dibalik NaZMa Office
                 </h2>
-                <p class=" text-gray-400 text-xs 2xl:text-md">
-                    Kami adalah tim yang berdedikasi untuk mengedukasi Indonesia melalui media digital
+                <p class=" text-gray-400 text-xs 2xl:text-base">
+                    Kami adalah tim yang berdedikasi untuk mengedukasi Indonesia dan siap
+                    untuk membantu dalam mengembangkan bisnis dengan teknologi informasi yang tepat.
                 </p>
             </div>
             <div class="flex flex-row items-center justify-center gap-4 mb-8">
@@ -159,10 +160,10 @@
                         data-aos-delay="{{ $loop->iteration * 300 }}">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team['image']) }}" alt={{ $team['name'] }}>
-                        <h3 class="mb-1 text-sm 2xl:text-md font-medium tracking-tight text-gray-900">
+                        <h3 class="mb-1 text-sm 2xl:text-base font-medium tracking-tight text-gray-900">
                             <span>{{ $team['name'] }}</span>
                         </h3>
-                        <p class="text-xs 2xl:text-md">{{ $team['job'] }}</p>
+                        <p class="text-xs 2xl:text-base">{{ $team['job'] }}</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             @if ($team['facebook'])
                                 <li>
@@ -201,10 +202,10 @@
                     <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
-                        <h3 class="mb-1 text-sm 2xl:text-md font-medium tracking-tight text-gray-900">
+                        <h3 class="mb-1 text-sm 2xl:text-base font-medium tracking-tight text-gray-900">
                             <span>{{ $team->name }}</span>
                         </h3>
-                        <p class="text-xs 2xl:text-md">{{ $team->job }}</p>
+                        <p class="text-xs 2xl:text-base">{{ $team->job }}</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 @if ($team->facebook)
@@ -244,10 +245,10 @@
                     <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
-                        <h3 class="mb-1 text-sm 2xl:text-md font-medium tracking-tight text-gray-900">
+                        <h3 class="mb-1 text-sm 2xl:text-base font-medium tracking-tight text-gray-900">
                             <span>{{ $team->name }}</span>
                         </h3>
-                        <p class="text-xs 2xl:text-md">{{ $team->job }}</p>
+                        <p class="text-xs 2xl:text-base">{{ $team->job }}</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 @if ($team->facebook)
@@ -286,7 +287,7 @@
 
     {{-- Testimonials --}}
     <section class="py-12 bg-white">
-        <p class="text-xl font-semibold tracking-tight text-black text-center">
+        <p class="text-2xl font-bold tracking-tight text-black text-center">
             Apa Kata Mereka
         </p>
         <div id="testimonial" class="mt-8">
@@ -301,20 +302,20 @@
                                     alt="">
                                 <div class="flex items-center">
                                     <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
-                                    <span class="text-xs 2xl:text-md text-primary">
+                                    <span class="text-xs 2xl:text-base text-primary">
                                         {{ number_format($testimonial->rating, 1, '.', ',') }}
                                     </span>
                                 </div>
                             </div>
                             <div>
-                                <h5 class="text-md font-medium tracking-tight text-gray-900">
+                                <h5 class="2xl:text-base font-semibold tracking-tight text-gray-900">
                                     {{ ucwords($testimonial->fullname) }}
                                 </h5>
-                                <span class="text-xs 2xl:text-md -mt-2 tracking-tight text-gray-400">
+                                <span class="text-xs 2xl:text-base -mt-2 tracking-tight text-gray-400">
                                     {{ ucwords($testimonial->job) }}
                                 </span>
                             </div>
-                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-base">
                                 {{ $testimonial->testimonial }}
                             </p>
                         </div>

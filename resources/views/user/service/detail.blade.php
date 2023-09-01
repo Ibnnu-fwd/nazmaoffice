@@ -13,7 +13,7 @@
                             <p class="text-danger">
                                 Layanan NaZMa Office
                             </p>
-                            <p class="text-2xl font-semibold leading-snug mt-2 tracking-tight text-black sm:text-4xl">
+                            <p class="text-2xl font-bold leading-snug mt-2 tracking-tight text-black sm:text-4xl">
                                 {{ $service->title }}
                             </p>
                             <p class="max-w-xl mt-4 text-base tracking-tight text-gray-400">
@@ -56,7 +56,7 @@
                                     <p class="text-lg capitalize font-semibold tracking-tight text-black sm:text-2xl">
                                         Kami akan membantu anda
                                     </p>
-                                    <p class="max-w-xl mt-4 text-xs 2xl:text-md tracking-tight text-gray-400">
+                                    <p class="max-w-xl mt-4 text-xs 2xl:text-base tracking-tight text-gray-400">
                                         Dengan layanan kami, kami akan membantu anda untuk membangun bisnis anda dengan
                                         cepat dan efisien dengan biaya yang terjangkau dan hasil yang memuaskan
                                     </p>
@@ -72,11 +72,11 @@
                                 @forelse ($service->subServices as $subService)
                                     <li>
                                         <div>
-                                            <p class="mt-5 text-md font-medium leading-6 text-black">
+                                            <p class="mt-5 text-xs 2xl:text-base font-medium leading-6 text-black">
                                                 {{ $subService->title }}
                                             </p>
                                         </div>
-                                        <div class="mt-2 text-xs 2xl:text-md text-gray-500">
+                                        <div class="mt-2 text-xs 2xl:text-base text-gray-500">
                                             {{ $subService->description }}
                                         </div>
                                     </li>
@@ -105,7 +105,7 @@
                             data-aos-duration="1000">
                             <div class="max-w-xl">
                                 <div>
-                                    <p class="text-2xl font-semibold tracking-tight text-black">
+                                    <p class="text-2xl font-bold tracking-tight text-black">
                                         Benefit Yang Anda Dapatkan
                                     </p>
                                 </div>
@@ -115,11 +115,11 @@
                                     @foreach ($service->serviceBenefits as $benefit)
                                         <li>
                                             <div>
-                                                <p class="mt-5 text-md font-semibold leading-6 text-black">
+                                                <p class="mt-5 text-lg font-medium leading-6 text-black">
                                                     {{ $benefit->title }}
                                                 </p>
                                             </div>
-                                            <div class="mt-2 text-xs 2xl:text-md text-gray-500">
+                                            <div class="mt-2 text-xs 2xl:text-base text-gray-500">
                                                 {{ $benefit->description }}
                                             </div>
                                         </li>
@@ -139,11 +139,11 @@
         <section class="">
             <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-24 2xl:px-0">
                 <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-                    <h2 class="mb-4 text-2xl tracking-tight font-semibold text-gray-900">
+                    <h2 class="mb-4 text-2xl tracking-tight font-bold capitalize text-gray-900">
                         Proyek yang telah kami kerjakan
                     </h2>
                 </div>
-                <div class="grid md:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class="grid md:grid-cols-3 xl:grid-cols-3 gap-6">
                     @forelse ($service->serviceProjects as $project)
                         <div class="bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
                             data-aos-delay="300" data-aos-duration="1000">
@@ -154,11 +154,11 @@
                             <div class="mt-4 text-start">
                                 <a href="#" onclick="event.preventDefault();">
                                     <h5
-                                        class="mb-2 text-md 2xl:text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                        class="mb-2 text-md 2xl:text-base font-semibold tracking-tight line-clamp-2 text-gray-900">
                                         {{ $project->title }}
                                     </h5>
                                 </a>
-                                <p class="font-normal text-xs 2xl:text-md text-gray-400">
+                                <p class="font-normal text-xs 2xl:text-base text-gray-400">
                                     {{ date('d F Y', strtotime($project->created_at)) }}
                                 </p>
                             </div>
@@ -174,11 +174,11 @@
     <section class="bg-white py-24">
         <div class="max-w-7xl mx-auto px-8 lg:px-12 2xl:px-0 grid md:grid-cols-2 ">
             <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
-                <h1 class="text-2xl font-semibold mb-2">
+                <h1 class="text-2xl font-bold mb-2">
                     Kami Siap <br>
                     Membantu Anda Tumbuh
                 </h1>
-                <p class="text-gray-400  text-xs 2xl:text-md 2xl:w-1/2 mb-4 lg:mb-0">
+                <p class="text-gray-400  text-xs 2xl:text-base 2xl:w-1/2 mb-4 lg:mb-0">
                     Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan dalam membangun bisnis
                 </p>
             </div>
