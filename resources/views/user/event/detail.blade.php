@@ -52,40 +52,44 @@
     {{-- Study Case --}}
     <section class="py-20 bg-white" id="content" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
         <div class="max-w-3xl mx-auto px-8 lg:px-12 2xl:px-0 ">
-            <div>
-                <h1 class="text-2xl font-semibold tracking-tight text-gray-600">Studi Kasus:
-                    {{ $event->study_case }}
-                </h1>
-                <p class="text-sm 2xl:text-sm text-gray-400 mt-3">
-                    {{ $event->study_case_description }}
-                </p>
-            </div>
+            @if ($data->study_case)
+                <div>
+                    <h1 class="text-2xl font-semibold tracking-tight text-gray-600">Studi Kasus:
+                        {{ $event->study_case }}
+                    </h1>
+                    <p class="text-sm 2xl:text-sm text-gray-400 mt-3">
+                        {{ $event->study_case_description }}
+                    </p>
+                </div>
+            @endif
 
-            <div class="mt-8">
-                <h1 class="text-xl font-semibold tracking-tight text-gray-600">
-                    Materi Yang
-                    Akan Diajarkan
-                </h1>
-                <p class="text-sm 2xl:text-sm text-gray-400 mt-3">
-                    Materi dibuat terstruktur sehingga
-                    pembelajaranmu terarah
-                </p>
-            </div>
+            @if (!empty($event->eventSylabuses))
+                <div class="mt-8">
+                    <h1 class="text-xl font-semibold tracking-tight text-gray-600">
+                        Materi Yang
+                        Akan Diajarkan
+                    </h1>
+                    <p class="text-sm 2xl:text-sm text-gray-400 mt-3">
+                        Materi dibuat terstruktur sehingga
+                        pembelajaranmu terarah
+                    </p>
+                </div>
 
-            <div class=" space-y-4 mt-6">
-                @forelse ($event->eventSylabuses as $eventSylabus)
-                    <div class="flex">
-                        <div
-                            class="text-gray-400 flex items-center justify-center text-xs bg-slate-100 w-6 h-6 rounded-full">
-                            {{ $loop->iteration }}
+                <div class=" space-y-4 mt-6">
+                    @forelse ($event->eventSylabuses as $eventSylabus)
+                        <div class="flex">
+                            <div
+                                class="text-gray-400 flex items-center justify-center text-xs bg-slate-100 w-6 h-6 rounded-full">
+                                {{ $loop->iteration }}
+                            </div>
+                            <p class="ml-2 text-gray-400 text-sm">
+                                {{ $eventSylabus->title }}
+                            </p>
                         </div>
-                        <p class="ml-2 text-gray-400 text-sm">
-                            {{ $eventSylabus->title }}
-                        </p>
-                    </div>
-                @empty
-                @endforelse
-            </div>
+                    @empty
+                    @endforelse
+                </div>
+            @endif
 
             {{-- <div class="">
                 <div class="py-12 mx-auto text-left lg:max-w-7xl">
