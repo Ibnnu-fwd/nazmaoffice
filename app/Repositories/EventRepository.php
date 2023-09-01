@@ -68,24 +68,24 @@ class EventRepository implements EventInterface
 
     public function store($data)
     {
-        $filenameThumbnail = uniqid() . '.' . $data['thumbnail']->extension();
-        $fileNameHeroImage = uniqid() . '.' . $data['hero_image']->extension();
+        if (isset($data['thumbnail'])) {
+            $filenameThumbnail = uniqid() . '.' . $data['thumbnail']->extension();
+            $data['thumbnail']->storeAs('public/event/thumbnail', $filenameThumbnail);
+        }
 
-        $data['thumbnail']->storeAs('public/event/thumbnail', $filenameThumbnail);
-        $data['hero_image']->storeAs('public/event/hero_image', $fileNameHeroImage);
+        if (isset($data['hero_image'])) {
+            $fileNameHeroImage = uniqid() . '.' . $data['hero_image']->extension();
+            $data['hero_image']->storeAs('public/event/hero_image', $fileNameHeroImage);
+        }
+
+        $data['start_date'] = date('Y-m-d', strtotime($data['start_date']));
+        $data['end_date']   = date('Y-m-d', strtotime($data['end_date']));
+        $data['event_date'] = date('Y-m-d', strtotime($data['event_date']));
+        $data['event_time'] = date('H:i:s', strtotime($data['event_time']));
 
         DB::beginTransaction();
         try {
-            $data['thumbnail']  = $filenameThumbnail;
-            $data['hero_image'] = $fileNameHeroImage;
-
-            $data['start_date'] = date('Y-m-d', strtotime($data['start_date']));
-            $data['end_date']   = date('Y-m-d', strtotime($data['end_date']));
-            $data['event_date'] = date('Y-m-d', strtotime($data['event_date']));
-            $data['event_time'] = date('H:i:s', strtotime($data['event_time']));
-
             $this->event->create($data);
-
             DB::commit();
         } catch (\Throwable $th) {
             Storage::delete('public/event/thumbnail/' . $filenameThumbnail);

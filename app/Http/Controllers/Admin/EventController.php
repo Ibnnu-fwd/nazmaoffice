@@ -44,8 +44,8 @@ class EventController extends Controller
         $request->validate([
             'title'                  => ['required'],
             'description'            => ['required'],
-            'thumbnail'              => ['required', 'image', 'mimes:png,jpg,jpeg', 'max:2048'],
-            'hero_image'             => ['required', 'image', 'mimes:png,jpg,jpeg', 'max:2048'],
+            'thumbnail'              => ['nullable', 'image', 'mimes:png,jpg,jpeg', 'max:2048'],
+            'hero_image'             => ['nullable', 'image', 'mimes:png,jpg,jpeg', 'max:2048'],
             'phone'                  => ['required'],
             'study_case'             => ['required'],
             'study_case_description' => ['required'],

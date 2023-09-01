@@ -67,13 +67,20 @@
         <div class="max-w-7xl mx-auto px-8 2xl:px-0 mt-12">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
                 @foreach ($events as $event)
-                    <div class="max-w-sm bg-gray-50 border-slate-100 border rounded-2xl p-4" data-aos="fade-up"
+                    <div class="max-w-sm bg-gray-50 border-slate-100 border rounded-2xl p-4 h-fit" data-aos="fade-up"
                         data-aos-duration="1000" id="event-{{ $event->id }}"
                         onclick="window.location='{{ route('user.event.detail', $event->id) }}'">
-                        <a href="#">
-                            <img class="w-full h-52 rounded-xl blur-mode object-center object-cover"
-                                src="{{ asset('storage/event/thumbnail/' . $event->thumbnail) }}" alt="" />
-                        </a>
+                        @if ($event->thumbnail)
+                            <a href="#">
+                                <img class="w-full h-52 rounded-xl blur-mode object-center object-cover"
+                                    src="{{ asset('storage/event/thumbnail/' . $event->thumbnail) }}" alt="" />
+                            </a>
+                        @else
+                            <a href="#">
+                                <img class="w-full h-52 rounded-xl blur-mode object-center object-cover"
+                                    src="{{ asset('assets/images/event-default.jpg') }}" alt="" />
+                            </a>
+                        @endif
                         <div class="mt-4">
                             <a href="#">
                                 <h5 class="mb-2 text-xl font-semibold tracking-tight line-clamp-2 text-gray-900">

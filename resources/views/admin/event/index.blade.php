@@ -63,12 +63,20 @@
                                 {{ $data->title }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ asset('storage/event/hero_image/' . $data->hero_image) }}"
-                                    class="w-20 h-20 object-cover rounded-lg">
+                                @if ($data->hero_image)
+                                    <img src="{{ asset('storage/event/hero_image/' . $data->hero_image) }}"
+                                        class="w-20 h-20 object-cover rounded-lg">
+                                @else
+                                    <span>-</span>
+                                @endif
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                <img src="{{ asset('storage/event/thumbnail/' . $data->thumbnail) }}"
-                                    class="w-20 h-20 object-cover rounded-lg">
+                                @if ($data->thumbnail)
+                                    <img src="{{ asset('storage/event/thumbnail/' . $data->thumbnail) }}"
+                                        class="w-20 h-20 object-cover rounded-lg">
+                                @else
+                                    <span>-</span>
+                                @endif
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $data->phone }}
@@ -234,9 +242,9 @@
 
                         <x-textarea id="description" name="description" label="Deskripsi" required />
 
-                        <x-input-file id="thumbnail" name="thumbnail" label="Thumbnail" required />
+                        <x-input-file id="thumbnail" name="thumbnail" label="Thumbnail" />
 
-                        <x-input-file id="hero_image" name="hero_image" label="Gambar Utama" required />
+                        <x-input-file id="hero_image" name="hero_image" label="Gambar Utama" />
 
                         <x-input id="phone" name="phone" label="No. Telepon" required />
 
@@ -381,9 +389,6 @@
                     },
                     dataType: 'JSON',
                     success: function(data) {
-                        // remove required attribute from input file 
-                        $('#create-modal #thumbnail').removeAttr('required');
-                        $('#create-modal #hero_image').removeAttr('required');
 
                         $('#create-modal #title').val(data.title);
                         $('#create-modal #event_type').val(data.event_type);
@@ -417,9 +422,6 @@
             $(function() {
                 $('#btnAddEvent').click(function(e) {
                     e.preventDefault();
-                    // add required attribute to input file
-                    $('#create-modal #thumbnail').attr('required', true);
-                    $('#create-modal #hero_image').attr('required', true);
 
                     $('#create-modal form').attr('action', "{{ route('admin.event.store') }}");
                     $('#create-modal form').trigger('reset');
