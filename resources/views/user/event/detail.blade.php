@@ -39,7 +39,10 @@
                 <div class="order-first hidden lg:block w-full lg:mt-0" data-aos="fade-left" data-aos-duration="500"
                     data-aos-delay="300">
                     <img class="object-cover object-center w-full mx-auto lg:ml-auto rounded-2xl shadow-xl"
-                        alt="hero" src="{{ asset('storage/event/hero_image/' . $event->hero_image) }}">
+                        alt="hero"
+                        src="{{ $event->hero_image
+                            ? asset('storage/event/hero_image/' . $event->hero_image)
+                            : asset('assets/images/event-default.jpg') }}">
                 </div>
             </div>
         </div>

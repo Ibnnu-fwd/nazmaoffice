@@ -9,11 +9,11 @@
                             <div>
                                 <p
                                     class="text-2xl font-semibold leading-snug mt-2 tracking-tight text-black md:text-4xl xl:text-6xl">
-                                    Bangun Bisnis Anda <br>
-                                    Bersama Kami
+                                    Temukan Potensi Bisnis Anda Bersama Kami
                                 </p>
                                 <p class="max-w-xl mt-4 text-base tracking-tight text-gray-400">
-                                    Kami menyediakan berbagai layanan untuk membantu membangun bisnis anda tumbuh
+                                    Kami membantu anda untuk mengembangkan bisnis anda dengan berbagai layanan yang kami
+                                    miliki dan kami siap membantu anda untuk mengembangkan bisnis anda.
                                 </p>
                             </div>
                             <div class="flex items-center justify-center gap-3 mt-10 lg:flex-row lg:justify-start">
