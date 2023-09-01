@@ -1,4 +1,5 @@
 <x-guest-layout>
+    @section('title', 'Tentang Kami')
     @push('css-internal')
         <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
 
@@ -116,10 +117,10 @@
                 Tahun demi tahun, kami terus berkembang dan berinovasi <br> untuk mengedukasi berbagai kalangan bisnis
             </p>
         </div>
-        <div class="max-w-7xl mx-auto" data-aos="fade-up" data-aos-delay="1000">
+        <div class="max-w-7xl mx-auto" data-aos="fade-up" data-aos-delay="500">
             <div class="grid grid-cols-1 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-8">
                 @foreach ($milestones as $milestone)
-                    <div class="relative" data-aos="fade-left" data-aos-delay="{{ $loop->iteration * 450 }}">
+                    <div class="relative">
                         <div class="items-center hidden md:flex">
                             <div
                                 class="z-10 flex items-center justify-center w-4 h-4 bg-orange-700 rounded-full ring-white shrink-0">
@@ -290,7 +291,7 @@
         </p>
         <div id="testimonial" class="mt-8">
             <div class="carousel carousel-center p-4 space-x-4 w-full md:place-content-center" data-aos="fade-up"
-                data-aos-delay="1000">
+                data-aos-delay="500">
                 @foreach ($testimonials as $testimonial)
                     <div id="item{{ $testimonial->id }}" class="carousel-item">
                         <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">

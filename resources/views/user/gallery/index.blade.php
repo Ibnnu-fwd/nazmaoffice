@@ -1,4 +1,5 @@
 <x-guest-layout>
+    @section('title', 'Dokumentasi Kegiatan')
     <section class="my-24">
         <div class="max-w-md mx-auto text-center px-4 md:px-0">
             <h1 class="text-2xl md:text-4xl font-semibold text-black">
