@@ -1,5 +1,5 @@
 <x-guest-layout>
-
+    @section('title', 'Beranda')
     @push('css-internal')
         <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
 
