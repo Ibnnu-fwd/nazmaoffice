@@ -25,11 +25,11 @@
                                     class="items-center justify-center w-fit px-6 py-3  text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-sm">
                                     Selengkapnya
                                 </a>
-                                <a href="#"
+                                {{-- <a href="#"
                                     class="inline-flex border border-gray-200 px-6 py-3 rounded-full items-center justify-center text-sm font-medium text-black duration-200 hover:text-blue-500 focus:outline-none focus-visible:outline-gray-600">
                                     Tonton Teaser <ion-icon name="play-circle-outline"
                                         class="ml-2 text-primary text-xl"></ion-icon>
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </div>
