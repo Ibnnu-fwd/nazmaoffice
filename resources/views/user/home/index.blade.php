@@ -16,7 +16,8 @@
     @endpush
 
     {{-- Hero --}}
-    <div id="indicators-carousel" class="relative max-w-7xl mx-auto my-12" data-carousel="static" data-aos="fade-up">
+    <div id="indicators-carousel" class="relative max-w-7xl mx-4 xl:mx-auto my-12" data-carousel="static"
+        data-aos="fade-up">
         <!-- Carousel wrapper -->
         <div class="relative h-48 overflow-hidden shadow-2xl rounded-lg md:rounded-3xl md:h-[488px] mx-4 md:mx-0">
             <!-- Item 1 -->

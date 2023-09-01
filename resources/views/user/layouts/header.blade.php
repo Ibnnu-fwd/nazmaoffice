@@ -69,7 +69,7 @@
     @if (date('l') == 'Friday')
         <div id="marketing-banner" tabindex="-1"
             class="fixed z-50 flex flex-col md:flex-row mt-20 justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-6xl left-1/2 top-6">
-            <div class="flex
+            <div class="xl:flex
     flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0">
                 <a href="#" onclick="event.preventDefault();"
                     class="flex items-center mb-2 border-gray-200 md:pr-4 md:mr-4 md:border-r md:mb-0">
@@ -78,7 +78,7 @@
                         Konsultasi Gratis
                     </span>
                 </a>
-                <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                <p class="xl:flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
                     Konsultasi gratis dengan kami setiap hari &nbsp; <b>Jum'at</b> &nbsp; mulai pukul &nbsp; <b>09.00 -
                         16.00</b>
                 </p>
