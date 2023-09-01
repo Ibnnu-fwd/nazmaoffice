@@ -416,7 +416,7 @@
             }
 
             function btnDelete(id) {
-                $('#delete-modal form').attr('action', "{{ route('admin.event.speaker.destroy', ':id') }}".replace(':id', id));
+                $('#delete-modal form').attr('action', "{{ route('admin.event.destroy', ':id') }}".replace(':id', id));
             }
 
             $(function() {
