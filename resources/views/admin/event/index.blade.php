@@ -57,10 +57,10 @@
                     @forelse ($events as $data)
                         <tr class="border-b hover:bg-gray-100 dark:hover:bg-gray-700">
                             <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ $data->event_type ?? '-' }}
+                                {{ $data->title }}
                             </th>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ $data->title }}
+                                {{ $data->event_type ?? '-' }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 @if ($data->hero_image)
