@@ -45,9 +45,9 @@ class CompanyLandingSettingController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'slide_image_1'  => 'required|image|mimes:jpg,jpeg,png',
-            'slide_image_2'  => 'required|image|mimes:jpg,jpeg,png',
-            'slide_image_3'  => 'required|image|mimes:jpg,jpeg,png',
+            'slide_image_1'  => 'nullable|image|mimes:jpg,jpeg,png',
+            'slide_image_2'  => 'nullable|image|mimes:jpg,jpeg,png',
+            'slide_image_3'  => 'nullable|image|mimes:jpg,jpeg,png',
             'about_us'       => 'required|string',
             'office_phone'   => 'required|string',
             'personal_phone' => 'required|string',

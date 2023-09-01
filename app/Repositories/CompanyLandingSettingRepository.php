@@ -57,36 +57,38 @@ class CompanyLandingSettingRepository implements CompanyLandingSettingInterface
     {
         $companyLandingSetting = $this->companyLandingSetting->first();
 
-        $slideImage1 = uniqid() . '.' . $data['slide_image_1']->extension();
-        $slideImage2 = uniqid() . '.' . $data['slide_image_2']->extension();
-        $slideImage3 = uniqid() . '.' . $data['slide_image_3']->extension();
+        if (isset($data['slide_image_1'])) {
+            $slideImage1 = uniqid() . '.' . $data['slide_image_1']->extension();
+            $data['slide_image_1']->storeAs('public/company-landing-setting', $slideImage1);
+            $data['slide_image_1'] = $slideImage1;
+            Storage::delete('public/company-landing-setting/' . $companyLandingSetting->slide_image_1);
+        }
 
-        $data['slide_image_1']->storeAs('public/company-landing-setting', $slideImage1);
-        $data['slide_image_2']->storeAs('public/company-landing-setting', $slideImage2);
-        $data['slide_image_3']->storeAs('public/company-landing-setting', $slideImage3);
+        if (isset($data['slide_image_2'])) {
+            $slideImage2 = uniqid() . '.' . $data['slide_image_2']->extension();
+            $data['slide_image_2']->storeAs('public/company-landing-setting', $slideImage2);
+            $data['slide_image_2'] = $slideImage2;
+            Storage::delete('public/company-landing-setting/' . $companyLandingSetting->slide_image_2);
+        }
 
-        $data['slide_image_1'] = $slideImage1;
-        $data['slide_image_2'] = $slideImage2;
-        $data['slide_image_3'] = $slideImage3;
+        if (isset($data['slide_image_3'])) {
+            $slideImage3 = uniqid() . '.' . $data['slide_image_3']->extension();
+            $data['slide_image_3']->storeAs('public/company-landing-setting', $slideImage3);
+            $data['slide_image_3'] = $slideImage3;
+            Storage::delete('public/company-landing-setting/' . $companyLandingSetting->slide_image_3);
+        }
 
         DB::beginTransaction();
 
         try {
             $companyLandingSetting->update($data);
             DB::commit();
-            Storage::delete([
-                'public/company-landing-setting/' . $companyLandingSetting->slide_image_1,
-                'public/company-landing-setting/' . $companyLandingSetting->slide_image_2,
-                'public/company-landing-setting/' . $companyLandingSetting->slide_image_3
-            ]);
-            return true;
         } catch (\Throwable $th) {
             Storage::delete([
                 'public/company-landing-setting/' . $slideImage1,
                 'public/company-landing-setting/' . $slideImage2,
                 'public/company-landing-setting/' . $slideImage3
             ]);
-
             DB::rollBack();
             throw $th;
         }
