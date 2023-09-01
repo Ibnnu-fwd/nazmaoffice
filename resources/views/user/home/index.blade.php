@@ -115,47 +115,47 @@
     {{-- Insight --}}
     <section class="bg-white">
         <div data-aos="fade-up" data-aos-duration="1000">
-            <p class="text-xl font-semibold text-black text-center pt-12 mb-2 mx-2 md:mx-0">
+            <p class="text-2xl font-semibold text-black text-center pt-24 mb-2 mx-2 md:mx-0">
                 Terima Kasih Telah Mempercayai Kami
             </p>
             <div class="grid grid-cols-2 gap-6 py-12 md:grid-cols-4 lg:grid-cols-4 max-w-4xl mx-auto">
                 <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000">
                     <img src="{{ asset('assets/images/icon/drive-download-20230830T061719Z-001/Mitra.svg') }}"
-                        class="w-24 h-24 text-gray-300 hover:text-primary self-center object-center" />
-                    <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                        class="w-36 h-36 text-gray-300 hover:text-primary self-center object-center" />
+                    <p class="mt-3 text-3xl font-semibold leading-6 text-black text-center">
                         1.115
                     </p>
-                    <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
+                    <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
                         Mitra Usaha
                     </p>
                 </figure>
                 <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000">
                     <img src="{{ asset('assets/images/icon/drive-download-20230830T061719Z-001/Event edukatif.svg') }}"
-                        class="w-24 h-24 text-gray-300 hover:text-primary self-center object-center" />
-                    <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                        class="w-36 h-36 text-gray-300 hover:text-primary self-center object-center" />
+                    <p class="mt-3 text-3xl font-semibold leading-6 text-black text-center">
                         310
                     </p>
-                    <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
+                    <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
                         Event Edukatif
                     </p>
                 </figure>
                 <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000">
                     <img src="{{ asset('assets/images/icon/drive-download-20230830T061719Z-001/Mentor profesional.svg') }}"
-                        class="w-24 h-24 text-gray-300 hover:text-primary self-center object-center" />
-                    <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                        class="w-36 h-36 text-gray-300 hover:text-primary self-center object-center" />
+                    <p class="mt-3 text-3xl font-semibold leading-6 text-black text-center">
                         500+
                     </p>
-                    <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
+                    <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
                         Program Sertifikasi
                     </p>
                 </figure>
                 <figure class="flex justify-center flex-col" data-aos="fade-up" data-aos-duration="1000">
                     <img src="{{ asset('assets/images/icon/drive-download-20230830T061719Z-001/Peserta event.svg') }}"
-                        class="w-24 h-24 text-gray-300 hover:text-primary self-center object-center" />
-                    <p class="mt-5 text-3xl font-semibold leading-6 text-black text-center">
+                        class="w-36 h-36 text-gray-300 hover:text-primary self-center object-center" />
+                    <p class="mt-3 text-3xl font-semibold leading-6 text-black text-center">
                         10.000+
                     </p>
-                    <p class="mt-3 text-xs 2xl:text-sm text-center text-gray-500">
+                    <p class="mt-3 text-xs 2xl:text-md text-center text-gray-500">
                         Peserta Event
                     </p>
                 </figure>
@@ -176,7 +176,7 @@
                         <ul class="md:flex gap-3 text-gray-500 justify-center">
                             <li class="-mb-px">
                                 <a @click.prevent="tab = '{{ $serviceCategories->first()->id }}'" href="#"
-                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-white bg-primary"
+                                    class="inline-block px-8 py-2.5 text-xs 2xl:text-md rounded-full text-white bg-primary"
                                     :class="{ '  text-white bg-primary': tab === '{{ $serviceCategories->first()->id }}' }">
                                     {{ $serviceCategories->first()->title }}
                                 </a>
@@ -186,7 +186,7 @@
                             @foreach ($serviceCategories->skip(1) as $serviceCategory)
                                 <li class="-mb-px">
                                     <a @click.prevent="tab = '{{ $serviceCategory->id }}'" href="#"
-                                        class="inline-block px-8 py-2.5 text-xs 2xl:text-sm rounded-full text-white bg-gray-200"
+                                        class="inline-block px-8 py-2.5 text-xs 2xl:text-md rounded-full text-white bg-gray-200"
                                         :class="{ '  text-white bg-primary': tab === '{{ $serviceCategory->id }}' }">
                                         {{ $serviceCategory->title }}
                                     </a>
@@ -210,15 +210,15 @@
                                                 </div>
                                                 <a href="{{ route('user.service.detail', $service->id) }}">
                                                     <h5
-                                                        class="mb-2 mt-4 text-xs 2xl:text-sm font-semibold tracking-tight text-gray-900">
+                                                        class="mb-2 mt-4 text-xs 2xl:text-md font-semibold tracking-tight text-gray-900">
                                                         {{ $service->title }}
                                                     </h5>
                                                 </a>
-                                                <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-sm">
+                                                <p class="mb-3 font-normal text-gray-500 text-xs 2xl:text-md">
                                                     {{ $service->description }}
                                                 </p>
                                                 <a href="{{ route('user.service.detail', $service->id) }}"
-                                                    class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-sm">
+                                                    class="inline-flex mt-4 items-center text-primary hover:underline text-xs 2xl:text-md">
                                                     Selengkapnya
                                                     <ion-icon name="chevron-forward-outline" class="text-primary ml-2"
                                                         size="small"></ion-icon>
@@ -250,7 +250,7 @@
                                 </div>
                             </div>
                             <div class="mt-6 lg:max-w-7xl" data-aos="fade-right" data-aos-duration="1000">
-                                <p class="text-gray-400 text-xs 2xl:text-sm">
+                                <p class="text-gray-400 text-xs 2xl:text-md">
                                     {{ $companyLandingSetting->about_us }}
                                 </p>
                                 <ul role="list" class="grid md:grid-cols-2 gap-4 list-none lg:gap-6">
@@ -260,7 +260,7 @@
                                                 Produk unggulan kami
                                             </p>
                                         </div>
-                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-sm text-gray-400">
+                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-md text-gray-400">
                                             <li>Penjualan hardware</li>
                                             <li>Pengembangan perangkat lunak</li>
                                             <li>Pelatihan IT</li>
@@ -274,7 +274,7 @@
                                                 Di bidang konsultan:
                                             </p>
                                         </div>
-                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-sm text-gray-400">
+                                        <ul class="list-disc list-inside mt-3 text-xs 2xl:text-md text-gray-400">
                                             <li>Pelatihan InHouse</li>
                                             <li>Public course</li>
                                             <li>Sertifikasi</li>
@@ -335,7 +335,7 @@
                                     alt="">
                                 <div class="flex items-center">
                                     <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
-                                    <span class="text-xs 2xl:text-sm text-primary">
+                                    <span class="text-xs 2xl:text-md text-primary">
                                         {{ number_format($testimonial->rating, 1, '.', ',') }}
                                     </span>
                                 </div>
@@ -344,11 +344,11 @@
                                 <h5 class="text-md font-medium tracking-tight text-gray-900">
                                     {{ ucwords($testimonial->fullname) }}
                                 </h5>
-                                <span class="text-xs 2xl:text-sm -mt-2 tracking-tight text-gray-400">
+                                <span class="text-xs 2xl:text-md -mt-2 tracking-tight text-gray-400">
                                     {{ ucwords($testimonial->job) }}
                                 </span>
                             </div>
-                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-sm">
+                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-md">
                                 {{ $testimonial->testimonial }}
                             </p>
                         </div>
@@ -363,7 +363,7 @@
         <p class="text-xl font-semibold tracking-tight text-black text-center">
             Proyek Kami
         </p>
-        <p class="text-gray-400 text-center text-xs 2xl:text-sm">
+        <p class="text-gray-400 text-center text-xs 2xl:text-md">
             Kami telah berkontribusi dalam berbagai kegiatan untuk memajukan usaha <br> individu, kelompok, maupun UMKM
         </p>
         <div class="max-w-7xl mx-auto px-4 mt-16">
@@ -379,11 +379,12 @@
                                 <h5 class="mb-2 text-lg font-medium line-clamp-2 tracking-tight text-gray-900">
                                     {{ $serviceProject->title }}
                                 </h5>
-                                <p class="font-normal text-gray-400 mb-4 line-clamp-3 text-xs 2xl:text-sm">
+                                <p
+                                    class="font-normal text-gray-400 mb-4 line-clamp-3 hover:line-clamp-none text-xs 2xl:text-md">
                                     {{ $serviceProject->description }}
                                 </p>
 
-                                <ul class="space-y-1 text-left text-gray-500 dark:text-gray-400 text-xs 2xl:text-sm">
+                                <ul class="space-y-1 text-left text-gray-500 text-xs 2xl:text-md">
                                     <li class="flex items-center space-x-3">
                                         <ion-icon name="calendar"
                                             class="flex-shrink-0 w-3.5 h-3.5 text-gray-400"></ion-icon>
@@ -399,10 +400,10 @@
                                         </span>
                                     </li>
                                 </ul>
-                                <button
-                                    class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-sm font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
+                                {{-- <button
+                                    class="inline-flex mt-4 items-center justify-center px-4 py-2 text-xs 2xl:text-md font-normal text-white bg-primary rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black">
                                     Selengkapnya
-                                </button>
+                                </button> --}}
                             </div>
                         </div>
                     </div>
@@ -417,13 +418,13 @@
             <div class="flex justify-between items-center">
                 <div data-aos="fade-right" data-aos-duration="1000">
                     <p class="font-semibold tracking-tight text-black text-xl">Informasi Terbaru</p>
-                    <p class="text-gray-400 text-xs 2xl:text-sm">
+                    <p class="text-gray-400 text-xs 2xl:text-md">
                         Kami melakukan press release setiap kegiatan. Jangan sampai ketinggalan
                     </p>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000">
                     <a href="{{ route('user.blog') }}"
-                        class="inline-flex items-center justify-center px-3 py-2 text-xs 2xl:text-sm text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
+                        class="inline-flex items-center justify-center px-3 py-2 text-xs 2xl:text-md text-gray-400 bg-transparent border border-gray-300 hover:border-purple-600 rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-purple-700 hover:text-white active:bg-purple active:text-white focus-visible:outline-black">
                         Lihat Semua
                     </a>
                 </div>
@@ -439,16 +440,16 @@
                         <p class="mt-5 text-md font-semibold leading-6 text-black">
                             {{ $blog->title }}
                         </p>
-                        <div class="mt-3 text-xs 2xl:text-sm text-gray-500 line-clamp-3">
+                        <div class="mt-3 text-xs 2xl:text-md text-gray-500 line-clamp-3">
                             {!! $blog->content !!}
                         </div>
                         <hr class="text-gray-300 my-4 opacity-30">
-                        <p class="uppercase text-gray-400 text-xs 2xl:text-sm">
+                        <p class="capitalize text-gray-400 text-xs 2xl:text-md">
                             {{ date('d F Y', strtotime($blog->published_date)) }}
                         </p>
                     </a>
                 @empty
-                    <p class="text-center text-gray-400 text-xs 2xl:text-sm">
+                    <p class="text-center text-gray-400 text-xs 2xl:text-md">
                         Belum ada blog
                     </p>
                 @endforelse
@@ -461,7 +462,7 @@
         <p class="text-xl font-semibold tracking-tight text-black text-center">
             Pertanyaan Umum
         </p>
-        <p class="text-center text-xs 2xl:text-sm text-gray-400">
+        <p class="text-center text-xs 2xl:text-md text-gray-400">
             Beberapa pertanyaan yang sering diajukan untuk layanan pada website NaZMa Office.
         </p>
 
@@ -471,7 +472,7 @@
                 <h2 id="accordion-arrow-icon-heading-{{ $faq->id }}" class="rounded-lg mb-3 bg-white"
                     data-aos="fade-up" data-aos-duration="1000">
                     <button type="button"
-                        class="flex items-center text-xs 2xl:text-sm justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
+                        class="flex items-center text-xs 2xl:text-md justify-between w-full p-5 text-left rounded-lg text-gray-500 focus:ring-4 focus:ring-gray-200"
                         data-accordion-target="#accordion-arrow-icon-body-{{ $faq->id }}" aria-expanded="false"
                         aria-controls="accordion-arrow-icon-body-{{ $faq->id }}">
                         <span>{{ $faq->question }}</span>
@@ -482,7 +483,7 @@
                 <div id="accordion-arrow-icon-body-{{ $faq->id }}" class="hidden mb-4"
                     aria-labelledby="accordion-arrow-icon-heading-{{ $faq->id }}">
                     <div class="p-5 bg-white rounded-lg">
-                        <p class="text-gray-400 text-xs 2xl:text-sm">
+                        <p class="text-gray-400 text-xs 2xl:text-md">
                             {{ $faq->answer }}
                         </p>
                     </div>

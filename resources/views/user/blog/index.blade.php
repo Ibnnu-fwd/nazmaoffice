@@ -1,4 +1,7 @@
 <x-guest-layout>
+    @section('title')
+        Blog
+    @endsection
     <section class="max-w-7xl mx-auto my-12 px-4 md:px-8 xl:px-12 2xl:px-0">
         <div class="grid">
             <div class="bg-primary rounded-2xl text-white p-8 text-center h-40 md:h-44 px-8 md:px-20">
@@ -25,10 +28,10 @@
         <div class="text-center gap-y-6">
             <span id="category-0" onclick="window.location.reload()"
                 class="bg-orange-800 cursor-pointer
-                text-white text-xs 2xl:text-sm font-normal mr-2 px-2.5 py-0.5 rounded-full">Semua</span>
+                text-white text-xs 2xl:text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">Semua</span>
             @foreach ($blogCategories as $blogCategory)
                 <span id="category-{{ $blogCategory->id }}" onclick="filterCategory({{ $blogCategory->id }})"
-                    class="bg-transparent cursor-pointer text-gray-400 text-xs 2xl:text-sm font-normal mr-2 px-2.5 py-0.5 rounded-full">
+                    class="bg-transparent cursor-pointer text-gray-400 text-xs 2xl:text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">
                     {{ $blogCategory->title }}
                 </span>
             @endforeach
@@ -45,7 +48,7 @@
                         <img src="{{ asset('storage/blogs/thumbnail/' . $firstBlog->thumbnail) }}"
                             class="w-full md:h-72 lg:h-96 rounded-xl object-cover object-center blur-mode mb-4"
                             alt="">
-                        <p class="text-gray-400 mb-1 text-xs 2xl:text-sm">
+                        <p class="text-gray-400 mb-1 text-xs 2xl:text-md">
                             {{ date('d F Y', strtotime($firstBlog->created_at)) }}</p>
                         <h1 class="text-xl font-semibold text-black tracking-tight mb-3 line-clamp-2">
                             {{ $firstBlog->title }}
@@ -67,11 +70,11 @@
                                     alt="">
                                 <div class="col-span-2">
                                     <span
-                                        class="text-gray-400 text-xs 2xl:text-sm">{{ date('d F Y', strtotime($blog->created_at)) }}</span>
+                                        class="text-gray-400 text-xs 2xl:text-md">{{ date('d F Y', strtotime($blog->created_at)) }}</span>
                                     <span class="text-md font-medium text-black line-clamp-2 mt-2">
                                         {{ $blog->title }}
                                     </span>
-                                    <div class="mt-3 text-xs 2xl:text-sm text-gray-400 line-clamp-2">
+                                    <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2">
                                         {!! $blog->content !!}
                                     </div>
                                     <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
@@ -104,7 +107,7 @@
                                 <p class="mt-3 text-md text-black font-semibold line-clamp-2">
                                     {{ $blog->title }}
                                 </p>
-                                <div class="mt-3 text-xs 2xl:text-sm text-gray-400 line-clamp-2">
+                                <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2">
                                     {!! $blog->content !!}
                                 </div>
                             </a>

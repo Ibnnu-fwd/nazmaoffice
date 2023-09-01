@@ -21,38 +21,38 @@
             <ul class="space-y-2 list-none md:space-y-0 md:items-center md:inline-flex">
                 <li>
                     <a href="{{ route('user.home') }}"
-                        class="px-4 md:py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.home') ? 'text-primary' : '' }}
+                        class="px-4 md:py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.home') ? 'text-primary' : '' }}
                         }}">
                         Beranda
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('user.about') }}"
-                        class="px-4 md:py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.about') ? 'text-primary' : '' }}">
+                        class="px-4 md:py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.about') ? 'text-primary' : '' }}">
                         Tentang Kami
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('user.service') }}"
-                        class="px-4 md:py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.service') || request()->routeIs('user.service.detail') ? 'text-primary' : '' }}">
+                        class="px-4 md:py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.service') || request()->routeIs('user.service.detail') ? 'text-primary' : '' }}">
                         Layanan
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('user.blog') }}"
-                        class="px-4 md:py-8 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.blog') || request()->routeIs('user.blog.detail') ? 'text-primary' : '' }}">
+                        class="px-4 md:py-8 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.blog') || request()->routeIs('user.blog.detail') ? 'text-primary' : '' }}">
                         Blog </a>
                 </li>
                 <li>
                     <a href="{{ route('user.gallery') }}"
-                        class="px-4 md:py-8 mr-0 md:mr-3 text-xs 2xl:text-sm text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.gallery') ? 'text-primary' : '' }}">
+                        class="px-4 md:py-8 mr-0 md:mr-3 text-xs 2xl:text-md text-gray-500 border-b-2 border-transparent lg:px-6 md:px-3 hover:text-blue-600 {{ request()->routeIs('user.gallery') ? 'text-primary' : '' }}">
                         Galeri
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('user.event') }}"
                         class="inline-flex
-                        items-center justify-center px-6 py-2 text-xs 2xl:text-sm font-medium text-white bg-primary
+                        items-center justify-center px-6 py-2 text-xs 2xl:text-md font-medium text-white bg-primary
                         rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2
                         hover:bg-purple-700 active:bg-purple active:text-white focus-visible:outline-black
                         {{ request()->routeIs('user.event') || request()->routeIs('user.event.detail') ? 'text-white bg-primary' : '' }}
@@ -63,7 +63,6 @@
             </ul>
         </nav>
     </div>
-
 
     {{-- check if today is friday --}}
     @if (date('l') == 'Friday')
@@ -78,7 +77,7 @@
                         Konsultasi Gratis
                     </span>
                 </a>
-                <p class="xl:flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                <p class="xl:flex items-center text-md font-normal text-gray-500">
                     Konsultasi gratis dengan kami setiap hari &nbsp; <b>Jum'at</b> &nbsp; mulai pukul &nbsp; <b>09.00 -
                         16.00</b>
                 </p>
@@ -92,11 +91,11 @@
             https://api.whatsapp.com/send?phone={{ $companyLandingSetting->personal_phone }}&text={{ $message }}
         "
                     target="_blank"
-                    class="px-5 py-2 mr-2 text-xs font-medium text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
+                    class="px-5 py-2 mr-2 text-md font-medium text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
                     Daftar Sekarang
                 </a>
                 <button data-dismiss-target="#marketing-banner" type="button"
-                    class="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-full text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
+                    class="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-full text-md p-2 dark:hover:bg-gray-600 dark:hover:text-white">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

@@ -1,4 +1,7 @@
 <x-guest-layout>
+    @section('title')
+        {{ $service->title }}
+    @endsection
     {{-- Hero --}}
     <section class="relative flex items-center w-full">
         <div class="relative flex items-center justify-center w-full px-5 py-24 mx-auto md:px-12 2xl:px-0 max-w-7xl">
@@ -53,7 +56,7 @@
                                     <p class="text-lg capitalize font-semibold tracking-tight text-black sm:text-2xl">
                                         Kami akan membantu anda
                                     </p>
-                                    <p class="max-w-xl mt-4 text-xs 2xl:text-sm tracking-tight text-gray-400">
+                                    <p class="max-w-xl mt-4 text-xs 2xl:text-md tracking-tight text-gray-400">
                                         Dengan layanan kami, kami akan membantu anda untuk membangun bisnis anda dengan
                                         cepat dan efisien dengan biaya yang terjangkau dan hasil yang memuaskan
                                     </p>
@@ -73,7 +76,7 @@
                                                 {{ $subService->title }}
                                             </p>
                                         </div>
-                                        <div class="mt-2 text-xs 2xl:text-sm text-gray-500">
+                                        <div class="mt-2 text-xs 2xl:text-md text-gray-500">
                                             {{ $subService->description }}
                                         </div>
                                     </li>
@@ -102,7 +105,7 @@
                             data-aos-duration="1000">
                             <div class="max-w-xl">
                                 <div>
-                                    <p class="text-xl font-semibold tracking-tight text-black">
+                                    <p class="text-2xl font-semibold tracking-tight text-black">
                                         Benefit Yang Anda Dapatkan
                                     </p>
                                 </div>
@@ -116,7 +119,7 @@
                                                     {{ $benefit->title }}
                                                 </p>
                                             </div>
-                                            <div class="mt-2 text-xs 2xl:text-sm text-gray-500">
+                                            <div class="mt-2 text-xs 2xl:text-md text-gray-500">
                                                 {{ $benefit->description }}
                                             </div>
                                         </li>
@@ -135,7 +138,7 @@
     <section class="">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-24 2xl:px-0">
             <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-                <h2 class="mb-4 text-xl tracking-tight font-semibold text-gray-900">
+                <h2 class="mb-4 text-2xl tracking-tight font-semibold text-gray-900">
                     Proyek yang telah kami kerjakan
                 </h2>
             </div>
@@ -154,7 +157,7 @@
                                     {{ $project->title }}
                                 </h5>
                             </a>
-                            <p class="font-normal text-xs 2xl:text-sm text-gray-400">
+                            <p class="font-normal text-xs 2xl:text-md text-gray-400">
                                 {{ date('d F Y', strtotime($project->created_at)) }}
                             </p>
                         </div>
@@ -186,7 +189,7 @@
                     Kami Siap <br>
                     Membantu Anda Tumbuh
                 </h1>
-                <p class="text-gray-400  text-xs 2xl:text-sm 2xl:w-1/2 mb-4 lg:mb-0">
+                <p class="text-gray-400  text-xs 2xl:text-md 2xl:w-1/2 mb-4 lg:mb-0">
                     Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan dalam membangun bisnis
                 </p>
             </div>
@@ -196,7 +199,7 @@
                 https://api.whatsapp.com/send?phone=62895389141779&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20{{ $service->phone }}
                 "
                     target="_blank"
-                    class="items-center text-xs 2xl:text-sm justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
+                    class="items-center text-xs 2xl:text-md justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
                     Daftar Sekarang
                 </a>
             </div>

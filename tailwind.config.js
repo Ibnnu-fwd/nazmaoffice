@@ -53,7 +53,9 @@ module.exports = {
         fontSize: {
             xs: '.75rem', // 12px
             sm: '0.8rem',
+            md: '0.875rem', // 14px
             base: '1rem',
+            lg: '1.125rem', // 18px
             xl: '1.25rem',
             '2xl': '1.563rem',
             '3xl': '1.953rem',
@@ -62,7 +64,15 @@ module.exports = {
             '6xl': '3.815rem',
             '7xl': '4.768rem',
             '8xl': '5.96rem',
-          }
+        },
+        // font weight
+        fontWeight: {
+            light: 300,
+            normal: 400,
+            medium: 500,
+            semibold: 600,
+            bold: 700,
+        },
     },
     plugins: [require('@tailwindcss/forms'), require('flowbite/plugin'), require('@tailwindcss/line-clamp')],
 };

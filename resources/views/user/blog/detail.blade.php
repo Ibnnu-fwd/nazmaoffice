@@ -1,4 +1,8 @@
 <x-guest-layout>
+    @section('title')
+        {{ $blog->title }}
+    @endsection
+
     <section class="py-8 bg-primary">
         <div class="max-w-4xl mx-auto px-8 lg:px-0">
             <p class="text-white text-md">
@@ -9,11 +13,11 @@
                     <h1 class="text-3xl font-semibold leading-tight text-white">
                         {{ $blog->title }}
                     </h1>
-                    <p class="text-gray-200 mt-4 text-xs 2xl:text-sm">
+                    <p class="text-gray-200 mt-4 text-xs 2xl:text-md">
                         {{ $blog->tag }}
                     </p>
                 </div>
-                <div class="mt-2 md:mt-0 md:place-self-end text-xs 2xl:text-sm">
+                <div class="mt-2 md:mt-0 md:place-self-end text-xs 2xl:text-md">
                     <p class="text-white">
                         {{ $blog->author_name }}
                     </p>
@@ -35,7 +39,7 @@
     <section class="max-w-4xl mx-auto mt-10 px-8 lg:px-0">
         <img src="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}"
             class="w-full h-48 md:h-[500px] object-cover object-center blur-mode rounded-xl" alt="">
-        <div class="mt-8 leading-6 text-justify -tracking-tight text-sm 2xl:text-lg">
+        <div class="mt-8 leading-6 text-justify -tracking-tight text-sm 2xl:text-md">
             {!! $blog->content !!}
         </div>
 
@@ -53,13 +57,13 @@
                                 src="{{ asset('storage/blogs/thumbnail/' . $data->thumbnail) }}" alt=""
                                 width="1310" height="873">
 
-                            <p class="mt-5 text-sm font-normal leading-6 text-gray-400">
+                            <p class="mt-5 text-md font-normal leading-6 text-gray-400">
                                 {{ date('d F Y', strtotime($data->published_date)) }}
                             </p>
                             <p class="mt-3 text-md text-black font-semibold line-clamp-2">
                                 {{ $data->title }}
                             </p>
-                            <div class="mt-3 text-xs 2xl:text-sm text-gray-400 line-clamp-2">
+                            <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2">
                                 {!! $data->content !!}
                             </div>
                         </a>
@@ -78,7 +82,7 @@
                             <span class="text-lg font-semibold text-black line-clamp-2 mt-2">
                                 {{ $blogs->last()->title }}
                             </span>
-                            <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-sm">
+                            <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-md">
                                 {!! $blogs->last()->content !!}
                             </p>
                             <div class="flex gap-x-2 items-center mt-5">

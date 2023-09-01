@@ -86,19 +86,19 @@
                                     {{ $event->title }}
                                 </h5>
                             </a>
-                            <div class="flex items-center mt-4 text-sm 2xl:text-md">
+                            <div class="flex items-center mt-4 text-md font-light">
                                 <ion-icon name="calendar-outline" class="text-primary me-2 w-4 h-4"></ion-icon>
                                 <span class="text-gray-400">
                                     {{ date('d F Y', strtotime($event->event_date)) }}
                                 </span>
                             </div>
-                            <div class="flex items-center  text-sm 2xl:text-sm">
+                            <div class="flex items-center text-md font-light">
                                 <ion-icon name="time-outline" class="text-primary me-2 w-4 h-4"></ion-icon>
                                 <span class="text-gray-400">
                                     {{ date('H:i'), strtotime($event->event_time) }} WIB
                                 </span>
                             </div>
-                            <div class="text-gray-400 text-xs mt-4 line-clamp-1 hover:line-clamp-2">
+                            <div class="text-gray-400 text-md mt-4 line-clamp-2 hover:line-clamp-3">
                                 {{ $event->location }}
                             </div>
                             <div class="mt-6 flex justify-between items-end">

@@ -23,14 +23,14 @@
                                 class="items-center
                                 justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2
                                 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white
-                                hover:border-purple-600 lg:w-auto text-sm">
+                                hover:border-purple-600 lg:w-auto text-md">
                                 Daftar Sekarang
                             </a>
                             <a href="#content"
                                 class="items-center
                                 justify-center w-fit px-6 py-3 text-center text-gray-400 border-2 border-transparent duration-200 bg-gray-100
                                 rounded-full inline-flex hover:bg-gray300 hover:text-gray-900
-                                hover:border-gray-100 lg:w-auto text-sm">
+                                hover:border-gray-100 lg:w-auto text-md">
                                 Selengkapnya
                             </a>
                         </div>
@@ -57,7 +57,7 @@
                     <h1 class="text-2xl font-semibold tracking-tight text-gray-600">Studi Kasus:
                         {{ $event->study_case }}
                     </h1>
-                    <p class="text-sm 2xl:text-sm text-gray-400 mt-3">
+                    <p class="text-sm 2xl:text-md text-gray-400 mt-3">
                         {{ $event->study_case_description }}
                     </p>
                 </div>
@@ -69,7 +69,7 @@
                         Materi Yang
                         Akan Diajarkan
                     </h1>
-                    <p class="text-sm 2xl:text-sm text-gray-400 mt-3">
+                    <p class="text-sm 2xl:text-md text-gray-400 mt-3">
                         Materi dibuat terstruktur sehingga
                         pembelajaranmu terarah
                     </p>
@@ -79,10 +79,10 @@
                     @forelse ($event->eventSylabuses as $eventSylabus)
                         <div class="flex">
                             <div
-                                class="text-gray-400 flex items-center justify-center text-xs bg-slate-100 w-6 h-6 rounded-full">
+                                class="text-gray-400 flex items-center justify-center text-md bg-slate-100 w-6 h-6 rounded-full">
                                 {{ $loop->iteration }}
                             </div>
-                            <p class="ml-2 text-gray-400 text-sm">
+                            <p class="ml-2 text-gray-400 text-md">
                                 {{ $eventSylabus->title }}
                             </p>
                         </div>
@@ -218,7 +218,7 @@
                     Tiket Terbatas <br>
                     Jangan Sampai Ketinggalan
                 </h1>
-                <p class="text-gray-400 mb-4 lg:mb-0 text-xs 2xl:text-sm">
+                <p class="text-gray-400 mb-4 lg:mb-0 text-xs 2xl:text-md">
                     Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan
                     dalam merancang logo
                 </p>
@@ -229,7 +229,7 @@
                     class="items-center
                     justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2
                     border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white
-                    hover:border-purple-600 lg:w-auto text-sm">
+                    hover:border-purple-600 lg:w-auto text-md">
                     Daftar Sekarang
                 </a>
             </div>

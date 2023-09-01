@@ -38,11 +38,11 @@
                             </a>
                             <div class="mt-4">
                                 <a href="#">
-                                    <h5 class="mb-2 text-sm font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                    <h5 class="mb-2 text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
                                         {{ $gallery->title }}
                                     </h5>
                                 </a>
-                                <p class="font-normal text-gray-400 text-sm">
+                                <p class="font-normal text-gray-400 text-md">
                                     {{ date('d F Y', strtotime($gallery->published_date)) }}
                                 </p>
                             </div>

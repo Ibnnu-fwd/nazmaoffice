@@ -8,45 +8,45 @@
                 @endphp
                 <div class="mb-8">
                     <h1 class="font-semibold text-lg text-black mb-2">NaZMa Office</h1>
-                    <p class="text-gray-400 text-xs 2xl:text-sm">
+                    <p class="text-gray-400 text-xs 2xl:text-md">
                         {{ $companyLandingSetting->about_us }}
                     </p>
                 </div>
 
                 <div class="mb-3">
-                    <h1 class="font-semibold text-xs 2xl:text-sm text-black">No. Telepon Kantor</h1>
-                    <p class="text-gray-400 text-xs 2xl:text-sm">
+                    <h1 class="font-semibold text-xs 2xl:text-md text-black">No. Telepon Kantor</h1>
+                    <p class="text-gray-400 text-xs 2xl:text-md">
                         {{ $companyLandingSetting->office_phone }}
                     </p>
                 </div>
 
                 <div class="mb-3">
-                    <h1 class="font-semibold text-xs 2xl:text-sm text-black">No. Handphone</h1>
-                    <p class="text-gray-400 text-xs 2xl:text-sm">
+                    <h1 class="font-semibold text-xs 2xl:text-md text-black">No. Handphone</h1>
+                    <p class="text-gray-400 text-xs 2xl:text-md">
                         {{ $companyLandingSetting->personal_phone }}
                     </p>
                 </div>
 
                 <div class="mb-3">
-                    <h1 class="font-semibold text-xs 2xl:text-sm text-black">Email</h1>
-                    <p class="text-gray-400 text-xs 2xl:text-sm">
+                    <h1 class="font-semibold text-xs 2xl:text-md text-black">Email</h1>
+                    <p class="text-gray-400 text-xs 2xl:text-md">
                         {{ $companyLandingSetting->email }}
                     </p>
                 </div>
             </div>
             <div>
                 <div class="mb-6">
-                    <h1 class="font-semibold text-xs 2xl:text-sm text-black">Alamat</h1>
+                    <h1 class="font-semibold text-xs 2xl:text-md text-black">Alamat</h1>
                     @php
                         $companyAddresses = \App\Models\CompanyAddress::all();
                     @endphp
                     <ul class="list-disc list-inside mt-6 list">
                         @forelse ($companyAddresses as $companyAddress)
                             <li class="md:pl-6 mb-2">
-                                <span class="font-medium text-black text-xs 2xl:text-sm">
+                                <span class="font-medium text-black text-xs 2xl:text-md">
                                     {{ $companyAddress->title }}
                                 </span>
-                                <p class="text-gray-400 pl-5 text-xs 2xl:text-sm">
+                                <p class="text-gray-400 pl-5 text-xs 2xl:text-md">
                                     <a href="{{ $companyAddress->link }}" target="_blank">
                                         {{ $companyAddress->address }}
                                     </a>
@@ -58,7 +58,7 @@
                 </div>
 
                 <div>
-                    <h1 class="font-semibold text-xs 2xl:text-sm text-black">Ikut Kami</h1>
+                    <h1 class="font-semibold text-xs 2xl:text-md text-black">Ikut Kami</h1>
                     <div class="flex gap-2 mt-3" id="social-media">
                         @php
                             $companySocialMedias = \App\Models\CompanySocialMedia::all();
@@ -75,7 +75,7 @@
         </div>
     </div>
     <div class="bg-primary py-4">
-        <p class="text-center text-white text-xs 2xl:text-sm">
+        <p class="text-center text-white text-xs 2xl:text-md">
             CV. NaZMa Office. <br>
             Yogyakarta, Indonesia
         </p>
