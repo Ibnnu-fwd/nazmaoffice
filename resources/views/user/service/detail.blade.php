@@ -184,8 +184,12 @@
             </div>
             <div class="flex items-center justify-start md:justify-end mt-6 md:mt-0" data-aos="fade-left"
                 data-aos-delay="300" data-aos-duration="1000">
+                @php
+                    $message = "Halo Admin NaZMa Office, saya ingin bertanya tentang layanan $service->title";
+                    $phone = $service->phone;
+                @endphp
                 <a href="
-                https://api.whatsapp.com/send?phone=62895389141779&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20{{ $service->phone }}
+                https://api.whatsapp.com/send?phone={{ $phone }}&text=Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20{{ $service->phone }}
                 "
                     target="_blank"
                     class="items-center 2xl:text-md justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">

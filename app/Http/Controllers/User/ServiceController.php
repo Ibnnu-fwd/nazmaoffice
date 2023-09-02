@@ -26,7 +26,7 @@ class ServiceController extends Controller
         return view('user.service.index', [
             'services'          => $this->service->getAll(),
             'serviceCategories' => $this->serviceCategory->getAll(),
-            'serviceProjects'    => $this->serviceProject->groupByMonth(date('Y'))
+            'serviceProjects'   => $this->serviceProject->groupByMonth(date('Y'))
         ]);
     }
 

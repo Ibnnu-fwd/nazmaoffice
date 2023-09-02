@@ -154,7 +154,7 @@ class BlogRepository implements BlogInterface
 
     public function filter($category_id)
     {
-        return $this->blog->with(['blogCategory'])->where('blog_category_id', $category_id)->get();
+        return $this->blog->with(['blogCategory'])->where('blog_category_id', $category_id)->orderBy('published_date', 'desc')->get();
     }
 
     public function getRelatedBlogs($slug)
