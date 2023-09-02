@@ -36,6 +36,7 @@ class BlogController extends Controller
             'author_name'      => ['required'],
             'content'          => ['required'],
             'tag'              => ['nullable'],
+            'published_date'   => ['required']
         ]);
 
         try {
@@ -69,6 +70,7 @@ class BlogController extends Controller
             'author_name'      => ['required'],
             'content'          => ['required'],
             'tag'              => ['nullable'],
+            'published_date'   => ['required']
         ]);
 
         try {

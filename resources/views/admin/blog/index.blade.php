@@ -66,7 +66,7 @@
                                 {{ $data->author_name }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
-                                {{ date('d F Y', strtotime($data->created_at)) }}
+                                {{ \Carbon\Carbon::parse($data->published_date)->locale('id')->isoFormat('dddd, D MMMM Y') }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">
@@ -147,6 +147,9 @@
 
                         <x-input id="tag" name="tag" label="Tags" type="text"
                             placeholder="Masukan tags blog, pisahkan dengan koma (,)" required />
+
+                        <x-input id="published_date" name="published_date" label="Tanggal Publikasi" type="date"
+                            placeholder="Masukan tanggal publikasi" required />
 
                     </div>
                     <!-- Modal footer -->
@@ -245,6 +248,7 @@
                         CKEDITOR.instances['content'].insertHtml(data.content);
                         let tag = data.tag.split('-');
                         $('#tag').val(tag.join(', '));
+                        $('#published_date').val(data.published_date);
                     }
                 });
             }

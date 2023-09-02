@@ -49,7 +49,7 @@ class BlogRepository implements BlogInterface
                 'title'            => $data['title'],
                 'author_name'      => $data['author_name'],
                 'content'          => $data['content'],
-                'published_date'   => date('Y-m-d H:i:s'),
+                'published_date'   => date('Y-m-d', strtotime($data['published_date'])),
                 'tag'              => str_replace(',', ' - ', $data['tag']),
                 'meta_description' => substr(strip_tags($data['content']), 0, 160),
                 'meta_keyword'     => str_replace(',', '-', $data['tag']),
@@ -95,7 +95,7 @@ class BlogRepository implements BlogInterface
             $slug = $slug . '-' . uniqid();
         }
 
-        $published_date   = date('Y-m-d H:i:s');
+        $published_date   = date('Y-m-d', strtotime($data['published_date']));
         $tag              = str_replace(',', ' - ', $data['tag']);
         $meta_description = substr(strip_tags($data['content']), 0, 160);
         $meta_keyword     = str_replace(',', '-', $data['tag']);
