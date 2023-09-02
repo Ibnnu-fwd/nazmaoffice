@@ -56,7 +56,7 @@
                                     <p class="text-lg capitalize font-semibold tracking-tight text-black sm:text-2xl">
                                         Kami akan membantu anda
                                     </p>
-                                    <p class="max-w-xl mt-4 text-xs 2xl:text-base tracking-tight text-gray-400">
+                                    <p class="max-w-xl mt-4 text-xs 2xl:text-md tracking-tight text-gray-400">
                                         Dengan layanan kami, kami akan membantu anda untuk membangun bisnis anda dengan
                                         cepat dan efisien dengan biaya yang terjangkau dan hasil yang memuaskan
                                     </p>
@@ -72,11 +72,11 @@
                                 @forelse ($service->subServices as $subService)
                                     <li>
                                         <div>
-                                            <p class="mt-5 text-xs 2xl:text-base font-medium leading-6 text-black">
+                                            <p class="mt-5 text-xs 2xl:text-md font-medium leading-6 text-black">
                                                 {{ $subService->title }}
                                             </p>
                                         </div>
-                                        <div class="mt-2 text-xs 2xl:text-base text-gray-500">
+                                        <div class="mt-2 text-xs 2xl:text-md text-gray-500">
                                             {{ $subService->description }}
                                         </div>
                                     </li>
@@ -115,11 +115,11 @@
                                     @foreach ($service->serviceBenefits as $benefit)
                                         <li>
                                             <div>
-                                                <p class="mt-5 text-lg font-medium leading-6 text-black">
+                                                <p class="mt-5 text-base font-medium leading-6 text-black">
                                                     {{ $benefit->title }}
                                                 </p>
                                             </div>
-                                            <div class="mt-2 text-xs 2xl:text-base text-gray-500">
+                                            <div class="mt-2 text-xs 2xl:text-md text-gray-500">
                                                 {{ $benefit->description }}
                                             </div>
                                         </li>
@@ -154,11 +154,11 @@
                             <div class="mt-4 text-start">
                                 <a href="#" onclick="event.preventDefault();">
                                     <h5
-                                        class="mb-2 text-md 2xl:text-base font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                        class="mb-2 text-md 2xl:text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
                                         {{ $project->title }}
                                     </h5>
                                 </a>
-                                <p class="font-normal text-xs 2xl:text-base text-gray-400">
+                                <p class="font-normal text-xs 2xl:text-md text-gray-400">
                                     {{ date('d F Y', strtotime($project->created_at)) }}
                                 </p>
                             </div>
@@ -178,7 +178,7 @@
                     Kami Siap <br>
                     Membantu Anda Tumbuh
                 </h1>
-                <p class="text-gray-400  text-xs 2xl:text-base 2xl:w-1/2 mb-4 lg:mb-0">
+                <p class="text-gray-400  text-xs 2xl:text-md 2xl:w-1/2 mb-4 lg:mb-0">
                     Kesempatan berharga bagi individu yang ingin mengembangkan keterampilan dalam membangun bisnis
                 </p>
             </div>

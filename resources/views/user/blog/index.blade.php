@@ -28,10 +28,10 @@
         <div class="text-center gap-y-6">
             <span id="category-0" onclick="window.location.reload()"
                 class="bg-orange-800 cursor-pointer
-                text-white text-xs 2xl:text-base font-normal mr-2 px-2.5 py-0.5 rounded-full">Semua</span>
+                text-white text-xs 2xl:text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">Semua</span>
             @foreach ($blogCategories as $blogCategory)
                 <span id="category-{{ $blogCategory->id }}" onclick="filterCategory({{ $blogCategory->id }})"
-                    class="bg-transparent cursor-pointer text-gray-400 text-xs 2xl:text-base font-normal mr-2 px-2.5 py-0.5 rounded-full">
+                    class="bg-transparent cursor-pointer text-gray-400 text-xs 2xl:text-md font-normal mr-2 px-2.5 py-0.5 rounded-full">
                     {{ $blogCategory->title }}
                 </span>
             @endforeach
@@ -51,10 +51,10 @@
                         <p class="text-gray-400 mb-1 text-xs 2xl:text-md">
                             {{ \Carbon\Carbon::parse($firstBlog->published_date)->locale('id')->isoFormat('dddd, D MMMM Y') }}
                         </p>
-                        <h1 class="text-xl font-semibold text-black tracking-tight mb-3 line-clamp-2">
+                        <h1 class="text-lg font-semibold text-black tracking-tight mb-3 line-clamp-2">
                             {{ $firstBlog->title }}
                         </h1>
-                        <div class="text-gray-400 line-clamp-3 text-xs 2xl:text-base">
+                        <div class="text-gray-400 line-clamp-3 text-xs 2xl:text-md">
                             {!! $firstBlog->content !!}
                         </div>
                     </a>
@@ -77,7 +77,7 @@
                                     <span class="text-base font-semibold text-black line-clamp-2 mt-2">
                                         {{ $blog->title }}
                                     </span>
-                                    <div class="mt-3 text-xs 2xl:text-base text-gray-400 line-clamp-2">
+                                    <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2">
                                         {!! $blog->content !!}
                                     </div>
                                     <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
@@ -110,7 +110,7 @@
                                 <p class="mt-3 text-base text-black font-semibold line-clamp-2">
                                     {{ $blog->title }}
                                 </p>
-                                <div class="mt-3 text-xs 2xl:text-base text-gray-400 line-clamp-2">
+                                <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2">
                                     {!! $blog->content !!}
                                 </div>
                             </a>

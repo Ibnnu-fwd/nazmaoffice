@@ -81,38 +81,38 @@
                         @endif
                         <div class="mt-4">
                             <a href="#">
-                                <h5 class="mb-2 text-xl font-bold tracking-tight line-clamp-2 text-gray-900">
+                                <h5 class="mb-2 text-lg font-bold tracking-tight line-clamp-2 text-gray-900">
                                     {{ $event->title }}
                                 </h5>
                             </a>
-                            <div class="flex items-center mt-4 text-base font-light">
+                            <div class="flex items-center mt-4 text-md font-light">
                                 <ion-icon name="calendar-outline" class="text-primary me-2 w-4 h-4"></ion-icon>
                                 <span class="text-gray-400">
                                     {{ date('d F Y', strtotime($event->event_date)) }}
                                 </span>
                             </div>
-                            <div class="flex items-center text-base font-light">
+                            <div class="flex items-center text-md font-light">
                                 <ion-icon name="time-outline" class="text-primary me-2 w-4 h-4"></ion-icon>
                                 <span class="text-gray-400">
                                     {{ date('H:i'), strtotime($event->event_time) }} WIB
                                 </span>
                             </div>
-                            <div class="text-gray-400 text-base mt-4 line-clamp-2 hover:line-clamp-3">
+                            <div class="text-gray-400 text-md mt-4 line-clamp-2 hover:line-clamp-3">
                                 {{ $event->location }}
                             </div>
                             <div class="mt-6 flex justify-between items-end">
                                 <div>
                                     @if ($event->discount === null)
-                                        <p class="text-gray-400 text-lg font-semibold mt-5">
+                                        <p class="text-gray-400 text-xl font-semibold mt-5">
                                             Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
                                     @else
-                                        <p class="text-base text-danger animate-pulse line-through">
+                                        <p class="text-md text-danger animate-pulse line-through">
                                             Rp.{{ number_format($event->price, 0, ',', '.') }}</p>
-                                        <p class="text-gray-400 text-lg font-semibold">
+                                        <p class="text-gray-400 text-xl font-semibold">
                                             Rp.{{ number_format($event->discount, 0, ',', '.') }}</p>
                                     @endif
                                 </div>
-                                <div class="flex items-center text-xs 2xl:text-base">
+                                <div class="flex items-center text-xs 2xl:text-md">
                                     <div class="w-3 h-3 rounded-full bg-success mr-2"></div>
                                     <span class="text-gray-400">
                                         Tersedia

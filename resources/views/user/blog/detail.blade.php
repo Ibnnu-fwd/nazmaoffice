@@ -13,11 +13,11 @@
                     <h1 class="text-3xl font-bold leading-snug text-white">
                         {{ $blog->title }}
                     </h1>
-                    <p class="text-gray-200 mt-4 text-xs 2xl:text-base">
+                    <p class="text-gray-200 mt-4 text-xs 2xl:text-md">
                         {{ $blog->tag }}
                     </p>
                 </div>
-                <div class="mt-2 md:mt-0 md:place-self-end text-xs 2xl:text-base">
+                <div class="mt-2 md:mt-0 md:place-self-end text-xs 2xl:text-md">
                     <p class="text-white">
                         {{ $blog->author_name }}
                     </p>
@@ -39,7 +39,7 @@
     <section class="max-w-4xl mx-auto mt-10 px-8 lg:px-0">
         <img src="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}"
             class="w-full h-48 md:h-[500px] object-cover object-center blur-mode rounded-xl" alt="">
-        <div class="mt-8 leading-relaxed text-justify -tracking-tight text-sm 2xl:text-base">
+        <div class="mt-8 leading-relaxed text-justify -tracking-tight text-sm 2xl:text-md">
             {!! $blog->content !!}
         </div>
 
@@ -63,7 +63,7 @@
                             <p class="mt-3 text-base text-black font-semibold line-clamp-2">
                                 {{ $data->title }}
                             </p>
-                            <div class="mt-3 text-xs 2xl:text-base text-gray-400 line-clamp-2">
+                            <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2">
                                 {!! $data->content !!}
                             </div>
                         </a>
@@ -82,7 +82,7 @@
                             <span class="text-lg font-semibold text-black line-clamp-2 mt-2">
                                 {{ $blogs->last()->title }}
                             </span>
-                            <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-base">
+                            <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-md">
                                 {!! $blogs->last()->content !!}
                             </p>
                             <div class="flex gap-x-2 items-center mt-5">

@@ -14,7 +14,8 @@
     @endpush
 
     {{-- Hero --}}
-    <div id="indicators-carousel" class="relative max-w-7xl mx-auto my-12" data-carousel="static" data-aos="fade-up">
+    <div id="indicators-carousel" class="relative max-w-7xl md:mx-4 xl:mx-auto my-12" data-carousel="static"
+        data-aos="fade-up">
         <!-- Carousel wrapper -->
         <div class="relative h-48 overflow-hidden shadow-2xl rounded-lg md:rounded-3xl md:h-[488px] mx-4 md:mx-0">
             <!-- Item 1 -->
@@ -108,12 +109,12 @@
     </div>
 
     {{-- Milestone --}}
-    <section class="bg-white py-20 px-4 md:px-8">
+    {{-- <section class="bg-white py-20 px-4 md:px-8">
         <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16 text-center" data-aos="fade-up" data-aos-delay="1000">
             <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
                 Perjalanan Kami
             </h2>
-            <p class=" text-gray-400 text-xs 2xl:text-base">
+            <p class=" text-gray-400 text-xs 2xl:text-md">
                 Tahun demi tahun, kami terus berkembang dan berinovasi <br> untuk mengedukasi berbagai kalangan bisnis
             </p>
         </div>
@@ -128,10 +129,10 @@
                             <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
                         </div>
                         <div class="mt-3 sm:pr-8">
-                            <p class="text-xs 2xl:text-base font-medium mb-3 text-gray-900">{{ $milestone->title }}</p>
+                            <p class="text-xs 2xl:text-md font-medium mb-3 text-gray-900">{{ $milestone->title }}</p>
                             <time
-                                class="block mb-2 text-xs 2xl:text-base font-normal leading-none text-gray-400 ">{{ $milestone->year }}</time>
-                            <p class="text-xs 2xl:text-base font-normal text-justify text-gray-500">
+                                class="block mb-2 text-xs 2xl:text-md font-normal leading-none text-gray-400 ">{{ $milestone->year }}</time>
+                            <p class="text-xs 2xl:text-md font-normal text-justify text-gray-500">
                                 {{ $milestone->description }}
                             </p>
                         </div>
@@ -139,7 +140,81 @@
                 @endforeach
             </div>
         </div>
+    </section> --}}
+
+    {{-- Vision --}}
+
+    <section>
+        <div
+            class="flex flex-col justify-center flex-1 px-8 py-8 mx-auto lg:py-24 md:px-12 lg:flex-none lg:px-24 max-w-7xl">
+            <div class="max-w-2xl mx-auto text-center">
+                <div>
+                    <p class="text-2xl font-bold tracking-tight text-black sm:text-2xl">
+                        Visi
+                    </p>
+                    <p class="max-w-xl mt-4 text-md tracking-tight text-gray-600">
+                        "Menjadi perusahaan IT dan Management Consulting yang inspiratif, berkualitas
+                        dan barokah pada tahun 2024"
+                    </p>
+                </div>
+                <div class="mb-6 mt-20">
+                    <p class="text-2xl font-bold tracking-tight text-black sm:text-2xl">
+                        Misi
+                    </p>
+                </div>
+            </div>
+
+            <section class="flex items-center w-full bg-white">
+                <div class="relative items-center w-full">
+
+                    <div class="flex flex-wrap justify-center">
+                        <div class="w-full md:w-1/2 lg:w-1/3 text-center p-4">
+                            <figure>
+                                <p class="mt-3 text-md text-gray-600">
+                                    Memberikan layanan IT dan Manajemen Consulting serta pengembangan lain yang
+                                    berkualitas
+                                </p>
+                            </figure>
+                        </div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 text-center p-4">
+                            <figure>
+                                <p class="mt-3 text-md text-gray-600">
+                                    Memberikan value (nilai) tambah pada setiap produk dan jasa yang diberikan oleh
+                                    NaZMa.
+                                </p>
+                            </figure>
+                        </div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 text-center p-4">
+                            <figure>
+                                <p class="mt-3 text-md text-gray-600">
+                                    Membuat sistemasi bisnis yang efektif, efisien, nyaman, dan terintegrasi baik secara
+                                    offline dan online.
+                                </p>
+                            </figure>
+                        </div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 text-center p-4">
+                            <figure>
+                                <p class="mt-3 text-md text-gray-600">
+                                    Selalu memberikan layanan pada customer dengan berprinsip “We’ll finish it with
+                                    excellence” dengan target kepuasan pelanggan.
+                                </p>
+                            </figure>
+                        </div>
+                        <div class="w-full md:w-1/2 lg:w-1/3 text-center p-4">
+                            <figure>
+                                <p class="mt-3 text-md text-gray-600">
+                                    Bekerja sama dan bersinergi dengan berbagai institusi, komunitas, perusahaan,
+                                    kampus, dan masyarakat untuk meningkatkan kinerja dan layanan perusahaan.
+                                </p>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </section>
+
 
     {{-- Teams --}}
     <section class=bg-gray-900">
@@ -149,7 +224,7 @@
                 <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
                     Tim Dibalik NaZMa Office
                 </h2>
-                <p class=" text-gray-400 text-xs 2xl:text-base">
+                <p class=" text-gray-400 text-xs 2xl:text-md">
                     Kami adalah tim yang berdedikasi untuk mengedukasi Indonesia dan siap
                     untuk membantu dalam mengembangkan bisnis dengan teknologi informasi yang tepat.
                 </p>
@@ -160,10 +235,10 @@
                         data-aos-delay="{{ $loop->iteration * 300 }}">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team['image']) }}" alt={{ $team['name'] }}>
-                        <h3 class="mb-1 text-sm 2xl:text-base font-medium tracking-tight text-gray-900">
+                        <h3 class="mb-1 text-sm 2xl:text-md font-medium tracking-tight text-gray-900">
                             <span>{{ $team['name'] }}</span>
                         </h3>
-                        <p class="text-xs 2xl:text-base">{{ $team['job'] }}</p>
+                        <p class="text-xs 2xl:text-md">{{ $team['job'] }}</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             @if ($team['facebook'])
                                 <li>
@@ -202,10 +277,10 @@
                     <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
-                        <h3 class="mb-1 text-sm 2xl:text-base font-medium tracking-tight text-gray-900">
+                        <h3 class="mb-1 text-sm 2xl:text-md font-medium tracking-tight text-gray-900">
                             <span>{{ $team->name }}</span>
                         </h3>
-                        <p class="text-xs 2xl:text-base">{{ $team->job }}</p>
+                        <p class="text-xs 2xl:text-md">{{ $team->job }}</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 @if ($team->facebook)
@@ -245,10 +320,10 @@
                     <div class="text-center text-gray-500" data-aos="fade-up" data-aos-duration="500">
                         <img class="mx-auto mb-4 w-36 h-36 rounded-full"
                             src="{{ asset('storage/teams/' . $team->image) }}" alt={{ $team->name }}>
-                        <h3 class="mb-1 text-sm 2xl:text-base font-medium tracking-tight text-gray-900">
+                        <h3 class="mb-1 text-sm 2xl:text-md font-medium tracking-tight text-gray-900">
                             <span>{{ $team->name }}</span>
                         </h3>
-                        <p class="text-xs 2xl:text-base">{{ $team->job }}</p>
+                        <p class="text-xs 2xl:text-md">{{ $team->job }}</p>
                         <ul class="flex justify-center mt-4 space-x-4">
                             <li>
                                 @if ($team->facebook)
@@ -302,20 +377,20 @@
                                     alt="">
                                 <div class="flex items-center">
                                     <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
-                                    <span class="text-xs 2xl:text-base text-primary">
+                                    <span class="text-xs 2xl:text-md text-primary">
                                         {{ number_format($testimonial->rating, 1, '.', ',') }}
                                     </span>
                                 </div>
                             </div>
                             <div>
-                                <h5 class="2xl:text-base font-semibold tracking-tight text-gray-900">
+                                <h5 class="2xl:text-md font-semibold tracking-tight text-gray-900">
                                     {{ ucwords($testimonial->fullname) }}
                                 </h5>
-                                <span class="text-xs 2xl:text-base -mt-2 tracking-tight text-gray-400">
+                                <span class="text-xs 2xl:text-md -mt-2 tracking-tight text-gray-400">
                                     {{ ucwords($testimonial->job) }}
                                 </span>
                             </div>
-                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-base">
+                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-md">
                                 {{ $testimonial->testimonial }}
                             </p>
                         </div>
