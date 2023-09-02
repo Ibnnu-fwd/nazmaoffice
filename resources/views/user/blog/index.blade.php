@@ -49,7 +49,8 @@
                             class="w-full md:h-72 lg:h-96 rounded-xl object-cover object-center blur-mode mb-4"
                             alt="">
                         <p class="text-gray-400 mb-1 text-xs 2xl:text-md">
-                            {{ date('d F Y', strtotime($firstBlog->created_at)) }}</p>
+                            {{ \Carbon\Carbon::parse($firstBlog->published_date)->locale('id')->isoFormat('dddd, D MMMM Y') }}
+                        </p>
                         <h1 class="text-xl font-semibold text-black tracking-tight mb-3 line-clamp-2">
                             {{ $firstBlog->title }}
                         </h1>
@@ -69,8 +70,10 @@
                                     class="hidden mx-auto lg:inline-block md:w-36 md:h-36 lg:w-40 lg:h-40 blur-mode object-center object-cover rounded-lg"
                                     alt="">
                                 <div class="col-span-2">
-                                    <span
-                                        class="text-gray-400 text-xs 2xl:text-md">{{ date('d F Y', strtotime($blog->created_at)) }}</span>
+                                    <span class="text-gray-400 text-xs 2xl:text-md">
+                                        {{ \Carbon\Carbon::parse($blog->published_date)->locale('id')->isoFormat('dddd, D MMMM Y') }}
+
+                                    </span>
                                     <span class="text-base font-semibold text-black line-clamp-2 mt-2">
                                         {{ $blog->title }}
                                     </span>
@@ -102,7 +105,7 @@
                                     alt="{{ $blog->title }}" />
 
                                 <p class="mt-5 text-md font-normal leading-6 text-gray-400">
-                                    {{ date('d F Y', strtotime($blog->created_at)) }}
+                                    {{ \Carbon\Carbon::parse($blog->published_date)->locale('id')->isoFormat('dddd, D MMMM Y') }}
                                 </p>
                                 <p class="mt-3 text-base text-black font-semibold line-clamp-2">
                                     {{ $blog->title }}

@@ -22,7 +22,7 @@
                         {{ $blog->author_name }}
                     </p>
                     <p class="text-gray-200">
-                        {{ date('d F Y', strtotime($blog->published_date)) }}
+                        {{ \Carbon\Carbon::parse($blog->published_date)->locale('id')->isoFormat('dddd, D MMMM Y') }}
                     </p>
 
                     <p class="text-white mt-8">

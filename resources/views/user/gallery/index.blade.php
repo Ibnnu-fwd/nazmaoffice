@@ -33,7 +33,7 @@
                     @foreach ($galleries as $gallery)
                         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4 h-fit"
                             data-gallery-id="{{ $gallery->id }}">
-                            <a href="#">
+                            <a>
                                 <img class="w-full h-52 rounded-xl blur-mode object-cover object-center"
                                     src="{{ asset('storage/gallery/' . $gallery->image) }}" alt="" />
                             </a>
@@ -44,7 +44,7 @@
                                     </h5>
                                 </a>
                                 <p class="font-normal text-gray-400 text-base">
-                                    {{ date('d F Y', strtotime($gallery->published_date)) }}
+                                    {{ \Carbon\Carbon::parse($gallery->published_date)->locale('id')->isoFormat('dddd, D MMMM Y') }}
                                 </p>
                             </div>
                         </div>

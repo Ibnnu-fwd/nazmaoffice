@@ -9,12 +9,12 @@
                             src="{{ asset('storage/blogs/thumbnail/' . $blog->thumbnail) }}" alt="{{ $blog->title }}" />
 
                         <p class="mt-5 text-sm font-normal leading-6 text-gray-400">
-                            {{ date('d F Y', strtotime($blog->created_at)) }}
+                            {{ \Carbon\Carbon::parse($blog->published_date)->locale('id')->isoFormat('dddd, D MMMM Y') }}
                         </p>
-                        <p class="mt-3 text-md text-black font-semibold line-clamp-2">
+                        <p class="mt-3 text-base text-black font-semibold line-clamp-2">
                             {{ $blog->title }}
                         </p>
-                        <div class="mt-3 text-xs 2xl:text-sm text-gray-400 line-clamp-2">
+                        <div class="mt-3 text-xs 2xl:text-base text-gray-400 line-clamp-2">
                             {!! $blog->content !!}
                         </div>
                     </a>
@@ -23,7 +23,7 @@
             </div>
         @else
             <div class="flex flex-col items-center justify-center w-full h-96">
-                <p class="mt-5 text-md font-semibold text-gray-400">
+                <p class="mt-5 text-base font-semibold text-gray-400">
                     Belum ada blog yang ditulis
                 </p>
             </div>
