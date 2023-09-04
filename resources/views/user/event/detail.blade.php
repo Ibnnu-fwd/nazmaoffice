@@ -156,7 +156,7 @@
                                 Waktu pendaftaran
                             </p>
                             <p class="text-md text-gray-600 font-semibold">
-                                {{ \Carbon\Carbon::parse($event->start_date)->format('d F Y') .
+                                {{ \Carbon\Carbon::parse($event->start_date)->format('d F') .
                                     ' - ' .
                                     \Carbon\Carbon::parse($event->end_date)->format('d F Y') }}
                             </p>
