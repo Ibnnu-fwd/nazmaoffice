@@ -30,12 +30,9 @@ class EventRepository implements EventInterface
     {
         $fileNameHeroImage = uniqid() . '.' . $data['hero_image']->extension();
         $data['hero_image']->storeAs('public/event/setting', $fileNameHeroImage);
+        $data['hero_image'] = $fileNameHeroImage;
 
-        return $this->eventPageSetting->create([
-            'header_title' => $data['header_title'],
-            'description'  => $data['description'],
-            'hero_image'   => $fileNameHeroImage,
-        ]);
+        return $this->eventPageSetting->create($data);
     }
 
     public function getSetting()
@@ -54,11 +51,7 @@ class EventRepository implements EventInterface
             Storage::delete('public/event/setting/' . $setting->hero_image);
         }
 
-        $setting->header_title = $data['header_title'];
-        $setting->description  = $data['description'];
-        $setting->save();
-
-        return $setting;
+        return $setting->update($data);
     }
 
     public function getWithPaginate($limit)
