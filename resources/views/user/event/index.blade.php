@@ -96,7 +96,7 @@
                             <div class="flex items-center text-md font-light">
                                 <ion-icon name="time-outline" class="text-primary me-2 w-4 h-4"></ion-icon>
                                 <span class="text-gray-400">
-                                    {{ date('H:i'), strtotime($event->event_time) }} WIB
+                                    {{ \Carbon\Carbon::parse($event->event_time)->format('H:i') }} WIB
                                 </span>
                             </div>
                             <div class="text-gray-400 text-md mt-4 line-clamp-2 hover:line-clamp-3">

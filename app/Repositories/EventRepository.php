@@ -7,6 +7,7 @@ use App\Models\Event;
 use App\Models\EventPageSetting;
 use App\Models\EventRundown;
 use App\Models\EventSpeaker;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
@@ -81,7 +82,7 @@ class EventRepository implements EventInterface
         $data['start_date'] = date('Y-m-d', strtotime($data['start_date']));
         $data['end_date']   = date('Y-m-d', strtotime($data['end_date']));
         $data['event_date'] = date('Y-m-d', strtotime($data['event_date']));
-        $data['event_time'] = date('H:i:s', strtotime($data['event_time']));
+        $data['event_time'] = Carbon::parse($data['event_time'])->format('H:i:s');
 
         DB::beginTransaction();
         try {
