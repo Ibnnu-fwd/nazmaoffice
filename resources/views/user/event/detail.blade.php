@@ -1,4 +1,7 @@
 <x-guest-layout>
+
+    @section('title', $event->title)
+
     {{-- Hero --}}
     <section class="relative flex items-center w-full">
         <div class="relative flex items-center justify-center w-full px-5 py-24 mx-auto md:px-12 2xl:px-0 max-w-7xl">
