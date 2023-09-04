@@ -256,14 +256,14 @@
                         </div>
                     </div>
                 </div>
-                <section class="flex flex-col px-6 sm:px-8 lg:py-0 bg-gray-50 rounded-2xl">
+                <section class="flex flex-col px-6 sm:px-8 lg:py-6 bg-gray-50 rounded-2xl">
                     <h3 class="mt-5 text-base text-black font-medium">
                         {{ $event->title }}
                     </h3>
                     <p class="mt-2 text-md text-gray-500">
                         Ikuti event berkualitas untuk mengasah skill dan membangun portofolio
                     </p>
-                    @if ($event->discount || $event->discount == 0)
+                    @if ($event->discount)
                         <p class="order-first text-5xl font-light tracking-tight text-black">
                             <span class="text-2xl font-normal text-danger animate-pulse line-through">
                                 Rp. {{ number_format($event->price, 0, ',', '.') }}
