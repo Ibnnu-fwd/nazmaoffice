@@ -1,5 +1,7 @@
 <x-guest-layout>
 
+    @section('title', 'Acara')
+
     {{-- Hero --}}
     <section class="relative flex items-center w-full">
         <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl">
