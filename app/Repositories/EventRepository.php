@@ -124,7 +124,7 @@ class EventRepository implements EventInterface
 
     public function getAll()
     {
-        return $this->event->where('is_active', 1)->get();
+        return $this->event->where('is_active', 1)->orderBy('event_date', 'asc')->get();
     }
 
     public function getById($id)
