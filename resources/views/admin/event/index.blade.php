@@ -312,7 +312,7 @@
                             d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <h3 class="mb-5 text-lg font-normal text-gray-500">
-                        Apakah kamu yakin ingin menghapus blog ini?
+                        Apakah kamu yakin ingin menghapus event ini?
                     </h3>
                     <form action="" method="POST">
                         @csrf

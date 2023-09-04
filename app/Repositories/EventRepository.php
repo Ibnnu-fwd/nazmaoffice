@@ -63,7 +63,7 @@ class EventRepository implements EventInterface
 
     public function getWithPaginate($limit)
     {
-        $events = $this->event->where('is_active', 1)->orderBy('created_at', 'desc')->paginate($limit);
+        $events = $this->event->orderBy('created_at', 'desc')->paginate($limit);
         return $events;
     }
 
