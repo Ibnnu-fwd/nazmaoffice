@@ -304,6 +304,12 @@
                         <li class="flex items-center">
                             <ion-icon class="w-5 h-5 text-success md hydrated" name="checkmark-circle"></ion-icon>
                             <span class="ml-4">
+                                Jaringan / Networking
+                            </span>
+                        </li>
+                        <li class="flex items-center">
+                            <ion-icon class="w-5 h-5 text-success md hydrated" name="checkmark-circle"></ion-icon>
+                            <span class="ml-4">
                                 Free coaching selama 2 minggu
                             </span>
                         </li>
@@ -314,8 +320,14 @@
                             </span>
                         </li>
                     </ul>
+                    @php
+                        $text = 'Halo%20Admin%20NaZMa%20Office%2C%20saya%20ingin%20bertanya%20tentang%20' . rawurlencode($event->title);
+                        $phone = $event->phone;
+                    @endphp
                     <a class="items-center justify-center w-full px-6 py-2.5 mt-8 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:border-primary focus:outline-none focus-visible:outline-primary text-md focus-visible:ring-primary"
-                        aria-label="Big fish tier" href="/register">
+                        aria-label="Big fish tier"
+                        href="{{ 'https://api.whatsapp.com/send?phone=' . $phone . '&text=' . $text }}"
+                        target="_blank">
                         Daftar Sekarang
                     </a>
                 </section>

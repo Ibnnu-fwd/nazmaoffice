@@ -109,7 +109,7 @@
     </div>
 
     {{-- Milestone --}}
-    {{-- <section class="bg-white py-20 px-4 md:px-8">
+    <section class="bg-white py-20 px-4 md:px-8">
         <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16 text-center" data-aos="fade-up" data-aos-delay="1000">
             <h2 class="mb-4 text-2xl tracking-tight font-bold text-gray-900">
                 Perjalanan Kami
@@ -140,7 +140,7 @@
                 @endforeach
             </div>
         </div>
-    </section> --}}
+    </section>
 
     {{-- Vision --}}
 
@@ -164,7 +164,7 @@
                 </div>
             </div>
 
-            <section class="flex items-center w-full bg-white">
+            <section class="flex items-center w-full">
                 <div class="relative items-center w-full">
 
                     <div class="flex flex-wrap justify-center">
