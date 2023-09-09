@@ -45,11 +45,11 @@
     </section>
 
     {{-- Sub Services --}}
-    @if (!empty($service->subService))
+    @if (!empty($service->subServices))
         <section aria-labelledby="feature-five" id="feature-five" class="overflow-y-auto bg-white lg:min-h-fit">
             <div class="px-8 py-8 xl:py-24 mx-auto lg:px-16 max-w-7xl md:px-12 xl:px-0 lg:flex">
                 <div class="lg:w-1/2">
-                    <div class="top-0 pt-8 pb-16 lg:sticky">
+                    <div class="top-0 pb-16 lg:sticky">
                         <div>
                             <div class="lg:pr-24 md:pr-12">
                                 <div>
@@ -68,7 +68,7 @@
                 <div class="lg:w-1/2">
                     <div class="flex-shrink-0">
                         <div>
-                            <ul class="grid grid-cols-1 gap-12 mt-6 list-none lg:mt-0 lg:gap-24" role="list">
+                            <ul class="grid grid-cols-1 gap-12 list-none lg:mt-0 lg:gap-24" role="list">
                                 @forelse ($service->subServices as $subService)
                                     <li>
                                         <div>
@@ -133,7 +133,6 @@
         </div>
     </section>
 
-
     {{-- Project --}}
     @if (!empty($service->serviceProjects) && count($service->serviceProjects) > 0)
         <section class="">
@@ -147,19 +146,19 @@
                     @forelse ($service->serviceProjects as $project)
                         <div class="bg-white border border-gray-200 rounded-lg shadow p-4" data-aos="fade-up"
                             data-aos-delay="300" data-aos-duration="1000">
-                            <a href="#">
+                            <a>
                                 <img class="rounded-xl"
                                     src="{{ asset('storage/service_project/' . $project->image_1) }}" alt="" />
                             </a>
                             <div class="mt-4 text-start">
-                                <a href="#" onclick="event.preventDefault();">
+                                <a onclick="event.preventDefault();">
                                     <h5
                                         class="mb-2 text-md 2xl:text-md font-semibold tracking-tight line-clamp-2 text-gray-900">
                                         {{ $project->title }}
                                     </h5>
                                 </a>
                                 <p class="font-normal text-xs 2xl:text-md text-gray-400">
-                                    {{ date('d F Y', strtotime($project->created_at)) }}
+                                    {{ \Carbon\Carbon::parse($project->created_at)->locale('id')->isoFormat('dddd, D MMMM Y') }}
                                 </p>
                             </div>
                         </div>
@@ -195,6 +194,50 @@
                     class="items-center 2xl:text-md justify-center w-fit px-6 py-3 text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
                     Daftar Sekarang
                 </a>
+            </div>
+        </div>
+    </section>
+
+    {{-- Testimonials --}}
+    <section class="py-12 bg-white">
+        <p class="text-2xl font-bold tracking-tight text-black text-center">
+            Apa Kata Mereka
+        </p>
+        <div id="testimonial" class="mt-8">
+            <div class="carousel carousel-center p-4 space-x-4 w-full md:place-content-center" data-aos="fade-up"
+                data-aos-delay="500">
+                @forelse ($testimonials as $testimonial)
+                    <div id="item{{ $testimonial->id }}" class="carousel-item">
+                        <div class="max-w-sm p-12 md:p-6 bg-white rounded-lg border border-gray-50">
+                            <div class="flex justify-between items-center mb-4">
+                                <img src="{{ asset('storage/testimonial/' . $testimonial->profile_picture) }}"
+                                    class=" blur-mode w-16 h-16 object-center object-cover rounded-full"
+                                    alt="">
+                                <div class="flex items-center">
+                                    <ion-icon name="star" class="text-primary h-4 w-4 me-1"></ion-icon>
+                                    <span class="text-xs 2xl:text-md text-primary">
+                                        {{ number_format($testimonial->rating, 1, '.', ',') }}
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="2xl:text-md font-semibold tracking-tight text-gray-900">
+                                    {{ ucwords($testimonial->fullname) }}
+                                </h5>
+                                <span class="text-xs 2xl:text-md -mt-2 tracking-tight text-gray-400">
+                                    {{ ucwords($testimonial->job) }}
+                                </span>
+                            </div>
+                            <p class="mt-3 font-normal text-gray-500 text-xs 2xl:text-md">
+                                {{ $testimonial->testimonial }}
+                            </p>
+                        </div>
+                    </div>
+                @empty
+                    <p class="text-center">
+                        Belum ada testimoni
+                    </p>
+                @endforelse
             </div>
         </div>
     </section>

@@ -9,4 +9,6 @@ interface ServiceInterface
     public function store($data);
     public function update($id, $data);
     public function changeStatus($id, $status);
+
+    public function getTestimonials($id);
 }

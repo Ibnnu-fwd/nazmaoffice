@@ -33,7 +33,8 @@ class ServiceController extends Controller
     public function detail($id)
     {
         return view('user.service.detail', [
-            'service' => $this->service->getById($id)
+            'service'      => $this->service->getById($id),
+            'testimonials' => $this->service->getTestimonials($id),
         ]);
     }
 }

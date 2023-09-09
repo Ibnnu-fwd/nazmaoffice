@@ -42,4 +42,9 @@ class Service extends Model
     {
         return $this->hasMany(SubService::class);
     }
+
+    public function serviceTestimonials()
+    {
+        return $this->hasMany(ServiceTestimonial::class);
+    }
 }

@@ -5,7 +5,9 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Interfaces\BlogCategoryInterface;
 use App\Interfaces\BlogInterface;
+use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -19,8 +21,11 @@ class BlogController extends Controller
     }
     public function index()
     {
+        $blog = Blog::withCount('views')->get();
+        $blog = $blog->sortByDesc('views_count');
+
         return view('user.blog.index', [
-            'blogs'          => $this->blog->getAll(),
+            'blogs'          => $blog,
             'blogCategories' => $this->blogCategory->getAllWithoutPagination()
         ]);
     }

@@ -82,6 +82,10 @@
                             </a>
                         @endif
                         <div class="mt-4">
+                            <div
+                                class="bg-gray-100 mb-3 w-fit text-gray-600 text-xs 2xl:text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full capitalize">
+                                {{ $event->event_type }}
+                            </div>
                             <a href="#">
                                 <h5 class="mb-2 text-lg font-bold tracking-tight line-clamp-2 text-gray-900">
                                     {{ $event->title }}

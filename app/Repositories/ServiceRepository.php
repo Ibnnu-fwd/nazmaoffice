@@ -89,4 +89,9 @@ class ServiceRepository implements ServiceInterface
     {
         return $this->service->findOrFail($id)->update(['is_active' => $status]);
     }
+
+    public function getTestimonials($id)
+    {
+        return $this->service->findOrFail($id)->serviceTestimonials;
+    }
 }

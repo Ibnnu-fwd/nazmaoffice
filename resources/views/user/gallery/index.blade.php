@@ -23,23 +23,24 @@
         </form>
 
         @foreach ($groupedGalleries as $year => $galleries)
-            <div>
-                <div class="flex justify-between items-center md:px-48 mt-16">
+            <div class="px-4 md:px-10 2xl:px-48">
+                <div class="flex justify-between items-center mt-16 xl:px-32">
                     <h1 class="text-gray-300 text-4xl font-bold">{{ $year }}</h1>
                     <ion-icon class="text-gray-300 text-5xl" name="chevron-down-circle-outline"></ion-icon>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-20 mt-10">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto md:px-0 xl:px-20 mt-10">
                     @foreach ($galleries as $gallery)
-                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow p-4 h-fit"
+                        <div class="max-w-sm bg-white mx-auto border border-gray-200 rounded-lg shadow p-4 h-fit min-w-full"
                             data-gallery-id="{{ $gallery->id }}">
                             <a>
                                 <img class="w-full h-52 rounded-xl blur-mode object-cover object-center"
                                     src="{{ asset('storage/gallery/' . $gallery->image) }}" alt="" />
                             </a>
                             <div class="mt-4">
-                                <a href="#">
-                                    <h5 class="mb-2 text-base font-semibold tracking-tight line-clamp-2 text-gray-900">
+                                <a>
+                                    <h5
+                                        class="mb-2 text-base font-semibold tracking-tight line-clamp-2 md:line-clamp-none text-gray-900">
                                         {{ $gallery->title }}
                                     </h5>
                                 </a>
