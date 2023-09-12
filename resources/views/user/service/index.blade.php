@@ -24,7 +24,7 @@
                                     class="items-center justify-center w-fit px-8 py-3  text-center text-white duration-200 bg-primary border-2 border-primary rounded-full inline-flex hover:bg-purple-700 hover:text-white hover:border-purple-600 lg:w-auto text-md">
                                     Jelajahi
                                 </a>
-                                {{-- <a href="#"
+                                {{-- <a 
                                     class="inline-flex border border-gray-200 px-6 py-3 rounded-full items-center justify-center text-md text-black duration-200 hover:text-blue-500 focus:outline-none focus-visible:outline-gray-600">
                                     Tonton Teaser <ion-icon name="play-circle-outline"
                                         class="ml-2 text-primary text-xl"></ion-icon>
@@ -138,7 +138,7 @@
                     <div x-data="{ tab: '{{ $serviceCategories->first()->id }}' }">
                         <ul class="md:flex gap-3 text-gray-500 justify-center">
                             <li class="-mb-px">
-                                <a @click.prevent="tab = '{{ $serviceCategories->first()->id }}'" href="#"
+                                <a @click.prevent="tab = '{{ $serviceCategories->first()->id }}'" 
                                     class="inline-block px-8 py-2.5 text-xs 2xl:text-md rounded-full text-white bg-primary"
                                     :class="{ '  text-white bg-primary': tab === '{{ $serviceCategories->first()->id }}' }">
                                     {{ $serviceCategories->first()->title }}
@@ -148,7 +148,7 @@
                             {{-- loop except 1 --}}
                             @foreach ($serviceCategories->skip(1) as $serviceCategory)
                                 <li class="-mb-px">
-                                    <a @click.prevent="tab = '{{ $serviceCategory->id }}'" href="#"
+                                    <a @click.prevent="tab = '{{ $serviceCategory->id }}'" 
                                         class="inline-block px-8 py-2.5 text-xs 2xl:text-md rounded-full text-white bg-gray-200"
                                         :class="{ '  text-white bg-primary': tab === '{{ $serviceCategory->id }}' }">
                                         {{ $serviceCategory->title }}
@@ -225,7 +225,7 @@
                                         @foreach ($value as $project)
                                             <div class="max-w-sm bg-white border border-gray-200 rounded-xl  p-4 mb-6">
                                                 <div class="">
-                                                    <a href="#">
+                                                    <a >
                                                         <h5
                                                             class="mb-2 text-xs 2xl:text-md font-medium tracking-tight line-clamp-2 text-gray-900">
                                                             {{ $project->title }}
