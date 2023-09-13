@@ -42,8 +42,8 @@
             </h1>
 
             <div class="grid md:grid-cols-2 gap-6 mt-6">
-                @if ($blogs->count() > 0)
-                    <?php $firstBlog = $blogs->first(); ?>
+                @if ($featuredBlogs->count() > 0)
+                    <?php $firstBlog = $featuredBlogs->first(); ?>
                     <a href="{{ route('user.blog.detail', $firstBlog->slug) }}">
                         <img src="{{ asset('storage/blogs/thumbnail/' . $firstBlog->thumbnail) }}"
                             class="w-full md:h-72 lg:h-96 rounded-xl object-cover object-center blur-mode mb-4"
@@ -62,7 +62,7 @@
 
 
                 <div class="grid grid-cols-1 gap-y-6 place-content-start">
-                    @foreach ($blogs->skip(1)->take(3) as $blog)
+                    @foreach ($featuredBlogs->skip(1)->take(3) as $blog)
                         <a href="{{ route('user.blog.detail', $blog->slug) }}">
                             <div
                                 class="grid grid-cols-1 lg:grid-cols-3 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
