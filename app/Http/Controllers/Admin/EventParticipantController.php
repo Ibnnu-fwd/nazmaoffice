@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Interfaces\EventInterface;
 use App\Interfaces\EventParticipantInterface;
+use App\Models\EventParticipant;
 use Illuminate\Http\Request;
 
 class EventParticipantController extends Controller
@@ -43,7 +44,7 @@ class EventParticipantController extends Controller
         ]);
 
         try {
-            $this->eventParticipant->store($request->all());
+            $this->eventParticipant->store(array_merge($request->all(), ['status' => EventParticipant::STATUS_PENDING]));
             return redirect()->back()->with('success', 'Event participant berhasil ditambahkan');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Event participant gagal ditambahkan');

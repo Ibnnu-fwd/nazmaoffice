@@ -41,6 +41,7 @@
                         <th scope="col" class="p-4">No. Telepon</th>
                         <th scope="col" class="p-4">Perusahaan</th>
                         <th scope="col" class="p-4">Pekerjaan</th>
+                        <th scope="col" class="p-4">Status</th>
                         <th scope="col" class="p-4">Aksi</th>
                     </tr>
                 </thead>
@@ -64,6 +65,9 @@
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 {{ $data->job_title ?? '-' }}
+                            </td>
+                            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap uppercase">
+                                {{ $data->status ?? '-' }}
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">
                                 <div class="flex items-center space-x-4">
@@ -126,6 +130,12 @@
                         <x-input id="company" name="company" label="Perusahaan" />
 
                         <x-input id="job_title" name="job_title" label="Pekerjaan" />
+
+                        <x-select id="status" name="status" label="Status" required>
+                            <option value="pending">Menunggu</option>
+                            <option value="approved">Setuju</option>
+                            <option value="rejected">Tolak</option>
+                        </x-select>
 
                     </div>
 
@@ -207,6 +217,7 @@
                         $('#create-modal #phone').val(data.phone);
                         $('#create-modal #company').val(data.company);
                         $('#create-modal #job_title').val(data.job_title);
+                        $('#create-modal #status').val(data.status);
                     },
                     error: function() {
                         Swal.fire({

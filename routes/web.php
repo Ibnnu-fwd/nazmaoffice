@@ -27,6 +27,7 @@ use App\Http\Controllers\Admin\ServiceProjectController;
 use App\Http\Controllers\Admin\SubServiceController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\EventParticipantController as ControllersEventParticipantController;
 use App\Http\Controllers\ServiceTestimonialController;
 use App\Http\Controllers\User\ServiceController as UserServiceController;
 use Illuminate\Support\Facades\Route;
@@ -50,6 +51,8 @@ Route::get('service', [UserServiceController::class, 'index'])->name('user.servi
 Route::get('service/{id}', [UserServiceController::class, 'detail'])->name('user.service.detail');
 
 Route::get('/login-page', [AdminController::class, 'login'])->name('admin.login');
+
+Route::post('register-event/{event_id}', [ControllersEventParticipantController::class, 'registerEvent'])->name('user.register-event');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     // Dashboard

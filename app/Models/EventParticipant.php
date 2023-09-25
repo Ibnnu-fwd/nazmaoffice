@@ -7,9 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class EventParticipant extends Model
 {
+    const STATUS_PENDING  = 'pending';
+    const STATUS_APPROVED = 'approved';
+    const STATUS_REJECTED = 'rejected';
+
     use HasFactory;
 
-    public $table = 'event_participants';
+    public    $table    = 'event_participants';
     protected $fillable = [
         'event_id',
         'name',
@@ -17,6 +21,7 @@ class EventParticipant extends Model
         'phone',
         'company',
         'job_title',
+        'status',
         'is_active'
     ];
 

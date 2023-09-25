@@ -37,7 +37,7 @@
     </section>
 
     <section class="max-w-4xl mx-auto mt-10 px-8 lg:px-0">
-        <img src="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}"
+        <img id="main-image" src="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}"
             class="w-full h-48 md:h-[500px] object-cover object-center blur-mode rounded-xl" alt="">
         <div class="mt-8 leading-relaxed text-justify -tracking-tight text-sm 2xl:text-md">
             {!! $blog->content !!}
@@ -101,4 +101,17 @@
             </div>
         </section>
     </section>
+
+    @push('js-internal')
+        <script>
+            $(document).ready(function() {
+                // remove style in image except main image
+                $('img').not('#main-image').removeAttr('style');
+                // style img in content
+                $('img').not('#main-image').addClass(
+                    'blur-mode my-4 w-[40rem] h-full mx-auto object-cover object-center border border-gray-200 rounded-xl'
+                );
+            });
+        </script>
+    @endpush
 </x-guest-layout>
