@@ -21,11 +21,12 @@ class BlogController extends Controller
     }
     public function index()
     {
-        $blog = Blog::withCount('views')->get();
-        $blog = $blog->sortByDesc('views_count');
+        $featuredBlog = Blog::withCount('views')->get();
+        $featuredBlog = $featuredBlog->sortByDesc('views_count');
 
         return view('user.blog.index', [
-            'blogs'          => $blog,
+            'blogs'          => $this->blog->getAll(),
+            'featuredBlogs' => $featuredBlog,
             'blogCategories' => $this->blogCategory->getAllWithoutPagination()
         ]);
     }
