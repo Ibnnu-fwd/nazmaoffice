@@ -72,7 +72,7 @@
                     <div onclick="window.location.href='{{ route('user.blog.detail', $blogs->last()->slug) }}'"
                         class="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-6 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
                         <img src="{{ asset('assets/images/hero2.jpg') }}" 
-                            class="hidden h-52 mx-auto lg:inline-block object-center object-cover blur-mode rounded-lg related-image"
+                            class="hidden w-full h-50 mx-auto lg:inline-block object-center object-cover blur-mode rounded-lg related-image"
                             alt="">
                         <div class="col-span-2">
                             <span class="text-gray-400 text-sm">
