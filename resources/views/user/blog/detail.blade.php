@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto mt-10 px-8 lg:px-0">
+    <section class="max-w-4xl mx-auto mt-10 px-8 lg:px-0 mb-72">
         <img id="main-image" src="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}"
             class="w-full h-48 md:h-[500px] object-cover object-center blur-mode rounded-xl" alt="">
         <div class="mt-8 leading-relaxed text-justify -tracking-tight text-sm 2xl:text-md">
@@ -53,9 +53,8 @@
                 <div class="grid grid-cols-2 gap-x-6 gap-y-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
                     @foreach ($blogs as $data)
                         <a href="{{ route('user.blog.detail', $data->slug) }}">
-                            <img class="w-full bg-gray-200 h-40 rounded-lg object-cover object-center blur-mode"
-                                src="{{ asset('storage/blogs/thumbnail/' . $data->thumbnail) }}" alt=""
-                                width="1310" height="873">
+                            <img class="w-full bg-gray-200 h-50 rounded-lg object-cover object-center blur-mode"
+                                src="{{ asset('storage/blogs/thumbnail/' . $data->thumbnail) }}" alt="">
 
                             <p class="mt-5 text-md font-normal leading-6 text-gray-400">
                                 {{ date('d F Y', strtotime($data->published_date)) }}
