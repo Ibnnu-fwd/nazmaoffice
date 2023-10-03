@@ -4,7 +4,7 @@
         class="relative flex flex-col w-full py-2 mx-auto bg-white md:items-center md:justify-between md:flex-row px-4 md:px-6 lg:px-8 md:max-w-7xl">
         <div class="flex flex-row items-center justify-between lg:justify-start">
             <img src="{{ asset('assets/images/logo nazma elipse -01.png') }}"
-                class="rounded-full object-cover object-center w-14 h-14 md:w-16 md:h-16" />
+                class="rounded-full object-cover object-center w-14 h-14 md:w-16 md:h-16 related-image" />
             <button @click="open = !open"
                 class="inline-flex items-center justify-center p-2 text-gray-400 hover:text-black focus:outline-none focus:text-black md:hidden">
                 <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
