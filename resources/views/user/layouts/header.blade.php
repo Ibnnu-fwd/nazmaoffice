@@ -72,7 +72,8 @@
     flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0">
                 <a href="#" onclick="event.preventDefault();"
                     class="flex items-center mb-2 border-gray-200 md:pr-4 md:mr-4 md:border-r md:mb-0">
-                    <img src="{{ asset('assets/images/logo circle.png') }}" class="h-10 mr-2" alt="Flowbite Logo">
+                    <img src="{{ asset('assets/images/logo circle.png') }}" class="h-10 mr-2 related-image"
+                        alt="Flowbite Logo">
                     <span class="self-center text-lg font-semibold whitespace-nowrap text-gray-400">
                         Konsultasi Gratis
                     </span>
