@@ -27,14 +27,17 @@ class CompanyLandingSettingRepository implements CompanyLandingSettingInterface
         $slideImage1 = uniqid() . '.' . $data['slide_image_1']->extension();
         $slideImage2 = uniqid() . '.' . $data['slide_image_2']->extension();
         $slideImage3 = uniqid() . '.' . $data['slide_image_3']->extension();
+        $slideImage4 = uniqid() . '.' . $data['slide_image_3']->extension();
 
         $data['slide_image_1']->storeAs('public/company-landing-setting', $slideImage1);
         $data['slide_image_2']->storeAs('public/company-landing-setting', $slideImage2);
         $data['slide_image_3']->storeAs('public/company-landing-setting', $slideImage3);
+        $data['slide_image_4']->storeAs('public/company-landing-setting', $slideImage4);
 
         $data['slide_image_1'] = $slideImage1;
         $data['slide_image_2'] = $slideImage2;
         $data['slide_image_3'] = $slideImage3;
+        $data['slide_image_4'] = $slideImage3;
 
         DB::beginTransaction();
 
@@ -45,7 +48,8 @@ class CompanyLandingSettingRepository implements CompanyLandingSettingInterface
             Storage::delete([
                 'public/company-landing-setting/' . $slideImage1,
                 'public/company-landing-setting/' . $slideImage2,
-                'public/company-landing-setting/' . $slideImage3
+                'public/company-landing-setting/' . $slideImage3,
+                'public/company-landing-setting/' . $slideImage4,
             ]);
 
             DB::rollBack();
@@ -78,6 +82,13 @@ class CompanyLandingSettingRepository implements CompanyLandingSettingInterface
             Storage::delete('public/company-landing-setting/' . $companyLandingSetting->slide_image_3);
         }
 
+        if (isset($data['slide_image_4'])) {
+            $slideImage4 = uniqid() . '.' . $data['slide_image_4']->extension();
+            $data['slide_image_4']->storeAs('public/company-landing-setting', $slideImage4);
+            $data['slide_image_4'] = $slideImage4;
+            Storage::delete('public/company-landing-setting/' . $companyLandingSetting->slide_image_4);
+        }
+
         DB::beginTransaction();
 
         try {
@@ -87,7 +98,8 @@ class CompanyLandingSettingRepository implements CompanyLandingSettingInterface
             Storage::delete([
                 'public/company-landing-setting/' . $slideImage1,
                 'public/company-landing-setting/' . $slideImage2,
-                'public/company-landing-setting/' . $slideImage3
+                'public/company-landing-setting/' . $slideImage3,
+                'public/company-landing-setting/' . $slideImage4
             ]);
             DB::rollBack();
             throw $th;
