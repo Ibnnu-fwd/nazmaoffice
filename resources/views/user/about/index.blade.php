@@ -11,79 +11,89 @@
                 line-height: 1.2;
             }
         </style>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     @endpush
 
+
     {{-- Hero --}}
-    <div id="indicators-carousel" class="relative max-w-7xl md:mx-4 xl:mx-auto my-12" data-carousel="static"
+    <div id="indicators-carousel" class="relative max-w-7xl mx-4 xl:mx-auto my-12" data-carousel="static"
         data-aos="fade-up">
         <!-- Carousel wrapper -->
-        <div class="relative h-48 overflow-hidden shadow-2xl rounded-lg md:rounded-3xl md:h-[488px] mx-4 md:mx-0">
-            <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <img src="{{ asset('storage/about-page-setting/' . $aboutPage->slide_image_1) }}"
-                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
-                    alt="...">
-                <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
-                <div
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
-                        {{ $aboutPage->title_slide_image_1 ?? '-' }}
-                    </h1>
-                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
-                        {{ $aboutPage->description_slide_image_1 }}
-
-                    </p>
-                </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('storage/about-page-setting/' . $aboutPage->slide_image_2) }}"
-                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
-                    alt="...">
-                <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
-                <div
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
-                        {{ $aboutPage->title_slide_image_1 ?? '-' }}
-                    </h1>
-                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
-                        {{ $aboutPage->description_slide_image_1 }}
-
-                    </p>
-                </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('storage/about-page-setting/' . $aboutPage->slide_image_3) }}"
-                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
-                    alt="...">
-                <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
-                <div
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
-                        {{ $aboutPage->title_slide_image_1 ?? '-' }}
-                    </h1>
-                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
-                        {{ $aboutPage->description_slide_image_1 }}
-
-                    </p>
-                </div>
-            </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="{{ asset('storage/about-page-setting/' . $aboutPage->slide_image_4) }}"
-                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
-                    alt="...">
-                <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
-                <div
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
-                        {{ $aboutPage->title_slide_image_1 ?? '-' }}
-                    </h1>
-                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
-                        {{ $aboutPage->description_slide_image_1 }}
-
-                    </p>
-                </div>
+        <div
+            class="carousel-container relative h-48 overflow-hidden shadow-2xl rounded-lg md:rounded-3xl md:h-[488px] mx-4 md:mx-0">
+            <div class="swiper-wrapper">
+                <!-- Item 1 -->
+                @if (isset($aboutPage->slide_image_1))
+                    <div class="hidden duration-700 ease-in-out swiper-slide" data-carousel-item="active">
+                        <img src="{{ asset('storage/about-page-setting/' . $aboutPage->slide_image_1) }}"
+                            class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
+                            alt="...">
+                        <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                            <h1 class="font-semibold text-2xl md:text-3xl lg:text-7xl" id="header-title">
+                                {{ $aboutPage->title_slide_image_1 ?? '-' }}
+                            </h1>
+                            <p class="tracking-tight leading-6 mt-3 hidden md:inline-block text-xs 2xl:text-md">
+                                {{ $aboutPage->description_slide_image_1 }}
+                            </p>
+                        </div>
+                    </div>
+                @endif
+                <!-- Item 2 -->
+                @if (isset($aboutPage->slide_image_2))
+                    <div class="hidden duration-700 ease-in-out swiper-slide" data-carousel-item>
+                        <img src="{{ asset('storage/about-page-setting/' . $aboutPage->slide_image_2) }}"
+                            class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
+                            alt="...">
+                        <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                            <h1 class="font-semibold text-2xl md:text-3xl lg:text-7xl" id="header-title">
+                                {{ $aboutPage->title_slide_image_2 ?? '-' }}
+                            </h1>
+                            <p class="tracking-tight leading-6 mt-3 hidden md:inline-block text-xs 2xl:text-md">
+                                {{ $aboutPage->description_slide_image_2 ?? '-' }}
+                            </p>
+                        </div>
+                    </div>
+                @endif
+                <!-- Item 3 -->
+                @if (isset($aboutPage->slide_image_3))
+                    <div class="hidden duration-700 ease-in-out swiper-slide" data-carousel-item>
+                        <img src="{{ asset('storage/about-page-setting/' . $aboutPage->slide_image_3) }}"
+                            class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
+                            alt="...">
+                        <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                            <h1 class="font-semibold text-2xl md:text-3xl lg:text-7xl" id="header-title">
+                                {{ $aboutPage->title_slide_image_3 ?? '-' }}
+                            </h1>
+                            <p class="tracking-tight leading-6 mt-3 hidden md:inline-block text-xs 2xl:text-md">
+                                {{ $aboutPage->description_slide_image_3 ?? '-' }}
+                            </p>
+                        </div>
+                    </div>
+                @endif
+                <!-- Item 4 -->
+                @if (isset($aboutPage->slide_image_4))
+                    <div class="hidden duration-700 ease-in-out swiper-slide" data-carousel-item>
+                        <img src="{{ asset('storage/about-page-setting/' . $aboutPage->slide_image_4) }}"
+                            class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
+                            alt="...">
+                        <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                            <h1 class="font-semibold text-2xl md:text-3xl lg:text-7xl" id="header-title">
+                                {{ $aboutPage->title_slide_image_4 ?? '-' }}
+                            </h1>
+                            <p class="tracking-tight leading-6 mt-3 hidden md:inline-block text-xs 2xl:text-md">
+                                {{ $aboutPage->description_slide_image_4 ?? '-' }}
+                            </p>
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
         <!-- Slider indicators -->
@@ -94,10 +104,12 @@
                 data-carousel-slide-to="2"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
                 data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                data-carousel-slide-to="4"></button>
         </div>
         <!-- Slider controls -->
         <button type="button"
-            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            class="absolute top-0 left-0 z-30 opacity-10 hover:opacity-100 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
             data-carousel-prev>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -110,7 +122,7 @@
             </span>
         </button>
         <button type="button"
-            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            class="absolute top-0 right-0 z-30 flex opacity-10 hover:opacity-100 items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
             data-carousel-next>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -415,4 +427,50 @@
             </div>
         </div>
     </section>
+
+    @push('js-internal')
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script>
+            let swiper = new Swiper(".swiper-container", {
+                slidesPerView: "auto",
+                spaceBetween: 2,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var mySwiper = new Swiper('.carousel-container', {
+                    direction: 'horizontal',
+                    loop: true,
+                    autoplay: {
+                        delay: 5000, // Adjust this value to set the delay time in milliseconds
+                    },
+                });
+            });
+        </script>
+    @endpush
 </x-guest-layout>
