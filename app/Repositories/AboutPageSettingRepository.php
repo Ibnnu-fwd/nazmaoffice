@@ -26,14 +26,20 @@ class AboutPageSettingRepository implements AboutPageSettingInterface
         $fileNameSlideImage1 = uniqid() . '.' . $data['slide_image_1']->extension();
         $fileNameSlideImage2 = uniqid() . '.' . $data['slide_image_2']->extension();
         $fileNameSlideImage3 = uniqid() . '.' . $data['slide_image_3']->extension();
+        $fileNameSlideImage4 = uniqid() . '.' . $data['slide_image_3']->extension();
+
 
         $data['slide_image_1']->storeAs('public/about-page-setting', $fileNameSlideImage1);
         $data['slide_image_2']->storeAs('public/about-page-setting', $fileNameSlideImage2);
         $data['slide_image_3']->storeAs('public/about-page-setting', $fileNameSlideImage3);
+        $data['slide_image_4']->storeAs('public/about-page-setting', $fileNameSlideImage4);
+
 
         $data['slide_image_1'] = $fileNameSlideImage1;
         $data['slide_image_2'] = $fileNameSlideImage2;
         $data['slide_image_3'] = $fileNameSlideImage3;
+        $data['slide_image_4'] = $fileNameSlideImage4;
+
 
         DB::beginTransaction();
         try {
@@ -43,7 +49,8 @@ class AboutPageSettingRepository implements AboutPageSettingInterface
             Storage::delete([
                 'public/about-page-setting/' . $fileNameSlideImage1,
                 'public/about-page-setting/' . $fileNameSlideImage2,
-                'public/about-page-setting/' . $fileNameSlideImage3
+                'public/about-page-setting/' . $fileNameSlideImage3,
+                'public/about-page-setting/' . $fileNameSlideImage4,
             ]);
             DB::rollBack();
         }
@@ -74,6 +81,14 @@ class AboutPageSettingRepository implements AboutPageSettingInterface
             Storage::delete('public/about-page-setting/' . $aboutPageSetting->slide_image_3);
         }
 
+        if (isset($data['slide_image_4'])) {
+            $fileNameSlideImage4 = uniqid() . '.' . $data['slide_image_4']->extension();
+            $data['slide_image_4']->storeAs('public/about-page-setting', $fileNameSlideImage4);
+            $data['slide_image_4'] = $fileNameSlideImage4;
+            Storage::delete('public/about-page-setting/' . $aboutPageSetting->slide_image_4);
+        }
+        
+
         DB::beginTransaction();
         try {
             $aboutPageSetting->update($data);
@@ -89,6 +104,10 @@ class AboutPageSettingRepository implements AboutPageSettingInterface
 
             if (isset($data['slide_image_3'])) {
                 Storage::delete('public/about-page-setting/' . $fileNameSlideImage3);
+            }
+
+            if (isset($data['slide_image_4'])) {
+                Storage::delete('public/about-page-setting/' . $fileNameSlideImage4);
             }
 
             DB::rollBack();

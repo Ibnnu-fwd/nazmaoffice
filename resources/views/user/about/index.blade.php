@@ -27,11 +27,11 @@
                 <div
                     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
                     <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
-                        Tim Kami
+                        {{ $aboutPage->title_slide_image_1 ?? '-' }}
                     </h1>
                     <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
-                        Kami adalah tim yang berdedikasi untuk mengedukasi Indonesia melalui media digital dan siap
-                        untuk membantu Anda dalam mengembangkan bisnis Anda dengan teknologi informasi yang tepat.
+                        {{ $aboutPage->description_slide_image_1 }}
+
                     </p>
                 </div>
             </div>
@@ -44,11 +44,11 @@
                 <div
                     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
                     <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
-                        Pengalaman Lebih Dari 10 Tahun
+                        {{ $aboutPage->title_slide_image_1 ?? '-' }}
                     </h1>
                     <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
-                        Kami telah berpengalaman lebih dari 10 tahun dalam mengembangkan berbagai macam aplikasi dan
-                        website untuk berbagai macam kebutuhan bisnis.
+                        {{ $aboutPage->description_slide_image_1 }}
+
                     </p>
                 </div>
             </div>
@@ -61,11 +61,27 @@
                 <div
                     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
                     <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
-                        Kerja Sama Dengan Berbagai Perusahaan
+                        {{ $aboutPage->title_slide_image_1 ?? '-' }}
                     </h1>
                     <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
-                        Kami telah bekerja sama dengan berbagai perusahaan ternama di Indonesia untuk mengembangkan
-                        bisnis mereka dengan teknologi informasi yang tepat.
+                        {{ $aboutPage->description_slide_image_1 }}
+
+                    </p>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="{{ asset('storage/about-page-setting/' . $aboutPage->slide_image_4) }}"
+                    class="absolute block w-full -translate-x-1/2 blur-mode -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+                <div class="absolute inset-0 bg-gradient-to-l from-black/60"></div>
+                <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                    <h1 class="font-semibold text-xl md:text-3xl lg:text-7xl" id="header-title">
+                        {{ $aboutPage->title_slide_image_1 ?? '-' }}
+                    </h1>
+                    <p class="tracking-tight leading-6 mt-3 hidden md:inline-block">
+                        {{ $aboutPage->description_slide_image_1 }}
+
                     </p>
                 </div>
             </div>

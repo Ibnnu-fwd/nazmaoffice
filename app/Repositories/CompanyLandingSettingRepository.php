@@ -37,7 +37,7 @@ class CompanyLandingSettingRepository implements CompanyLandingSettingInterface
         $data['slide_image_1'] = $slideImage1;
         $data['slide_image_2'] = $slideImage2;
         $data['slide_image_3'] = $slideImage3;
-        $data['slide_image_4'] = $slideImage3;
+        $data['slide_image_4'] = $slideImage4;
 
         DB::beginTransaction();
 

@@ -25,9 +25,18 @@ class AboutPageSettingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'slide_image_1' => 'required|image|mimes:jpg,jpeg,png',
-            'slide_image_2' => 'required|image|mimes:jpg,jpeg,png',
-            'slide_image_3' => 'required|image|mimes:jpg,jpeg,png',
+            'slide_image_1'             => 'required|image|mimes:jpg,jpeg,png',
+            'slide_image_2'             => 'required|image|mimes:jpg,jpeg,png',
+            'slide_image_3'             => 'required|image|mimes:jpg,jpeg,png',
+            'slide_image_4'             => 'required|image|mimes:jpg,jpeg,png',
+            'title_slide_image_1'       => 'required',
+            'description_slide_image_1' => 'required',
+            'title_slide_image_2'       => 'required',
+            'description_slide_image_2' => 'required',
+            'title_slide_image_3'       => 'required',
+            'description_slide_image_3' => 'required',
+            'title_slide_image_4'       => 'required',
+            'description_slide_image_4' => 'required',
         ]);
 
         try {
@@ -41,9 +50,18 @@ class AboutPageSettingController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'slide_image_1' => 'nullable|image|mimes:jpg,jpeg,png',
-            'slide_image_2' => 'nullable|image|mimes:jpg,jpeg,png',
-            'slide_image_3' => 'nullable|image|mimes:jpg,jpeg,png',
+            'slide_image_1'             => 'required|image|mimes:jpg,jpeg,png',
+            'slide_image_2'             => 'required|image|mimes:jpg,jpeg,png',
+            'slide_image_3'             => 'required|image|mimes:jpg,jpeg,png',
+            'slide_image_4'             => 'required|image|mimes:jpg,jpeg,png',
+            'title_slide_image_1'       => 'required',
+            'description_slide_image_1' => 'required',
+            'title_slide_image_2'       => 'required',
+            'description_slide_image_2' => 'required',
+            'title_slide_image_3'       => 'required',
+            'description_slide_image_3' => 'required',
+            'title_slide_image_4'       => 'required',
+            'description_slide_image_4' => 'required',
         ]);
 
         try {
