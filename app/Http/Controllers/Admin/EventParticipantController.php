@@ -41,6 +41,7 @@ class EventParticipantController extends Controller
             'phone'     => ['required'],
             'company'   => ['nullable', 'string', 'max:255'],
             'job_title' => ['nullable', 'string', 'max:255'],
+            'status'     => ['required'],
         ]);
 
         try {
@@ -60,6 +61,8 @@ class EventParticipantController extends Controller
             'phone'     => ['required'],
             'company'   => ['nullable', 'string', 'max:255'],
             'job_title' => ['nullable', 'string', 'max:255'],
+            'phone'     => ['required'],
+            'status'     => ['required'],
         ]);
 
         try {
