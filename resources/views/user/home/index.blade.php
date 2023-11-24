@@ -469,7 +469,7 @@
                             {{ $blog->title }}
                         </p>
                         <div class="my-3 text-xs 2xl:text-md text-gray-500 line-clamp-3">
-                            {!! $blog->content !!}
+                            {!! Str::limit($blog->content, 100) !!}
                         </div>
 
                         @php
