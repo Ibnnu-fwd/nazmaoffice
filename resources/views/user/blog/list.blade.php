@@ -15,7 +15,7 @@
                             {{ $blog->title }}
                         </p>
                         <div class="mt-3 text-xs 2xl:text-base text-gray-400 line-clamp-2">
-                            {!! $blog->content !!}
+                            {!! Str::limit($blog->content, 70) !!}
                         </div>
                     </a>
                 @empty
