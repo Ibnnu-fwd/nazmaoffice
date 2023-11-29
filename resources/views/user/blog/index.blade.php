@@ -55,7 +55,7 @@
                             {{ $firstBlog->title }}
                         </h1>
                         <div class="text-gray-400 line-clamp-3 text-xs 2xl:text-md">
-                            {!! $firstBlog->content !!}
+                            {!! Str::limit($blog->content, 70) !!}
                         </div>
                     </a>
                 @endif
@@ -78,7 +78,7 @@
                                         {{ $blog->title }}
                                     </span>
                                     <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2">
-                                        {!! $blog->content !!}
+                                        {!! Str::limit($blog->content, 70) !!}
                                     </div>
                                     <div class="flex items-center md:hidden text-primary mt-4">Selengkapnya <ion-icon
                                             name="chevron-forward-outline"></ion-icon>
