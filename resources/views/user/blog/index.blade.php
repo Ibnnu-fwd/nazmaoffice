@@ -55,7 +55,7 @@
                             {{ $firstBlog->title }}
                         </h1>
                         <div class="text-gray-400 line-clamp-3 text-xs 2xl:text-md">
-                            {!! Str::limit($firstBlog->content, 70) !!}
+                            {!! Str::limit($firstBlog->content, 300) !!}
                         </div>
                     </a>
                 @endif
