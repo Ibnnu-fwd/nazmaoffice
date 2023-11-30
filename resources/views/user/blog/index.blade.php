@@ -1,15 +1,6 @@
 <x-guest-layout>
     @push('css-internal')
         <style>
-            ol {
-                list-style-type: decimal;
-                margin-left: 1.5rem;
-            }
-
-            ul {
-                list-style-type: disc;
-                margin-left: 1.5rem;
-            }
         </style>
     @endpush
     @section('title')
@@ -185,6 +176,19 @@
             }
 
             $(function() {
+
+                let ulList = document.querySelectorAll('ul');
+                // add style attribute in ul tag
+                ulList.forEach((ul) => {
+                    ul.setAttribute('style', 'list-style-type: disc; padding-left: 1.5rem;');
+                });
+
+                let olList = document.querySelectorAll('ol');
+                // add style attribute in ol tag
+                olList.forEach((ol) => {
+                    ol.setAttribute('style', 'list-style-type: decimal; padding-left: 1.5rem;');
+                });
+
                 $('#search').on('keypress', function(e) {
                     if (e.which == 13) {
                         e.preventDefault();
