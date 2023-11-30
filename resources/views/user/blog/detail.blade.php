@@ -124,16 +124,15 @@
                     'blur-mode my-4 w-[40rem] h-full mx-auto object-cover object-center border border-gray-200 rounded-xl'
                 );
 
-                let ulList = document.querySelectorAll('.content ul');
-                // add style attribute in ul tag
+                let ulList = document.querySelectorAll('.content>ul');
+                let olList = document.querySelectorAll('.content>ol');
+
                 ulList.forEach((ul) => {
-                    ul.setAttribute('style', 'list-style-type: disc; padding-left: 1.5rem;');
+                    ul.classList.add('list-disc', 'list-inside');
                 });
 
-                let olList = document.querySelectorAll('.content ol');
-                // add style attribute in ol tag
                 olList.forEach((ol) => {
-                    ol.setAttribute('style', 'list-style-type: decimal; padding-left: 1.5rem;');
+                    ol.classList.add('list-decimal', 'list-inside');
                 });
             });
         </script>
