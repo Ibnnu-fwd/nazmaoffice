@@ -1,16 +1,15 @@
 <x-guest-layout>
     @push('css-internal')
         <style>
-            /* style the ul and ol */
-            .content ul {
-                list-style-type: disc;
-                margin-left: 2rem;
-            }
+            /* ol {
+                    list-style-type: decimal;
+                    padding-left: 1.5rem;
+                }
 
-            .content ol {
-                list-style-type: decimal;
-                margin-left: 2rem;
-            }
+                ul {
+                    list-style-type: disc;
+                    padding-left: 1.5rem;
+                } */
         </style>
     @endpush
     @section('title')
@@ -125,9 +124,17 @@
                     'blur-mode my-4 w-[40rem] h-full mx-auto object-cover object-center border border-gray-200 rounded-xl'
                 );
 
-                // style ul and ol
-                $('.content ul').addClass('list-disc list-inside');
-                $('.content ol').addClass('list-decimal list-inside');
+                let ulList = document.querySelectorAll('ul');
+                // add style attribute in ul tag
+                ulList.forEach((ul) => {
+                    ul.setAttribute('style', 'list-style-type: disc; padding-left: 1.5rem;');
+                });
+
+                let olList = document.querySelectorAll('ol');
+                // add style attribute in ol tag
+                olList.forEach((ol) => {
+                    ol.setAttribute('style', 'list-style-type: decimal; padding-left: 1.5rem;');
+                });
             });
         </script>
     @endpush
