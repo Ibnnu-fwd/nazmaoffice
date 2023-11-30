@@ -194,13 +194,21 @@
                         });
                     }
                 });
-            
-                //make the numbered list in content in ckeditor is visible
-                let ol = document.querySelectorAll('ol');
-                ol.forEach((ol) => {
-                    ol.classList.remove('list-decimal');
-                    ol.classList.add('list-inside');
-                    ol.classList.add('list-decimal');
+
+                // fix list not styled in content
+                let lists = document.querySelectorAll('.content ul');
+                lists.forEach((list) => {
+                    list.classList.add('list-disc');
+                    list.classList.add('list-inside');
+                    list.classList.add('ml-4');
+                });
+
+                // fix list not styled in content
+                let lists2 = document.querySelectorAll('.content ol');
+                lists2.forEach((list) => {
+                    list.classList.add('list-decimal');
+                    list.classList.add('list-inside');
+                    list.classList.add('ml-4');
                 });
             });
         </script>
