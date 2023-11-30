@@ -2,14 +2,14 @@
     @push('css-internal')
         <style>
             /* ol {
-                                list-style-type: decimal;
-                                padding-left: 1.5rem;
-                            }
+                            list-style-type: decimal;
+                            padding-left: 1.5rem;
+                        }
 
-                            ul {
-                                list-style-type: disc;
-                                padding-left: 1.5rem;
-                            } */
+                        ul {
+                            list-style-type: disc;
+                            padding-left: 1.5rem;
+                        } */
         </style>
     @endpush
     @section('title')
@@ -124,9 +124,19 @@
                     'blur-mode my-4 w-[40rem] h-full mx-auto object-cover object-center border border-gray-200 rounded-xl'
                 );
 
-                // style ol and ul inside content
-                $('ol').addClass('list-decimal list-inside');
-                $('ul').addClass('list-disc list-inside');
+                let ulList = document.querySelectorAll('#content ul');
+                // add style attribute in ul tag
+                ulList.forEach((ul) => {
+                    ul.style.listStyleType = 'disc';
+                    ul.style.paddingLeft = '1.5rem';
+                });
+
+                let olList = document.querySelectorAll('#content ol');
+                // add style attribute in ol tag
+                olList.forEach((ol) => {
+                    ol.style.listStyleType = 'decimal';
+                    ol.style.paddingLeft = '1.5rem';
+                });
             });
         </script>
     @endpush
