@@ -1,8 +1,4 @@
 <x-guest-layout>
-    @push('css-internal')
-        <style>
-        </style>
-    @endpush
     @section('title')
         Blog
     @endsection
@@ -176,18 +172,6 @@
             }
 
             $(function() {
-
-                let ulList = document.querySelectorAll('ul');
-                // add style attribute in ul tag
-                ulList.forEach((ul) => {
-                    ul.setAttribute('style', 'list-style-type: disc; padding-left: 1.5rem;');
-                });
-
-                let olList = document.querySelectorAll('ol');
-                // add style attribute in ol tag
-                olList.forEach((ol) => {
-                    ol.setAttribute('style', 'list-style-type: decimal; padding-left: 1.5rem;');
-                });
 
                 $('#search').on('keypress', function(e) {
                     if (e.which == 13) {

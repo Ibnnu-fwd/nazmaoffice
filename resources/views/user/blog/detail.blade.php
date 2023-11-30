@@ -1,4 +1,17 @@
 <x-guest-layout>
+    @push('css-internal')
+        <style>
+            ol {
+                list-style-type: decimal;
+                padding-left: 1.5rem;
+            }
+
+            ul {
+                list-style-type: disc;
+                padding-left: 1.5rem;
+            }
+        </style>
+    @endpush
     @section('title')
         {{ $blog->title }}
     @endsection
@@ -71,7 +84,7 @@
                 @if ($blogs->count() > 3)
                     <div onclick="window.location.href='{{ route('user.blog.detail', $blogs->last()->slug) }}'"
                         class="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3 gap-6 rounded-xl border border-gray-200 p-4 md:border-0 md:p-0">
-                        <img src="{{ asset('assets/images/hero2.jpg') }}" 
+                        <img src="{{ asset('assets/images/hero2.jpg') }}"
                             class="hidden w-auto h-50 mx-auto lg:inline-block object-center object-cover blur-mode rounded-lg related-image"
                             alt="">
                         <div class="col-span-2">
@@ -110,6 +123,18 @@
                 $('img').not('#main-image, .related-image').addClass(
                     'blur-mode my-4 w-[40rem] h-full mx-auto object-cover object-center border border-gray-200 rounded-xl'
                 );
+
+                let ulList = document.querySelectorAll('ul');
+                // add style attribute in ul tag
+                ulList.forEach((ul) => {
+                    ul.setAttribute('style', 'list-style-type: disc; padding-left: 1.5rem;');
+                });
+
+                let olList = document.querySelectorAll('ol');
+                // add style attribute in ol tag
+                olList.forEach((ol) => {
+                    ol.setAttribute('style', 'list-style-type: decimal; padding-left: 1.5rem;');
+                });
             });
         </script>
     @endpush
