@@ -124,6 +124,10 @@
                 $('img').not('#main-image, .related-image').addClass(
                     'blur-mode my-4 w-[40rem] h-full mx-auto object-cover object-center border border-gray-200 rounded-xl'
                 );
+
+                // style ul and ol
+                $('.content ul').addClass('list-disc list-inside');
+                $('.content ol').addClass('list-decimal list-inside');
             });
         </script>
     @endpush
