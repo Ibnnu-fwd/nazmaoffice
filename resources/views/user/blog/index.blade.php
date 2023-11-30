@@ -194,6 +194,22 @@
                         });
                     }
                 });
+
+                // make list from content is numbered or bulleted
+                let contents = document.querySelectorAll('.content');
+                contents.forEach((content) => {
+                    let contentHTML = content.innerHTML;
+                    let contentArray = contentHTML.split('\n');
+                    let contentList = '';
+                    contentArray.forEach((content) => {
+                        if (content != '') {
+                            contentList +=
+                                '<li class="text-xs 2xl:text-md text-gray-400 line-clamp-2">' +
+                                content + '</li>';
+                        }
+                    });
+                    content.innerHTML = contentList;
+                });
             });
         </script>
     @endpush
