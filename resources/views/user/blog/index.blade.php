@@ -1,4 +1,17 @@
 <x-guest-layout>
+    @push('css-internal')
+        <style>
+            ol {
+                list-style-type: decimal;
+                margin-left: 1.5rem;
+            }
+
+            ul {
+                list-style-type: disc;
+                margin-left: 1.5rem;
+            }
+        </style>
+    @endpush
     @section('title')
         Blog
     @endsection
@@ -193,22 +206,6 @@
                             }
                         });
                     }
-                });
-
-                // fix list not styled in content
-                let lists = document.querySelectorAll('.content ul');
-                lists.forEach((list) => {
-                    list.classList.add('list-disc');
-                    list.classList.add('list-inside');
-                    list.classList.add('ml-4');
-                });
-
-                // fix list not styled in content
-                let lists2 = document.querySelectorAll('.content ol');
-                lists2.forEach((list) => {
-                    list.classList.add('list-decimal');
-                    list.classList.add('list-inside');
-                    list.classList.add('ml-4');
                 });
             });
         </script>
