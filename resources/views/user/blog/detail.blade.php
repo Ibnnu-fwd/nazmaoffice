@@ -2,14 +2,14 @@
     @push('css-internal')
         <style>
             /* ol {
-                    list-style-type: decimal;
-                    padding-left: 1.5rem;
-                }
+                        list-style-type: decimal;
+                        padding-left: 1.5rem;
+                    }
 
-                ul {
-                    list-style-type: disc;
-                    padding-left: 1.5rem;
-                } */
+                    ul {
+                        list-style-type: disc;
+                        padding-left: 1.5rem;
+                    } */
         </style>
     @endpush
     @section('title')
@@ -75,7 +75,7 @@
                             <p class="mt-3 text-base text-black font-semibold line-clamp-2">
                                 {{ $data->title }}
                             </p>
-                            <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2 content">
+                            <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2" id="content">
                                 {!! $data->content !!}
                             </div>
                         </a>
@@ -124,13 +124,13 @@
                     'blur-mode my-4 w-[40rem] h-full mx-auto object-cover object-center border border-gray-200 rounded-xl'
                 );
 
-                let ulList = document.querySelectorAll('ul');
+                let ulList = document.querySelectorAll('#content ul');
                 // add style attribute in ul tag
                 ulList.forEach((ul) => {
                     ul.setAttribute('style', 'list-style-type: disc; padding-left: 1.5rem;');
                 });
 
-                let olList = document.querySelectorAll('ol');
+                let olList = document.querySelectorAll('#content ol');
                 // add style attribute in ol tag
                 olList.forEach((ol) => {
                     ol.setAttribute('style', 'list-style-type: decimal; padding-left: 1.5rem;');
