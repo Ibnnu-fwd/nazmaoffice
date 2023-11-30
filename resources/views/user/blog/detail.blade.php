@@ -2,14 +2,14 @@
     @push('css-internal')
         <style>
             /* ol {
-                                list-style-type: decimal;
-                                padding-left: 1.5rem;
-                            }
+                                    list-style-type: decimal;
+                                    padding-left: 1.5rem;
+                                }
 
-                            ul {
-                                list-style-type: disc;
-                                padding-left: 1.5rem;
-                            } */
+                                ul {
+                                    list-style-type: disc;
+                                    padding-left: 1.5rem;
+                                } */
         </style>
     @endpush
     @section('title')
@@ -52,7 +52,7 @@
     <section class="max-w-4xl mx-auto mt-10 px-8 lg:px-0 mb-72">
         <img id="main-image" src="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}"
             class="w-full h-48 md:h-[500px] object-cover object-center blur-mode rounded-xl" alt="">
-        <div class="mt-8 leading-relaxed text-justify -tracking-tight text-sm 2xl:text-md">
+        <div class="mt-8 leading-relaxed text-justify -tracking-tight text-sm 2xl:text-md" id="content">
             {!! $blog->content !!}
         </div>
 
