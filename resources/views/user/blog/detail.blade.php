@@ -2,14 +2,14 @@
     @push('css-internal')
         <style>
             /* ol {
-                                    list-style-type: decimal;
-                                    padding-left: 1.5rem;
-                                }
+                                                list-style-type: decimal;
+                                                padding-left: 1.5rem;
+                                            }
 
-                                ul {
-                                    list-style-type: disc;
-                                    padding-left: 1.5rem;
-                                } */
+                                            ul {
+                                                list-style-type: disc;
+                                                padding-left: 1.5rem;
+                                            } */
         </style>
     @endpush
     @section('title')
@@ -18,29 +18,35 @@
 
     @section('meta')
         <meta name="title" content="{{ $blog->title }}">
-        <meta name="description" content="{{ $blog->tag }}">
-        <meta name="keywords" content="{{ $blog->tag }}">
+        <meta name="description"
+            content="{{ trim(preg_replace('/\s+/', ' ', substr(strip_tags(html_entity_decode($blog->content)), 0, strpos(strip_tags(html_entity_decode($blog->content)), "\n")))) }}">
+        <meta name="keywords"
+            content="{{ trim(preg_replace('/\s+/', ' ', substr(strip_tags(html_entity_decode($blog->content)), 0, strpos(strip_tags(html_entity_decode($blog->content)), "\n")))) }}">
         <meta name="author" content="{{ $blog->author_name }}">
         <meta property="og:title" content="{{ $blog->title }}">
-        <meta property="og:description" content="{{ $blog->tag }}">
+        <meta property="og:description"
+            content="{{ trim(preg_replace('/\s+/', ' ', substr(strip_tags(html_entity_decode($blog->content)), 0, strpos(strip_tags(html_entity_decode($blog->content)), "\n")))) }}">
         <meta property="og:image" content="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}">
         <meta property="og:url" content="{{ route('user.blog.detail', $blog->slug) }}">
         <meta property="og:site_name" content="{{ config('app.name') }}">
         <meta property="og:type" content="article">
         <meta property="article:published_time" content="{{ $blog->published_date }}">
         <meta property="article:author" content="{{ $blog->author_name }}">
-        <meta property="article:tag" content="{{ $blog->tag }}">
+        <meta property="article:tag"
+            content="{{ trim(preg_replace('/\s+/', ' ', substr(strip_tags(html_entity_decode($blog->content)), 0, strpos(strip_tags(html_entity_decode($blog->content)), "\n")))) }}">
         <meta property="article:section" content="{{ $blog->blogCategory->title }}">
         <meta property="article:modified_time" content="{{ $blog->updated_at }}">
         <meta property="article:published_first" content="{{ $blog->published_date }}">
         <meta property="article:published_last" content="{{ $blog->published_date }}">
-        <meta content="{{ str_replace('&nbsp;', ' ', html_entity_decode(strip_tags($blog->content))) }} "
+        <meta
+            content="{{ trim(preg_replace('/\s+/', ' ', substr(strip_tags(html_entity_decode($blog->content)), 0, strpos(strip_tags(html_entity_decode($blog->content)), "\n")))) }} "
             property="og:description">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@nazmaoffice">
         <meta name="twitter:creator" content="@nazmaoffice">
         <meta name="twitter:title" content="{{ $blog->title }}">
-        <meta name="twitter:description" content="{{ $blog->tag }}">
+        <meta name="twitter:description"
+            content="{{ trim(preg_replace('/\s+/', ' ', substr(strip_tags(html_entity_decode($blog->content)), 0, strpos(strip_tags(html_entity_decode($blog->content)), "\n")))) }}">
         <meta name="twitter:image" content="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}">
         <meta name="twitter:image:alt" content="{{ $blog->title }}">
         <meta name="twitter:label1" content="Written by">
