@@ -9,28 +9,28 @@
                 <div class="mb-8">
                     <h1 class="font-semibold text-lg text-black mb-2">NaZMa Office</h1>
                     <p class="text-gray-400 text-xs 2xl:text-md">
-                        {{ $companyLandingSetting->about_us }}
+                        {{ $companyLandingSetting->about_us ?? '-' }}
                     </p>
                 </div>
 
                 <div class="mb-3">
                     <h1 class="font-semibold text-xs 2xl:text-md text-black">No. Telepon Kantor</h1>
                     <p class="text-gray-400 text-xs 2xl:text-md">
-                        {{ $companyLandingSetting->office_phone }}
+                        {{ $companyLandingSetting->office_phone ?? '-' }}
                     </p>
                 </div>
 
                 <div class="mb-3">
                     <h1 class="font-semibold text-xs 2xl:text-md text-black">No. Handphone</h1>
                     <p class="text-gray-400 text-xs 2xl:text-md">
-                        {{ $companyLandingSetting->personal_phone }}
+                        {{ $companyLandingSetting->personal_phone ?? '-' }}
                     </p>
                 </div>
 
                 <div class="mb-3">
                     <h1 class="font-semibold text-xs 2xl:text-md text-black">Email</h1>
                     <p class="text-gray-400 text-xs 2xl:text-md">
-                        {{ $companyLandingSetting->email }}
+                        {{ $companyLandingSetting->email ?? '-' }}
                     </p>
                 </div>
             </div>
@@ -44,11 +44,11 @@
                         @forelse ($companyAddresses as $companyAddress)
                             <li class="md:pl-6 mb-2">
                                 <span class="font-medium text-black text-xs 2xl:text-md">
-                                    {{ $companyAddress->title }}
+                                    {{ $companyAddress->title ?? '-' }}
                                 </span>
                                 <p class="text-gray-400 pl-5 text-xs 2xl:text-md">
-                                    <a href="{{ $companyAddress->link }}" target="_blank">
-                                        {{ $companyAddress->address }}
+                                    <a href="{{ $companyAddress->link ?? '-' }}" target="_blank">
+                                        {{ $companyAddress->address ?? '-' }}
                                     </a>
                                 </p>
                             </li>

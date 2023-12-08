@@ -2,18 +2,51 @@
     @push('css-internal')
         <style>
             /* ol {
-                                    list-style-type: decimal;
-                                    padding-left: 1.5rem;
-                                }
+                            list-style-type: decimal;
+                            padding-left: 1.5rem;
+                        }
 
-                                ul {
-                                    list-style-type: disc;
-                                    padding-left: 1.5rem;
-                                } */
+                        ul {
+                            list-style-type: disc;
+                            padding-left: 1.5rem;
+                        } */
         </style>
     @endpush
     @section('title')
         {{ $blog->title }}
+    @endsection
+
+    @section('meta')
+        <meta name="title" content="{{ $blog->title }}">
+        <meta name="description" content="{{ $blog->tag }}">
+        <meta name="keywords" content="{{ $blog->tag }}">
+        <meta name="author" content="{{ $blog->author_name }}">
+        <meta property="og:title" content="{{ $blog->title }}">
+        <meta property="og:description" content="{{ $blog->tag }}">
+        <meta property="og:image" content="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}">
+        <meta property="og:url" content="{{ route('user.blog.detail', $blog->slug) }}">
+        <meta property="og:site_name" content="{{ config('app.name') }}">
+        <meta property="og:type" content="article">
+        <meta property="article:published_time" content="{{ $blog->published_date }}">
+        <meta property="article:author" content="{{ $blog->author_name }}">
+        <meta property="article:tag" content="{{ $blog->tag }}">
+        <meta property="article:section" content="{{ $blog->blogCategory->title }}">
+        <meta property="article:modified_time" content="{{ $blog->updated_at }}">
+        <meta property="article:published_first" content="{{ $blog->published_date }}">
+        <meta property="article:published_last" content="{{ $blog->published_date }}">
+        <meta content="{!! $blog->content !!}" name="keywords">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@nazmaoffice">
+        <meta name="twitter:creator" content="@nazmaoffice">
+        <meta name="twitter:title" content="{{ $blog->title }}">
+        <meta name="twitter:description" content="{{ $blog->tag }}">
+        <meta name="twitter:image" content="{{ asset('storage/blogs/main-image/' . $blog->main_image) }}">
+        <meta name="twitter:image:alt" content="{{ $blog->title }}">
+        <meta name="twitter:label1" content="Written by">
+        <meta name="twitter:data1" content="{{ $blog->author_name }}">
+        <meta name="twitter:label2" content="Filed under">
+        <meta name="twitter:data2" content="{{ $blog->blogCategory->title }}">
+        <meta name="twitter:label3" content="Published on">
     @endsection
 
     <section class="py-8 bg-primary">

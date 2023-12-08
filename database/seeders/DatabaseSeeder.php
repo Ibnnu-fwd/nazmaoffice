@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\BlogCategory;
 use App\Models\User;
-use Database\Factories\BlogCategoryFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
