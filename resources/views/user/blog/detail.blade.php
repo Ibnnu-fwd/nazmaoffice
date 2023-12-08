@@ -2,14 +2,14 @@
     @push('css-internal')
         <style>
             /* ol {
-                                                list-style-type: decimal;
-                                                padding-left: 1.5rem;
-                                            }
+                                                    list-style-type: decimal;
+                                                    padding-left: 1.5rem;
+                                                }
 
-                                            ul {
-                                                list-style-type: disc;
-                                                padding-left: 1.5rem;
-                                            } */
+                                                ul {
+                                                    list-style-type: disc;
+                                                    padding-left: 1.5rem;
+                                                } */
         </style>
     @endpush
     @section('title')
@@ -17,6 +17,8 @@
     @endsection
 
     @section('meta')
+        <meta name="thumbnail" content="{{ asset('storage/blogs/thumbnail/' . $blog->thumbnail) }}">
+        <meta property="og:image" content="{{ asset('storage/blogs/thumbnail/' . $blog->thumbnail) }}">
         <meta name="title" content="{{ $blog->title }}">
         <meta name="description"
             content="{{ trim(preg_replace('/\s+/', ' ', substr(strip_tags(html_entity_decode($blog->content)), 0, strpos(strip_tags(html_entity_decode($blog->content)), "\n")))) }}">
