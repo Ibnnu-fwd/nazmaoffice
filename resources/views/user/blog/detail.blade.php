@@ -2,14 +2,14 @@
     @push('css-internal')
         <style>
             /* ol {
-                            list-style-type: decimal;
-                            padding-left: 1.5rem;
-                        }
+                                    list-style-type: decimal;
+                                    padding-left: 1.5rem;
+                                }
 
-                        ul {
-                            list-style-type: disc;
-                            padding-left: 1.5rem;
-                        } */
+                                ul {
+                                    list-style-type: disc;
+                                    padding-left: 1.5rem;
+                                } */
         </style>
     @endpush
     @section('title')
@@ -34,7 +34,8 @@
         <meta property="article:modified_time" content="{{ $blog->updated_at }}">
         <meta property="article:published_first" content="{{ $blog->published_date }}">
         <meta property="article:published_last" content="{{ $blog->published_date }}">
-        <meta content="{!! $blog->content !!}" name="keywords">
+        <meta content="{{ str_replace('&nbsp;', ' ', html_entity_decode(strip_tags($blog->content))) }} "
+            property="og:description">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@nazmaoffice">
         <meta name="twitter:creator" content="@nazmaoffice">
