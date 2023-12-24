@@ -118,7 +118,7 @@
                                 {{ $data->title }}
                             </p>
                             <div class="mt-3 text-xs 2xl:text-md text-gray-400 line-clamp-2" id="content">
-                                {!! $data->content !!}
+                                {!! Str::limit($data->content,70) !!}
                             </div>
                         </a>
                     @endforeach
@@ -137,7 +137,7 @@
                                 {{ $blogs->last()->title }}
                             </span>
                             <p class="text-gray-400 line-clamp-2 mt-2 text-xs 2xl:text-md">
-                                {!! $blogs->last()->content !!}
+                                {!! Str::limit($blogs->last()->content,70) !!}
                             </p>
                             <div class="flex gap-x-2 items-center mt-5">
                                 {{-- <img src="{{ asset('assets/images/hero1.jpg') }}"
